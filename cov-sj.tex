@@ -1,20 +1,35 @@
-\documentclass[12pt]{jarticle}
+\documentclass[12pt]{ujarticle}
+\renewcommand{\abstractname}{Abstract}
+\renewcommand{\contentsname}{Contents}
+\renewcommand{\refname}{References}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{amsthm}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{proposition}{Proposition}[subsection]
+\newtheorem{corollary}{Corollary}[subsection]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[subsection]
+\newtheorem{example}{Example}[subsection]
+\newtheorem{remark}{Remark}[subsection]
 
 \setlength{\topmargin}{0truecm}
 
-
 \newcommand{\TITLE}%
-{研究題目を\\ ここに書く}
+{Magnitude Homology of Graphs and the Magnitude as its Categorification}
 %上のタイトルを書く
 \newcommand{\STNO}%
-{22*****}%学籍番号
+{2264257}%学籍番号
 \newcommand{\NAME}%
-{横浜 みらい}%氏名
+{Kensho Yachi}%氏名
 \newcommand{\ADVR}%
-{横浜 みなと 教授}%指導教員
+{Yuta Nozaki Associate Professor}%指導教員
 
 \newcommand{\DATE}%
-{（2026年1月30日）}%〆切
+{（January 30th, 2025）}%〆切
 
 
 
@@ -22,10 +37,12 @@
 \begin{document}
 \thispagestyle{empty}
 
-\hfil 
-2025年度 横浜国立大学 理工学部 数理科学EP 卒業研究
+\begin{center}
+  2025 Yokohama National University, Faculty of Science and Engineering, Mathematical Science EP Graduation Research
+  \vskip3cm
+\end{center}
 
-\vskip3cm
+
 
 {\Large
 
@@ -44,9 +61,10 @@
 }
 
 \vskip10Q
-\hfil
-\textbf{
-指導教員：\ADVR }
+\begin{center}
+  \textbf{Supervisor : \ADVR }
+\end{center}
+
 
 \hfil
 \textbf{\DATE}
@@ -54,14 +72,75 @@
 }
 
 
-%\vfill
-%\hfill
-%\begin{tabular}{|p{6zw}|p{6zw}|} \hline
-%    \hskip.5zw 指導教員印 & \hskip1.5zw 受理印 \\ \hline
-%    & \\[2cm] \hline 
-%  
-%\end{tabular}
+\vfill
+\hfill
+\begin{tabular}{|p{6zw}|p{6zw}|} \hline
+   \hskip.5zw 指導教員印 & \hskip1.5zw 受理印 \\ \hline
+   & \\[2cm] \hline 
+ 
+\end{tabular}
 
+
+
+% Start of the main content
+\newpage
+\pagestyle{plain}
+\setcounter{page}{1}
+
+
+% Abstract
+\begin{abstract}
+Sample Abstract
+\end{abstract}
+
+
+% Table of Contents
+\newpage
+\tableofcontents
+
+
+% Section 1
+\newpage
+\section{Introduction}
+Lamport's guide to \LaTeX\ \cite{Lamport94}.
+
+
+% Section 2
+\newpage
+\section{The definition}
+In this section, we define the magnitude of a graph $G$ and the magnitude homology of a graph $G$, give some very basic examples and properties.
+By a \textit{graph} we mean a finite undirected graph with no loops or multiple edges. The set of vertices of a graph $G$ is denoted by $V(G)$, and the set of edges of $G$ is denoted by $E(G)$. If $x$ and $y$ are vertices of a graph $G$, then the \textit{distance} $d_G(x,y)$ between $x$ and $y$ is defined to be the length of a shortest edge path from $x$ to $y$. If $x$ and $y$ lie in different components of $G$ then $d(x,y)=\infty$.
+\subsection{The Definition of The Magnitude and Some Examples, Properties}
+Here, we difine the magnitude of a graph, which can be expressed as either a rational function over $\mathbb{Q}$ or a formal power series over $\mathbb{Z}$. Write $\mathbb{Z}[q]$ for the polynomial ring over the integers in one variable $q$.
+
+\begin{definition}
+  Let $G$ be a graph. Let $Z_G = Z_G(q)$ be the square matrix over $\mathbb{Z}[q]$ whose rows and columns are indexed by the vertices of $G$, and whose $(x,y)$-entry is given by
+  \[
+  Z_G(q)(x,y) = q^{d(x,y)} \quad (x,y \in V(G))
+  \]
+  where by convention $q^\infty = 0$.
+\end{definition}
+
+\subsection{The Definition of The Magnitude Homology and Some Examples, Properties}
+Magnitude homology
+
+
+
+% Bibliography (参考文献)
+\newpage
+\begin{thebibliography}{9}
+
+\bibitem{Lamport94}
+Leslie Lamport.
+\textit{LaTeX: A Document Preparation System}.
+Addison-Wesley, 2nd edition, 1994.
+
+\bibitem{Knuth84}
+Donald E. Knuth.
+\textit{The TeXbook}.
+Addison-Wesley, 1984.
+
+\end{thebibliography}
 
 
 
