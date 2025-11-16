@@ -1,0 +1,243 @@
+\documentclass[12pt]{ujarticle}
+\renewcommand{\abstractname}{Abstract}
+\renewcommand{\contentsname}{Contents}
+\renewcommand{\refname}{References}
+
+\usepackage[dvipdfmx, hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cleveref}
+
+\usepackage{amsthm}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+
+\setlength{\topmargin}{0truecm}
+
+\newcommand{\TITLE}%
+{Magnitude Homology of Graphs and the Magnitude as its Categorification}
+%上のタイトルを書く
+\newcommand{\STNO}%
+{2264257}%学籍番号
+\newcommand{\NAME}%
+{Kensho Yachi}%氏名
+\newcommand{\ADVR}%
+{Yuta Nozaki Associate Professor}%指導教員
+
+\newcommand{\DATE}%
+{（January 30th, 2025）}%〆切
+
+
+
+
+% 汎用コマンド
+\newcommand{\tsum}{\text{sum}}
+\newcommand{\tadj}{\text{adj}}
+
+
+
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+  2025 Yokohama National University, Faculty of Science and Engineering, Mathematical Science EP Graduation Research
+  \vskip3cm
+\end{center}
+
+
+
+{\Large
+
+\begin{center}
+  %\LARGE
+  \huge
+  \textbf{\TITLE}
+\end{center}
+
+\vfill
+
+\hfil
+{\LARGE
+\textbf{
+\STNO\ \NAME}
+}
+
+\vskip 4mm
+\hfil
+{\large
+\href{https://taro-ken.com}{https://taro-ken.com}
+}
+
+\vskip10Q
+\begin{center}
+  \textbf{Supervisor : \ADVR }
+\end{center}
+
+
+\hfil
+\textbf{\DATE}
+
+}
+
+
+\vfill
+\hfill
+\begin{tabular}{|p{6zw}|p{6zw}|} \hline
+   \hskip.5zw 指導教員印 & \hskip1.5zw 受理印 \\ \hline
+   & \\[2cm] \hline 
+ 
+\end{tabular}
+
+
+
+% Start of the main content
+\newpage
+\pagestyle{plain}
+\setcounter{page}{1}
+
+
+% Abstract
+\begin{abstract}
+Sample Abstract
+\end{abstract}
+
+
+% Table of Contents
+\newpage
+\tableofcontents
+
+
+% Section 1
+\newpage
+\section{Introduction}
+Lamport's guide to \LaTeX\ \cite{Lamport94}.
+
+
+% Section 2
+\newpage
+\section{The Magnitude of Graphs}
+In this section, we define the magnitude of a graph $G$ and the magnitude homology of a graph $G$, give some very basic examples and properties.
+By a \textit{graph} we mean a finite undirected graph with no loops or multiple edges. The set of vertices of a graph $G$ is denoted by $V(G)$, and the set of edges of $G$ is denoted by $E(G)$. If $x$ and $y$ are vertices of a graph $G$, then the \textit{distance} $d_G(x,y)$ between $x$ and $y$ is defined to be the length of a shortest edge path from $x$ to $y$. If $x$ and $y$ lie in different components of $G$ then $d(x,y)=\infty$.
+\subsection{The definition of the magnitude of Graphs}
+Here, we difine the magnitude of a graph, which can be expressed as either a rational function over $\mathbb{Q}$ or a formal power series over $\mathbb{Z}$. Write $\mathbb{Z}[q]$ for the polynomial ring over the integers in one variable $q$ and $\mathbb{Z}[[q]]$ for the ring of formal power series over the integers in one variable $q$.
+
+\begin{definition}
+  Let $G$ be a graph. We define the \textit{$G$-matrix} $Z_G = Z_G(q)$ over $\mathbb{Z}[q]$ whose rows and columns are indexed by the vertices of $G$, and whose $(x,y)$-entry is given by
+  \[
+  Z_G(q)(x,y) = q^{d(x,y)} \quad (x,y \in V(G))
+  \]
+  where by convention $q^\infty = 0$.
+  
+\end{definition}
+
+$G$-matrix is the square synmetric matrix.
+
+\begin{proposition}\label{invertible}
+  $G$-matrix is invertible.
+\end{proposition}
+
+\begin{proof}
+  By definition, the determinant of $Z_G$ has constant term $1$, which implies that $\det Z_G \neq 0$.
+\end{proof}
+
+\begin{definition}
+  The \textit{magnitude} of a graph $G$ is defined to be the rational function given by
+  \[
+  \# G(q) = \sum_{x,y \in V(G)} (Z_G(q))^{-1}(x,y)
+  \]
+  in the rational function field $\mathbb{Q}(q)$. 
+\end{definition}
+
+\begin{remark}
+  \[
+    \# G(q) = \tsum(Z_G(q)^{-1}) = \frac{\tsum(\tadj(Z_G(q)))}{\det(Z_G(q))}
+  \]
+  where $\tadj$ is the adjugate matrix and $\tsum$ is the sum of all entries of a matrix.
+\end{remark}
+
+\begin{proposition}
+  $\# G(q)$ takes values in $\mathbb{Z}[[q]]$.
+\end{proposition}
+
+\begin{proof}
+  Let $\det Z_G(q) = 1 - qf(q)$ for some $f(q) \in \mathbb{Z}[q]$ by \cref{invertible}. Then we have 
+  \[
+    \# G(q) = \frac{\tsum(\tadj(Z_G(q)))}{\det(Z_G(q))} = \tsum(\tadj(Z_G(q))) \sum_{n=0}^{\infty} q^n f(q)^n
+  \]
+  Note that $qf(q)$ has no constant term and then $\sum_{n=0}^{\infty} q^n f(q)^n$ takes values in $\mathbb{Z}[[q]]$.
+\end{proof}
+
+\begin{example}
+  Let $G = K_3$(complete graph with three vertices).
+\end{example}
+
+\subsection{Basic Properties and Examples}
+Magnitude 
+
+\subsection{The magnitude of union}
+
+
+
+
+
+
+
+
+% Section 3
+\newpage
+\section{The Magnitude Homology of Graphs}
+In this section, we define the magnitude homology of a graph $G$, give some very
+
+
+\subsection{The Definition of the magnitude homology of graphs}
+
+
+\subsection{Magnitude Homology of Graphs is Categorification of Magnitude of Graphs}
+
+\subsection{u}
+
+
+
+
+
+
+
+
+
+% Section 4
+\newpage
+\section{Motivation : The Magnitude of Enriched Categories}
+
+
+
+
+
+% Bibliography (参考文献)
+\newpage
+\begin{thebibliography}{9}
+
+\bibitem{Lamport94}
+Leslie Lamport.
+\textit{LaTeX: A Document Preparation System}.
+Addison-Wesley, 2nd edition, 1994.
+
+\bibitem{Knuth84}
+Donald E. Knuth.
+\textit{The TeXbook}.
+Addison-Wesley, 1984.
+
+\end{thebibliography}
+
+
+
+\end{document}

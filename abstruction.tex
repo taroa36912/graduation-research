@@ -1,12 +1,11 @@
-\documentclass{jarticle}
+\documentclass[twocolumn]{ujarticle}
 
 \setlength{\topmargin}{-1.4cm}
-%\setlength{\paperwidth}{14cm}
 \setlength{\oddsidemargin}{-30Q}
 \setlength{\evensidemargin}{0cm}
 
 \setlength{\columnsep}{2.5zw}
-
+\usepackage[dvipdfmx, hidelinks]{hyperref}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -14,21 +13,14 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% 以下の項目を適宜，修正して
-%%%%%% 利用してください．
-%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\TITLE}%
-{卒業研究 題目}%卒論タイトルを書く
-\newcommand{\eTITLE}%
-{英文タイトル}%%英語タイトル
+{Magnitude Homology of Graphs and the Magnitude as its Categorification}%卒論タイトルを書く
 \newcommand{\STNO}%
-{22xxxxxx}%学籍番号
+{2264257}%学籍番号
 \newcommand{\NAME}%
-{横浜 みらい}%氏名
+{Kensho Yachi}%氏名
 \newcommand{\ADVR}%
-{横浜 みなと 教授}%指導教員氏名
-
+{Yuta Nozaki Associate Professor}%指導教員氏名
 %%%% 以下は変更しないでください
 \newcommand{\DATE}%
 {(2026年2月6日)}%〆切
@@ -54,39 +46,33 @@
 
 \pagestyle{lrheadf}
 
-\markboth{\NENDO \hskip1zw 
-数物・電子情報系学科 数理科学EP 
-\hskip1zw
-卒業研究 \hskip1zw 概要}{}
-
+\markboth{
+2025 Yokohama National University, Faculty of Science and Engineering, Mathematical Science EP Graduation Research Abstract
+}{}
 
 
 \begin{document}
-%\fontsize{9pt}{14pt}\selectfont
 \fontsize{10pt}{14pt}\selectfont
 
 
-\hfil
-\textbf{\Large \TITLE }
-
-\vskip5Q
-\hfil
-{\large \eTITLE }
-
+\twocolumn[
+\centering
+\textbf{\Large \TITLE}
 
 \vskip5Q
 \hfil 
 {\large \STNO \hskip1zw \NAME
-\hskip 2zw 指導教員： \ADVR}
+\hskip 2zw Supervisor : \ADVR}
 
 \vskip20Q
 
+]
 
 \noindent
 \textbf{１．研究背景・動機}
 
-\NENDO 数理科学EP卒業研究の概要フォーマットです．
-用紙はA4用紙1枚です．
+\NENDO 数理科学ＥＰ卒業研究の概要フォーマットです．
+用紙はA4用紙１枚です．
 最初の1段組の枠に，
 日本語の研究題目，英文の研究題目，学籍番号，
 氏名，指導教員の氏名を記入してください．
@@ -109,11 +95,11 @@
 ○○○○○○○○○○○○○○○○○○○○○○○○○○○
  ○○○○○○○○○○○○○○○○○○○○○○○○○○
 ○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-%  ○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-% ○○○○○○○○○○○○○○○○○○○○○○○○○○○
-%  ○○○○○○○○○○○○○○○○○○○○○○○○○○
-% ○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-%  ○○○○○○○○○
+ ○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+○○○○○○○○○○○○○○○○○○○○○○○○○○○
+ ○○○○○○○○○○○○○○○○○○○○○○○○○○
+○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+ ○○○○○○○○○
 
 \vskip10Q
 \noindent
@@ -165,10 +151,10 @@
 ○○○○○○○○○○○○○○○○○
  ○○○○○○○○○○○○○○○○
 ○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-%  ○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-% ○○○○○○○○○○○○○○○○○
-%  ○○○○○○○○○○○○○○○○
-% ○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+ ○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
+○○○○○○○○○○○○○○○○○
+ ○○○○○○○○○○○○○○○○
+○○○○○○○○○○○○○○○○○○○○○○○○○○○○
 
 \vskip10Q
 \noindent
