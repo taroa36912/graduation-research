@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1763274729.21482 "out/main.dvi" "out/main.pdf" "out/main" 1763274729.45864 0
-  "out/main.dvi" 1763274729.20005 14812 b855c9e8b3c798ca538a3b993d2591b6 "latex"
+["dvipdf"] 1763286187.86717 "out/main.dvi" "out/main.pdf" "out/main" 1763286188.11483 0
+  "out/main.dvi" 1763286187.8508 14812 59531cc29ca98384cf8081b4719ff885 "latex"
   (generated)
   "out/main.pdf"
   (rewritten before read)
-["latex"] 1763274728.87017 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1763274729.45807 0
-  "/Users/kensh/Documents/src/graduation-research/main.tex" 1763274728.69678 5467 f1af3eef45c70cc8c3087a48428a04ca ""
+["latex"] 1763286187.51909 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1763286188.1143 0
+  "/Users/kensh/Documents/src/graduation-research/main.tex" 1763286186.84353 5467 f1af3eef45c70cc8c3087a48428a04ca ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -80,10 +80,10 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "main.tex" 1763274728.69678 5467 f1af3eef45c70cc8c3087a48428a04ca ""
-  "out/main.aux" 1763274729.19951 1699 0194f95c360918a4cb0c77ca694bb90c "latex"
-  "out/main.out" 1763274729.19988 2288 5f4dc9cfc34a597cc99663fef0129feb "latex"
-  "out/main.toc" 1763274729.20001 950 723807fba5ad80e69c70522e8021b6be "latex"
+  "main.tex" 1763286186.84353 5467 f1af3eef45c70cc8c3087a48428a04ca ""
+  "out/main.aux" 1763286187.85019 1699 0194f95c360918a4cb0c77ca694bb90c "latex"
+  "out/main.out" 1763286187.85063 2288 5f4dc9cfc34a597cc99663fef0129feb "latex"
+  "out/main.toc" 1763286187.85077 950 723807fba5ad80e69c70522e8021b6be "latex"
   (generated)
   "out/main.aux"
   "out/main.dvi"
