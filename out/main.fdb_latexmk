@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1763515880.39963 "out/main.dvi" "out/main.pdf" "out/main" 1763515880.65483 0
-  "out/main.dvi" 1763515880.38411 14792 e30a86bf6e7a16f980dadee1a293bd18 "latex"
+["dvipdf"] 1763529958.0409 "out/main.dvi" "out/main.pdf" "out/main" 1763529958.28024 0
+  "out/main.dvi" 1763529926.3995 14952 7e55ad04b1be44504039cf23adb8eb2c "latex"
   (generated)
   "out/main.pdf"
   (rewritten before read)
-["latex"] 1763515880.05767 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1763515880.6543 0
-  "/Users/kensh/Documents/src/graduation-research/main.tex" 1763515879.90786 5476 813503e42204b08765a67328e59cac11 ""
+["latex"] 1763529925.98323 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1763529958.27963 0
+  "/Users/kensh/Documents/src/graduation-research/main.tex" 1763529957.84449 5577 7cff7a349392ea25313ec216ed55e77c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -57,7 +57,7 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/cleveref/cleveref.sty" 1525128982 329481 7fc6b003158402a4c694bc0a1b729308 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1759437024 46885 8953c67ffba03252c6090aa19568b8ba ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
-  "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/dvips.def" 1759176675 6789 86de240c158ee63ff8a8e12ed82d4c47 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/dvipdfmx.def" 1759176675 12466 254cda60ce262fd4e1f9dbb063f46499 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/color.sty" 1748806692 7245 a7e8457a46cda4920df85d975267efb4 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty" 1748806692 18363 69bb4f5538964bfea50d1e6d89cbe69f ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty" 1748806692 8118 43b99e52946c33a23f5f43b52d5cc5ec ""
@@ -80,10 +80,11 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "main.tex" 1763515879.90786 5476 813503e42204b08765a67328e59cac11 ""
-  "out/main.aux" 1763515880.38345 1699 0194f95c360918a4cb0c77ca694bb90c "latex"
-  "out/main.out" 1763515880.3839 2288 5f4dc9cfc34a597cc99663fef0129feb "latex"
-  "out/main.toc" 1763515880.38407 950 723807fba5ad80e69c70522e8021b6be "latex"
+  "Tikz/Graphs/out/product.pdf" 1763526475.66972 6067 5d70dcf08ea556599fd4455de52c7c0a ""
+  "main.tex" 1763529957.84449 5577 7cff7a349392ea25313ec216ed55e77c ""
+  "out/main.aux" 1763529926.39886 1699 0194f95c360918a4cb0c77ca694bb90c "latex"
+  "out/main.out" 1763529926.39932 2288 5f4dc9cfc34a597cc99663fef0129feb "latex"
+  "out/main.toc" 1763529926.39946 950 723807fba5ad80e69c70522e8021b6be "latex"
   (generated)
   "out/main.aux"
   "out/main.dvi"

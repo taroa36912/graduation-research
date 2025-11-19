@@ -1,19 +1,10 @@
-\documentclass{standalone}
-\usepackage{tikz}
+\documentclass[dvipdfmx]{standalone}
+\usepackage{tikz-cd} % 専用パッケージ
 
 \begin{document}
-
-\begin{tikzpicture}[auto]
-    \node (W) at (0.6, 2.4) {$W$};
-    \node (T) at (0.6, 1.2) {$A \times B$};
-    \node (A) at (0, 0) {$A$}; \node (B) at (1.2, 0) {$B$};
-    \draw[->] (T) to node[swap] {$p_1$} (A);
-    \draw[->] (T) to node {$p_2$} (B);
-    \draw[->] (W) to[bend right=40] node[swap] {$q_1$} (A);
-    \draw[->] (W) to[bend left=40] node {$q_2$} (B);
-
-    \draw[->, dashed] (W) to node {$i$} (T);
-    
-\end{tikzpicture}
-
+\begin{tikzcd}
+    & W \arrow[ddr, bend left=40, "q_2"] \arrow[ddl, bend right=40, "q_1"'] \arrow[d, dashed, "i"] & \\
+    & A \times B \arrow[dl, "p_1"'] \arrow[dr, "p_2"] & \\
+    A & & B
+\end{tikzcd}
 \end{document}
