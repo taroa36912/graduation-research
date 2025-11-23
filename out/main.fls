@@ -97,6 +97,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/bm.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/bm.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/cleveref/cleveref.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/cleveref/cleveref.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
@@ -190,6 +192,12 @@ INPUT ./Tikz/Graphs/out/K_3.pdf
 INPUT ./Tikz/Graphs/out/K_3.pdf
 INPUT ./Tikz/Graphs/out/K_3.pdf
 INPUT extractbb -B cropbox -O Tikz/Graphs/out/K_3.pdf
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT out/main.aux
 INPUT out/main.out
 INPUT out/main.out
