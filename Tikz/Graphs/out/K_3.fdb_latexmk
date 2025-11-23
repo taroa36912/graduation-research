@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1763526475.47641 "out/product.dvi" "out/product.pdf" "out/product" 1763526475.67996 0
-  "out/product.dvi" 1763526475.4606 7356 67751f9d336414e51c6a4112903dcd6f "latex"
+["dvipdf"] 1763831489.86307 "out/K_3.dvi" "out/K_3.pdf" "out/K_3" 1763831490.0632 0
+  "out/K_3.dvi" 1763831489.83926 2212 c9d8f943e67f87304f36b0f12e6f916a "latex"
   (generated)
-  "out/product.pdf"
+  "out/K_3.pdf"
   (rewritten before read)
-["latex"] 1763526475.09124 "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/product.tex" "out/product.dvi" "product" 1763526475.67934 0
-  "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/product.tex" 1763526474.86988 317 094df6ad58993d862fe8a6bd9f31ed42 ""
+["latex"] 1763831489.53707 "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_3.tex" "out/K_3.dvi" "K_3" 1763831490.06258 0
+  "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_3.tex" 1763831435.34983 606 f5b889906161bc3270d4fd1ac11d292f ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1673816307 1016 1c2b89187d12a2768764b83b4945667c ""
@@ -26,11 +26,8 @@
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex" 1755201859 35251 5ff5b5b310c5ac882610e0ccc99095e7 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex" 1673816307 22012 81b34a0aa8fa1a6158cc6220b00e4f10 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex" 1601326656 8893 e851de2175338fdf7c17f3e091d94618 ""
-  "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex" 1673816307 4228 c39d423dc1a80da31c8c67bf1067f384 ""
-  "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex" 1673816307 3970 c199216b190c70e45bff870bacf0da00 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex" 1608933718 11518 738408f795261b70ce8dd47459171309 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex" 1755201859 186859 0445d9a41a87648b4723e04765409541 ""
-  "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex" 1601326656 58801 1e750fb0692eb99aaac45698bbec96b1 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex" 1601326656 32995 ac577023e12c0e4bd8aa420b2e852d1a ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex" 1557692582 3063 8c415c68a0f3394e45cfeca0b65f6ee6 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex" 1673816307 949 cea70942e7b7eddabfb3186befada2e6 ""
@@ -63,7 +60,6 @@
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex" 1673816307 4385 510565c2f07998c8a0e14f0ec07ff23c ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex" 1756502844 30029 c49ea8f95207c46731469c614daf4e33 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def" 1755201859 7067 11553488d1600cac6a0cfca012fca111 ""
-  "/usr/local/texlive/2025/texmf-dist/tex/generic/tikz-cd/tikzlibrarycd.code.tex" 1620507957 23059 b4b98da760150611227e2533f15fe352 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/keyval.tex" 1655411236 2725 1a42bd9e7e57e25fc7763c445f4b785b ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex" 1655411236 19231 27205ee17aaa2902aea3e0c07a3cfc65 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex" 1655411236 7677 9cb1a74d945bc9331f2181c0a59ff34a ""
@@ -91,17 +87,16 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/preview/preview.sty" 1719778176 13875 09967d4ab60287cfaa3ce0e42a1524aa ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/standalone/standalone.cfg" 1740345147 1015 4f7ef49662222d6288d944cd07fcac9b ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/standalone/standalone.cls" 1740345147 31554 025731bd61fa01ab395682f1e6e2e146 ""
-  "/usr/local/texlive/2025/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty" 1620507957 823 2375f30bf77af9357d3b4834b054bf52 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/tools/shellesc.sty" 1748806692 4121 d611256e8b768e99aa5a680aad44990d ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty" 1727642399 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1655411236 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "out/product.aux" 1763526475.46022 32 3985256e7290058c681f74d7a3565a19 "latex"
-  "product.tex" 1763526474.86988 317 094df6ad58993d862fe8a6bd9f31ed42 ""
+  "K_3.tex" 1763831435.34983 606 f5b889906161bc3270d4fd1ac11d292f ""
+  "out/K_3.aux" 1763831489.83895 32 3985256e7290058c681f74d7a3565a19 "latex"
   (generated)
-  "out/product.aux"
-  "out/product.dvi"
-  "out/product.log"
+  "out/K_3.aux"
+  "out/K_3.dvi"
+  "out/K_3.log"
   (rewritten before read)

@@ -7,6 +7,7 @@
 \usepackage[dvipdfmx, hidelinks]{hyperref}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{bm}
 \usepackage{cleveref}
 
 \usepackage{graphicx}
@@ -45,6 +46,7 @@
 % 汎用コマンド
 \newcommand{\tsum}{\text{sum}}
 \newcommand{\tadj}{\text{adj}}
+\newcommand{\aut}{\text{Aut}}
 
 
 
@@ -176,18 +178,146 @@ $G$-matrix is the square synmetric matrix.
 \begin{proof}
   Let $\det Z_G(q) = 1 - qf(q)$ for some $f(q) \in \mathbb{Z}[q]$ by \cref{invertible}. Then we have 
   \[
-    \# G(q) = \frac{\tsum(\tadj(Z_G(q)))}{\det(Z_G(q))} = \tsum(\tadj(Z_G(q))) \sum_{n=0}^{\infty} q^n f(q)^n
+    \# G(q) = \frac{\tsum(\tadj(Z_G))}{\det(Z_G)} = \tsum(\tadj(Z_G)) \sum_{n=0}^{\infty} q^n f(q)^n
   \]
   Note that $qf(q)$ has no constant term and then $\sum_{n=0}^{\infty} q^n f(q)^n$ takes values in $\mathbb{Z}[[q]]$.
 \end{proof}
 
 \begin{example}
   Let $G = K_3$(complete graph with three vertices).
-  \raisebox{-0.5\height}{\includegraphics{Tikz/Graphs/out/product.pdf}}
+  ~
+
+  \raisebox{-0.5\height}{\includegraphics{Tikz/Graphs/out/K_3.pdf}}
+  Then, you can calculate the magnitude of $K_3$ as follows:
+  \[
+    Z_{K_3}(q) = \begin{pmatrix}
+      1 & q & q \\
+      q & 1 & q \\
+      q & q & 1
+    \end{pmatrix}, \quad
+    Z_{K_3}(q)^{-1} = \frac{1}{1 - 3q^2 + 2q^3} \begin{pmatrix}
+      1 - q^2 & -q + q^2 & -q + q^2 \\
+      -q + q^2 & 1 - q^2 & -q + q^2 \\
+      -q + q^2 & -q + q^2 & 1 - q^2
+    \end{pmatrix},
+  \]
+  $ \#K_3(q) = \frac{3}{1+2q}$
+
 \end{example}
 
+\begin{definition}
+  Let $G$ be a graph and $x \in V(G)$.
+  The \textit{weight} of $x$ in $G$ is defined 
+  \[
+    w_G(x)(q) = \sum_{y \in V(G)}(Z_G(q))^{-1}(x,y)
+  \]
+
+  The function $w_G : V(G) \rightarrow \mathbb{Q}(q)$ is called the \textit{weighting} on $G$.
+\end{definition}
+
+The magnitude can be expressed using the weighting as follows:
+\[
+  \# G(q) = \sum_{x \in V(G)} w_G(x)
+\]
+
+\begin{lemma}\label{weighting equation}
+  For any graph $G$, the weighting $w_G$ satisfies
+  \[
+    \sum_{y \in V(G)} q^{d(x,y)} w_G(y) = 1 \quad (x \in V(G))
+  \]
+\end{lemma}
+
+\begin{proof}
+  For any vertex $x \in V(G)$, we have 
+  \[
+  \begin{split}
+    \sum_{y \in V(G)}q^{d(x,y)} w_G(y) &= \sum_{y,z \in V(G)}q^{d(x,y)}Z_G^{-1}(y,z) \\
+    &= \sum_{y,z \in V(G)}Z_G(x,y)Z_G^{-1}(y,z) \\
+    &= \sum_{z \in V(G)} \sum_{y \in V(G)}Z_G(x,y)Z_G^{-1}(y,z) \\
+    &= \sum_{z \in V(G)}(Z_G Z_G^{-1})(x,z) \\
+    &= \sum_{z \in V(G)}I(x,z) \\
+    = 1.
+  \end{split}
+  \]
+\end{proof}
+
+This equation is called the \textit{weighting equation}.
+
+\begin{lemma}\label{unique property on weighting equation}
+  Let $G$ be a graph and $\tilde{w}_G : V(G) \rightarrow \mathbb{Q}$ be a function satisfying a weighting equation.
+  Then, $\tilde{w}_G = w_G$. Now, $w_G$ is the weighting on $G$.
+\end{lemma}
+
+\begin{proof}
+  Let $\bm{b} = (1, 1, \ldots, 1)^T$ where the length of $\bm{b}$ is $|V(G)|$ and $\bm{w}_G$ = $(w_G(x))^T_{x \in V(G)}$.
+  If $\tilde{w}_G$ satisfies the weighting equation, then we have
+  \[
+    Z_G \tilde{\bm{w}}_G = \bm{b}
+  \]
+  Since $Z_G$ is invertible by \cref{invertible}, we have $\tilde{w}_G = w_G$
+\end{proof}
+
+This lemma shows that the weighting on a graph is unique and we use this frequently to compute the magnitude of graphs.
+
+
 \subsection{Basic Properties and Examples}
-Magnitude 
+Here we give the most basic facts about magnitude. We focus on transitive graphs, disjoint unions, catesian products, and how the magnitude behaves within $\mathbb{Z}[[q]]$.
+
+\begin{definition}
+  Let $G = (V(G), E(G)), H = (V(H), E(H))$ be a graph.
+  An \textit{graph homomorphism} from $G$ to $H$ is a map $f : V(G) \rightarrow V(H)$ such that if $\{x,y\} \in E(G)$ then $\{f(x), f(y)\} \in E(H)$.
+\end{definition}
+
+We can define a \textit{graph automorphism} using the definition above. We denote the group of all graph automorphisms of a graph $G$ by $\aut(G)$. $\aut(G)$ includes $id_G$ and for $g,h \in \aut(G)$ and $x \in V(G)$, $g(h(x)) = (gh)(x)$, which means $\aut(G)$ acts on $V(G)$.
+\begin{definition}
+  A graph $G$ is \textit{vertex-transitive} if $\aut(G)$ acts transitively on $V(G)$.
+  It says that for any vertices $x$ and $y$ of $G$, there exists an automorphism $g : G \rightarrow G$ such that $y = g(x)$.
+\end{definition}
+
+\begin{lemma}
+  Let $G$ be a vertex-transitive graph.
+  Then, 
+
+  \[
+    \# G(q) = \frac{|V(G)|}{\sum_{y \in V(G)} q^{d(x,y)}}
+  \]
+
+  for any vertex $x \in V(G)$.
+\end{lemma}
+
+\begin{proof}
+  Let $S(x) = \sum_{y \in V(G)} q^{d(x,y)}$ for a vertex $x \in V(G)$. We show that $S(x)$ does not depend on the choice of $x$.  Take any vertices $a,b \in V(G)$.
+  Since $G$ is vertex-transitive, there exists $g \in \aut(G)$ such that $b = g(a)$.
+  Then,
+  \[
+    \begin{split}
+      S(b) &= \sum_{y \in V(G)} q^{d(b,y)} \\
+      &= \sum_{y \in V(G)} q^{d(g(a),y)} \\
+      &= \sum_{y \in V(G)} q^{d(g(a), g(y))} \quad (\text{since } g \text{ is bijective}) \\
+      &= \sum_{y \in V(G)} q^{d(a,y)} \quad (\text{since } g \text{ is an isomorphism})  \\
+      &= S(a)
+    \end{split}
+  \]
+
+  Thus, $S(x)$ does not depend on the choice of $x$, denoting it by $S$.
+  Now, we define a function $\tilde{w}_G : V(G) \rightarrow \mathbb{Q}(q)$ by $\tilde{w}_G(x) = \frac{1}{S}$ for any vertex $x \in V(G)$.
+  Then $\tilde{w}_G$ satisfies the weighting equation and by \cref{unique property on weighting equation}, we have $\# G = \frac{|V(G)|}{S}$.
+  
+\end{proof}
+
+
+\begin{example}
+  \item aj
+\end{example}
+
+
+
+
+
+
+
+
+
 
 \subsection{The magnitude of union}
 
