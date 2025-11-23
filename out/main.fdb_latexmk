@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1763897470.5636 "out/main.dvi" "out/main.pdf" "out/main" 1763897470.78729 0
-  "out/main.dvi" 1763897470.54674 26168 d81adc55d8eabf62a46f18e419f685c0 "latex"
+["dvipdf"] 1763898291.90208 "out/main.dvi" "out/main.pdf" "out/main" 1763898292.13004 0
+  "out/main.dvi" 1763898291.88503 27280 c7388e1445da8f2fb4138aca45b96c91 "latex"
   (generated)
   "out/main.pdf"
   (rewritten before read)
-["latex"] 1763897470.09862 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1763897470.78667 0
-  "/Users/kensh/Documents/src/graduation-research/main.tex" 1763897469.92086 11068 b4d7751c29b5c48233770b5b0b9c45dc ""
+["latex"] 1763898291.46694 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1763898292.12943 0
+  "/Users/kensh/Documents/src/graduation-research/main.tex" 1763898291.29056 11730 59692b9d400146a812c39442c9c38580 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1246382020 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -38,6 +38,8 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti7.tfm" 1136768653 1492 86331993fe614793f5e7e755835c31c5 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti8.tfm" 1136768653 1504 1747189e0441d1c18f3ea56fafc1c480 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-h.tfm" 1522271273 812 52bd92aa20c58a398601cda6dd62c8d1 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm" 1522271273 536 5f2475e9deb198c23894800d3c5eed00 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-h.tfm" 1522271273 812 52bd92aa20c58a398601cda6dd62c8d1 ""
@@ -94,10 +96,10 @@
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "Tikz/Graphs/out/K_3.pdf" 1763831490.05265 1014 4c82f6f1e0a987a52a880d4bf114def3 ""
-  "main.tex" 1763897469.92086 11068 b4d7751c29b5c48233770b5b0b9c45dc ""
-  "out/main.aux" 1763897470.54612 2017 2408a9551fa10000cb4b32d25963eaa7 "latex"
-  "out/main.out" 1763897470.54655 2288 5f4dc9cfc34a597cc99663fef0129feb "latex"
-  "out/main.toc" 1763897470.54671 951 863a8b68a552b99cb807a9697e9cef55 "latex"
+  "main.tex" 1763898291.29056 11730 59692b9d400146a812c39442c9c38580 ""
+  "out/main.aux" 1763898291.88434 2017 67523cef20efa8daa771b57ada728689 "latex"
+  "out/main.out" 1763898291.88483 2288 5f4dc9cfc34a597cc99663fef0129feb "latex"
+  "out/main.toc" 1763898291.88499 951 863a8b68a552b99cb807a9697e9cef55 "latex"
   (generated)
   "out/main.aux"
   "out/main.dvi"
