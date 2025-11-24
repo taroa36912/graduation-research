@@ -327,26 +327,162 @@ We can define a \textit{graph automorphism} using the definition above. We denot
     Then, $\aut(G)$ contains $D_{10}$ as its subgroup and $G$ is vertex-transitive. $S = 1 + 3q + 6q^2$ and we have $\# G = \frac{10}{1 + 3q + 6q^2}$.
     \item $G = K_{m,n}$(complete bipartite graph). \\
     \graph{K_mn.pdf} \\
-    Then, $\aut(G) \approx \mathfrak{S}_m \times \mathfrak{S}_n$ if $m \neq n$ and $G$ is not vertex-transitive. You can calculate the magnitude as follows:
+    Then, $\aut(G) \approx \mathfrak{S}_m \times \mathfrak{S}_n$ if $m \neq n$ and $G$ is not vertex-transitive. You can calculate the magnitude with other methods. Let $a,b$ be the weight of vertices on each part of $K_{m,n}$. Then, the weighting equation is written by two equations as follows:
+    \[
+      \begin{cases}
+        \{ q^0 + (m-1)q^2 \} a + nqb = 1 \\
+        \{q^0 + (n-1)q^2 \} b + mqa = 1
+      \end{cases}
+    \]
+    You can solve this and we have 
+    \[
+      \# K_{m,n} = ma + nb = \frac{(m+n) - (2mn - m - n)q}{(1+q)(1-(m-1)(n-1)q^2)}
+    \]
   \end{enumerate}
 \end{example}
 
+\begin{lemma}
+  Let $G$ and $H$ be graphs. Then, 
+  \[
+    \#(G \sqcup H) = \# G + \# H
+  \]
+  where $G \sqcup H$ is the disjoint union of $G$ and $H$.
+\end{lemma}
 
+\begin{proof}
+  $Z_{G \sqcup H} = 
+  \begin{pmatrix}
+    Z_G & O \\
+    O & Z_H
+  \end{pmatrix}$,
 
+  $Z_{G \sqcup H}^{-1} = 
+  \begin{pmatrix}
+    Z_G^{-1} & O \\
+    O & Z_H^{-1}
+  \end{pmatrix}$.
 
+  Thus, 
+  \[
+    \#(G \sqcup H) = \tsum(Z_{G \sqcup H}^{-1}) = \tsum(Z_G^{-1}) + \tsum(Z_H^{-1}) = \# G + \# H
+  \]
+\end{proof}
 
+\begin{definition}
+  Let $G$ and $H$ be graphs. The \textit{cartesian product} $G \square H$ of $G$ and $H$ is the graph defined as follows;
+  \begin{itemize}
+    \item $V(G \square H) = V(G) \times V(H)$
+    \item $E(G \square H) = \{\{ (x,y), (x', y') \} | x=x' \text{ and } \{y,y'\} \in E(H) \text{ or } y=y' \text{ and } \{x,x'\} \in E(G)\}$.
+  \end{itemize}
+\end{definition}
 
+\begin{lemma}
+  $\# G \square H = \# G \cdot \# H$
+\end{lemma}
 
+\begin{proof}
+  For $x, x' \in V(G)$ and $y, y' \in V(H)$, \\
+  $d_{G \square H}((x,y), (x',y')) = d_G(x,x') + d_H(y,y')$ \\
+  $\Rightarrow Z_{G \square H}((x,y), (x',y')) = q^{d_{G \square H}((x,y), (x',y'))} = q^{d_G(x,x')} q^{d_H(y,y')} = Z_G(x,x') Z_H(y,y')$ \\
+  $\Rightarrow Z_{G \square H} = Z_G \otimes Z_H$ and then $Z_{G \square H}^{-1} = Z_G^{-1} \otimes Z_H^{-1}$ \\
+  $\Rightarrow \# G \square H = \tsum(Z_{G \square H}^{-1}) = \tsum(Z_G^{-1} \otimes Z_H^{-1}) = \tsum(Z_G^{-1}) \cdot \tsum(Z_H^{-1}) = \# G \cdot \# H$ \\
 
+  We used the fact that $(P \otimes Q)(R \otimes S) = (PR) \otimes (QS)$ for proper matrices $P,Q,R,S$.
+\end{proof}
 
+\begin{example}
+  See $G = K_2 \square K_3$. \\
+  $\# K_2 \square K_3 = \# K_2 \cdot \# K_3 = \frac{2}{1+q} \cdot \frac{3}{1+2q} = \frac{6}{(1+q)(1+2q)} = \# K_{3,3}$.
+\end{example}
 
-\subsection{The magnitude of union}
+\begin{remark}
+  Here we use the catesian product for graph product, but there are other graph products such as the tensor product and strong product. However, there is a reason that we use the catesian product. This will be clear in Section 4.
+\end{remark}
 
+\begin{proposition}
+  Let $G$ be a graph. Then,
+  \[
+  \begin{split}
+    \# G(q) &= \sum_{k=0}^{\infty} (-1)^k \sum_{x_0 \neq x_1 \neq \cdots \neq x_k} q^{d(x_0, x_1) + d(x_1, x_2) + \cdots + d(x_{k-1}, x_k)} \\
+    &= \sum_{n=0}^{\infty} c_n q^n
+  \end{split}
+  \]
+  where $c_n = \sum_{k=0}^{n} (-1)^k |\{ (x_0, \dots, x_k) | x_0 \neq x_1 \neq \cdots \neq x_k, d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) = n \}|$
+\end{proposition}
 
+\begin{proof}
+  aaa
+\end{proof}
 
+\begin{corollary}
+  Let $G$ be a graph.
+  $|V(G)| = \# G(0), |E(G)| = - \frac{1}{2} \left. \frac{d}{dq} \# G(q) \right|_{q=0}$.
+  Here, the derivative is taken in $\mathbb{Z}[[q]]$.
+\end{corollary}
 
+\begin{proof}
+  From the previous proposition, we have
+  \[
+    \begin{split}
+      c_0 &= \sum_{k=0}^{0}(-1)^k |\{ (x_0, \dots, x_k) | x_0 \neq x_1 \neq \cdots \neq x_k, d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) = n \}| \\
+      &= |\{ (x_0) | x_0 \in V(G) \}| \\
+      &= |V(G)|
+    \end{split}
+  \]
+  and
+  \[
+    \begin{split}
+      c_1 &= |\{ (x_0) | d(x_0, x_0) = 1 \}| - |\{ (x_0, x_1) | x_0 \neq x_1, d(x_0, x_1) = 1 \}| \\
+      &= 0 - 2|E(G)| \\
+      &= -2|E(G)|
+    \end{split}
+  \]
+  This corollary immidiately follows from these equations.
+\end{proof}
 
+\begin{remark}
+  $c_0 \geq 0, c_1 \leq 0, \text{ and } c_2 \geq 0$. $c_2 = 0$ if and only if
+\end{remark}
 
+\subsection{The main result of magnitude of graphs}
+This section states the inclusion-exclusion principle of magnitude of graphs under some conditions.
+First, we see that the magnitude does not satisfy the inclusion-exclusion principle in general.
+Then, we introduce the sufficient condition for the inclusion-exclusion principle to hold.
+
+\begin{definition}
+  Let $R$ be a ring. A function $\Phi$ is an \textit{$R$-valued graph invariant} if
+  \begin{itemize}
+    \item $\Phi(G) \in R$ for any graph $G$
+    \item If $G \approx H$ as a graph then $\Phi(G) = \Phi(H)$
+  \end{itemize}
+\end{definition}
+
+\begin{definition}
+  Let $\Phi$ be an $R$-valued graph invariant. \\
+  1. $\Phi$ is said to be multiplicative if
+  \begin{itemize}
+    \item $\Phi(K_1) = 1$
+    \item $\Phi(G \square H) = \Phi(G) \cdot \Phi(H)$ for any graphs $G$ and $H$
+  \end{itemize}
+
+  2. $\Phi$ is said to satisfy the inclusion-exclusion principle if
+  \begin{itemize}
+    \item $\Phi(\emptyset) = 0$
+    \item $\Phi(G \cup H) = \Phi(G) + \Phi(H) - \Phi(G \cap H)$ for any graphs $G$ and $H$
+  \end{itemize}
+\end{definition}
+
+\begin{lemma}
+  Let $R$ be a ring containing no nonzero nilpotents and $\Phi$ be a multiplicative $R$-valued graph invariant satisfying the inclusion-exclusion principle. Then, $\Phi(G) = |V(G)|$ for any graph $G$.
+\end{lemma}
+
+\begin{proof}
+  aaa
+\end{proof}
+
+\begin{corollary}
+  The magnitude does not satisfy the inclusion-exclusion principle in general.
+\end{corollary}
 
 
 % Section 3
