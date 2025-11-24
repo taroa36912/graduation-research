@@ -192,12 +192,32 @@ INPUT ./Tikz/Graphs/out/K_3.pdf
 INPUT ./Tikz/Graphs/out/K_3.pdf
 INPUT ./Tikz/Graphs/out/K_3.pdf
 INPUT extractbb -B cropbox -O Tikz/Graphs/out/K_3.pdf
+INPUT ./Tikz/Graphs/out/n_vertex.pdf
+INPUT ./Tikz/Graphs/out/n_vertex.pdf
+INPUT ./Tikz/Graphs/out/n_vertex.pdf
+INPUT Tikz/Graphs/out/n_vertex.xbb
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
+INPUT ./Tikz/Graphs/out/K_n.pdf
+INPUT ./Tikz/Graphs/out/K_n.pdf
+INPUT ./Tikz/Graphs/out/K_n.pdf
+INPUT extractbb -B cropbox -O Tikz/Graphs/out/K_n.pdf
+INPUT ./Tikz/Graphs/out/C_n.pdf
+INPUT ./Tikz/Graphs/out/C_n.pdf
+INPUT ./Tikz/Graphs/out/C_n.pdf
+INPUT extractbb -B cropbox -O Tikz/Graphs/out/C_n.pdf
+INPUT ./Tikz/Graphs/out/Petersen.pdf
+INPUT ./Tikz/Graphs/out/Petersen.pdf
+INPUT ./Tikz/Graphs/out/Petersen.pdf
+INPUT extractbb -B cropbox -O Tikz/Graphs/out/Petersen.pdf
+INPUT ./Tikz/Graphs/out/K_mn.pdf
+INPUT ./Tikz/Graphs/out/K_mn.pdf
+INPUT ./Tikz/Graphs/out/K_mn.pdf
+INPUT extractbb -B cropbox -O Tikz/Graphs/out/K_mn.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT out/main.aux

@@ -1,11 +1,10 @@
 # Fdb version 4
-["dvipdf"] 1763969969.30157 "out/K_3.dvi" "out/K_3.pdf" "out/K_3" 1763969969.51257 0
-  "out/K_3.dvi" 1763969969.28702 2212 c73a1ec1b354ec88f1486f063fc08606 "latex"
+["dvipdf"] 1763971149.17346 "out/C_n.dvi" "out/C_n.pdf" "out/C_n" 1763971149.36525 0
+  "out/C_n.dvi" 1763971149.14645 5548 fb64b41f8c8d6273fa1dacaf455f88d0 "latex"
   (generated)
-  "out/K_3.pdf"
+  "out/C_n.pdf"
   (rewritten before read)
-["latex"] 1763969969.0128 "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_3.tex" "out/K_3.dvi" "K_3" 1763969969.5119 0
-  "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_3.tex" 1763969968.7432 341 37d125c5b81b1a686beb0b45d0950a0a ""
+["latex"] 1763971148.83084 "C_n.tex" "out/C_n.dvi" "C_n" 1763971149.36464 0
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1673816307 1016 1c2b89187d12a2768764b83b4945667c ""
@@ -26,6 +25,7 @@
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex" 1755201859 35251 5ff5b5b310c5ac882610e0ccc99095e7 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex" 1673816307 22012 81b34a0aa8fa1a6158cc6220b00e4f10 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex" 1601326656 8893 e851de2175338fdf7c17f3e091d94618 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex" 1601326656 15929 463535aa2c4268fead6674a75c0e8266 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex" 1608933718 11518 738408f795261b70ce8dd47459171309 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex" 1755201859 186859 0445d9a41a87648b4723e04765409541 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex" 1601326656 32995 ac577023e12c0e4bd8aa420b2e852d1a ""
@@ -93,10 +93,10 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "K_3.tex" 1763969968.7432 341 37d125c5b81b1a686beb0b45d0950a0a ""
-  "out/K_3.aux" 1763969969.28665 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "C_n.tex" 1763971122.73886 1503 19c9e6b1b7235876c9fb83f9ff287847 ""
+  "out/C_n.aux" 1763971149.14612 32 3985256e7290058c681f74d7a3565a19 "latex"
   (generated)
-  "out/K_3.aux"
-  "out/K_3.dvi"
-  "out/K_3.log"
+  "out/C_n.aux"
+  "out/C_n.dvi"
+  "out/C_n.log"
   (rewritten before read)

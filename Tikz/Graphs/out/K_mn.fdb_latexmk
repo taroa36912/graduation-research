@@ -1,11 +1,10 @@
 # Fdb version 4
-["dvipdf"] 1763969969.30157 "out/K_3.dvi" "out/K_3.pdf" "out/K_3" 1763969969.51257 0
-  "out/K_3.dvi" 1763969969.28702 2212 c73a1ec1b354ec88f1486f063fc08606 "latex"
+["dvipdf"] 1763972013.45565 "out/K_mn.dvi" "out/K_mn.pdf" "out/K_mn" 1763972013.64818 0
+  "out/K_mn.dvi" 1763972013.42824 6892 015464c44f5a9ee6a2f1c36a769a5c52 "latex"
   (generated)
-  "out/K_3.pdf"
+  "out/K_mn.pdf"
   (rewritten before read)
-["latex"] 1763969969.0128 "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_3.tex" "out/K_3.dvi" "K_3" 1763969969.5119 0
-  "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_3.tex" 1763969968.7432 341 37d125c5b81b1a686beb0b45d0950a0a ""
+["latex"] 1763972013.10891 "K_mn.tex" "out/K_mn.dvi" "K_mn" 1763972013.64762 0
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1673816307 1016 1c2b89187d12a2768764b83b4945667c ""
@@ -93,10 +92,10 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "K_3.tex" 1763969968.7432 341 37d125c5b81b1a686beb0b45d0950a0a ""
-  "out/K_3.aux" 1763969969.28665 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "K_mn.tex" 1763972006.0353 1391 fcd5f265ac73d4b96abbd5bf44f9ac7d ""
+  "out/K_mn.aux" 1763972013.42792 32 3985256e7290058c681f74d7a3565a19 "latex"
   (generated)
-  "out/K_3.aux"
-  "out/K_3.dvi"
-  "out/K_3.log"
+  "out/K_mn.aux"
+  "out/K_mn.dvi"
+  "out/K_mn.log"
   (rewritten before read)

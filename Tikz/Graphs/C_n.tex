@@ -1,0 +1,18 @@
+\documentclass[dvipdfmx]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}
+  \def\R{2.0}
+  \tikzset{dot/.style={circle, fill=black, inner sep=2pt}}
+  \node[dot] (v1) at (90:\R) {};
+  \node[dot] (v2) at (135:\R) {};
+  \node[dot] (vn) at (45:\R) {};
+  \node[dot] (v3) at (180:\R) {};
+  \node[dot] (vn1) at (0:\R) {};
+  \draw (vn1) -- (vn) -- (v1) -- (v2) -- (v3);
+  \node at (270:\R) {$\dots$};
+  \draw (v3) -- ($(v3)!0.3!(225:\R)$);
+  \draw (vn1) -- ($(vn1)!0.3!(315:\R)$);
+\end{tikzpicture}
+\end{document}

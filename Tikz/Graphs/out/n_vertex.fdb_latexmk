@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1763969969.30157 "out/K_3.dvi" "out/K_3.pdf" "out/K_3" 1763969969.51257 0
-  "out/K_3.dvi" 1763969969.28702 2212 c73a1ec1b354ec88f1486f063fc08606 "latex"
+["dvipdf"] 1763969192.02777 "out/n_vertex.dvi" "out/n_vertex.pdf" "out/n_vertex" 1763969192.2133 0
+  "out/n_vertex.dvi" 1763969192.0135 4284 d4a7a6336fc27179f2c8dc9feafb367e "latex"
   (generated)
-  "out/K_3.pdf"
+  "out/n_vertex.pdf"
   (rewritten before read)
-["latex"] 1763969969.0128 "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_3.tex" "out/K_3.dvi" "K_3" 1763969969.5119 0
-  "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_3.tex" 1763969968.7432 341 37d125c5b81b1a686beb0b45d0950a0a ""
+["latex"] 1763969191.76071 "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/n_vertex.tex" "out/n_vertex.dvi" "n_vertex" 1763969192.21271 0
+  "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/n_vertex.tex" 1763969191.5997 391 fc67ce4b78cf015f732b9ed768ed1958 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1673816307 1016 1c2b89187d12a2768764b83b4945667c ""
@@ -93,10 +93,10 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "K_3.tex" 1763969968.7432 341 37d125c5b81b1a686beb0b45d0950a0a ""
-  "out/K_3.aux" 1763969969.28665 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "n_vertex.tex" 1763969191.5997 391 fc67ce4b78cf015f732b9ed768ed1958 ""
+  "out/n_vertex.aux" 1763969192.0132 32 3985256e7290058c681f74d7a3565a19 "latex"
   (generated)
-  "out/K_3.aux"
-  "out/K_3.dvi"
-  "out/K_3.log"
+  "out/n_vertex.aux"
+  "out/n_vertex.dvi"
+  "out/n_vertex.log"
   (rewritten before read)

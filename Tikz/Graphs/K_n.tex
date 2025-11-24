@@ -1,0 +1,47 @@
+\documentclass[dvipdfmx]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{calc} % 座標計算のために必要
+
+\begin{document}
+
+\begin{tikzpicture}
+    % ===================================
+    % 設定
+    % ===================================
+    \def\R{2.0} % 半径
+    \tikzset{dot/.style={circle, fill=black, inner sep=2pt}}
+    % ===================================
+
+    % 1. 頂点配置
+    \node[dot] (v1) at (120:\R) {}; % 左上
+    \node[dot] (v2) at (60:\R) {};  % 右上
+    \node[dot] (vn) at (300:\R) {}; % 右下
+
+    % 2. 仮想的な隣の頂点（描画はしない、方向の基準用）
+    \coordinate (next_to_v1) at (180:\R);
+    \coordinate (next_to_v2) at (0:\R);
+    \coordinate (next_to_vn_1) at (0:\R);
+    \coordinate (next_to_vn_2) at (240:\R);
+
+    % 3. 完全グラフの辺（3頂点を互いに結ぶ）
+    \draw (v1) -- (v2);
+    \draw (v2) -- (vn);
+    \draw (vn) -- (v1);
+
+    % 4. 正六角形の輪郭を「少しだけ」伸ばす
+    % ($(A)!0.3!(B)$) は「AからBに向かって30%の位置」という意味です
+    \draw (v1) -- ($(v1)!0.3!(next_to_v1)$);
+    \draw (v2) -- ($(v2)!0.3!(next_to_v2)$);      % 右上から右へ
+    \draw (vn) -- ($(vn)!0.3!(next_to_vn_1)$);    % 右下から右へ
+    \draw (vn) -- ($(vn)!0.3!(next_to_vn_2)$);
+
+    % 5. 省略記号 (...) の配置
+    % 右側：右へ伸びる2本の辺のちょうど間（0度地点）
+    \node at (0:\R) {$\dots$};
+
+    % 左下側：斜めに配置
+    \node[rotate=60] at (210:\R) {$\dots$};
+
+\end{tikzpicture}
+
+\end{document}

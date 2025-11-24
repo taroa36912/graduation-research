@@ -1,0 +1,13 @@
+\documentclass[dvipdfmx]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \def\dist{1.0} 
+  \tikzset{large_dot/.style={circle, fill=black, inner sep=3pt}}
+  \node[large_dot] at (0, 0) {};
+  \node[large_dot] at (\dist, 0) {};
+  \node[large_dot] at (2*\dist, 0) {};
+  \node at (3*\dist, 0) {$\cdots$};
+  \node[large_dot] at (4*\dist, 0) {};
+\end{tikzpicture}
+\end{document}

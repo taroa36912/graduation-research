@@ -12,8 +12,6 @@
 \usepackage{enumitem}
 
 \usepackage{graphicx}
-\graphicspath{{Tikz/Graphs/out/}}
-
 \usepackage{amsthm}
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[subsection]
@@ -48,6 +46,9 @@
 \newcommand{\tsum}{\text{sum}}
 \newcommand{\tadj}{\text{adj}}
 \newcommand{\aut}{\text{Aut}}
+\newcommand{\graph}[1]{%
+    \raisebox{-0.5\height}{\includegraphics{Tikz/Graphs/out/#1}}%
+}
 
 
 
@@ -187,8 +188,8 @@ $G$-matrix is the square synmetric matrix.
 \begin{example}
   Let $G = K_3$(complete graph with three vertices).
   ~
-
-  \raisebox{-0.5\height}{\includegraphics{Tikz/Graphs/out/K_3.pdf}}
+  \graph{K_3.pdf}
+  ~
   Then, you can calculate the magnitude of $K_3$ as follows:
   \[
     Z_{K_3}(q) = \begin{pmatrix}
@@ -309,13 +310,24 @@ We can define a \textit{graph automorphism} using the definition above. We denot
 
 \begin{example}
   \begin{enumerate}[label=(\roman*)]
-    \item $G = V_n$ (edgeless graph with $n$ vertices). Then, $\aut(G) \approx \mathfrak{S}_n$ and $G$ is vertex-transitive. $S = 1$ and we have $\# V_n = n$.
-    \item $G = K_n$ (complete graph with $n$ vertices). Then, $\aut(G) \approx \mathfrak{S}_n$ and $G$ is vertex-transitive. $S = 1 + (n-1)q$ and we have $\# K_n = \frac{n}{1 + (n-1)q}$.
-    \item $G = C_n$ (cycle graph with $n$ vertices). Then, $\aut(G) \approx D_{2n}$ and $G$ is vertex-transitive.
+    \item $G = V_n$ (edgeless graph with $n$ vertices). \\
+    \graph{n_vertex.pdf} \\ 
+    Then, $\aut(G) \approx \mathfrak{S}_n$ and $G$ is vertex-transitive. $S = 1$ and we have $\# V_n = n$.
+    \item $G = K_n$ (complete graph with $n$ vertices). \\
+    \graph{K_n.pdf} \\
+    Then, $\aut(G) \approx \mathfrak{S}_n$ and $G$ is vertex-transitive. $S = 1 + (n-1)q$ and we have $\# K_n = \frac{n}{1 + (n-1)q}$.
+    \item $G = C_n$ (cycle graph with $n$ vertices). \\
+    \graph{C_n.pdf} \\
+    Then, $\aut(G) \approx D_{2n}$ and $G$ is vertex-transitive.
     If $n = 2m$(even), then $S = 1 + 2(q + q^2 + \cdots + q^{m-1}) + q^m = \frac{1 + q - q^m - q^{m+1}}{1 - q}$. Thus, we have $\# C_{2m} = \frac{2m(1-q)}{(1+q)(1-q^m)} = \frac{n(1-q)}{(1+q)(1-q^m)}$.
-    If $n = 2m-1$(odd), then similarly $\# C_{2m-1} = \frac{n(1-q)}{1+q-2q^m}$.
-    \item $G$ is a Petersen graph. Then, $\aut(G)$ contains $D_{10}$ as its subgroup and $G$ is vertex-transitive. $S = 1 + 3q + 6q^2$ and we have $\# G = \frac{10}{1 + 3q + 6q^2}$.
-    \item $G = K_{m,n}$(complete bipartite graph). Then, $\aut(G) \approx \mathfrak{S}_m \times \mathfrak{S}_n$ if $m \neq n$ and $G$ is not vertex-transitive. You can calculate the magnitude as follows:
+    If $n = 2m-1$(odd), then similarly 
+    $\# C_{2m-1} = \frac{n(1-q)}{1+q-2q^m}$.
+    \item $G$ is a Petersen graph. \\
+    \graph{Petersen.pdf} \\
+    Then, $\aut(G)$ contains $D_{10}$ as its subgroup and $G$ is vertex-transitive. $S = 1 + 3q + 6q^2$ and we have $\# G = \frac{10}{1 + 3q + 6q^2}$.
+    \item $G = K_{m,n}$(complete bipartite graph). \\
+    \graph{K_mn.pdf} \\
+    Then, $\aut(G) \approx \mathfrak{S}_m \times \mathfrak{S}_n$ if $m \neq n$ and $G$ is not vertex-transitive. You can calculate the magnitude as follows:
   \end{enumerate}
 \end{example}
 

@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1763898291.90208 "out/main.dvi" "out/main.pdf" "out/main" 1763898292.13004 0
-  "out/main.dvi" 1763898291.88503 27280 c7388e1445da8f2fb4138aca45b96c91 "latex"
+["dvipdf"] 1763972040.53841 "out/main.dvi" "out/main.pdf" "out/main" 1763972040.77508 0
+  "out/main.dvi" 1763972040.52038 28236 a7b2a5ab9471ee2cb07464d87e2f979f "latex"
   (generated)
   "out/main.pdf"
   (rewritten before read)
-["latex"] 1763898291.46694 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1763898292.12943 0
-  "/Users/kensh/Documents/src/graduation-research/main.tex" 1763898291.29056 11730 59692b9d400146a812c39442c9c38580 ""
+["latex"] 1763972039.74906 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1763972040.77438 0
+  "/Users/kensh/Documents/src/graduation-research/main.tex" 1763972039.45607 11908 ba6a142ccee44c7cec23702cb94dcb2c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1246382020 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -95,11 +95,17 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "Tikz/Graphs/out/K_3.pdf" 1763831490.05265 1014 4c82f6f1e0a987a52a880d4bf114def3 ""
-  "main.tex" 1763898291.29056 11730 59692b9d400146a812c39442c9c38580 ""
-  "out/main.aux" 1763898291.88434 2017 67523cef20efa8daa771b57ada728689 "latex"
-  "out/main.out" 1763898291.88483 2288 5f4dc9cfc34a597cc99663fef0129feb "latex"
-  "out/main.toc" 1763898291.88499 951 863a8b68a552b99cb807a9697e9cef55 "latex"
+  "Tikz/Graphs/out/C_n.pdf" 1763971149.35278 2204 cb915a0faa49e6f1679de7266245a4d3 ""
+  "Tikz/Graphs/out/K_3.pdf" 1763969969.50069 1015 52b9dcc7bb7255e8dd4cd48dea70856b ""
+  "Tikz/Graphs/out/K_mn.pdf" 1763972013.6366 2335 e2480949c0b5d3a321cbc77057100b05 ""
+  "Tikz/Graphs/out/K_n.pdf" 1763970917.66224 2121 705e8b346914d42b9eee9e382e218f83 ""
+  "Tikz/Graphs/out/Petersen.pdf" 1763971653.85786 1825 fb6b0381a38b01a99e185f7cca654924 ""
+  "Tikz/Graphs/out/n_vertex.pdf" 1763969192.20198 2085 76f65b71985b64b4306d7748bf0b7ffd ""
+  "Tikz/Graphs/out/n_vertex.xbb" 1763969652.45016 239 46931e924c7340ffb2002b72d03fb43e ""
+  "main.tex" 1763972039.45607 11908 ba6a142ccee44c7cec23702cb94dcb2c ""
+  "out/main.aux" 1763972040.51979 2021 fd04a0ab98da0fd9dff5ec11b1de1638 "latex"
+  "out/main.out" 1763972040.5202 2288 5f4dc9cfc34a597cc99663fef0129feb "latex"
+  "out/main.toc" 1763972040.52034 955 be70044163a944d33de8c137c93b43ff "latex"
   (generated)
   "out/main.aux"
   "out/main.dvi"
