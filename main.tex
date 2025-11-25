@@ -484,6 +484,88 @@ Then, we introduce the sufficient condition for the inclusion-exclusion principl
   The magnitude does not satisfy the inclusion-exclusion principle in general.
 \end{corollary}
 
+\begin{example}label{Willerton}
+  
+\end{example}
+
+\begin{definition}
+  Let $X$ be a graph and $U$ be a subgraph of $X$.
+  $U$ is said to be \textit{convex} in $X$ if for any vertices $x,y \in V(U)$, $d_U(x,y) = d_X(x,y)$.
+\end{definition}
+
+\begin{lemma}
+  Let $X$ be a graph and $G,H$ be subgraphs of $X$ such that $X = G \cup H$.
+  In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H))$.
+  Let $g \in V(G)$ and $h \in V(H)$ such that there is a path $(g = x_0 \rightarrow x_1 \rightarrow \dots \rightarrow x_n = h)$ in $X$.
+  Then, there exists a vertex $x_i \in V(G) \cap V(H)$.
+\end{lemma}
+
+\begin{proof}
+  aaa
+\end{proof}
+
+\begin{lemma}
+  Let $X$ be a graph and $G,H$ be subgraphs of $X$ such that $X = G \cup H$.
+  If $G \cap H$ is convex in $X$, then $G$ and $H$ are also convex in $X$.
+\end{lemma}
+
+\begin{proof}
+  aaa
+\end{proof}
+
+\begin{definition}
+  Let $X$ be a graph and $U$ be a subgraph of $X$ such that $U$ is convex in $X$. Write $V_U(X) = \{ v \in V(X) | d_X(v,u) < \infty \text{ for some } u \in V(U) \}$.
+  Then, we say that $X$ projects to $U$ if for any $x \in V_U(X)$, there exists $\pi(x) \in V(U)$ such that for any $u \in V(U)$, $d_X(x,u) = d_X(x, \pi(x)) + d_X(\pi(x),u)$.
+\end{definition}
+
+\begin{lemma}
+  If $X$ projects to $U$, then $\pi(x)$ is uniquely determined for any $x \in V_U(X)$.
+\end{lemma}
+
+\begin{proof}
+  aaa
+\end{proof}
+
+\begin{example}
+  aaa
+\end{example}
+
+\begin{lemma}
+  Let $X$ be a graph and $U \subset X$ be a convex subgraph of $X$ such that $X$ projects to $U$.
+  Then, for any $u \in V(U)$, 
+  \[
+    w_U(u) = \sum_{x \in \pi^{-1}(u)}q^{d_X(u, x)}w_X(x)
+  \]
+\end{lemma}
+
+\begin{proof}
+  aaa
+\end{proof}
+
+\begin{theorem}(main theorem I)
+  Let $X$ be a graph and $G,H$ be subgraphs of $X$ such that $X = G \cup H$.
+  If $G \cap H$ is convex in $X$ and $H$ projects to $G \cap H$, then
+  \[
+    \# X = \# G + \# H - \#(G \cap H)
+  \]
+\end{theorem}
+
+Before proving this theorem, we give the example of graphs which does not satisfy the assumption of this theorem.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 % Section 3
 \newpage
