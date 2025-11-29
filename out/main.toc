@@ -3,8 +3,8 @@
 \contentsline {subsection}{\numberline {2.1}The definition of the magnitude of Graphs}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Basic Properties and Examples}{7}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}The main result of magnitude of graphs}{11}{subsection.2.3}%
-\contentsline {section}{\numberline {3}The Magnitude Homology of Graphs}{14}{section.3}%
-\contentsline {subsection}{\numberline {3.1}The Definition of the magnitude homology of graphs}{14}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Magnitude Homology of Graphs is Categorification of Magnitude of Graphs}{14}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}u}{14}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Motivation : The Magnitude of Enriched Categories}{15}{section.4}%
+\contentsline {section}{\numberline {3}The Magnitude Homology of Graphs}{15}{section.3}%
+\contentsline {subsection}{\numberline {3.1}The Definition of the magnitude homology of graphs}{15}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Magnitude Homology of Graphs is Categorification of Magnitude of Graphs}{16}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}u}{16}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Motivation : The Magnitude of Enriched Categories}{17}{section.4}%

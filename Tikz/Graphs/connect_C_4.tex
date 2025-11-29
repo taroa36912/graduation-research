@@ -1,0 +1,73 @@
+\documentclass[dvipdfmx]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes, calc, positioning}
+
+\begin{document}
+
+\begin{tikzpicture}[>=latex, thick]
+    \tikzset{
+        dot/.style={circle, fill=black, inner sep=2pt},
+        blob/.style={fill=gray!20, draw=black, thin},
+        shared_edge/.style={ultra thick, red},
+        graph_label/.style={font=\Large\bfseries}
+    }
+
+    \begin{scope}[local bounding box=UnionGraph]
+        \coordinate (L_u) at (-1.5, 0);
+        \coordinate (L_v) at (1.5, 0);
+        \draw[blob] (L_u) 
+            .. controls (-2.5, -2.5) and (2.5, -2.5) .. (L_v) 
+            -- cycle;
+        
+        \node[dot] (g1) at (-0.5, -1) {};
+        \node[dot] (g2) at (0.8, -1.5) {};
+        \draw (L_u) -- (g1) -- (L_v);
+        \draw (g1) -- (g2) -- (L_v);
+        \node[graph_label] at (0, -1) {$G$};
+        \coordinate (L_x) at (1.5, 2);
+        \coordinate (L_y) at (-1.5, 2);
+        \draw (L_u) -- (L_y) -- (L_x) -- (L_v);
+        \node[graph_label] at (0, 1) {$H$};
+        \draw[shared_edge] (L_u) -- (L_v);
+        \node[dot] at (L_u) {}; \node[dot] at (L_v) {};
+        \node[dot] at (L_x) {}; \node[dot] at (L_y) {};
+        \node at (0, -3.5) {$G \cup H$};
+    \end{scope}
+    \draw[->, ultra thick, shorten >= 1cm, shorten <= 1cm] 
+        ($(UnionGraph.east) + (0.5, 0)$) -- ++(3, 0) 
+        node[midway, above] {separation};
+    \begin{scope}[shift={(8, 0)}, local bounding box=SepGraph]
+        \coordinate (R_Gu) at (-1.5, 0);
+        \coordinate (R_Gv) at (1.5, 0);
+        \draw[blob] (R_Gu) 
+            .. controls (-2.5, -2.5) and (2.5, -2.5) .. (R_Gv) 
+            -- cycle;
+        \node[dot] (rg1) at (-0.5, -1) {};
+        \node[dot] (rg2) at (0.8, -1.5) {};
+        \draw (R_Gu) -- (rg1) -- (R_Gv);
+        \draw (rg1) -- (rg2) -- (R_Gv);
+        \draw[shared_edge] (R_Gu) -- (R_Gv);
+        \node[dot] at (R_Gu) {}; \node[dot] at (R_Gv) {};
+        \node[graph_label] at (0, -1) {$G$};
+        \begin{scope}[yshift=1.5cm] 
+            \coordinate (R_Hu) at (-1.5, 0);
+            \coordinate (R_Hv) at (1.5, 0);
+            \coordinate (R_Hx) at (1.5, 2);
+            \coordinate (R_Hy) at (-1.5, 2);
+
+            \draw (R_Hu) -- (R_Hy) -- (R_Hx) -- (R_Hv);
+            \draw[shared_edge] (R_Hu) -- (R_Hv); 
+
+            \node[dot] at (R_Hu) {}; \node[dot] at (R_Hv) {};
+            \node[dot] at (R_Hx) {}; \node[dot] at (R_Hy) {};
+            \node[graph_label] at (0, 1) {$H$};
+        \end{scope}
+        \draw[dotted, gray] (R_Gu) -- ++(0, 1.5);
+        \draw[dotted, gray] (R_Gv) -- ++(0, 1.5);
+        \node at (0, -3.5) {$G, H$ (separated)};
+
+    \end{scope}
+
+\end{tikzpicture}
+
+\end{document}
