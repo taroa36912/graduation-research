@@ -46,6 +46,7 @@
 \newcommand{\tsum}{\text{sum}}
 \newcommand{\tadj}{\text{adj}}
 \newcommand{\aut}{\text{Aut}}
+\newcommand{\isom}{\xrightarrow{\sim}}
 \newcommand{\graph}[1]{%
     \raisebox{-0.5\height}{\includegraphics{Tikz/Graphs/out/#1}}%
 }
@@ -665,9 +666,205 @@ In this section, we define the magnitude homology of a graph $G$, give some very
 % Section 4
 \newpage
 \section{Motivation : The Magnitude of Enriched Categories}
+In this section, I explain the motivation of why we study the magnitude of graphs in a larger context. We use the notion of enriched categories to define the magnitude.
+
+\subsection{the magnitude of a matrix}
+\begin{definition}
+  Let $k$ be a set and $+, \cdot $ be a binary operation on $k$, and $0_k, 1_k$ be elements of $k$.
+  Then, $(k, +, \cdot, 0_k, 1_k)$ is called a \textit{rig} if the following conditions hold:
+  \begin{itemize}
+    \item $(k, +, 0_k)$ is a commutative monoid
+    \item $(k, \cdot, 1_k)$ is a monoid
+    \item multiplication distributes over addition
+  \end{itemize}
+  Now, we mean a rig as a commutative rig with the operation $\cdot$.
+\end{definition}
+
+\begin{example}
+  $(\mathbb{Z}_{\geq 0}, +, \cdot, 0, 1)$ is a rig.
+\end{example}
+
+\begin{definition}
+  Let $k$ be a rig and $I, J$ be finite sets.
+  A $I \times J$-matrix is a function $\zeta : I \times J \rightarrow k$.
+\end{definition}
+
+\begin{remark}
+  Let $k$ be a rig, and $I, J, L$ be finite sets.
+  \begin{enumerate}
+    \item If $\zeta_1$ is an $I \times J$-matrix and $\zeta_2$ is a $J \times L$-matrix, then the product $\zeta_1 \zeta_2$ is defined as follows:
+    \[
+      (\zeta_1 \zeta_2)(i,l) = \sum_{j \in J} \zeta_1(i,j) \cdot \zeta_2(j,l) \quad (i \in I, l \in L)
+    \]
+
+    \item $\delta : I \times I \rightarrow k$ is called the \textit{identity matrix} if $\delta(i,j) = 1_k$ when $i=j$ and $\delta(i,j) = 0_k$ when $i \neq j$.
+    
+    \item Let $\zeta : I \times J \rightarrow k$ be a matrix. We define $\zeta^* : J \times I \rightarrow k$ by $\zeta^*(j,i) = \zeta(i,j)$.
+    
+    \item Let $\zeta$ be an $I \times I$-matrix. If there exists an $I \times I$-matrix $\zeta^{-1}$ such that $\zeta \zeta^{-1} = \delta$ and $\zeta^{-1} \zeta = \delta$, then $\zeta$ is said to be \textit{invertible} and $\zeta^{-1}$ is called the \textit{inverse} of $\zeta$.
+    
+    \item $w : I \rightarrow k$ is called a \textit{vector}. $w$ can be thought of as an element of $k^I$. If $\zeta$ is an $I \times J$-matrix, $v$ is a $I$-vector, and $w$ is a $J$-vector, then the product $\zeta w : I \rightarrow k$ and $v \zeta : J \rightarrow k$ are defined by
+    \[
+      (\zeta w)(i) = \sum_{j \in J} \zeta(i,j) \cdot w(j) \quad (i \in I)
+    \]
+    \[
+      (v \zeta)(j) = \sum_{i \in I} v(i) \cdot \zeta(i,j) \quad (j \in J)
+    \]
+    Now, $\zeta w$ is a $I$-vector and $v \zeta$ is a $J$-vector.
+
+    \item If $w, v$ are $I$-vectors, then the \textit{inner product} $v w$ is defined by
+    \[
+      v w = \sum_{i \in I} v(i) \cdot w(i)
+    \]
+
+    \item A vector $u_I : I \rightarrow k$ is defined by $u_I(i) = 1_k$ for any $i \in I$.
+  \end{enumerate}
+\end{remark}
+
+
+\begin{definition}
+  Let $\zeta$ be an $I \times I$-matrix over a rig $k$.
+  \begin{itemize}
+    \item A \textit{weighting} on $\zeta$ is a vector $w : J \rightarrow k$ such that $\zeta w = u_I$.
+    $w(j)$ is called the \textit{weight} of $j \in J$.
+    \item A \textit{coweighting} on $\zeta$ is a vector $v : I \rightarrow k$ such that $v \zeta = u_I^*$. $v(i)$ is called the \textit{coweight} of $i \in I$.
+  \end{itemize}
+\end{definition}
+
+\begin{example}
+  Let $G$ be a graph.
+  Then, $Z_G(q)$ is a $V(G) \times V(G)$-matrix over the rig $\mathbb{Q}[[q]]$ and the weighting on $Z_G(q)$ is the weighting on $G$ defined in Section 2.1.
+\end{example}
+
+\begin{lemma}\label{sum_of_w.c.}
+  Let $\zeta$ be an $I \times I$-matrix over a rig $k$.
+  If $\zeta$ has a weighting $w$ and a coweighting $v$, then
+  \[
+    \sum_{i \in I} v(i) = \sum_{j \in J} w(j)
+  \]
+\end{lemma}
+
+\begin{proof}
+  \[
+    \begin{split}
+      \sum_{i \in I} v(i) &= v u_I \\
+      &= v (\zeta w) \\
+      &= (v \zeta) w \\
+      &= u_J w \\
+      &= \sum_{j \in J} w(j)
+    \end{split}
+  \]
+\end{proof}
+
+From this lemma, the sum of the weighting or coweighting on $\zeta$ is unique if they exist. Therefore, we can define the magnitude of $\zeta$ as follows:
+
+\begin{definition}
+  Let $\zeta$ be an $I \times J$-matrix over a rig $k$.
+  If $\zeta$ has a weighting and a coweighting, then the \textit{magnitude} of $\zeta$ is defined to be
+  \[
+    \# \zeta = \sum_{i \in I} v(i) = \sum_{j \in J} w(j)
+  \]
+  where $w$ is the weighting on $\zeta$ and $v$ is the coweighting on $\zeta$.
+\end{definition}
+
+\begin{lemma}
+  Let $\zeta$ be an $I \times I$-matrix over a rig $k$.
+  \begin{enumerate}
+    \item If $\zeta$ is invertible, then $\zeta$ has the magnitude.
+    \item If $k$ is a field and $\zeta$ has the magnitude, then $\zeta$ is invertible.
+  \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+  (1) If $\zeta$ is invertible, then $w = \zeta^{-1} u_I$ and $v = u_I \zeta^{-1}$ obviously satisfy the definition of weighting and coweighting respectively. Thus $\zeta$ has the magnitude by \cref{sum_of_w.c.}.
+
+  (2) If $k$ is a field and $\zeta$ has the magnitude, then there exist a weighting $w$ and a coweighting $v$ on $\zeta$.
+  Let $\zeta x$ be a zero-map for some $x : I \rightarrow k$. Then,
+  \[
+    0 = v (\zeta x) = (v \zeta) x = u_I x = \sum_{i \in I} x(i)
+  \]
+  ここからやり直し
+\end{proof}
+
+\begin{lemma}
+  Let $\zeta$ be an invertible $I \times I$-matrix over a rig $k$.
+  Then, $\zeta$ has the unique weighting $w$ of $\zeta$, given by $w(j) = \sum_{i \in I} \zeta^{-1}(j,i)$ for $j \in I$, and the unique coweighting $v$ of $\zeta$, given by $v(i) = \sum_{j \in I} \zeta^{-1}(j,i)$ for $i \in I$.
+  Then, \[
+    \# \zeta = \sum_{i,j \in I} \zeta^{-1}(j,i)
+  \]
+\end{lemma}
+
+\begin{proof}
+  We should check the uniqueness and it holds from the invertibility of $\zeta$.
+\end{proof}
 
 
 
+\subsection{The definition of enriched categories}
+In this document, we only treat the locally small categories, which means that for any objects $a,b$ of a category $\mathcal{C}$, the hom-set $\hom_{\mathcal{C}}(a,b)$ is a set.
+
+
+
+\begin{definition}
+  A category $\mathcal{C}$ is called a \textit{monoid} if $\mathcal{C}$ has only one object $*$ and $V=Hom_{\mathcal{C}}(*,*)$ is a monoid with the composition of morphisms as the binary operation and the identity morphism $id_*$ as the identity element. We denote the operation of $V$ by $\otimes$.
+  ここに可換図式を挿入
+\end{definition}
+
+\begin{definition}
+  A pair $(\mathcal{V}, \otimes, I)$ is called a \textit{monoidal category} if it satisfies the following conditions:
+  \begin{enumerate}
+    \item $\mathcal{V}$ is a category.
+    \item $\otimes : \mathcal{V} \times \mathcal{V} \rightarrow \mathcal{V}$ is a functor.
+    \item $I$ is an object of $\mathcal{V}$.
+    \item There exist the natural isomorphism $\alpha : \otimes \circ (\otimes \times id_{\mathcal{V}}) \Rightarrow \otimes \circ (id_{\mathcal{V}} \times \otimes)$ given by $\alpha_{uvw} : (u \otimes v) \otimes w \isom u \otimes (v \otimes w)$
+    \item There exist the natural isomorphism $\lambda : I \otimes - \Rightarrow id_{\mathcal{V}}$ given by $\lambda_u : I \otimes u \isom u$
+    \item There exist the natural isomorphism $\rho : - \otimes I \Rightarrow id_{\mathcal{V}}$ given by $\rho_u : u \otimes I \isom u$
+    \item The following diagram commutes for any objects $u,v,w,x$ of $\mathcal{V}$:
+    ここに可換図式を挿入
+    \item The following diagrams commute for any objects $u,v$ of $\mathcal{V}$:
+    ここに可換図式を挿入
+  \end{enumerate}
+\end{definition}
+
+\begin{example}
+  \begin{enumerate}[label=(\roman*)]
+    \item $(\textit{Set}, \times, \{*\})$ is a monoidal category.
+    ここに説明を挿入
+    \item $(\textit{Vect}_K, \otimes_K, K)$ is a monoidal category, where $K$ is a field.
+    ここに説明を挿入
+    \item $([0, \infty], +, 0)$ is a monoidal category.
+    ここに説明を挿入
+    \item $(\mathbf{2}, \otimes, t)$ is a monoidal category, where $\mathbf{2}$ is the category defined by $Ob(\mathbf{2}) = \{t,f\}$ and $\hom_{\mathbf{2}}(x,y) = \{*\}$ if $x \leq y$ and $\emptyset$ otherwise, and the operation $\otimes$ is defined by the following table:
+    \begin{center}
+      \begin{tabular}{c|cc}
+        $\otimes$ & $t$ & $f$ \\
+        \hline
+        $t$ & $t$ & $f$ \\
+        $f$ & $f$ & $f$ \\
+      \end{tabular}
+    \end{center}
+    ここに説明を挿入
+
+    Then, $\mathbf{2}$ is a monoidal subcategory of $[0, \infty]$ by the embedding $t \mapsto 0, f \mapsto \infty$ and of $\textit{Set}$ by the embedding $t \mapsto \{*\}, f \mapsto \emptyset$.
+  \end{enumerate}
+\end{example}
+
+\begin{definition}
+  An \textit{enriched category} $\mathcal{A}$ in a monoidal category $(\mathcal{V}, \otimes, I)$ is defined as follows:
+
+  \begin{enumerate}
+    \item For any objects $a,b$ of $\mathcal{A}$, $\hom_{\mathcal{A}}(a,b)$ is an object of $\mathcal{V}$.
+    \item For any objects $a,b,c$ of $\mathcal{A}$, there exists a morphism $m_{abc} : \hom_{\mathcal{A}}(b,c) \otimes \hom_{\mathcal{A}}(a,b) \rightarrow \hom_{\mathcal{A}}(a,c)$ in $\mathcal{V}$, which defines the composition of morphisms.
+    \item For any object $a$ of $\mathcal{A}$, there exists a morphism $j_a : I \rightarrow \hom_{\mathcal{A}}(a,a)$ in $\mathcal{V}$, which defines the identity morphism of $a$.
+    あと３つの可換図式を挿入
+  \end{enumerate}
+
+  Then, $A$ is called a \textit{$\mathcal{V}$-category}.
+\end{definition}
+
+\begin{definition}
+  
+\end{definition}
 
 
 
