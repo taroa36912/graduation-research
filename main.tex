@@ -47,6 +47,7 @@
 \newcommand{\tadj}{\text{adj}}
 \newcommand{\aut}{\text{Aut}}
 \newcommand{\isom}{\xrightarrow{\sim}}
+\newcommand{\mor}{\text{Mor}}
 \newcommand{\graph}[1]{%
     \raisebox{-0.5\height}{\includegraphics{Tikz/Graphs/out/#1}}%
 }
@@ -859,12 +860,43 @@ In this document, we only treat the locally small categories, which means that f
     あと３つの可換図式を挿入
   \end{enumerate}
 
-  Then, $A$ is called a \textit{$\mathcal{V}$-category}.
+  Then, $\mathcal{A}$ is called a \textit{$\mathcal{V}$-category}.
 \end{definition}
 
 \begin{definition}
+  Let $\mathcal{A}, \mathcal{A}'$ be $\mathcal{V}$-categories. A functor $F:\mathcal{A} \rightarrow \mathcal{A}'$ is called a \textit{$\mathcal{V}$-functor} if it satisfies the following conditions. We denote $F_{ab} : \mor_{\mathcal{A}}(a,b) \rightarrow \mor_{\mathcal{A}'}(F(a),F(b))$ as the morphism function.
+  \begin{enumerate}
+    \item The following diagram commutes for any objects $a,b,c$ of $\mathcal{A}$:
+    ここに可換図式を挿入
+    \item The following diagram commutes for any object $a$ of $\mathcal{A}$:
+    ここに可換図式を挿入
+  \end{enumerate}
+\end{definition}
+
+\begin{remark}
+  The family of all $\mathcal{V}$-categories and $\mathcal{V}$-functors form a category, which is denoted by $\mathcal{V}\textit{-Cat}$.
+\end{remark}
+
+\begin{example}
+  aaa
+\end{example}
+
+
+\subsection{The magnitude of enriched categories}
+\begin{definition}
+  Let $(\mathcal{V}, \otimes, I)$ be a monoidal category and $k$ be a rig.
   
 \end{definition}
+
+
+
+
+
+
+
+
+
+
 
 
 

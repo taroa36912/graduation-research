@@ -10,3 +10,4 @@
 \contentsline {section}{\numberline {4}Motivation : The Magnitude of Enriched Categories}{17}{section.4}%
 \contentsline {subsection}{\numberline {4.1}the magnitude of a matrix}{17}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}The definition of enriched categories}{20}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}The magnitude of enriched categories}{22}{subsection.4.3}%
