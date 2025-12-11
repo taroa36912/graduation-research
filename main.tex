@@ -3,26 +3,51 @@
 \renewcommand{\contentsname}{Contents}
 \renewcommand{\refname}{References}
 
-\usepackage[dvipdfmx]{graphicx}
-\usepackage[dvipdfmx, hidelinks]{hyperref}
 \usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{aliascnt}
+\usepackage[dvipdfmx, hidelinks]{hyperref}
+\usepackage[capitalize]{cleveref}
+\usepackage[dvipdfmx]{graphicx}
 \usepackage{amssymb}
 \usepackage{bm}
-\usepackage{cleveref}
 \usepackage{enumitem}
 
-\usepackage{graphicx}
-\usepackage{amsthm}
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[subsection]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
+\crefname{theorem}{Theorem}{Theorems}
+\Crefname{theorem}{Theorem}{Theorems}
+\newaliascnt{proposition}{theorem}
+\newtheorem{proposition}[proposition]{Proposition}
+\aliascntresetthe{proposition}
+\crefname{proposition}{Proposition}{Propositions}
+\Crefname{proposition}{Proposition}{Propositions}
+\newaliascnt{lemma}{theorem}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+\crefname{lemma}{Lemma}{Lemmas}
+\Crefname{lemma}{Lemma}{Lemmas}
+\newaliascnt{corollary}{theorem}
+\newtheorem{corollary}[corollary]{Corollary}
+\aliascntresetthe{corollary}
+\crefname{corollary}{Corollary}{Corollaries}
+\Crefname{corollary}{Corollary}{Corollaries}
 \theoremstyle{definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{remark}[theorem]{Remark}
-
+\newaliascnt{definition}{theorem}
+\newtheorem{definition}[definition]{Definition}
+\aliascntresetthe{definition}
+\crefname{definition}{Definition}{Definitions}
+\Crefname{definition}{Definition}{Definitions}
+\newaliascnt{example}{theorem}
+\newtheorem{example}[example]{Example}
+\aliascntresetthe{example}
+\crefname{example}{Example}{Examples}
+\Crefname{example}{Example}{Examples}
+\newaliascnt{remark}{theorem}
+\newtheorem{remark}[remark]{Remark}
+\aliascntresetthe{remark}
+\crefname{remark}{Remark}{Remarks}
+\Crefname{remark}{Remark}{Remarks}
 
 \setlength{\topmargin}{0truecm}
 
@@ -48,11 +73,19 @@
 \newcommand{\aut}{\text{Aut}}
 \newcommand{\isom}{\xrightarrow{\sim}}
 \newcommand{\mor}{\text{Mor}}
+\newcommand{\rank}{\text{rank}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\VV}{\mathcal{V}}
+\newcommand{\calA}{\mathcal{A}}
+\newcommand{\llbracket}{\[\[}
+\newcommand{\rrbracket}{\]\]}
 \newcommand{\graph}[1]{%
     \raisebox{-0.5\height}{\includegraphics{Tikz/Graphs/out/#1}}%
 }
-
-
 
 
 
@@ -139,10 +172,10 @@ Lamport's guide to \LaTeX\ \cite{Lamport94}.
 In this section, we define the magnitude of a graph $G$ and the magnitude homology of a graph $G$, give some very basic examples and properties.
 By a \textit{graph} we mean a finite undirected graph with no loops or multiple edges. The set of vertices of a graph $G$ is denoted by $V(G)$, and the set of edges of $G$ is denoted by $E(G)$. If $x$ and $y$ are vertices of a graph $G$, then the \textit{distance} $d_G(x,y)$ between $x$ and $y$ is defined to be the length of a shortest edge path from $x$ to $y$. If $x$ and $y$ lie in different components of $G$ then $d(x,y)=\infty$.
 \subsection{The definition of the magnitude of Graphs}
-Here, we difine the magnitude of a graph, which can be expressed as either a rational function over $\mathbb{Q}$ or a formal power series over $\mathbb{Z}$. Write $\mathbb{Z}[q]$ for the polynomial ring over the integers in one variable $q$ and $\mathbb{Z}[[q]]$ for the ring of formal power series over the integers in one variable $q$.
+Here, we difine the magnitude of a graph, which can be expressed as either a rational function over $\QQ$ or a formal power series over $\ZZ$. Write $\ZZ[q]$ for the polynomial ring over the integers in one variable $q$ and $\ZZ[[q]]$ for the ring of formal power series over the integers in one variable $q$.
 
 \begin{definition}
-  Let $G$ be a graph. We define the \textit{$G$-matrix} $Z_G = Z_G(q)$ over $\mathbb{Z}[q]$ whose rows and columns are indexed by the vertices of $G$, and whose $(x,y)$-entry is given by
+  Let $G$ be a graph. We define the \textit{$G$-matrix} $Z_G = Z_G(q)$ over $\ZZ[q]$ whose rows and columns are indexed by the vertices of $G$, and whose $(x,y)$-entry is given by
   \[
   Z_G(q)(x,y) = q^{d(x,y)} \quad (x,y \in V(G))
   \]
@@ -165,7 +198,7 @@ $G$-matrix is the square synmetric matrix.
   \[
   \# G(q) = \sum_{x,y \in V(G)} (Z_G(q))^{-1}(x,y)
   \]
-  in the rational function field $\mathbb{Q}(q)$. 
+  in the rational function field $\QQ(q)$. 
 \end{definition}
 
 \begin{remark}
@@ -176,15 +209,15 @@ $G$-matrix is the square synmetric matrix.
 \end{remark}
 
 \begin{proposition}
-  $\# G(q)$ takes values in $\mathbb{Z}[[q]]$.
+  $\# G(q)$ takes values in $\ZZ[[q]]$.
 \end{proposition}
 
 \begin{proof}
-  Let $\det Z_G(q) = 1 - qf(q)$ for some $f(q) \in \mathbb{Z}[q]$ by \cref{invertible}. Then we have 
+  Let $\det Z_G(q) = 1 - qf(q)$ for some $f(q) \in \ZZ[q]$ by \cref{invertible}. Then we have 
   \[
     \# G(q) = \frac{\tsum(\tadj(Z_G))}{\det(Z_G)} = \tsum(\tadj(Z_G)) \sum_{n=0}^{\infty} q^n f(q)^n
   \]
-  Note that $qf(q)$ has no constant term and then $\sum_{n=0}^{\infty} q^n f(q)^n$ takes values in $\mathbb{Z}[[q]]$.
+  Note that $qf(q)$ has no constant term and then $\sum_{n=0}^{\infty} q^n f(q)^n$ takes values in $\ZZ[[q]]$.
 \end{proof}
 
 \begin{example}
@@ -192,7 +225,7 @@ $G$-matrix is the square synmetric matrix.
   ~
   \graph{K_3.pdf}
   ~
-  Then, you can calculate the magnitude of $K_3$ as follows:
+  Then, we can calculate the magnitude of $K_3$ as follows:
   \[
     Z_{K_3}(q) = \begin{pmatrix}
       1 & q & q \\
@@ -216,7 +249,7 @@ $G$-matrix is the square synmetric matrix.
     w_G(x)(q) = \sum_{y \in V(G)}(Z_G(q))^{-1}(x,y)
   \]
 
-  The function $w_G : V(G) \rightarrow \mathbb{Q}(q)$ is called the \textit{weighting} on $G$.
+  The function $w_G : V(G) \rightarrow \QQ(q)$ is called the \textit{weighting} on $G$.
 \end{definition}
 
 The magnitude can be expressed using the weighting as follows:
@@ -240,7 +273,7 @@ The magnitude can be expressed using the weighting as follows:
     &= \sum_{z \in V(G)} \sum_{y \in V(G)}Z_G(x,y)Z_G^{-1}(y,z) \\
     &= \sum_{z \in V(G)}(Z_G Z_G^{-1})(x,z) \\
     &= \sum_{z \in V(G)}I(x,z) \\
-    = 1.
+    &= 1.
   \end{split}
   \]
 \end{proof}
@@ -248,7 +281,7 @@ The magnitude can be expressed using the weighting as follows:
 This equation is called the \textit{weighting equation}.
 
 \begin{lemma}\label{unique property on weighting equation}
-  Let $G$ be a graph and $\tilde{w}_G : V(G) \rightarrow \mathbb{Q}$ be a function satisfying a weighting equation.
+  Let $G$ be a graph and $\tilde{w}_G : V(G) \rightarrow \QQ$ be a function satisfying a weighting equation.
   Then, $\tilde{w}_G = w_G$. Now, $w_G$ is the weighting on $G$.
 \end{lemma}
 
@@ -265,7 +298,7 @@ This lemma shows that the weighting on a graph is unique and we use this frequen
 
 
 \subsection{Basic Properties and Examples}
-Here we give the most basic facts about magnitude. We focus on transitive graphs, disjoint unions, catesian products, and how the magnitude behaves within $\mathbb{Z}[[q]]$.
+Here we give the most basic facts about magnitude. We focus on transitive graphs, disjoint unions, catesian products, and how the magnitude behaves within $\ZZ[[q]]$.
 
 \begin{definition}
   Let $G = (V(G), E(G)), H = (V(H), E(H))$ be a graph.
@@ -304,7 +337,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   \]
 
   Thus, $S(x)$ does not depend on the choice of $x$, denoting it by $S$.
-  Now, we define a function $\tilde{w}_G : V(G) \rightarrow \mathbb{Q}(q)$ by $\tilde{w}_G(x) = \frac{1}{S}$ for any vertex $x \in V(G)$.
+  Now, we define a function $\tilde{w}_G : V(G) \rightarrow \QQ(q)$ by $\tilde{w}_G(x) = \frac{1}{S}$ for any vertex $x \in V(G)$.
   Then $\tilde{w}_G$ satisfies the weighting equation and by \cref{unique property on weighting equation}, we have $\# G = \frac{|V(G)|}{S}$.
   
 \end{proof}
@@ -329,14 +362,14 @@ We can define a \textit{graph automorphism} using the definition above. We denot
     Then, $\aut(G)$ contains $D_{10}$ as its subgroup and $G$ is vertex-transitive. $S = 1 + 3q + 6q^2$ and we have $\# G = \frac{10}{1 + 3q + 6q^2}$.
     \item $G = K_{m,n}$(complete bipartite graph). \\
     \graph{K_mn.pdf} \\
-    Then, $\aut(G) \approx \mathfrak{S}_m \times \mathfrak{S}_n$ if $m \neq n$ and $G$ is not vertex-transitive. You can calculate the magnitude with other methods. Let $a,b$ be the weight of vertices on each part of $K_{m,n}$. Then, the weighting equation is written by two equations as follows:
+    Then, $\aut(G) \approx \mathfrak{S}_m \times \mathfrak{S}_n$ if $m \neq n$ and $G$ is not vertex-transitive. We can calculate the magnitude with other methods. Let $a,b$ be the weight of vertices on each part of $K_{m,n}$. Then, the weighting equation is written by two equations as follows:
     \[
       \begin{cases}
         \{ q^0 + (m-1)q^2 \} a + nqb = 1 \\
         \{q^0 + (n-1)q^2 \} b + mqa = 1
       \end{cases}
     \]
-    You can solve this and we have 
+    We can solve this and we have 
     \[
       \# K_{m,n} = ma + nb = \frac{(m+n) - (2mn - m - n)q}{(1+q)(1-(m-1)(n-1)q^2)}
     \]
@@ -401,7 +434,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   Here we use the catesian product for graph product, but there are other graph products such as the tensor product and strong product. However, there is a reason that we use the catesian product. This will be clear in Section 4.
 \end{remark}
 
-\begin{proposition}
+\begin{proposition}\label{sum_of_magnitude}
   Let $G$ be a graph. Then,
   \[
   \begin{split}
@@ -419,7 +452,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
 \begin{corollary}
   Let $G$ be a graph.
   $|V(G)| = \# G(0), |E(G)| = - \frac{1}{2} \left. \frac{d}{dq} \# G(q) \right|_{q=0}$.
-  Here, the derivative is taken in $\mathbb{Z}[[q]]$.
+  Here, the derivative is taken in $\ZZ[[q]]$.
 \end{corollary}
 
 \begin{proof}
@@ -600,7 +633,7 @@ Furthermore examples.
 % Section 3
 \newpage
 \section{The Magnitude Homology of Graphs}
-In this section, we define the magnitude homology of a graph $G$, give some very
+In this section, we define the magnitude homology of a graph $G$, give some very basic examples and properties, and state the Mayer-Vietoris sequence for the magnitude homology of graphs.
 
 
 \subsection{The Definition of the magnitude homology of graphs}
@@ -614,6 +647,7 @@ In this section, we define the magnitude homology of a graph $G$, give some very
     \end{split}
   \]
   Now, let $l(x_0) = 0$.
+  We say the tuple $(x_0, \dots, x_k)$ is \textit{good} if $x_0 \neq x_1 \neq \cdots \neq x_k$.
 \end{definition}
 
 \begin{lemma}(Triangle inequality)
@@ -626,10 +660,10 @@ In this section, we define the magnitude homology of a graph $G$, give some very
   Let $G$ be a graph.
   $MC_{*,*}(G)$ is the \textit{magnitude complex} defined as follows:
   \[
-    MC_{*,*}(G) = \bigoplus_{l=0}MC_{*, l}(G)
+    MC_{*,*}(G) = \bigoplus_{l=0}^{\infty} MC_{*, l}(G)
   \]
-  For non-negative integers $k$ and $l$, $MC_{k,l}(G)$ is freely generated by tuples $(x_0, \dots, x_k)$ of $V(G)$ satisfying $x_0 \neq x_1 \neq \cdots \neq x_k$ and $l(x_0, \dots, x_k) = l$.
-  The coefficient ring is $\mathbb{Z}$.
+  For non-negative integers $k$ and $l$, $MC_{k,l}(G)$ is freely generated by good tuples $(x_0, \dots, x_k)$ of $V(G)$ of length $l$.
+  The coefficient ring is $\ZZ$.
   The differential $\partial : MC_{k,l}(G) \rightarrow MC_{k-1,l}(G)$ is defined by
   \[
     \partial = \sum_{i=1}^{k-1} (-1)^{i-1} \partial_i
@@ -637,7 +671,7 @@ In this section, we define the magnitude homology of a graph $G$, give some very
   where $\partial_i (x_0, \dots, x_k) = (x_0, \dots, \hat{x_i}, \dots, x_k)$ if $l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, x_k)$ and $0$ otherwise.
 \end{definition}
 
-\begin{remark}
+\begin{remark}For a good tuple $(x_0, \dots, x_k)$,
   \[
     \partial_i(x_0, \dots, x_k) \neq 0 \iff d(x_{i-1}, x_i) + d(x_i, x_{i+1}) = d(x_{i-1}, x_{i+1})
   \]  
@@ -651,10 +685,230 @@ In this section, we define the magnitude homology of a graph $G$, give some very
   aaa.
 \end{proof}
 
+\begin{definition}(magnitude homology)
+  Let $G$ be a graph.
+  The \textit{magnitude homology} $MH_{*,*}(G)$ of $G$ is the homology of the magnitude chain complex $MC_{*,*}(G)$.
+  That is,
+  \[
+    MH_{k,l}(G) = H_k(MC_{*,l}(G))
+  \]
+\end{definition}
 
-\subsection{Magnitude Homology of Graphs is Categorification of Magnitude of Graphs}
+\begin{example}
+  \begin{enumerate}[label=(\roman*)]
+    \item $G = V_n$. Then,
+    \[
+      MC_{k,l}(V_n) = \begin{cases}
+        \ZZ\{(x) | x \in V(V_n) \} & (k=l=0) \\
+        0 & (\text{otherwise})
+      \end{cases}
+    \]
+    $\partial = 0$ inplies that
+    \[
+      MH_{k,l}(V_n) \approx \begin{cases}
+        \ZZ^n & (k=l=0) \\
+        0 & (\text{otherwise})
+      \end{cases}
+    \]
+    \item $G = K_n (n \geq 2)$. Then, $l(x_0, \cdots, x_k) = k$ for any good tuple $(x_0, \cdots, x_k)$ of $V(K_n)$. Thus,
+    \[
+      MC_{k,l}(K_n) = \begin{cases}
+        \ZZ\{(x_0, \dots, x_k) | x_0 \neq x_1 \neq \cdots \neq x_k \} & (l=k) \\
+        0 & (\text{otherwise})
+      \end{cases}
+    \]
+    $\partial = 0$ inplies that
+    \[
+      MH_{k,l}(K_n) \approx \begin{cases}
+        \ZZ^{n(n-1)^l} & (l=k) \\
+        0 & (\text{otherwise})
+      \end{cases}
+    \]
+    \item $G = C_5$. Number the vertices of $C_5$ as shown in the following figure. \\
+    ここにナンバリングした$C_5$の図を挿入 \\
+    Let us consider $MH_{2,3}(C_5)$.
+    続く
+  \end{enumerate}
+\end{example}
+
+\begin{definition}
+  A graph $G$ is said to be \textit{diagonal} if $MH_{k,l}(G) = 0$ for $k \neq l$.
+\end{definition}
+
+\begin{lemma}
+  A tree is diagonal.
+\end{lemma}
+
+\begin{proof}
+  aaa
+\end{proof}
+
+\begin{theorem}
+  Let $G$ be a graph. Then, 
+  \[
+    \sum_{k,l \geq 0} (-1)^k \rank (MH_{k,l}(G)) q^l = \# G ~ \text{in} ~  \ZZ[[q]].
+  \] 
+\end{theorem}
+
+\begin{proof}
+  \[
+  \begin{split}
+    (LHS) &= \sum_{l \geq 0} \chi(MH_{*,l}(G)) q^l \\
+    &= \sum_{l \geq 0} \chi(MC_{*,l}(G))q^l \\
+    &= \sum_{k,l \geq 0} (-1)^k \rank(MC_{k,l}(G))q^l \\
+    &= \sum_{k \geq 0} (-1)^k \sum_{x_0 \neq \cdots \neq x_k} q^{d(x_0, x_1) + \cdots + d(x_{k-1}, x_k)} \\
+    &= \# G.
+  \end{split}
+  \]
+  The last equation is obtained by \cref{sum_of_magnitude}.
+\end{proof}
+
+\begin{proposition}
+  Let $G$ be a graph.
+  \begin{itemize}
+    \item $MH_{0,0}(G) \approx \ZZ^{|V(G)|}$
+    \item $MH_{1,1}(G) \approx \ZZ^{2|E(G)|}$
+  \end{itemize}
+\end{proposition}
+
+\begin{proof}
+  \[
+      MC_{k,0}(G) = \begin{cases}
+        \ZZ\{(x) | x \in V(G) \} & (k=0) \\
+        0 & (\text{otherwise})
+      \end{cases}
+  \]
+  and $\partial = 0$ induces the first equation.
+  \[
+      MC_{k,1}(G) = \begin{cases}
+        \ZZ\{(x_0, x_1) | x_0 \neq x_1 \} & (k=1) \\
+        0 & (\text{otherwise})
+      \end{cases}
+    \]
+  and $\partial = 0$ induces the second equation.
+\end{proof}
+
+\begin{definition}
+  The diameter $d$ of a graph $G$ is defined by
+  \[
+    d = \max \{ d(x,y) | x,y \in V(G) \text{ and } x,y \text{ lie in the same component of G}\}.
+  \]
+  If $G = V_n$, then we define $d=0$.
+  Then, for any graph $G$, $0 \leq d < \infty$.
+
+\end{definition}
+
+\begin{proposition}
+  Let $G$ be a graph and $d$ be the diameter of $G$ and assume that $MH_{k,l}(G) \neq 0$ for given non-negative integers $k$ and $l$.
+  Then,
+  \begin{itemize}
+    \item $\frac{l}{d} \leq k \leq l$.
+    \item If $d > 1 \text{ and } l > 0 \text{, then } \frac{l}{d} < k \leq l$.
+  \end{itemize}
+\end{proposition}
+
+\begin{proof}
+  Since $MH_{k,l}(G) \neq 0$, there exists a good tuple $(x_0, \dots, x_k)$ of length $l$ such that $\partial (x_0, \dots, x_k) = 0$.
+  Thus, $l = l(x_0, \dots, x_k) = \sum_{i=1}^{k} d(x_{i-1}, x_i) \leq \sum_{i=1}^{k} d = kd$ and $l = \sum_{i=1}^{k} d(x_{i-1}, x_i) \geq k$.
+  This implies that $\frac{l}{d} \leq k \leq l$.
+  
+  Now, assume that $d > 1$ and $l > 0$ and suppose that $k = \frac{l}{d}$.
+  From the above discussion, we have $d(x_i, x_{i+1}) = d$ for all $i$. $\partial(x_0, \cdots, x_k) = 0$. For the $(k+1)$-tuple $\partial(x_0, \cdots, x_k)$ is a linear combination of at most $k-1$ distinct terms of $k$-tuples, so $\partial(x_0, \cdots, x_k) = 0$ implies $d(x_{i-1}, x_i) + d(x_i, x_{i+1}) \neq d(x_{i-1}, x_{i+1})$ for all $1 \leq i \leq k-1$.
+  Since $d(x_0, x_1) = d \geq 2$, there exists a vertex $y$ such that $d(x_0, y) + d(y, x_1) = d(x_0, x_1)$ and $y \neq x_0, x_1$.
+  Then, $(x_0, y, x_1, \cdots, x_k)$ is a good tuple in $MC_{k+1, l}(G)$ and \[
+    \partial_i(x_0, y, x_1, \cdots, x_k) =
+    \begin{cases}
+      (x_0, x_1, \cdots, x_k) & (i=1) \\
+      0 & (2 \leq i \leq k)
+    \end{cases}
+  \].
+  It is obvious for $3 \leq i$ by $d(x_{i-1}, x_i) + d(x_i, x_{i+1}) \neq d(x_{i-1}, x_{i+1})$ and is also true for $i=2$ since $d(y, x_1) + d(x_1, x_2) = d(y, x_1) + d > d \geq d(y, x_2)$. This implies $MH_{k,l}(G) = 0$ and contradicts the assumption.
+\end{proof}
+
+\subsection{Induced maps}
+\begin{definition}
+  Let $G$ and $H$ be graphs.
+  A map $f : V(G) \rightarrow V(H)$ is said to be a \textit{graph map} if for any $\{x,y\} \in E(G)$, either $f(x) = f(y)$ or $\{f(x), f(y)\} \in E(H)$.
+\end{definition}
+
+\begin{proposition}\label{f_inequality}
+  $l(f(x_0), \cdots, f(x_k)) \leq l(x_0, \cdots, x_k)$ for any good tuple $(x_0, \cdots, x_k)$ of $V(G)$.
+\end{proposition}
+
+\begin{proof}
+  For any vertices $x,y \in V(G)$, $d_H(f(x), f(y)) \leq d_G(x,y)$ holds. Indeed, if $x,y$ lie in the same component of $G$, then there exists a path $(x = x_0 \rightarrow x_1 \rightarrow \cdots \rightarrow x_n = y)$ in $G$ such that $n = d_G(x,y)$.
+  Since $f$ is a graph map, either $f(x_{i-1}) = f(x_i)$ or $\{f(x_{i-1}), f(x_i)\} \in E(H)$ for any $1 \leq i \leq n$.
+  Thus, $(f(x) = f(x_0) \rightarrow f(x_1) \rightarrow \cdots \rightarrow f(x_n) = f(y))$ is a path in $H$ and then $d_H(f(x), f(y)) \leq n = d_G(x,y)$.
+  If $x,y$ do not lie in the same component, then $d_G(x,y) = d_H(f(x), f(y)) = \infty$. Then,
+  \[
+    \begin{split}
+      l(f(x_0), \cdots, f(x_k)) &= \sum_{i=1}^{k} d_H(f(x_{i-1}), f(x_i)) \\
+      &\leq \sum_{i=1}^{k} d_G(x_{i-1}, x_i) \\
+      &= l(x_0, \cdots, x_k).
+    \end{split}
+  \]
+\end{proof}
+
+\begin{definition}
+  Let $G$ and $H$ be graphs and $f : V(G) \rightarrow V(H)$ be a graph map.
+  Then, the \textit{induced map} $f_{\#} : MC_{*,*}(G) \rightarrow MC_{*,*}(H)$ is defined by
+  \[
+    f_{\#}(x_0, \cdots, x_k) = \begin{cases}
+      (f(x_0), \cdots, f(x_k)) & l(f(x_0), \cdots, f(x_k)) = l(x_0, \cdots, x_k) \\
+      0 & \text{otherwise}
+    \end{cases}
+  \]
+  for any good tuple $(x_0, \cdots, x_k)$ of $V(G)$.
+\end{definition}
+
+\begin{proposition}
+  The induced map $f_{\#} : MC_{*,*}(G) \rightarrow MC_{*,*}(H)$ is a chain map.
+\end{proposition}
+
+\begin{proof}
+  aaa.
+\end{proof}
+
+\begin{definition}(Induced maps in homoplogy)
+  If $f : G \rightarrow H$ is a graph map, the \textit{induced map in homology} $f_* : MH_{*,*}(G) \rightarrow MH_{*,*}(H)$ is the map induced by the chain map $f_{\#} : MC_{*,*}(G) \rightarrow MC_{*,*}(H)$.
+\end{definition}
+
+\begin{proposition}
+  The assignment $G \mapsto MH_{*,*}(G)$ and $f \mapsto f_*$ defines a functor from the category of graphs and graph maps to the category of bigraded abelian groups and bigraded homomorphisms.
+\end{proposition}
+
+\begin{remark}
+  
+\end{remark}
+
+\begin{proposition}
+  Let $f:G \rightarrow H$ be a graph map. 
+\end{proposition}
+
+
 
 \subsection{u}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -682,7 +936,7 @@ In this section, I explain the motivation of why we study the magnitude of graph
 \end{definition}
 
 \begin{example}
-  $(\mathbb{Z}_{\geq 0}, +, \cdot, 0, 1)$ is a rig.
+  $(\ZZ_{\geq 0}, +, \cdot, 0, 1)$ is a rig.
 \end{example}
 
 \begin{definition}
@@ -734,7 +988,7 @@ In this section, I explain the motivation of why we study the magnitude of graph
 
 \begin{example}
   Let $G$ be a graph.
-  Then, $Z_G(q)$ is a $V(G) \times V(G)$-matrix over the rig $\mathbb{Q}[[q]]$ and the weighting on $Z_G(q)$ is the weighting on $G$ defined in Section 2.1.
+  Then, $Z_G(q)$ is a $V(G) \times V(G)$-matrix over the rig $\QQ [[ q]]$ and the weighting on $Z_G(q)$ is the weighting on $G$ defined in Section 2.1.
 \end{example}
 
 \begin{lemma}\label{sum_of_w.c.}
@@ -802,27 +1056,27 @@ From this lemma, the sum of the weighting or coweighting on $\zeta$ is unique if
 
 
 \subsection{The definition of enriched categories}
-In this document, we only treat the locally small categories, which means that for any objects $a,b$ of a category $\mathcal{C}$, the hom-set $\hom_{\mathcal{C}}(a,b)$ is a set.
+In this document, we only treat the locally small categories, which means that for any objects $a,b$ of a category $\CC$, the hom-set $\hom_{\CC}(a,b)$ is a set.
 
 
 
 \begin{definition}
-  A category $\mathcal{C}$ is called a \textit{monoid} if $\mathcal{C}$ has only one object $*$ and $V=Hom_{\mathcal{C}}(*,*)$ is a monoid with the composition of morphisms as the binary operation and the identity morphism $id_*$ as the identity element. We denote the operation of $V$ by $\otimes$.
+  A category $\CC$ is called a \textit{monoid} if $\CC$ has only one object $*$ and $V=Hom_{\CC}(*,*)$ is a monoid with the composition of morphisms as the binary operation and the identity morphism $id_*$ as the identity element. We denote the operation of $V$ by $\otimes$.
   ここに可換図式を挿入
 \end{definition}
 
 \begin{definition}
-  A pair $(\mathcal{V}, \otimes, I)$ is called a \textit{monoidal category} if it satisfies the following conditions:
+  A pair $(\VV, \otimes, I)$ is called a \textit{monoidal category} if it satisfies the following conditions:
   \begin{enumerate}
-    \item $\mathcal{V}$ is a category.
-    \item $\otimes : \mathcal{V} \times \mathcal{V} \rightarrow \mathcal{V}$ is a functor.
-    \item $I$ is an object of $\mathcal{V}$.
-    \item There exist the natural isomorphism $\alpha : \otimes \circ (\otimes \times id_{\mathcal{V}}) \Rightarrow \otimes \circ (id_{\mathcal{V}} \times \otimes)$ given by $\alpha_{uvw} : (u \otimes v) \otimes w \isom u \otimes (v \otimes w)$
-    \item There exist the natural isomorphism $\lambda : I \otimes - \Rightarrow id_{\mathcal{V}}$ given by $\lambda_u : I \otimes u \isom u$
-    \item There exist the natural isomorphism $\rho : - \otimes I \Rightarrow id_{\mathcal{V}}$ given by $\rho_u : u \otimes I \isom u$
-    \item The following diagram commutes for any objects $u,v,w,x$ of $\mathcal{V}$:
+    \item $\VV$ is a category.
+    \item $\otimes : \VV \times \VV \rightarrow \VV$ is a functor.
+    \item $I$ is an object of $\VV$.
+    \item There exist the natural isomorphism $\alpha : \otimes \circ (\otimes \times id_{\VV}) \Rightarrow \otimes \circ (id_{\VV} \times \otimes)$ given by $\alpha_{uvw} : (u \otimes v) \otimes w \isom u \otimes (v \otimes w)$
+    \item There exist the natural isomorphism $\lambda : I \otimes - \Rightarrow id_{\VV}$ given by $\lambda_u : I \otimes u \isom u$
+    \item There exist the natural isomorphism $\rho : - \otimes I \Rightarrow id_{\VV}$ given by $\rho_u : u \otimes I \isom u$
+    \item The following diagram commutes for any objects $u,v,w,x$ of $\VV$:
     ここに可換図式を挿入
-    \item The following diagrams commute for any objects $u,v$ of $\mathcal{V}$:
+    \item The following diagrams commute for any objects $u,v$ of $\VV$:
     ここに可換図式を挿入
   \end{enumerate}
 \end{definition}
@@ -851,30 +1105,30 @@ In this document, we only treat the locally small categories, which means that f
 \end{example}
 
 \begin{definition}
-  An \textit{enriched category} $\mathcal{A}$ in a monoidal category $(\mathcal{V}, \otimes, I)$ is defined as follows:
+  An \textit{enriched category} $\calA$ in a monoidal category $(\VV, \otimes, I)$ is defined as follows:
 
   \begin{enumerate}
-    \item For any objects $a,b$ of $\mathcal{A}$, $\hom_{\mathcal{A}}(a,b)$ is an object of $\mathcal{V}$.
-    \item For any objects $a,b,c$ of $\mathcal{A}$, there exists a morphism $m_{abc} : \hom_{\mathcal{A}}(b,c) \otimes \hom_{\mathcal{A}}(a,b) \rightarrow \hom_{\mathcal{A}}(a,c)$ in $\mathcal{V}$, which defines the composition of morphisms.
-    \item For any object $a$ of $\mathcal{A}$, there exists a morphism $j_a : I \rightarrow \hom_{\mathcal{A}}(a,a)$ in $\mathcal{V}$, which defines the identity morphism of $a$.
+    \item For any objects $a,b$ of $\calA$, $\hom_{\calA}(a,b)$ is an object of $\VV$.
+    \item For any objects $a,b,c$ of $\calA$, there exists a morphism $m_{abc} : \hom_{\calA}(b,c) \otimes \hom_{\calA}(a,b) \rightarrow \hom_{\calA}(a,c)$ in $\VV$, which defines the composition of morphisms.
+    \item For any object $a$ of $\calA$, there exists a morphism $j_a : I \rightarrow \hom_{\calA}(a,a)$ in $\VV$, which defines the identity morphism of $a$.
     あと３つの可換図式を挿入
   \end{enumerate}
 
-  Then, $\mathcal{A}$ is called a \textit{$\mathcal{V}$-category}.
+  Then, $\calA$ is called a \textit{$\VV$-category}.
 \end{definition}
 
 \begin{definition}
-  Let $\mathcal{A}, \mathcal{A}'$ be $\mathcal{V}$-categories. A functor $F:\mathcal{A} \rightarrow \mathcal{A}'$ is called a \textit{$\mathcal{V}$-functor} if it satisfies the following conditions. We denote $F_{ab} : \mor_{\mathcal{A}}(a,b) \rightarrow \mor_{\mathcal{A}'}(F(a),F(b))$ as the morphism function.
+  Let $\calA, \calA'$ be $\VV$-categories. A functor $F:\calA \rightarrow \calA'$ is called a \textit{$\VV$-functor} if it satisfies the following conditions. We denote $F_{ab} : \mor_{\calA}(a,b) \rightarrow \mor_{\calA'}(F(a),F(b))$ as the morphism function.
   \begin{enumerate}
-    \item The following diagram commutes for any objects $a,b,c$ of $\mathcal{A}$:
+    \item The following diagram commutes for any objects $a,b,c$ of $\calA$:
     ここに可換図式を挿入
-    \item The following diagram commutes for any object $a$ of $\mathcal{A}$:
+    \item The following diagram commutes for any object $a$ of $\calA$:
     ここに可換図式を挿入
   \end{enumerate}
 \end{definition}
 
 \begin{remark}
-  The family of all $\mathcal{V}$-categories and $\mathcal{V}$-functors form a category, which is denoted by $\mathcal{V}\textit{-Cat}$.
+  The family of all $\VV$-categories and $\VV$-functors form a category, which is denoted by $\VV\textit{-Cat}$.
 \end{remark}
 
 \begin{example}
@@ -884,7 +1138,7 @@ In this document, we only treat the locally small categories, which means that f
 
 \subsection{The magnitude of enriched categories}
 \begin{definition}
-  Let $(\mathcal{V}, \otimes, I)$ be a monoidal category and $k$ be a rig.
+  Let $(\VV, \otimes, I)$ be a monoidal category and $k$ be a rig.
   
 \end{definition}
 
@@ -922,15 +1176,15 @@ Addison-Wesley, 1984.
 \newpage
 \appendix
 \begin{proposition}
-  Let $G = K_{n,n}$. Then, $\aut(G) \approx (\mathfrak{S}_n \times \mathfrak{S}_n) \rtimes_s \mathbb{Z}_2$, where $s : \mathbb{Z}_2 \rightarrow \aut(G); 0 \mapsto id_G, 1 \mapsto \tau$ and $\tau$ is the automorphism which interchanges the two parts of $K_{n,n}$.
+  Let $G = K_{n,n}$. Then, $\aut(G) \approx (\mathfrak{S}_n \times \mathfrak{S}_n) \rtimes_s \ZZ_2$, where $s : \ZZ_2 \rightarrow \aut(G); 0 \mapsto id_G, 1 \mapsto \tau$ and $\tau$ is the automorphism which interchanges the two parts of $K_{n,n}$.
 \end{proposition}
 
 \begin{proof}
   Now, 
   \[
-    0 \rightarrow \mathfrak{S}_n \times \mathfrak{S}_n \xrightarrow{incl} \aut(G) \xrightarrow{s} \mathbb{Z}_2 \rightarrow 0
+    0 \rightarrow \mathfrak{S}_n \times \mathfrak{S}_n \xrightarrow{incl} \aut(G) \xrightarrow{s} \ZZ_2 \rightarrow 0
   \]
-  is exact and this sequence splits. Thus, we have $\aut(G) \approx (\mathfrak{S}_n \times \mathfrak{S}_n) \rtimes_s \mathbb{Z}_2$.
+  is exact and this sequence splits. Thus, we have $\aut(G) \approx (\mathfrak{S}_n \times \mathfrak{S}_n) \rtimes_s \ZZ_2$.
 \end{proof}
 
 
