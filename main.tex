@@ -376,7 +376,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   \end{enumerate}
 \end{example}
 
-\begin{lemma}
+\begin{lemma}\label{disjoint_union}
   Let $G$ and $H$ be graphs. Then, 
   \[
     \#(G \sqcup H) = \# G + \# H
@@ -874,31 +874,83 @@ In this section, we define the magnitude homology of a graph $G$, give some very
 \end{definition}
 
 \begin{proposition}
-  The assignment $G \mapsto MH_{*,*}(G)$ and $f \mapsto f_*$ defines a functor from the category of graphs and graph maps to the category of bigraded abelian groups and bigraded homomorphisms.
+  The assignment $G \mapsto MH_{*,*}(G)$ and $f \mapsto f_*$ defines a functor from the category of graphs and graph maps to the category of bigraded abelian groups and bigraded homomorphisms, denoting by $\mathbf{Graph} \rightarrow \mathbf{BAb}$.
 \end{proposition}
 
 \begin{remark}
-  
+  $A$ is called a \textit{bigaded abelian group} if $A = \bigoplus_{k,l \geq 0} A_{k,l}$ where each $A_{k,l}$ is an abelian group.
+  A \textit{bigraded homomorphism} $f : A \rightarrow B$ between bigraded abelian groups $A$ and $B$ is a homomorphism such that $f(A_{k,l}) \subset B_{k,l}$ for any $k,l \geq 0$.
 \end{remark}
 
 \begin{proposition}
-  Let $f:G \rightarrow H$ be a graph map. 
+  Let $f:G \rightarrow H$ be a graph map.
+  \begin{itemize}
+    \item $f_* : MH_{0,0}(G) \rightarrow MH_{0,0}(H)$ is given by $f_*(x) = f(x)$ for any $x \in V(G)$.
+    \item $f_* : MH_{1,1}(G) \rightarrow MH_{1,1}(H)$ is given by $f_*(x_0, x_1) = (f(x_0), f(x_1))$ if $f(x_0) \neq f(x_1)$ and $0$ otherwise, for any $(x_0, x_1) \in MH_{1,1}(G)$.
+  \end{itemize}
 \end{proposition}
 
+\begin{proof}
+  The first equation is obvious. \\
+  For the second equation, we obtain by definition;
+  \[
+    f_*(x_0, x_1) = \begin{cases}
+      (f(x_0), f(x_1)) & l(f(x_0), f(x_1)) = l(x_0, x_1) = 1 \\
+      0 & \text{otherwise}
+    \end{cases}
+  \]
+  for any $(x_0, x_1) \in MH_{1,1}(G)$. Since $f$ is a graph map, $l(f(x_0), f(x_1)) = 1$ if and only if $f(x_0) \neq f(x_1)$.
+\end{proof}
+
+\begin{corollary}
+  Let $f : G \rightarrow H$ be a graph map.
+  $f_*$ is an isomorphism if and only if $f$ is a graph isomorphism.
+\end{corollary}
+
+\begin{proof}
+  aaa.
+\end{proof}
 
 
-\subsection{u}
+\subsection{Disjoint union}
+\begin{proposition}\label{magnitude_of_disjoint_union}
+  Let $G$ and $H$ be graphs.
+  We define the inclusion graph maps $i : G \rightarrow G \bigsqcup H, j : H \rightarrow G \bigsqcup H$. Then,
+  \[
+    i_* \oplus j_* : MH_{*,*}(G) \oplus MH_{*,*}(H) \rightarrow MH_{*,*}(G \bigsqcup H)
+  \]
+  is an isomorphism for each $k,l \geq 0$.
+\end{proposition}
+
+\begin{proof}
+  saaa.
+\end{proof}
+
+We obtain \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(A_* \oplus B_*) = \chi(A_*) + \chi(B_*)$.
 
 
 
 
-
-
-
-
-
-
-
+\subsection{Cartesian Products}
+\begin{definition}This definition is not true.
+  Fix $l \geq 0$. The \textit{exterior product} is the map
+  \[
+    \square : MC_{*,l}(G) \otimes MC_{*,l}(H) \rightarrow MC_{*,l}(G \square H)
+  \]
+  defined by
+  \[
+    (x_0, \cdots, x_{k_1}) \square (y_0, \cdots, y_{k_2}) = \sum_{\sigma} \pm ((x_{i_0}, y_{j_0}), (x_{i_1}, y_{j_1}), \cdots, (x_{i_{k_1+k_2}}, y_{j_{k_1+k_2}}))
+  \]
+  where the sum is over all shuffles $\sigma$ of type $(k_1, k_2)$, that is, all sequences
+  \[    (i_0, j_0, i_1, j_1, \cdots, i_{k_1+k_2}, j_{k_1+k_2})
+  \]
+  such that
+  \[    0 = i_0 \leq i_1 \leq \cdots \leq i_{k_1+k_2} = k_1
+  \]
+  and
+  \[    0 = j_0 \leq j_1 \leq \cdots \leq j_{k_1+k_2} = k_2
+  \]
+\end{definition}
 
 
 

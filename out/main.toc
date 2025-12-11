@@ -6,8 +6,9 @@
 \contentsline {section}{\numberline {3}The Magnitude Homology of Graphs}{15}{section.3}%
 \contentsline {subsection}{\numberline {3.1}The Definition of the magnitude homology of graphs}{15}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Induced maps}{18}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}u}{20}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Motivation : The Magnitude of Enriched Categories}{21}{section.4}%
-\contentsline {subsection}{\numberline {4.1}the magnitude of a matrix}{21}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The definition of enriched categories}{24}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}The magnitude of enriched categories}{26}{subsection.4.3}%
+\contentsline {subsection}{\numberline {3.3}Disjoint union}{20}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Cartesian Products}{21}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Motivation : The Magnitude of Enriched Categories}{22}{section.4}%
+\contentsline {subsection}{\numberline {4.1}the magnitude of a matrix}{22}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The definition of enriched categories}{25}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}The magnitude of enriched categories}{27}{subsection.4.3}%
