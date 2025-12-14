@@ -74,6 +74,8 @@
 \newcommand{\isom}{\xrightarrow{\sim}}
 \newcommand{\mor}{\text{Mor}}
 \newcommand{\rank}{\text{rank}}
+\newcommand{\sign}{\text{sign}}
+\newcommand{\tor}{\mathrm{Tor}}
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\NN}{\mathbb{N}}
@@ -83,8 +85,8 @@
 \newcommand{\calA}{\mathcal{A}}
 \newcommand{\llbracket}{\[\[}
 \newcommand{\rrbracket}{\]\]}
-\newcommand{\graph}[1]{%
-    \raisebox{-0.5\height}{\includegraphics{Tikz/Graphs/out/#1}}%
+\newcommand{\graph}[1]{
+  \raisebox{-0.5\height}{\includegraphics{Tikz/Graphs/out/#1}}%
 }
 
 
@@ -743,7 +745,7 @@ In this section, we define the magnitude homology of a graph $G$, give some very
   aaa
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{categorifying}
   Let $G$ be a graph. Then, 
   \[
     \sum_{k,l \geq 0} (-1)^k \rank (MH_{k,l}(G)) q^l = \# G ~ \text{in} ~  \ZZ[[q]].
@@ -935,38 +937,186 @@ We obtain \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(
 \begin{definition}This definition is not true.
   Fix $l \geq 0$. The \textit{exterior product} is the map
   \[
-    \square : MC_{*,l}(G) \otimes MC_{*,l}(H) \rightarrow MC_{*,l}(G \square H)
+    \square : MC_{*,*}(G) \otimes MC_{*,*}(H) \rightarrow MC_{*,*}(G \square H)
   \]
-  defined by
+  is defined as follows. Let $\square$ be the map
   \[
-    (x_0, \cdots, x_{k_1}) \square (y_0, \cdots, y_{k_2}) = \sum_{\sigma} \pm ((x_{i_0}, y_{j_0}), (x_{i_1}, y_{j_1}), \cdots, (x_{i_{k_1+k_2}}, y_{j_{k_1+k_2}}))
+    \square : MC_{k_1, l_1}(G) \times MC_{k_2, l_2}(H) \rightarrow MC_{k, l}(G \square H) \text{ for } k_1, k_2 \geq 0, k = k_1 + k_2, l = l_1 + l_2,
+  \]
+  which is defined by
+  \[
+    \square((x_0, \cdots, x_{k_1}), (y_0, \cdots, y_{k_2})) = \sum_{\sigma} \sign(\sigma) ((x_{i_0}, y_{j_0}), (x_{i_1}, y_{j_1}), \cdots, (x_{i_k}, y_{j_k})),
   \]
   where the sum is over all shuffles $\sigma$ of type $(k_1, k_2)$, that is, all sequences
-  \[    (i_0, j_0, i_1, j_1, \cdots, i_{k_1+k_2}, j_{k_1+k_2})
+  \[    
+    ((i_0, j_0), (i_1, j_1), \cdots, (i_k, j_k))
   \]
   such that
-  \[    0 = i_0 \leq i_1 \leq \cdots \leq i_{k_1+k_2} = k_1
+  \[
+    i_0 = 0, j_0 = 0, 0 \leq i_r \leq k_1, 0 \leq j_r \leq k_2 \text{ for } 0 \leq r \leq k,
   \]
-  and
-  \[    0 = j_0 \leq j_1 \leq \cdots \leq j_{k_1+k_2} = k_2
+
+  \[
+    (i_{r+1}, j_{r+1}) = \begin{cases}
+      (i_r + 1, j_r) & \text{or} \\
+      (i_r, j_r + 1) & \text{ for } 0 \leq r < k,
+    \end{cases}
   \]
+  and 
+  \[
+    \sign(\sigma) = (-1)^m,
+  \]
+  where $m = \# \{ (i,j) \in \{ \{0, \cdots, k_1\} \times \{0, \cdots, k_2\} \} | i = i_r \Rightarrow j < j_r \}$.
+
+  Here, we extend the map $\square$ bilinearly to the tensor product $MC_{k_1, l_1}(G) \otimes MC_{k_2, l_2}(H) \rightarrow MC_{k, l}(G \square H)$. We denote this induced map also by $\square$ and call it the \textit{exterior product}.
+\end{definition}
+
+\begin{example}
+  Let $G = C_2 \square C_2 = C_4$ \\
+  \graph{C_2_square.pdf} \\
+  Consider the exterior product $\square((x_0, x_1) \otimes (y_0, y_1))$.
+  We have the two shuffles of type $(1,1)$:
+  \[
+    ((0,0), (1,0), (1,1)), ~ ((0,0), (0,1), (1,1))
+  \]
+  Thus,
+  \[
+    \begin{split}
+      \square((x_0, x_1) \otimes (y_0, y_1)) &= - ((x_0, y_0), (x_1, y_0), (x_1, y_1)) + ((x_0, y_0), (x_0, y_1), (x_1, y_1)) \\
+    \end{split}
+  \]
+\end{example}
+
+\begin{remark}
+  As you see in the above example, the number of shuffles is $\binom{k}{k_1}$.
+\end{remark}
+
+\begin{proposition}
+  The exterior product $\square : MC_{*,*}(G) \otimes MC_{*,*}(H) \rightarrow MC_{*,*}(G \square H)$ is a chain map.
+\end{proposition}
+
+\begin{proof}
+  Let $\bf{x} = (x_0, \cdots, x_{k_1}), \bf{y} = (y_0, \cdots, y_{k_2})$.
+  Now, we show that 
+  \[
+    \partial \circ \square(\bf{x} \otimes \bf{y}) = \square((\partial \bf{x}) \otimes \bf{y}) + (-1)^{k_1} \square (\bf{x} \otimes (\partial \bf{y})) = \square \circ (\partial \otimes \partial) (\bf{x} \otimes \bf{y}).
+  \]
+  Here, we should consider the sequence of tensor products of the magnitude chain complexes defined by
+  \begin{align*}
+    \partial \otimes \partial : MC_{k_1, l_1}(G) \otimes MC_{k_2, l_2}(H) 
+    &\rightarrow 
+    MC_{k_1-1, l_1}(G) \otimes MC_{k_2, l_2}(H) \\
+    &\quad \oplus MC_{k_1, l_1}(G) \otimes MC_{k_2-1, l_2}(H), \\
+    (\partial \otimes \partial) (\mathbf{x} \otimes \mathbf{y}) 
+    &= (\partial \mathbf{x}) \otimes \mathbf{y} + (-1)^{k_1} \mathbf{x} \otimes (\partial \mathbf{y}).
+  \end{align*}
+  Then, we should show only the first equality. \\
+  ここに可換図式を挿入. 証明も続く
+\end{proof}
+
+
+From this proposition, we obtain the induced map in homology, denoting $\square$.
+
+\begin{definition}(Tor functor)
+  Let $R$ be a ring and $A$ and $B$ be $R$-modules.
+  Then, $\tor(A,B)$ is defined by the derived functor of the tensor product.  
+\end{definition}
+
+\begin{theorem}
+  Let $G$ and $H$ be graphs.
+  \[
+    0 \rightarrow MH_{*,*}(G) \otimes MH_{*,*}(H) \xrightarrow{\square} MH_{*,*}(G \square H) \rightarrow \tor(MH_{*-1,*}(G), MH_{*,*}(H)) \rightarrow 0
+  \]
+  is a short exact sequence and non-naturally split.
+  In particular, if $MH_{*,*}(G)$ or $MH_{*,*}(H)$ is torsion-free, then the exterior product $\square$ is an isomorphism.
+\end{theorem}
+
+We don't prove this theorem in this thesis.
+
+\begin{example}
+  $G = C_4 = C_2 \square C_2$.
+\end{example}
+
+
+
+\subsection{The Mayer-Vietoris sequence}
+\begin{definition}
+  Let $X$ be a graph and $G,H$ be subgraphs of $X$.
+  \begin{enumerate}
+    \item $(X;G,H)$ is said to be a \textit{projecting decomposition} if $X = G \cup H$, $G \cap H$ is convex in $X$ and $H$ projects to $G \cap H$. \\ 
+    We write $i^G : G \rightarrow X$, $i^H : H \rightarrow X$, $j^G : G \cap H \rightarrow G$, $j^H : G \cap H \rightarrow H$ for the inclusion graph maps.
+
+    \item Let $(X;G,H), (X';G',H')$ be projecting decompositions. $f : (X;G,H) \rightarrow (X';G',H')$ is said to be a \textit{decomposition map} if $f : X \rightarrow X'$ is a graph map such that $f(V(G)) \subset V(G')$ and $f(V(H)) \subset V(H')$.
+    \item Let $f : (X;G,H) \rightarrow (X';G',H')$ be a decomposition map.
+    Then, $f$ is said to be a \textit{projecting decomposition map} if $V_{G \cap H}(H) = f^{-1}(V_{G' \cap H'}(H'))$ and $f(\pi(h)) = \pi(f(h))$ for any $h \in V_{G \cap H}(H)$.
+    \item Let $(X;G,H)$ be a projecting decomposition. $MC_{*,*}(G,H)$ denote the subcomplex of $MC_{*,*}(X)$ spanned by good tuples $(x_0, \cdots, x_k)$ whose entries all lie in $G$ or all lie in $H$.
+  \end{enumerate}
 \end{definition}
 
 
+\begin{theorem}
+  Let $(X;G,H)$ be a projecting decomposition.
+  Then, the inclusion map
+  \[
+    MC_{*,l}(G,H) \hookrightarrow MC_{*,l}(X)
+  \]
+  is a quasi-isomorphism for any $l \geq 0$.
+\end{theorem}
+
+\begin{proof}
+  aaa.
+\end{proof}
+
+\begin{theorem}\label{Mayer-Vietoris}
+  Let $(X;G,H)$ be a projecting decomposition.
+  Then,
+  \[
+    0 \rightarrow MH_{*,*}(G \cap H) \xrightarrow{(j^G_*, -j^H_*)} MH_{*,*}(G) \oplus MH_{*,*}(H) \xrightarrow{i^G_* \oplus i^H_*} MH_{*,*}(X) \rightarrow 0
+  \]
+  is a split short exact sequence.
+\end{theorem}
+
+\begin{proof}
+  aaa.
+\end{proof}
 
 
+\begin{corollary}
+  Let $(X;G,H)$ be a projecting decomposition.
+  Then,
+  \[
+    \# X = \# G + \# H - \# (G \cap H)
+  \]
+  in $\ZZ[[q]]$.
+\end{corollary}
+
+\begin{proof}
+  By Theorem \ref{Mayer-Vietoris}, 
+  \begin{align*}
+    &\chi(MH_{*,l}(G \cap H)) - \chi((MH_{*,l}(G)) \oplus \chi(MH_{*,l}(H))) + \chi(MH_{*,l}(X)) = 0. \\
+    \Rightarrow &\chi(MH_{*,l}(X)) = \chi(MH_{*,l}(G)) + \chi(MH_{*,l}(H)) - \chi(MH_{*,l}(G \cap H)).
+  \end{align*}
+
+  For each $l \geq 0$, multiplying by $q^l$ and summing over all $l \geq 0$, we have
+  \[
+    \sum_{l \geq 0} \chi(MH_{*,l}(X)) q^l = \sum_{l \geq 0} \chi(MH_{*,l}(G)) q^l + \sum_{l \geq 0} \chi(MH_{*,l}(H)) q^l - \sum_{l \geq 0} \chi(MH_{*,l}(G \cap H)) q^l.
+  \]
+  By \cref{categorifying}, we obtain the desired equation.
+\end{proof}
+
+\begin{corollary}
+  Let $T$ be a tree.
+\end{corollary}
 
 
+\subsection{Diagonal Graphs}
+\begin{proposition}
+  For a diagonal graph, the magnitude completely determines the magnitude homology ranks.
+\end{proposition}
 
-
-
-
-
-
-
-
-
-
+\begin{proof}
+  Obvious by \cref{categorifying}.
+\end{proof}
 
 
 
@@ -1191,17 +1341,27 @@ In this document, we only treat the locally small categories, which means that f
 \subsection{The magnitude of enriched categories}
 \begin{definition}
   Let $(\VV, \otimes, I)$ be a monoidal category and $k$ be a rig.
-  
+  We define a monoid homomorphism
+  \[  | \cdot | : (Ob(\VV)/\approx, \otimes, I) \rightarrow (k, \cdot, 1_k)
+  \]
+  such that $|I| = 1_k$ and $|u \otimes v| = |u| \cdot |v|$ for any objects $u,v$ of $\VV$.
+\end{definition}
+
+
+\begin{example}
+  aaa.
+\end{example}
+
+\begin{definition}
+  Let $\calA$ be a $\VV$-category.
 \end{definition}
 
 
 
 
 
-
-
-
-
+\subsection{The relation of the magnitudes of graphs and enriched categories}
+ここが私が一番説明したい部分です．
 
 
 

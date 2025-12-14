@@ -8,7 +8,10 @@
 \contentsline {subsection}{\numberline {3.2}Induced maps}{18}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Disjoint union}{20}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Cartesian Products}{21}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Motivation : The Magnitude of Enriched Categories}{22}{section.4}%
-\contentsline {subsection}{\numberline {4.1}the magnitude of a matrix}{22}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The definition of enriched categories}{25}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}The magnitude of enriched categories}{27}{subsection.4.3}%
+\contentsline {subsection}{\numberline {3.5}The Mayer-Vietoris sequence}{23}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Diagonal Graphs}{24}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Motivation : The Magnitude of Enriched Categories}{25}{section.4}%
+\contentsline {subsection}{\numberline {4.1}the magnitude of a matrix}{25}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The definition of enriched categories}{28}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}The magnitude of enriched categories}{30}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}The relation of the magnitudes of graphs and enriched categories}{30}{subsection.4.4}%
