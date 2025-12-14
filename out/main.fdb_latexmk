@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1765700012.9073 "out/main.dvi" "out/main.pdf" "out/main" 1765700013.18424 0
+["dvipdf"] 1765700084.21799 "out/main.dvi" "out/main.pdf" "out/main" 1765700084.56705 0
   "out/main.dvi" 1765700012.88063 101632 f049b207f3b1e60be875fbd96e08ce66 "latex"
   (generated)
   "out/main.pdf"
   (rewritten before read)
-["latex"] 1765700011.74001 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1765700013.18353 0
-  "/Users/kensh/Documents/src/graduation-research/main.tex" 1765700011.42176 49067 414df3b6b5f2bafaf37ce74008ee7e43 ""
+["latex"] 1765700011.74001 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1765700084.56589 0
+  "/Users/kensh/Documents/src/graduation-research/main.tex" 1765700084.02037 49067 414df3b6b5f2bafaf37ce74008ee7e43 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -106,7 +106,7 @@
   "Tikz/Graphs/out/connect_C_4.pdf" 1764427465.42548 8030 ed527b50ca694e3a9aca1f574cbea91b ""
   "Tikz/Graphs/out/n_vertex.pdf" 1763969192.20198 2085 76f65b71985b64b4306d7748bf0b7ffd ""
   "Tikz/Graphs/out/n_vertex.xbb" 1763969652.45016 239 46931e924c7340ffb2002b72d03fb43e ""
-  "main.tex" 1765700011.42176 49067 414df3b6b5f2bafaf37ce74008ee7e43 ""
+  "main.tex" 1765700084.02037 49067 414df3b6b5f2bafaf37ce74008ee7e43 ""
   "out/main.aux" 1765700012.87972 3947 7e26faa379498240b8ca96f004ed5cfe "latex"
   "out/main.out" 1765700012.88044 3717 7379a3d3c988956d7ee7506266f9af53 "latex"
   "out/main.toc" 1765700012.8806 1617 a7f44668af33c41d187ac2d0c5445c16 "latex"
