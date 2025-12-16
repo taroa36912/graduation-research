@@ -1,17 +1,19 @@
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
 \contentsline {section}{\numberline {2}The Magnitude of Graphs}{4}{section.2}%
-\contentsline {subsection}{\numberline {2.1}The definition of the magnitude of Graphs}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.1}The Definition of the Magnitude of Graphs}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Basic Properties and Examples}{7}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}The main result of magnitude of graphs}{11}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Main Results on the Magnitude of Graphs}{11}{subsection.2.3}%
 \contentsline {section}{\numberline {3}The Magnitude Homology of Graphs}{15}{section.3}%
-\contentsline {subsection}{\numberline {3.1}The Definition of the magnitude homology of graphs}{15}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Induced maps}{18}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Disjoint union}{20}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.1}The Definition of The Magnitude Homology of Graphs}{15}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Induced Maps}{18}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Disjoint Union}{20}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Cartesian Products}{21}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}The Mayer-Vietoris sequence}{23}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.5}The Mayer-Vietoris Sequence}{23}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}Diagonal Graphs}{24}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Motivation : The Magnitude of Enriched Categories}{25}{section.4}%
-\contentsline {subsection}{\numberline {4.1}the magnitude of a matrix}{25}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The definition of enriched categories}{28}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}The magnitude of enriched categories}{30}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}The relation of the magnitudes of graphs and enriched categories}{30}{subsection.4.4}%
+\contentsline {section}{\numberline {4}Motivation: The Magnitude of Enriched Categories}{25}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The Magnitude of a Matrix}{25}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The Definition of Enriched Categories}{28}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}The Magnitude of Enriched Categories}{30}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}The Relation of The Magnitudes of Graphs and Enriched Categories}{30}{subsection.4.4}%
+\contentsline {section}{Appendix}{31}{subsection.4.4}%
+\contentsline {section}{\numberline {A}The calculation of Graph Automorphisms}{31}{appendix.A}%

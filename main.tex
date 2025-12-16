@@ -12,6 +12,8 @@
 \usepackage{amssymb}
 \usepackage{bm}
 \usepackage{enumitem}
+\usepackage{stmaryrd}
+\usepackage{chngcntr}
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[subsection]
@@ -83,8 +85,6 @@
 \newcommand{\CC}{\mathcal{C}}
 \newcommand{\VV}{\mathcal{V}}
 \newcommand{\calA}{\mathcal{A}}
-\newcommand{\llbracket}{\[\[}
-\newcommand{\rrbracket}{\]\]}
 \newcommand{\graph}[1]{
   \raisebox{-0.5\height}{\includegraphics{Tikz/Graphs/out/#1}}%
 }
@@ -166,15 +166,18 @@ Sample Abstract
 \newpage
 \section{Introduction}
 Lamport's guide to \LaTeX\ \cite{Lamport94}.
+We denote $\approx$ as isomorphisms and $\cong$ as homeomorphisms.
 
 
 % Section 2
 \newpage
 \section{The Magnitude of Graphs}
-In this section, we define the magnitude of a graph $G$ and the magnitude homology of a graph $G$, give some very basic examples and properties.
-By a \textit{graph} we mean a finite undirected graph with no loops or multiple edges. The set of vertices of a graph $G$ is denoted by $V(G)$, and the set of edges of $G$ is denoted by $E(G)$. If $x$ and $y$ are vertices of a graph $G$, then the \textit{distance} $d_G(x,y)$ between $x$ and $y$ is defined to be the length of a shortest edge path from $x$ to $y$. If $x$ and $y$ lie in different components of $G$ then $d(x,y)=\infty$.
-\subsection{The definition of the magnitude of Graphs}
-Here, we difine the magnitude of a graph, which can be expressed as either a rational function over $\QQ$ or a formal power series over $\ZZ$. Write $\ZZ[q]$ for the polynomial ring over the integers in one variable $q$ and $\ZZ[[q]]$ for the ring of formal power series over the integers in one variable $q$.
+This section introduces the magnitude and the magnitude homology of a graph $G$, along with fundamental examples and properties.
+Throughout this paper, a \textit{graph} means a finite undirected graph with no loops or multiple edges. The set of vertices of a graph $G$ is denoted by $V(G)$, and the set of edges of $G$ is denoted by $E(G)$. For vertices $x, y \in V(G)$, the \textit{distance} $d_G(x,y)$ is defined as the length of a shortest edge path between them. If $x$ and $y$ lie in different connected components of $G$, we set $d_G(x,y)=\infty$.
+
+\subsection{The Definition of the Magnitude of Graphs}
+We begin by defining the magnitude of a graph. This invariant takes values in either the field of rational functions over $\QQ$ or the ring of formal power series over $\ZZ$.
+Let $\QQ(q)$ denote the field of rational functions in a variable $q$ over $\QQ$. We also write $\ZZ[q]$ and $\ZZ \llbracket q \rrbracket$ for the polynomial ring and the ring of formal power series in $q$ over $\ZZ$, respectively.
 
 \begin{definition}
   Let $G$ be a graph. We define the \textit{$G$-matrix} $Z_G = Z_G(q)$ over $\ZZ[q]$ whose rows and columns are indexed by the vertices of $G$, and whose $(x,y)$-entry is given by
@@ -188,7 +191,7 @@ Here, we difine the magnitude of a graph, which can be expressed as either a rat
 $G$-matrix is the square synmetric matrix.
 
 \begin{proposition}\label{invertible}
-  $G$-matrix is invertible.
+  A の$G$-matrix is invertible.
 \end{proposition}
 
 \begin{proof}
@@ -198,35 +201,33 @@ $G$-matrix is the square synmetric matrix.
 \begin{definition}
   The \textit{magnitude} of a graph $G$ is defined to be the rational function given by
   \[
-  \# G(q) = \sum_{x,y \in V(G)} (Z_G(q))^{-1}(x,y)
+  \# G(q) = \sum_{x,y \in V(G)} (Z_G(q))^{-1}(x,y).
   \]
-  in the rational function field $\QQ(q)$. 
 \end{definition}
 
 \begin{remark}
   \[
-    \# G(q) = \tsum(Z_G(q)^{-1}) = \frac{\tsum(\tadj(Z_G(q)))}{\det(Z_G(q))}
+    \# G(q) = \tsum(Z_G(q)^{-1}) = \frac{\tsum(\tadj(Z_G(q)))}{\det(Z_G(q))},
   \]
   where $\tadj$ is the adjugate matrix and $\tsum$ is the sum of all entries of a matrix.
 \end{remark}
 
 \begin{proposition}
-  $\# G(q)$ takes values in $\ZZ[[q]]$.
+  $\# G(q)$ takes values in $\ZZ \llbracket q \rrbracket$.
 \end{proposition}
 
 \begin{proof}
   Let $\det Z_G(q) = 1 - qf(q)$ for some $f(q) \in \ZZ[q]$ by \cref{invertible}. Then we have 
   \[
-    \# G(q) = \frac{\tsum(\tadj(Z_G))}{\det(Z_G)} = \tsum(\tadj(Z_G)) \sum_{n=0}^{\infty} q^n f(q)^n
+    \# G(q) = \frac{\tsum(\tadj(Z_G))}{\det(Z_G)} = \tsum(\tadj(Z_G)) \sum_{n=0}^{\infty} q^n f(q)^n.
   \]
-  Note that $qf(q)$ has no constant term and then $\sum_{n=0}^{\infty} q^n f(q)^n$ takes values in $\ZZ[[q]]$.
+  Note that $qf(q)$ has no constant term and then $\sum_{n=0}^{\infty} q^n f(q)^n$ takes values in $\ZZ \llbracket q \rrbracket$.
 \end{proof}
 
 \begin{example}
-  Let $G = K_3$(complete graph with three vertices).
-  ~
-  \graph{K_3.pdf}
-  ~
+  Let $G = K_3$ (complete graph with three vertices). \\
+  \graph{K_3.pdf} \\
+  \\
   Then, we can calculate the magnitude of $K_3$ as follows:
   \[
     Z_{K_3}(q) = \begin{pmatrix}
@@ -240,7 +241,7 @@ $G$-matrix is the square synmetric matrix.
       -q + q^2 & -q + q^2 & 1 - q^2
     \end{pmatrix},
   \]
-  $ \#K_3(q) = \frac{3}{1+2q}$
+  $ \#K_3(q) = \frac{3}{1+2q}.$
 
 \end{example}
 
@@ -262,7 +263,7 @@ The magnitude can be expressed using the weighting as follows:
 \begin{lemma}\label{weighting equation}
   For any graph $G$, the weighting $w_G$ satisfies
   \[
-    \sum_{y \in V(G)} q^{d(x,y)} w_G(y) = 1 \quad (x \in V(G))
+    \sum_{y \in V(G)} q^{d(x,y)} w_G(y) = 1 \quad (x \in V(G)).
   \]
 \end{lemma}
 
@@ -291,20 +292,20 @@ This equation is called the \textit{weighting equation}.
   Let $\bm{b} = (1, 1, \ldots, 1)^T$ where the length of $\bm{b}$ is $|V(G)|$ and $\bm{w}_G$ = $(w_G(x))^T_{x \in V(G)}$.
   If $\tilde{w}_G$ satisfies the weighting equation, then we have
   \[
-    Z_G \tilde{\bm{w}}_G = \bm{b}
+    Z_G \tilde{\bm{w}}_G = \bm{b}.
   \]
-  Since $Z_G$ is invertible by \cref{invertible}, we have $\tilde{w}_G = w_G$
+  Since $Z_G$ is invertible by \cref{invertible}, we have $\tilde{w}_G = w_G$.
 \end{proof}
 
 This lemma shows that the weighting on a graph is unique and we use this frequently to compute the magnitude of graphs.
 
 
 \subsection{Basic Properties and Examples}
-Here we give the most basic facts about magnitude. We focus on transitive graphs, disjoint unions, catesian products, and how the magnitude behaves within $\ZZ[[q]]$.
+This subsection presents fundamental properties and examples of magnitude. We focus on vertex-transitive graphs, disjoint unions, and Cartesian products. We also discuss the properties of magnitude within $\ZZ \llbracket q \rrbracket$.
 
 \begin{definition}
-  Let $G = (V(G), E(G)), H = (V(H), E(H))$ be a graph.
-  An \textit{graph homomorphism} from $G$ to $H$ is a map $f : V(G) \rightarrow V(H)$ such that if $\{x,y\} \in E(G)$ then $\{f(x), f(y)\} \in E(H)$.
+  Let $G = (V(G), E(G)), H = (V(H), E(H))$ be graphs.
+  A \textit{graph homomorphism} from $G$ to $H$ is a map $f : V(G) \rightarrow V(H)$ such that if $\{x,y\} \in E(G)$ then $\{f(x), f(y)\} \in E(H)$ or $f(x) = f(y)$.
 \end{definition}
 
 We can define a \textit{graph automorphism} using the definition above. We denote the group of all graph automorphisms of a graph $G$ by $\aut(G)$. $\aut(G)$ includes $id_G$ and for $g,h \in \aut(G)$ and $x \in V(G)$, $g(h(x)) = (gh)(x)$, which means $\aut(G)$ acts on $V(G)$.
@@ -332,9 +333,9 @@ We can define a \textit{graph automorphism} using the definition above. We denot
     \begin{split}
       S(b) &= \sum_{y \in V(G)} q^{d(b,y)} \\
       &= \sum_{y \in V(G)} q^{d(g(a),y)} \\
-      &= \sum_{y \in V(G)} q^{d(g(a), g(y))} \quad (\text{since } g \text{ is bijective}) \\
-      &= \sum_{y \in V(G)} q^{d(a,y)} \quad (\text{since } g \text{ is an isomorphism})  \\
-      &= S(a)
+      &= \sum_{y \in V(G)} q^{d(g(a), g(y))} \quad (g \text{ is bijective}) \\
+      &= \sum_{y \in V(G)} q^{d(a,y)} \quad (g \text{ is an isomorphism})  \\
+      &= S(a).
     \end{split}
   \]
 
@@ -356,8 +357,8 @@ We can define a \textit{graph automorphism} using the definition above. We denot
     \item $G = C_n$ (cycle graph with $n$ vertices). \\
     \graph{C_n.pdf} \\
     Then, $\aut(G) \approx D_{2n}$ and $G$ is vertex-transitive.
-    If $n = 2m$(even), then $S = 1 + 2(q + q^2 + \cdots + q^{m-1}) + q^m = \frac{1 + q - q^m - q^{m+1}}{1 - q}$. Thus, we have $\# C_{2m} = \frac{2m(1-q)}{(1+q)(1-q^m)} = \frac{n(1-q)}{(1+q)(1-q^m)}$.
-    If $n = 2m-1$(odd), then similarly 
+    If $n = 2m$, then $S = 1 + 2(q + q^2 + \cdots + q^{m-1}) + q^m = \frac{1 + q - q^m - q^{m+1}}{1 - q}$. Thus, we have $\# C_{2m} = \frac{2m(1-q)}{(1+q)(1-q^m)} = \frac{n(1-q)}{(1+q)(1-q^m)}$.
+    If $n=2m-1$, then similarly 
     $\# C_{2m-1} = \frac{n(1-q)}{1+q-2q^m}$.
     \item $G$ is a Petersen graph. \\
     \graph{Petersen.pdf} \\
@@ -368,12 +369,12 @@ We can define a \textit{graph automorphism} using the definition above. We denot
     \[
       \begin{cases}
         \{ q^0 + (m-1)q^2 \} a + nqb = 1 \\
-        \{q^0 + (n-1)q^2 \} b + mqa = 1
+        \{q^0 + (n-1)q^2 \} b + mqa = 1.
       \end{cases}
     \]
     We can solve this and we have 
     \[
-      \# K_{m,n} = ma + nb = \frac{(m+n) - (2mn - m - n)q}{(1+q)(1-(m-1)(n-1)q^2)}
+      \# K_{m,n} = ma + nb = \frac{(m+n) - (2mn - m - n)q}{(1+q)(1-(m-1)(n-1)q^2)}.
     \]
   \end{enumerate}
 \end{example}
@@ -381,7 +382,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
 \begin{lemma}\label{disjoint_union}
   Let $G$ and $H$ be graphs. Then, 
   \[
-    \#(G \sqcup H) = \# G + \# H
+    \#(G \sqcup H) = \# G + \# H,
   \]
   where $G \sqcup H$ is the disjoint union of $G$ and $H$.
 \end{lemma}
@@ -391,9 +392,8 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   \begin{pmatrix}
     Z_G & O \\
     O & Z_H
-  \end{pmatrix}$,
-
-  $Z_{G \sqcup H}^{-1} = 
+  \end{pmatrix}, 
+  Z_{G \sqcup H}^{-1} = 
   \begin{pmatrix}
     Z_G^{-1} & O \\
     O & Z_H^{-1}
@@ -401,7 +401,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
 
   Thus, 
   \[
-    \#(G \sqcup H) = \tsum(Z_{G \sqcup H}^{-1}) = \tsum(Z_G^{-1}) + \tsum(Z_H^{-1}) = \# G + \# H
+    \#(G \sqcup H) = \tsum(Z_{G \sqcup H}^{-1}) = \tsum(Z_G^{-1}) + \tsum(Z_H^{-1}) = \# G + \# H.
   \]
 \end{proof}
 
@@ -409,22 +409,23 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   Let $G$ and $H$ be graphs. The \textit{cartesian product} $G \square H$ of $G$ and $H$ is the graph defined as follows;
   \begin{itemize}
     \item $V(G \square H) = V(G) \times V(H)$
-    \item $E(G \square H) = \{\{ (x,y), (x', y') \} | x=x' \text{ and } \{y,y'\} \in E(H) \text{ or } y=y' \text{ and } \{x,x'\} \in E(G)\}$.
+    \item $E(G \square H) = \{\{ (x,y), (x', y') \} | x=x' \text{ and } \{y,y'\} \in E(H) \text{ or } y=y' \text{ and } \{x,x'\} \in E(G)\}$
   \end{itemize}
 \end{definition}
 
 \begin{lemma}
-  $\# G \square H = \# G \cdot \# H$
+  $\# G \square H = \# G \cdot \# H$.
 \end{lemma}
 
 \begin{proof}
   For $x, x' \in V(G)$ and $y, y' \in V(H)$, \\
-  $d_{G \square H}((x,y), (x',y')) = d_G(x,x') + d_H(y,y')$ \\
-  $\Rightarrow Z_{G \square H}((x,y), (x',y')) = q^{d_{G \square H}((x,y), (x',y'))} = q^{d_G(x,x')} q^{d_H(y,y')} = Z_G(x,x') Z_H(y,y')$ \\
-  $\Rightarrow Z_{G \square H} = Z_G \otimes Z_H$ and then $Z_{G \square H}^{-1} = Z_G^{-1} \otimes Z_H^{-1}$ \\
-  $\Rightarrow \# G \square H = \tsum(Z_{G \square H}^{-1}) = \tsum(Z_G^{-1} \otimes Z_H^{-1}) = \tsum(Z_G^{-1}) \cdot \tsum(Z_H^{-1}) = \# G \cdot \# H$ \\
+  $d_{G \square H}((x,y), (x',y')) = d_G(x,x') + d_H(y,y')$, \\
+  $Z_{G \square H}((x,y), (x',y')) = q^{d_{G \square H}((x,y), (x',y'))} = q^{d_G(x,x')} q^{d_H(y,y')} = Z_G(x,x') Z_H(y,y')$, \\
+  $Z_{G \square H} = Z_G \otimes Z_H$ and then $Z_{G \square H}^{-1} = Z_G^{-1} \otimes Z_H^{-1}$. \\
+  Thus, 
+  $\# G \square H = \tsum(Z_{G \square H}^{-1}) = \tsum(Z_G^{-1} \otimes Z_H^{-1}) = \tsum(Z_G^{-1}) \cdot \tsum(Z_H^{-1}) = \# G \cdot \# H$.\\
 
-  We used the fact that $(P \otimes Q)(R \otimes S) = (PR) \otimes (QS)$ for proper matrices $P,Q,R,S$.
+  We used the fact that $(P \otimes Q)(R \otimes S) = (PR) \otimes (QS)$ for proper matrices $P,Q,R, \text{ and } S$.
 \end{proof}
 
 \begin{example}
@@ -441,20 +442,20 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   \[
   \begin{split}
     \# G(q) &= \sum_{k=0}^{\infty} (-1)^k \sum_{x_0 \neq x_1 \neq \cdots \neq x_k} q^{d(x_0, x_1) + d(x_1, x_2) + \cdots + d(x_{k-1}, x_k)} \\
-    &= \sum_{n=0}^{\infty} c_n q^n
+    &= \sum_{n=0}^{\infty} c_n q^n,
   \end{split}
   \]
-  where $c_n = \sum_{k=0}^{n} (-1)^k |\{ (x_0, \dots, x_k) | x_0 \neq x_1 \neq \cdots \neq x_k, d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) = n \}|$
+  where $c_n = \sum_{k=0}^{n} (-1)^k |\{ (x_0, \dots, x_k) | x_0 \neq x_1 \neq \cdots \neq x_k, d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) = n \}|$.
 \end{proposition}
 
 \begin{proof}
-  aaa
+  aaa.
 \end{proof}
 
 \begin{corollary}
   Let $G$ be a graph.
   $|V(G)| = \# G(0), |E(G)| = - \frac{1}{2} \left. \frac{d}{dq} \# G(q) \right|_{q=0}$.
-  Here, the derivative is taken in $\ZZ[[q]]$.
+  Here, the derivative is taken in $\ZZ \llbracket q \rrbracket$.
 \end{corollary}
 
 \begin{proof}
@@ -471,7 +472,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
     \begin{split}
       c_1 &= |\{ (x_0) | d(x_0, x_0) = 1 \}| - |\{ (x_0, x_1) | x_0 \neq x_1, d(x_0, x_1) = 1 \}| \\
       &= 0 - 2|E(G)| \\
-      &= -2|E(G)|
+      &= -2|E(G)|.
     \end{split}
   \]
   This corollary immidiately follows from these equations.
@@ -481,10 +482,8 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   $c_0 \geq 0, c_1 \leq 0, \text{ and } c_2 \geq 0$. $c_2 = 0$ if and only if
 \end{remark}
 
-\subsection{The main result of magnitude of graphs}
-This section states the inclusion-exclusion principle of magnitude of graphs under some conditions.
-First, we see that the magnitude does not satisfy the inclusion-exclusion principle in general.
-Then, we introduce the sufficient condition for the inclusion-exclusion principle to hold.
+\subsection{Main Results on the Magnitude of Graphs}
+This subsection states the inclusion-exclusion principle for the magnitude of graphs under specific conditions. We begin by observing that the magnitude does not generally satisfy the inclusion-exclusion principle. We then introduce sufficient conditions for the principle to hold.
 
 \begin{definition}
   Let $R$ be a ring. A function $\Phi$ is an \textit{$R$-valued graph invariant} if
@@ -496,13 +495,13 @@ Then, we introduce the sufficient condition for the inclusion-exclusion principl
 
 \begin{definition}
   Let $\Phi$ be an $R$-valued graph invariant. \\
-  1. $\Phi$ is said to be multiplicative if
+  1. $\Phi$ is said to be \textit{multiplicative} if
   \begin{itemize}
     \item $\Phi(K_1) = 1$
     \item $\Phi(G \square H) = \Phi(G) \cdot \Phi(H)$ for any graphs $G$ and $H$
   \end{itemize}
 
-  2. $\Phi$ is said to satisfy the inclusion-exclusion principle if
+  2. $\Phi$ is said to satisfy the \textit{inclusion-exclusion principle} if
   \begin{itemize}
     \item $\Phi(\emptyset) = 0$
     \item $\Phi(G \cup H) = \Phi(G) + \Phi(H) - \Phi(G \cap H)$ for any graphs $G$ and $H$
@@ -552,7 +551,7 @@ Then, we introduce the sufficient condition for the inclusion-exclusion principl
 
 \begin{definition}
   Let $X$ be a graph and $U$ be a subgraph of $X$ such that $U$ is convex in $X$. Write $V_U(X) = \{ v \in V(X) | d_X(v,u) < \infty \text{ for some } u \in V(U) \}$.
-  Then, we say that $X$ projects to $U$ if for any $x \in V_U(X)$, there exists $\pi(x) \in V(U)$ such that for any $u \in V(U)$, $d_X(x,u) = d_X(x, \pi(x)) + d_X(\pi(x),u)$.
+  Then, we say that \textit{$X$ projects to $U$} if for any $x \in V_U(X)$, there exists $\pi(x) \in V(U)$ such that for any $u \in V(U)$, $d_X(x,u) = d_X(x, \pi(x)) + d_X(\pi(x),u)$.
 \end{definition}
 
 \begin{lemma}
@@ -571,7 +570,7 @@ Then, we introduce the sufficient condition for the inclusion-exclusion principl
   Let $X$ be a graph and $U \subset X$ be a convex subgraph of $X$ such that $X$ projects to $U$.
   Then, for any $u \in V(U)$, 
   \[
-    w_U(u) = \sum_{x \in \pi^{-1}(u)}q^{d_X(u, x)}w_X(x)
+    w_U(u) = \sum_{x \in \pi^{-1}(u)}q^{d_X(u, x)}w_X(x).
   \]
 \end{lemma}
 
@@ -583,7 +582,7 @@ Then, we introduce the sufficient condition for the inclusion-exclusion principl
   Let $X$ be a graph and $G,H$ be subgraphs of $X$ such that $X = G \cup H$.
   If $G \cap H$ is convex in $X$ and $H$ projects to $G \cap H$, then
   \[
-    \# X = \# G + \# H - \#(G \cap H)
+    \# X = \# G + \# H - \#(G \cap H).
   \]
 \end{theorem}
 
@@ -596,11 +595,11 @@ Before proving this theorem, we give the example of graphs for which we can appl
 
   Then, we can apply the main theorem I to $X = G \cup H$ as follows:
   \[
-    \# X = \# G + \# C_n - \# K_2
+    \# X = \# G + \# C_n - \# K_2.
   \]
   Similarly, if $G$ and $H$ are graphs and $G \vee H$ is the graph formed by identifying one vertex of $G$ with one vertex of $H$, then we have
   \[
-    \#(G \vee H) = \# G + \# H - 1
+    \#(G \vee H) = \# G + \# H - 1.
   \]
 \end{example}
 
@@ -612,19 +611,19 @@ Before proving this theorem, we give the example of graphs for which we can appl
 \begin{example}
   The three graphs below are divided into a graph $C_3$, and two graphs $C_2$, so they all have the same magnitude and can be calculated as follows:
   \[
-    \# G = \# C_3 + 2 \# C_2 - 2
+    \# G = \# C_3 + 2 \cdot \# C_2 - 2.
   \]
 \end{example}
 
 \begin{example}
   If $G$ is a forest, then we can calculate the magnitude of $G$ as follows:
   \[
-    \# G = |V(G)| - 2|E(G)| \frac{q}{1+q}
+    \# G = |V(G)| - 2|E(G)| \frac{q}{1+q}.
   \]
 
   If $G$ is a tree, then
   \[
-    \# G = |V(G)| - 2(|V(G)| - 1) \frac{q}{1+q}
+    \# G = |V(G)| - 2(|V(G)| - 1) \frac{q}{1+q}.
   \]
 \end{example}
 
@@ -635,17 +634,15 @@ Furthermore examples.
 % Section 3
 \newpage
 \section{The Magnitude Homology of Graphs}
-In this section, we define the magnitude homology of a graph $G$, give some very basic examples and properties, and state the Mayer-Vietoris sequence for the magnitude homology of graphs.
+In this section, we define the magnitude homology of a graph $G$. We provide fundamental examples and properties, and state the Mayer-Vietoris sequence for magnitude homology.
 
-
-\subsection{The Definition of the magnitude homology of graphs}
-
+\subsection{The Definition of The Magnitude Homology of Graphs}
 \begin{definition}
   Let $G$ be a graph. For positive integers $k$, the \textit{length} of a tuple $(x_0, \dots, x_k)$ of $V(G)$ is defined to be
   \[
     \begin{split}
       l(x_0, \dots, x_k) &= d(x_0, x_1) + d(x_1, x_2) + \cdots + d(x_{k-1}, x_k) \\
-      &= \sum_{i=1}^{k} d(x_{i-1}, x_i)
+      &= \sum_{i=1}^{k} d(x_{i-1}, x_i)．
     \end{split}
   \]
   Now, let $l(x_0) = 0$.
@@ -653,34 +650,39 @@ In this section, we define the magnitude homology of a graph $G$, give some very
 \end{definition}
 
 \begin{lemma}(Triangle inequality)
+  If $(x_0, \dots, x_k)$ is a good tuple of $V(G)$, then for any $1 \leq i \leq k-1$,
   \[
-    l(x_0, \dots, x_k) \geq l(x_0, \dots, \hat{x_i}, \dots, x_k)
+    l(x_0, \dots, x_k) \geq l(x_0, \dots, \hat{x_i}, \dots, x_k)．
   \]
 \end{lemma}
+
+\begin{proof}
+  We obviously have the statement by the triangle inequality of the distance function $d$.
+\end{proof}
 
 \begin{definition}(magnitude chain complex)
   Let $G$ be a graph.
   $MC_{*,*}(G)$ is the \textit{magnitude complex} defined as follows:
   \[
-    MC_{*,*}(G) = \bigoplus_{l=0}^{\infty} MC_{*, l}(G)
+    MC_{*,*}(G) = \bigoplus_{l=0}^{\infty} MC_{*, l}(G).
   \]
   For non-negative integers $k$ and $l$, $MC_{k,l}(G)$ is freely generated by good tuples $(x_0, \dots, x_k)$ of $V(G)$ of length $l$.
   The coefficient ring is $\ZZ$.
   The differential $\partial : MC_{k,l}(G) \rightarrow MC_{k-1,l}(G)$ is defined by
   \[
-    \partial = \sum_{i=1}^{k-1} (-1)^{i-1} \partial_i
+    \partial = \sum_{i=1}^{k-1} (-1)^{i-1} \partial_i,
   \]
   where $\partial_i (x_0, \dots, x_k) = (x_0, \dots, \hat{x_i}, \dots, x_k)$ if $l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, x_k)$ and $0$ otherwise.
 \end{definition}
 
 \begin{remark}For a good tuple $(x_0, \dots, x_k)$,
   \[
-    \partial_i(x_0, \dots, x_k) \neq 0 \iff d(x_{i-1}, x_i) + d(x_i, x_{i+1}) = d(x_{i-1}, x_{i+1})
+    \partial_i(x_0, \dots, x_k) \neq 0 \iff d(x_{i-1}, x_i) + d(x_i, x_{i+1}) = d(x_{i-1}, x_{i+1}).
   \]  
 \end{remark}
 
 \begin{lemma}
-  $\partial \circ \partial = 0$
+  $\partial \circ \partial = 0$.
 \end{lemma}
 
 \begin{proof}
@@ -689,10 +691,9 @@ In this section, we define the magnitude homology of a graph $G$, give some very
 
 \begin{definition}(magnitude homology)
   Let $G$ be a graph.
-  The \textit{magnitude homology} $MH_{*,*}(G)$ of $G$ is the homology of the magnitude chain complex $MC_{*,*}(G)$.
-  That is,
+  The \textit{magnitude homology} $MH_{*,*}(G)$ of $G$ is the homology of the magnitude chain complex $MC_{*,*}(G)$, that is,
   \[
-    MH_{k,l}(G) = H_k(MC_{*,l}(G))
+    MH_{k,l}(G) = H_k(MC_{*,l}(G)).
   \]
 \end{definition}
 
@@ -702,28 +703,28 @@ In this section, we define the magnitude homology of a graph $G$, give some very
     \[
       MC_{k,l}(V_n) = \begin{cases}
         \ZZ\{(x) | x \in V(V_n) \} & (k=l=0) \\
-        0 & (\text{otherwise})
+        0 & (\text{otherwise}).
       \end{cases}
     \]
     $\partial = 0$ inplies that
     \[
       MH_{k,l}(V_n) \approx \begin{cases}
         \ZZ^n & (k=l=0) \\
-        0 & (\text{otherwise})
+        0 & (\text{otherwise}).
       \end{cases}
     \]
     \item $G = K_n (n \geq 2)$. Then, $l(x_0, \cdots, x_k) = k$ for any good tuple $(x_0, \cdots, x_k)$ of $V(K_n)$. Thus,
     \[
       MC_{k,l}(K_n) = \begin{cases}
         \ZZ\{(x_0, \dots, x_k) | x_0 \neq x_1 \neq \cdots \neq x_k \} & (l=k) \\
-        0 & (\text{otherwise})
+        0 & (\text{otherwise}).
       \end{cases}
     \]
     $\partial = 0$ inplies that
     \[
       MH_{k,l}(K_n) \approx \begin{cases}
         \ZZ^{n(n-1)^l} & (l=k) \\
-        0 & (\text{otherwise})
+        0 & (\text{otherwise}).
       \end{cases}
     \]
     \item $G = C_5$. Number the vertices of $C_5$ as shown in the following figure. \\
@@ -732,18 +733,6 @@ In this section, we define the magnitude homology of a graph $G$, give some very
     続く
   \end{enumerate}
 \end{example}
-
-\begin{definition}
-  A graph $G$ is said to be \textit{diagonal} if $MH_{k,l}(G) = 0$ for $k \neq l$.
-\end{definition}
-
-\begin{lemma}
-  A tree is diagonal.
-\end{lemma}
-
-\begin{proof}
-  aaa
-\end{proof}
 
 \begin{theorem}\label{categorifying}
   Let $G$ be a graph. Then, 
@@ -766,11 +755,12 @@ In this section, we define the magnitude homology of a graph $G$, give some very
 \end{proof}
 
 \begin{proposition}
-  Let $G$ be a graph.
+  Let $G$ be a graph. Then,
   \begin{itemize}
     \item $MH_{0,0}(G) \approx \ZZ^{|V(G)|}$
     \item $MH_{1,1}(G) \approx \ZZ^{2|E(G)|}$
   \end{itemize}
+  holds.
 \end{proposition}
 
 \begin{proof}
@@ -804,9 +794,10 @@ In this section, we define the magnitude homology of a graph $G$, give some very
   Let $G$ be a graph and $d$ be the diameter of $G$ and assume that $MH_{k,l}(G) \neq 0$ for given non-negative integers $k$ and $l$.
   Then,
   \begin{itemize}
-    \item $\frac{l}{d} \leq k \leq l$.
-    \item If $d > 1 \text{ and } l > 0 \text{, then } \frac{l}{d} < k \leq l$.
+    \item $\frac{l}{d} \leq k \leq l$
+    \item If $d > 1 \text{ and } l > 0 \text{, then } \frac{l}{d} < k \leq l$
   \end{itemize}
+  holds.
 \end{proposition}
 
 \begin{proof}
@@ -821,13 +812,13 @@ In this section, we define the magnitude homology of a graph $G$, give some very
     \partial_i(x_0, y, x_1, \cdots, x_k) =
     \begin{cases}
       (x_0, x_1, \cdots, x_k) & (i=1) \\
-      0 & (2 \leq i \leq k)
+      0 & (2 \leq i \leq k).
     \end{cases}
   \].
   It is obvious for $3 \leq i$ by $d(x_{i-1}, x_i) + d(x_i, x_{i+1}) \neq d(x_{i-1}, x_{i+1})$ and is also true for $i=2$ since $d(y, x_1) + d(x_1, x_2) = d(y, x_1) + d > d \geq d(y, x_2)$. This implies $MH_{k,l}(G) = 0$ and contradicts the assumption.
 \end{proof}
 
-\subsection{Induced maps}
+\subsection{Induced Maps}
 \begin{definition}
   Let $G$ and $H$ be graphs.
   A map $f : V(G) \rightarrow V(H)$ is said to be a \textit{graph map} if for any $\{x,y\} \in E(G)$, either $f(x) = f(y)$ or $\{f(x), f(y)\} \in E(H)$.
@@ -914,7 +905,7 @@ In this section, we define the magnitude homology of a graph $G$, give some very
 \end{proof}
 
 
-\subsection{Disjoint union}
+\subsection{Disjoint Union}
 \begin{proposition}\label{magnitude_of_disjoint_union}
   Let $G$ and $H$ be graphs.
   We define the inclusion graph maps $i : G \rightarrow G \bigsqcup H, j : H \rightarrow G \bigsqcup H$. Then,
@@ -953,7 +944,7 @@ We obtain \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(
   \]
   such that
   \[
-    i_0 = 0, j_0 = 0, 0 \leq i_r \leq k_1, 0 \leq j_r \leq k_2 \text{ for } 0 \leq r \leq k,
+    i_0 = 0, j_0 = 0, 0 \leq i_r \leq k_1, 0 \leq j_r \leq k_2 \text{ for } 0 \leq r \leq k, \text{ and }
   \]
 
   \[
@@ -968,7 +959,12 @@ We obtain \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(
   \]
   where $m = \# \{ (i,j) \in \{ \{0, \cdots, k_1\} \times \{0, \cdots, k_2\} \} | i = i_r \Rightarrow j < j_r \}$.
 
-  Here, we extend the map $\square$ bilinearly to the tensor product $MC_{k_1, l_1}(G) \otimes MC_{k_2, l_2}(H) \rightarrow MC_{k, l}(G \square H)$. We denote this induced map also by $\square$ and call it the \textit{exterior product}.
+  Here, we extend the map $\square$ bilinearly to the tensor product \\
+  \[
+    MC_{k_1, l_1}(G) \otimes MC_{k_2, l_2}(H) \rightarrow MC_{k, l}(G \square H)
+  \]. 
+  
+  We denote this induced map also by $\square$ and call it the \textit{exterior product}.
 \end{definition}
 
 \begin{example}
@@ -977,12 +973,12 @@ We obtain \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(
   Consider the exterior product $\square((x_0, x_1) \otimes (y_0, y_1))$.
   We have the two shuffles of type $(1,1)$:
   \[
-    ((0,0), (1,0), (1,1)), ~ ((0,0), (0,1), (1,1))
+    ((0,0), (1,0), (1,1)), ~ ((0,0), (0,1), (1,1)).
   \]
   Thus,
   \[
     \begin{split}
-      \square((x_0, x_1) \otimes (y_0, y_1)) &= - ((x_0, y_0), (x_1, y_0), (x_1, y_1)) + ((x_0, y_0), (x_0, y_1), (x_1, y_1)) \\
+      \square((x_0, x_1) \otimes (y_0, y_1)) &= - ((x_0, y_0), (x_1, y_0), (x_1, y_1)) + ((x_0, y_0), (x_0, y_1), (x_1, y_1)).
     \end{split}
   \]
 \end{example}
@@ -1015,7 +1011,7 @@ We obtain \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(
 \end{proof}
 
 
-From this proposition, we obtain the induced map in homology, denoting $\square$.
+From this proposition, we obtain the induced map in homology, also denoting $\square$.
 
 \begin{definition}(Tor functor)
   Let $R$ be a ring and $A$ and $B$ be $R$-modules.
@@ -1039,7 +1035,7 @@ We don't prove this theorem in this thesis.
 
 
 
-\subsection{The Mayer-Vietoris sequence}
+\subsection{The Mayer-Vietoris Sequence}
 \begin{definition}
   Let $X$ be a graph and $G,H$ be subgraphs of $X$.
   \begin{enumerate}
@@ -1067,7 +1063,7 @@ We don't prove this theorem in this thesis.
   aaa.
 \end{proof}
 
-\begin{theorem}\label{Mayer-Vietoris}
+\begin{theorem}\label{Mayer-Vietoris}(the main theorem II)
   Let $(X;G,H)$ be a projecting decomposition.
   Then,
   \[
@@ -1110,6 +1106,18 @@ We don't prove this theorem in this thesis.
 
 
 \subsection{Diagonal Graphs}
+\begin{definition}
+  A graph $G$ is said to be \textit{diagonal} if $MH_{k,l}(G) = 0$ for $k \neq l$.
+\end{definition}
+
+\begin{lemma}
+  A tree is diagonal.
+\end{lemma}
+
+\begin{proof}
+  aaa
+\end{proof}
+
 \begin{proposition}
   For a diagonal graph, the magnitude completely determines the magnitude homology ranks.
 \end{proposition}
@@ -1122,10 +1130,10 @@ We don't prove this theorem in this thesis.
 
 % Section 4
 \newpage
-\section{Motivation : The Magnitude of Enriched Categories}
-In this section, I explain the motivation of why we study the magnitude of graphs in a larger context. We use the notion of enriched categories to define the magnitude.
+\section{Motivation: The Magnitude of Enriched Categories}
+In this section, we explain the motivation for studying the magnitude of graphs in a broader context. We employ the notion of enriched categories to define the magnitude.
 
-\subsection{the magnitude of a matrix}
+\subsection{The Magnitude of a Matrix}
 \begin{definition}
   Let $k$ be a set and $+, \cdot $ be a binary operation on $k$, and $0_k, 1_k$ be elements of $k$.
   Then, $(k, +, \cdot, 0_k, 1_k)$ is called a \textit{rig} if the following conditions hold:
@@ -1256,8 +1264,7 @@ From this lemma, the sum of the weighting or coweighting on $\zeta$ is unique if
 \end{proof}
 
 
-
-\subsection{The definition of enriched categories}
+\subsection{The Definition of Enriched Categories}
 In this document, we only treat the locally small categories, which means that for any objects $a,b$ of a category $\CC$, the hom-set $\hom_{\CC}(a,b)$ is a set.
 
 
@@ -1338,7 +1345,7 @@ In this document, we only treat the locally small categories, which means that f
 \end{example}
 
 
-\subsection{The magnitude of enriched categories}
+\subsection{The Magnitude of Enriched Categories}
 \begin{definition}
   Let $(\VV, \otimes, I)$ be a monoidal category and $k$ be a rig.
   We define a monoid homomorphism
@@ -1359,9 +1366,34 @@ In this document, we only treat the locally small categories, which means that f
 
 
 
-
-\subsection{The relation of the magnitudes of graphs and enriched categories}
+  \subsection{The Relation of The Magnitudes of Graphs and Enriched Categories}
 ここが私が一番説明したい部分です．
+
+
+
+
+
+
+% Appendix
+\newpage
+\appendix
+\counterwithin{theorem}{section}
+\addcontentsline{toc}{section}{Appendix}
+\section*{Appendix}
+
+\section{The calculation of Graph Automorphisms}
+\begin{proposition}
+  Let $G = K_{n,n}$. Then, $\aut(G) \approx (\mathfrak{S}_n \times \mathfrak{S}_n) \rtimes_s \ZZ_2$, where $s : \ZZ_2 \rightarrow \aut(G); 0 \mapsto id_G, 1 \mapsto \tau$ and $\tau$ is the automorphism which interchanges the two parts of $K_{n,n}$.
+\end{proposition}
+
+\begin{proof}
+  Now, 
+  \[
+    0 \rightarrow \mathfrak{S}_n \times \mathfrak{S}_n \xrightarrow{incl} \aut(G) \xrightarrow{s} \ZZ_2 \rightarrow 0
+  \]
+  is exact and this sequence splits. Thus, we have $\aut(G) \approx (\mathfrak{S}_n \times \mathfrak{S}_n) \rtimes_s \ZZ_2$.
+\end{proof}
+
 
 
 
@@ -1381,24 +1413,6 @@ Donald E. Knuth.
 Addison-Wesley, 1984.
 
 \end{thebibliography}
-
-
-
-% Appendix
-\newpage
-\appendix
-\begin{proposition}
-  Let $G = K_{n,n}$. Then, $\aut(G) \approx (\mathfrak{S}_n \times \mathfrak{S}_n) \rtimes_s \ZZ_2$, where $s : \ZZ_2 \rightarrow \aut(G); 0 \mapsto id_G, 1 \mapsto \tau$ and $\tau$ is the automorphism which interchanges the two parts of $K_{n,n}$.
-\end{proposition}
-
-\begin{proof}
-  Now, 
-  \[
-    0 \rightarrow \mathfrak{S}_n \times \mathfrak{S}_n \xrightarrow{incl} \aut(G) \xrightarrow{s} \ZZ_2 \rightarrow 0
-  \]
-  is exact and this sequence splits. Thus, we have $\aut(G) \approx (\mathfrak{S}_n \times \mathfrak{S}_n) \rtimes_s \ZZ_2$.
-\end{proof}
-
 
 
 

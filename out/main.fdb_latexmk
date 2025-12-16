@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1765700084.21799 "out/main.dvi" "out/main.pdf" "out/main" 1765700084.56705 0
-  "out/main.dvi" 1765700012.88063 101632 f049b207f3b1e60be875fbd96e08ce66 "latex"
+["dvipdf"] 1765866310.19632 "out/main.dvi" "out/main.pdf" "out/main" 1765866310.52711 0
+  "out/main.dvi" 1765866248.31361 103352 ceabcb95a73941a3123477e52c0104fc "latex"
   (generated)
   "out/main.pdf"
   (rewritten before read)
-["latex"] 1765700011.74001 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1765700084.56589 0
-  "/Users/kensh/Documents/src/graduation-research/main.tex" 1765700084.02037 49067 414df3b6b5f2bafaf37ce74008ee7e43 ""
+["latex"] 1765866247.19457 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1765866310.52632 0
+  "/Users/kensh/Documents/src/graduation-research/main.tex" 1765866309.99822 49726 5a519fadec2ef9c5d096f8a85a5efcc0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -41,6 +41,9 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti7.tfm" 1136768653 1492 86331993fe614793f5e7e755835c31c5 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti8.tfm" 1136768653 1504 1747189e0441d1c18f3ea56fafc1c480 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm" 1302307949 848 f478e0761563bbc369eca609a1741348 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm" 1302307949 848 068dd119e13b75777e62821af7d4f2a6 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm" 1302307949 848 6125cdd3627e68d3db8013b98e587508 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-h.tfm" 1522271273 812 52bd92aa20c58a398601cda6dd62c8d1 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm" 1522271273 536 5f2475e9deb198c23894800d3c5eed00 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-h.tfm" 1522271273 812 52bd92aa20c58a398601cda6dd62c8d1 ""
@@ -68,6 +71,7 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty" 1750190222 88401 0c3d1897569ad77cb9d8fb25b0bdf668 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty" 1748806692 4474 c510a88aa5f51b8c773b50a7ee92befd ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty" 1748806692 2444 9983e1d0683f102e3b190c64a49313aa ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/chngcntr/chngcntr.sty" 1525297854 4336 84bc4a8edb126e69abec1a67dc0c36cf ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/cleveref/cleveref.sty" 1525128982 329481 7fc6b003158402a4c694bc0a1b729308 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty" 1738874546 52272 63d293bc0d496619edb57585740861a2 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1759437024 46885 8953c67ffba03252c6090aa19568b8ba ""
@@ -90,6 +94,8 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/oberdiek/aliascnt.sty" 1575152444 2652 813491e2bc95c1dafbb39cd7c54b380b ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1750533675 9684 a33a14b82ce60d6e77cb9be689d79ee6 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/stmaryrd/Ustmry.fd" 1137110872 1766 216b0f832c406513647608b5bb9bb8ff ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty" 1302307949 11080 aa7f81da60ce104f0dbb8b827dd14383 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/tools/bm.sty" 1748806692 13236 71253d8fde2c80ecebae7e3f7da0c2b0 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty" 1388531844 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "/usr/local/texlive/2025/texmf-dist/tex/uplatex/base/ujarticle.cls" 1601501193 25756 696812db1093637a703931ccf3d2e037 ""
@@ -106,10 +112,10 @@
   "Tikz/Graphs/out/connect_C_4.pdf" 1764427465.42548 8030 ed527b50ca694e3a9aca1f574cbea91b ""
   "Tikz/Graphs/out/n_vertex.pdf" 1763969192.20198 2085 76f65b71985b64b4306d7748bf0b7ffd ""
   "Tikz/Graphs/out/n_vertex.xbb" 1763969652.45016 239 46931e924c7340ffb2002b72d03fb43e ""
-  "main.tex" 1765700084.02037 49067 414df3b6b5f2bafaf37ce74008ee7e43 ""
-  "out/main.aux" 1765700012.87972 3947 7e26faa379498240b8ca96f004ed5cfe "latex"
-  "out/main.out" 1765700012.88044 3717 7379a3d3c988956d7ee7506266f9af53 "latex"
-  "out/main.toc" 1765700012.8806 1617 a7f44668af33c41d187ac2d0c5445c16 "latex"
+  "main.tex" 1765866309.99822 49726 5a519fadec2ef9c5d096f8a85a5efcc0 ""
+  "out/main.aux" 1765866248.3126 4176 ce3ee4af5154cbe7507c75a3bb150dab "latex"
+  "out/main.out" 1765866248.31342 4050 e5613fa3f8c4bc994efd7550250d9599 "latex"
+  "out/main.toc" 1765866248.31358 1768 58d458da1de634550e04d249636db5cc "latex"
   (generated)
   "out/main.aux"
   "out/main.dvi"
