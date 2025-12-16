@@ -408,8 +408,8 @@ We can define a \textit{graph automorphism} using the definition above. We denot
 \begin{definition}
   Let $G$ and $H$ be graphs. The \textit{cartesian product} $G \square H$ of $G$ and $H$ is the graph defined as follows;
   \begin{itemize}
-    \item $V(G \square H) = V(G) \times V(H)$
-    \item $E(G \square H) = \{\{ (x,y), (x', y') \} | x=x' \text{ and } \{y,y'\} \in E(H) \text{ or } y=y' \text{ and } \{x,x'\} \in E(G)\}$
+    \item $V(G \square H) = V(G) \times V(H)$.
+    \item $E(G \square H) = \{\{ (x,y), (x', y') \} | x=x' \text{ and } \{y,y'\} \in E(H) \text{ or } y=y' \text{ and } \{x,x'\} \in E(G)\}$.
   \end{itemize}
 \end{definition}
 
@@ -429,12 +429,12 @@ We can define a \textit{graph automorphism} using the definition above. We denot
 \end{proof}
 
 \begin{example}
-  See $G = K_2 \square K_3$. \\
+  $G = K_2 \square K_3$. \\
   $\# K_2 \square K_3 = \# K_2 \cdot \# K_3 = \frac{2}{1+q} \cdot \frac{3}{1+2q} = \frac{6}{(1+q)(1+2q)} = \# K_{3,3}$.
 \end{example}
 
 \begin{remark}
-  Here we use the catesian product for graph product, but there are other graph products such as the tensor product and strong product. However, there is a reason that we use the catesian product. This will be clear in Section 4.
+  Here we use the catesian product for graph product, but there are other graph products. However, there is a reason that we use the catesian product. This will be clear in Section 4.
 \end{remark}
 
 \begin{proposition}\label{sum_of_magnitude}
@@ -445,7 +445,10 @@ We can define a \textit{graph automorphism} using the definition above. We denot
     &= \sum_{n=0}^{\infty} c_n q^n,
   \end{split}
   \]
-  where $c_n = \sum_{k=0}^{n} (-1)^k |\{ (x_0, \dots, x_k) | x_0 \neq x_1 \neq \cdots \neq x_k, d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) = n \}|$.
+  where 
+  \[
+    c_n = \sum_{k=0}^{n} (-1)^k |\{ (x_0, \dots, x_k) | x_0 \neq x_1 \neq \cdots \neq x_k, d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) = n \}|.
+  \]
 \end{proposition}
 
 \begin{proof}
@@ -484,12 +487,13 @@ We can define a \textit{graph automorphism} using the definition above. We denot
 
 \subsection{Main Results on the Magnitude of Graphs}
 This subsection states the inclusion-exclusion principle for the magnitude of graphs under specific conditions. We begin by observing that the magnitude does not generally satisfy the inclusion-exclusion principle. We then introduce sufficient conditions for the principle to hold.
+In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H))$.
 
 \begin{definition}
   Let $R$ be a ring. A function $\Phi$ is an \textit{$R$-valued graph invariant} if
   \begin{itemize}
-    \item $\Phi(G) \in R$ for any graph $G$
-    \item If $G \approx H$ as a graph then $\Phi(G) = \Phi(H)$
+    \item $\Phi(G) \in R$ for any graph $G$,
+    \item If $G \approx H$ as a graph then $\Phi(G) = \Phi(H)$.
   \end{itemize}
 \end{definition}
 
@@ -497,14 +501,14 @@ This subsection states the inclusion-exclusion principle for the magnitude of gr
   Let $\Phi$ be an $R$-valued graph invariant. \\
   1. $\Phi$ is said to be \textit{multiplicative} if
   \begin{itemize}
-    \item $\Phi(K_1) = 1$
-    \item $\Phi(G \square H) = \Phi(G) \cdot \Phi(H)$ for any graphs $G$ and $H$
+    \item $\Phi(K_1) = 1$,
+    \item $\Phi(G \square H) = \Phi(G) \cdot \Phi(H)$ for any graphs $G$ and $H$.
   \end{itemize}
 
   2. $\Phi$ is said to satisfy the \textit{inclusion-exclusion principle} if
   \begin{itemize}
-    \item $\Phi(\emptyset) = 0$
-    \item $\Phi(G \cup H) = \Phi(G) + \Phi(H) - \Phi(G \cap H)$ for any graphs $G$ and $H$
+    \item $\Phi(\emptyset) = 0$,
+    \item $\Phi(G \cup H) = \Phi(G) + \Phi(H) - \Phi(G \cap H)$ for any graphs $G$ and $H$.
   \end{itemize}
 \end{definition}
 
@@ -530,9 +534,7 @@ This subsection states the inclusion-exclusion principle for the magnitude of gr
 \end{definition}
 
 \begin{lemma}
-  Let $X$ be a graph and $G,H$ be subgraphs of $X$ such that $X = G \cup H$.
-  In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H))$.
-  Let $g \in V(G)$ and $h \in V(H)$ such that there is a path $(g = x_0 \rightarrow x_1 \rightarrow \dots \rightarrow x_n = h)$ in $X$.
+  Let $X$ be a graph, $G,H$ be subgraphs of $X$ such that $X = G \cup H$, and $g \in V(G)$ and $h \in V(H)$ such that there is a path $(g = x_0 \rightarrow x_1 \rightarrow \dots \rightarrow x_n = h)$ in $X$.
   Then, there exists a vertex $x_i \in V(G) \cap V(H)$.
 \end{lemma}
 
@@ -550,7 +552,7 @@ This subsection states the inclusion-exclusion principle for the magnitude of gr
 \end{proof}
 
 \begin{definition}
-  Let $X$ be a graph and $U$ be a subgraph of $X$ such that $U$ is convex in $X$. Write $V_U(X) = \{ v \in V(X) | d_X(v,u) < \infty \text{ for some } u \in V(U) \}$.
+  Let $X$ be a graph and $U$ be a subgraph of $X$ such that $U$ is convex in $X$. We denote $V_U(X) = \{ v \in V(X) | d_X(v,u) < \infty \text{ for some } u \in V(U) \}$.
   Then, we say that \textit{$X$ projects to $U$} if for any $x \in V_U(X)$, there exists $\pi(x) \in V(U)$ such that for any $u \in V(U)$, $d_X(x,u) = d_X(x, \pi(x)) + d_X(\pi(x),u)$.
 \end{definition}
 
@@ -578,7 +580,7 @@ This subsection states the inclusion-exclusion principle for the magnitude of gr
   aaa
 \end{proof}
 
-\begin{theorem}(main theorem I)
+\begin{theorem}\label{incl-excl}(Main theorem I)
   Let $X$ be a graph and $G,H$ be subgraphs of $X$ such that $X = G \cup H$.
   If $G \cap H$ is convex in $X$ and $H$ projects to $G \cap H$, then
   \[
@@ -593,7 +595,7 @@ Before proving this theorem, we give the example of graphs for which we can appl
 
   \graph{connect_C_4.pdf}
 
-  Then, we can apply the main theorem I to $X = G \cup H$ as follows:
+  Then, we can apply \cref{incl-excl} to $X = G \cup H$ as follows:
   \[
     \# X = \# G + \# C_n - \# K_2.
   \]
@@ -604,7 +606,7 @@ Before proving this theorem, we give the example of graphs for which we can appl
 \end{example}
 
 
-\begin{proof}(of main theorem I)
+\begin{proof}[Proof of \cref{incl-excl}]
   aaa
 \end{proof}
 
@@ -672,7 +674,13 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   \[
     \partial = \sum_{i=1}^{k-1} (-1)^{i-1} \partial_i,
   \]
-  where $\partial_i (x_0, \dots, x_k) = (x_0, \dots, \hat{x_i}, \dots, x_k)$ if $l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, x_k)$ and $0$ otherwise.
+  where 
+  \[
+    \partial_i (x_0, \dots, x_k) = \begin{cases}
+      (x_0, \dots, \hat{x_i}, \dots, x_k) & \text{ if } l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, x_k) \\
+      0 & \text{otherwise}.
+    \end{cases}
+  \]
 \end{definition}
 
 \begin{remark}For a good tuple $(x_0, \dots, x_k)$,
@@ -757,8 +765,8 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
 \begin{proposition}
   Let $G$ be a graph. Then,
   \begin{itemize}
-    \item $MH_{0,0}(G) \approx \ZZ^{|V(G)|}$
-    \item $MH_{1,1}(G) \approx \ZZ^{2|E(G)|}$
+    \item $MH_{0,0}(G) \approx \ZZ^{|V(G)|}$.
+    \item $MH_{1,1}(G) \approx \ZZ^{2|E(G)|}$.
   \end{itemize}
   holds.
 \end{proposition}
@@ -794,8 +802,8 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   Let $G$ be a graph and $d$ be the diameter of $G$ and assume that $MH_{k,l}(G) \neq 0$ for given non-negative integers $k$ and $l$.
   Then,
   \begin{itemize}
-    \item $\frac{l}{d} \leq k \leq l$
-    \item If $d > 1 \text{ and } l > 0 \text{, then } \frac{l}{d} < k \leq l$
+    \item $\frac{l}{d} \leq k \leq l$.
+    \item If $d > 1 \text{ and } l > 0 \text{, then } \frac{l}{d} < k \leq l$.
   \end{itemize}
   holds.
 \end{proposition}
@@ -879,7 +887,14 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   Let $f:G \rightarrow H$ be a graph map.
   \begin{itemize}
     \item $f_* : MH_{0,0}(G) \rightarrow MH_{0,0}(H)$ is given by $f_*(x) = f(x)$ for any $x \in V(G)$.
-    \item $f_* : MH_{1,1}(G) \rightarrow MH_{1,1}(H)$ is given by $f_*(x_0, x_1) = (f(x_0), f(x_1))$ if $f(x_0) \neq f(x_1)$ and $0$ otherwise, for any $(x_0, x_1) \in MH_{1,1}(G)$.
+    \item $f_* : MH_{1,1}(G) \rightarrow MH_{1,1}(H)$ is given by
+    \[
+      f_*(x_0, x_1) = \begin{cases}
+        (f(x_0), f(x_1)) & (\text{ if } ) \\
+        0 & (\text{otherwise}).
+      \end{cases}
+    \]
+    for any $(x_0, x_1) \in MH_{1,1}(G)$.
   \end{itemize}
 \end{proposition}
 
@@ -1138,9 +1153,9 @@ In this section, we explain the motivation for studying the magnitude of graphs 
   Let $k$ be a set and $+, \cdot $ be a binary operation on $k$, and $0_k, 1_k$ be elements of $k$.
   Then, $(k, +, \cdot, 0_k, 1_k)$ is called a \textit{rig} if the following conditions hold:
   \begin{itemize}
-    \item $(k, +, 0_k)$ is a commutative monoid
-    \item $(k, \cdot, 1_k)$ is a monoid
-    \item multiplication distributes over addition
+    \item $(k, +, 0_k)$ is a commutative monoid.
+    \item $(k, \cdot, 1_k)$ is a monoid.
+    \item multiplication distributes over addition.
   \end{itemize}
   Now, we mean a rig as a commutative rig with the operation $\cdot$.
 \end{definition}
@@ -1280,9 +1295,9 @@ In this document, we only treat the locally small categories, which means that f
     \item $\VV$ is a category.
     \item $\otimes : \VV \times \VV \rightarrow \VV$ is a functor.
     \item $I$ is an object of $\VV$.
-    \item There exist the natural isomorphism $\alpha : \otimes \circ (\otimes \times id_{\VV}) \Rightarrow \otimes \circ (id_{\VV} \times \otimes)$ given by $\alpha_{uvw} : (u \otimes v) \otimes w \isom u \otimes (v \otimes w)$
-    \item There exist the natural isomorphism $\lambda : I \otimes - \Rightarrow id_{\VV}$ given by $\lambda_u : I \otimes u \isom u$
-    \item There exist the natural isomorphism $\rho : - \otimes I \Rightarrow id_{\VV}$ given by $\rho_u : u \otimes I \isom u$
+    \item There exist the natural isomorphism $\alpha : \otimes \circ (\otimes \times id_{\VV}) \Rightarrow \otimes \circ (id_{\VV} \times \otimes)$ given by $\alpha_{uvw} : (u \otimes v) \otimes w \isom u \otimes (v \otimes w)$.
+    \item There exist the natural isomorphism $\lambda : I \otimes - \Rightarrow id_{\VV}$ given by $\lambda_u : I \otimes u \isom u$.
+    \item There exist the natural isomorphism $\rho : - \otimes I \Rightarrow id_{\VV}$ given by $\rho_u : u \otimes I \isom u$.
     \item The following diagram commutes for any objects $u,v,w,x$ of $\VV$:
     ここに可換図式を挿入
     \item The following diagrams commute for any objects $u,v$ of $\VV$:
@@ -1298,7 +1313,16 @@ In this document, we only treat the locally small categories, which means that f
     ここに説明を挿入
     \item $([0, \infty], +, 0)$ is a monoidal category.
     ここに説明を挿入
-    \item $(\mathbf{2}, \otimes, t)$ is a monoidal category, where $\mathbf{2}$ is the category defined by $Ob(\mathbf{2}) = \{t,f\}$ and $\hom_{\mathbf{2}}(x,y) = \{*\}$ if $x \leq y$ and $\emptyset$ otherwise, and the operation $\otimes$ is defined by the following table:
+    \item $(\mathbf{2}, \otimes, t)$ is a monoidal category, where $\mathbf{2}$ is the category defined by $Ob(\mathbf{2}) = \{t,f\}$ and the morphism sets are defined by
+    \begin{center}
+      \begin{tabular}{c|cc}
+        $\hom_{\mathbf{2}}$ & $t$ & $f$ \\
+        \hline
+        $t$ & $\{id_t\}$ & $\emptyset$ \\
+        $f$ & $\{*\}$ & $\{id_f\}$ \\
+      \end{tabular}
+    \end{center}
+    and the operation $\otimes$ is defined by the following table:
     \begin{center}
       \begin{tabular}{c|cc}
         $\otimes$ & $t$ & $f$ \\
