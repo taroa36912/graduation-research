@@ -79,6 +79,7 @@
 \newcommand{\sign}{\text{sign}}
 \newcommand{\tor}{\mathrm{Tor}}
 \newcommand{\Ker}{\mathrm{Ker}}
+\newcommand{\Hom}{\mathrm{Hom}}
 \newcommand{\im}{\mathrm{Im}}
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
@@ -87,6 +88,7 @@
 \newcommand{\CC}{\mathcal{C}}
 \newcommand{\VV}{\mathcal{V}}
 \newcommand{\calA}{\mathcal{A}}
+\newcommand{\ob}{\mathcal{O}\mathrm{b}}
 \newcommand{\graph}[1]{
   \raisebox{-0.5\height}{\includegraphics{Tikz/Graphs/out/#1}}%
 }
@@ -642,7 +644,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
 
 \subsection{The Definition of The Magnitude Homology of Graphs}
 \begin{definition}
-  Let $G$ be a graph. For positive integer $k$, the \textit{length} of a tuple $(x_0, \dots, x_k)$ of $V(G)$ is defined to be
+  Let $G$ be a graph. For a positive integer $k$, the \textit{length} of a tuple $(x_0, \dots, x_k)$ of $V(G)$ is defined to be
   \[
     \begin{split}
       l(x_0, \dots, x_k) &= d(x_0, x_1) + d(x_1, x_2) + \cdots + d(x_{k-1}, x_k) \\
@@ -746,7 +748,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
 \begin{theorem}\label{categorifying}
   Let $G$ be a graph. Then, 
   \[
-    \sum_{k,l \geq 0} (-1)^k \rank (MH_{k,l}(G)) q^l = \# G ~ \text{in} ~  \ZZ[[q]].
+    \sum_{k,l \geq 0} (-1)^k \rank (MH_{k,l}(G)) q^l = \# G ~ \text{in} ~  \ZZ \llbracket q \rrbracket.
   \] 
 \end{theorem}
 
@@ -792,10 +794,10 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
 \begin{definition}
   The diameter $d$ of a graph $G$ is defined by
   \[
-    d = \max \{ d(x,y) | x,y \in V(G) \text{ and } x,y \text{ lie in the same component of G}\}.
+    d = \max \{ d(x,y) | x,y \in V(G) \text{ and } x,y \text{ lie in the same component of } G \}.
   \]
   If $G = V_n$, then we define $d=0$.
-  Then, for any graph $G$, $0 \leq d < \infty$.
+  Then, for any graph $G$, $0 \leq d < \infty$ holds.
 
 \end{definition}
 
@@ -823,7 +825,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
       (x_0, x_1, \cdots, x_k) & (i=1) \\
       0 & (2 \leq i \leq k).
     \end{cases}
-  \].
+  \]
   It is obvious for $3 \leq i$ by $d(x_{i-1}, x_i) + d(x_i, x_{i+1}) \neq d(x_{i-1}, x_{i+1})$ and is also true for $i=2$ since $d(y, x_1) + d(x_1, x_2) = d(y, x_1) + d > d \geq d(y, x_2)$. This implies $MH_{k,l}(G) = 0$ and contradicts the assumption.
 \end{proof}
 
@@ -856,8 +858,8 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   Then, the \textit{induced map} $f_{\#} : MC_{*,*}(G) \rightarrow MC_{*,*}(H)$ is defined by
   \[
     f_{\#}(x_0, \cdots, x_k) = \begin{cases}
-      (f(x_0), \cdots, f(x_k)) & l(f(x_0), \cdots, f(x_k)) = l(x_0, \cdots, x_k) \\
-      0 & \text{otherwise}
+      (f(x_0), \cdots, f(x_k)) & (l(f(x_0), \cdots, f(x_k)) = l(x_0, \cdots, x_k)) \\
+      0 & (\text{otherwise})
     \end{cases}
   \]
   for any good tuple $(x_0, \cdots, x_k)$ of $V(G)$.
@@ -875,14 +877,14 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   If $f : G \rightarrow H$ is a graph map, the \textit{induced map in homology} $f_* : MH_{*,*}(G) \rightarrow MH_{*,*}(H)$ is the map induced by the chain map $f_{\#} : MC_{*,*}(G) \rightarrow MC_{*,*}(H)$.
 \end{definition}
 
-\begin{proposition}
-  The assignment $G \mapsto MH_{*,*}(G)$ and $f \mapsto f_*$ defines a functor from the category of graphs and graph maps to the category of bigraded abelian groups and bigraded homomorphisms, denoting by $\mathbf{Graph} \rightarrow \mathbf{BAb}$.
-\end{proposition}
-
 \begin{remark}
   $A$ is called a \textit{bigaded abelian group} if $A = \bigoplus_{k,l \geq 0} A_{k,l}$ where each $A_{k,l}$ is an abelian group.
   A \textit{bigraded homomorphism} $f : A \rightarrow B$ between bigraded abelian groups $A$ and $B$ is a homomorphism such that $f(A_{k,l}) \subset B_{k,l}$ for any $k,l \geq 0$.
 \end{remark}
+
+\begin{proposition}
+  The assignment $G \mapsto MH_{*,*}(G)$ and $f \mapsto f_*$ defines a functor from the category of graphs and graph maps to the category of bigraded abelian groups and bigraded homomorphisms, denoting by $\mathbf{Graph} \rightarrow \mathbf{BAb}$.
+\end{proposition}
 
 \begin{proposition}
   Let $f:G \rightarrow H$ be a graph map.
@@ -1017,8 +1019,8 @@ We obtain \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(
   \begin{align*}
     \partial \otimes \partial : MC_{k_1, l_1}(G) \otimes MC_{k_2, l_2}(H) 
     &\rightarrow 
-    MC_{k_1-1, l_1}(G) \otimes MC_{k_2, l_2}(H) \\
-    &\quad \oplus MC_{k_1, l_1}(G) \otimes MC_{k_2-1, l_2}(H), \\
+    (MC_{k_1-1, l_1}(G) \otimes MC_{k_2, l_2}(H)) \\
+    &\quad \oplus (MC_{k_1, l_1}(G) \otimes MC_{k_2-1, l_2}(H)), \\
     (\partial \otimes \partial) (\mathbf{x} \otimes \mathbf{y}) 
     &= (\partial \mathbf{x}) \otimes \mathbf{y} + (-1)^{k_1} \mathbf{x} \otimes (\partial \mathbf{y}).
   \end{align*}
@@ -1127,7 +1129,7 @@ We don't prove this theorem in this thesis.
 \end{definition}
 
 \begin{lemma}
-  A tree is diagonal.
+  Any trees are diagonal.
 \end{lemma}
 
 \begin{proof}
@@ -1171,7 +1173,7 @@ In this section, we explain the motivation for studying the magnitude of graphs 
 \end{definition}
 
 \begin{remark}
-  Let $k$ be a rig, and $I, J, L$ be finite sets.
+  Let $k$ be a rig, and $I, J, \text{ and } L$ be finite sets.
   \begin{enumerate}
     \item If $\zeta_1$ is an $I \times J$-matrix and $\zeta_2$ is a $J \times L$-matrix, then the product $\zeta_1 \zeta_2$ is defined as follows:
     \[
@@ -1214,7 +1216,7 @@ In this section, we explain the motivation for studying the magnitude of graphs 
 
 \begin{example}
   Let $G$ be a graph.
-  Then, $Z_G(q)$ is a $V(G) \times V(G)$-matrix over the rig $\QQ [[ q]]$ and the weighting on $Z_G(q)$ is the weighting on $G$ defined in Section 2.1.
+  Then, $Z_G(q)$ is a $V(G) \times V(G)$-matrix over the rig $\QQ \llbracket q \rrbracket$ and the weighting on $Z_G(q)$ is the weighting on $G$ defined in Section 2.1.
 \end{example}
 
 \begin{lemma}\label{sum_of_w.c.}
@@ -1286,7 +1288,7 @@ In this document, we only treat the locally small categories, which means that f
 
 
 \begin{definition}
-  A category $\CC$ is called a \textit{monoid} if $\CC$ has only one object $*$ and $V=Hom_{\CC}(*,*)$ is a monoid with the composition of morphisms as the binary operation and the identity morphism $id_*$ as the identity element. We denote the operation of $V$ by $\otimes$.
+  A category $\CC$ is called a \textit{monoid} if $\CC$ has only one object $*$ and $V=\Hom_{\CC}(*,*)$ is a monoid with the composition of morphisms as the binary operation and the identity morphism $id_*$ as the identity element. We denote the operation of $V$ by $\otimes$.
   ここに可換図式を挿入
 \end{definition}
 
@@ -1308,9 +1310,9 @@ In this document, we only treat the locally small categories, which means that f
 
 \begin{example}
   \begin{enumerate}[label=(\roman*)]
-    \item $(\textit{Set}, \times, \{*\})$ is a monoidal category.
+    \item $(\textbf{Set}, \times, \{*\})$ is a monoidal category.
     ここに説明を挿入
-    \item $(\textit{Vect}_K, \otimes_K, K)$ is a monoidal category, where $K$ is a field.
+    \item $(\textbf{Vect}_K, \otimes_K, K)$ is a monoidal category, where $K$ is a field.
     ここに説明を挿入
     \item $([0, \infty], +, 0)$ is a monoidal category.
     ここに説明を挿入
@@ -1342,9 +1344,9 @@ In this document, we only treat the locally small categories, which means that f
   An \textit{enriched category} $\calA$ in a monoidal category $(\VV, \otimes, I)$ is defined as follows:
 
   \begin{enumerate}
-    \item For any objects $a,b$ of $\calA$, $\hom_{\calA}(a,b)$ is an object of $\VV$.
-    \item For any objects $a,b,c$ of $\calA$, there exists a morphism $m_{abc} : \hom_{\calA}(b,c) \otimes \hom_{\calA}(a,b) \rightarrow \hom_{\calA}(a,c)$ in $\VV$, which defines the composition of morphisms.
-    \item For any object $a$ of $\calA$, there exists a morphism $j_a : I \rightarrow \hom_{\calA}(a,a)$ in $\VV$, which defines the identity morphism of $a$.
+    \item For any objects $a,b$ of $\calA$, $\Hom_{\calA}(a,b)$ is an object of $\VV$.
+    \item For any objects $a,b,c$ of $\calA$, there exists a morphism $m_{abc} : \Hom_{\calA}(b,c) \otimes \Hom_{\calA}(a,b) \rightarrow \Hom_{\calA}(a,c)$ in $\VV$, which defines the composition of morphisms.
+    \item For any object $a$ of $\calA$, there exists a morphism $j_a : I \rightarrow \Hom_{\calA}(a,a)$ in $\VV$, which defines the identity morphism of $a$.
     あと３つの可換図式を挿入
   \end{enumerate}
 
@@ -1374,7 +1376,7 @@ In this document, we only treat the locally small categories, which means that f
 \begin{definition}
   Let $(\VV, \otimes, I)$ be a monoidal category and $k$ be a rig.
   We define a monoid homomorphism
-  \[  | \cdot | : (Ob(\VV)/\approx, \otimes, I) \rightarrow (k, \cdot, 1_k)
+  \[  | \cdot | : (\ob(\VV)/{\approx}, \otimes, I) \rightarrow (k, \cdot, 1_k)
   \]
   such that $|I| = 1_k$ and $|u \otimes v| = |u| \cdot |v|$ for any objects $u,v$ of $\VV$.
 \end{definition}

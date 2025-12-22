@@ -241,6 +241,8 @@ INPUT ./Tikz/Graphs/out/C_2_square.pdf
 INPUT ./Tikz/Graphs/out/C_2_square.pdf
 INPUT ./Tikz/Graphs/out/C_2_square.pdf
 INPUT extractbb -B cropbox -O Tikz/Graphs/out/C_2_square.pdf
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
 INPUT out/main.aux
 INPUT out/main.out
 INPUT out/main.out
