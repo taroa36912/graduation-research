@@ -72,11 +72,11 @@
 % 汎用コマンド
 \newcommand{\tsum}{\text{sum}}
 \newcommand{\tadj}{\text{adj}}
-\newcommand{\aut}{\text{Aut}}
+\newcommand{\aut}{\mathrm{Aut}}
 \newcommand{\isom}{\xrightarrow{\sim}}
-\newcommand{\mor}{\text{Mor}}
-\newcommand{\rank}{\text{rank}}
-\newcommand{\sign}{\text{sign}}
+\newcommand{\mor}{\mathrm{Mor}}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\sign}{\mathrm{sign}}
 \newcommand{\tor}{\mathrm{Tor}}
 \newcommand{\Ker}{\mathrm{Ker}}
 \newcommand{\Hom}{\mathrm{Hom}}
@@ -97,65 +97,29 @@
 
 \begin{document}
 \thispagestyle{empty}
-
-\begin{center}
-  2025 Yokohama National University, Faculty of Science and Engineering, Mathematical Science EP Graduation Research
-  \vskip3cm
-\end{center}
-
-
-
-{\Large
-
-\begin{center}
-  %\LARGE
-  \huge
-  \textbf{\TITLE}
-\end{center}
-
-\vfill
-
-\hfil
-{\LARGE
-\textbf{
-\STNO\ \NAME}
+\hfil 2025年度 横浜国立大学 理工学部 数理科学EP 卒業研究
+\vskip3cm
+{
+  \Large
+  \begin{center}
+    \huge
+    \textbf{\TITLE}
+  \end{center}
+  \vfill
+  \hfil
+  {
+    \LARGE\textbf{\STNO\ \NAME}
+  }
+  \vskip10Q
+  \hfil\textbf{指導教員：\ADVR }\hfil\textbf{\DATE}
 }
-
-\vskip 4mm
-\hfil
-{\large
-\href{https://taro-ken.com}{https://taro-ken.com}
-}
-
-\vskip10Q
-\begin{center}
-  \textbf{Supervisor : \ADVR }
-\end{center}
-
-
-\hfil
-\textbf{\DATE}
-
-}
-
-
 \vfill
 \hfill
 \begin{tabular}{|p{6zw}|p{6zw}|} \hline
-   \hskip.5zw Supervisor's seal & \hskip1.5zw acceptance stamp \\ \hline
+  \hskip.5zw 指導教員印 & \hskip1.5zw 受理印 \\ \hline
    & \\[2cm] \hline 
- 
 \end{tabular}
-
-
-
-% Start of the main content
 \newpage
-\pagestyle{plain}
-\setcounter{page}{1}
-
-
-% Abstract
 \begin{abstract}
 Sample Abstract
 \end{abstract}
@@ -528,7 +492,7 @@ In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H)
   The magnitude does not satisfy the inclusion-exclusion principle in general.
 \end{corollary}
 
-\begin{example}label{Willerton}
+\begin{example}\label{Willerton}
   
 \end{example}
 
@@ -680,7 +644,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   where 
   \[
     \partial_i (x_0, \dots, x_k) = \begin{cases}
-      (x_0, \dots, \hat{x_i}, \dots, x_k) & \text{ if } l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, x_k) \\
+      (x_0, \dots, \hat{x_i}, \dots, x_k) & \text{if } l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, x_k) \\
       0 & \text{otherwise}.
     \end{cases}
   \]
@@ -1283,8 +1247,7 @@ From this lemma, the sum of the weighting or coweighting on $\zeta$ is unique if
 
 
 \subsection{The Definition of Enriched Categories}
-In this document, we only treat the locally small categories, which means that for any objects $a,b$ of a category $\CC$, the hom-set $\hom_{\CC}(a,b)$ is a set.
-
+In this document, we only treat the locally small categories, which means that for any objects $a,b$ of a category $\CC$, the hom-set $\Hom_{\CC}(a,b)$ is a set.
 
 
 \begin{definition}
