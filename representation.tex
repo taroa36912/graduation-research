@@ -1,0 +1,185 @@
+\documentclass[dvipdfmx, 11pt, notheorems]{beamer} 
+% notheorems: amsthmの定理環境と競合しないようにするオプション
+
+% ==========================================
+% パッケージ設定
+% ==========================================
+\usepackage{bxdpx-beamer} % dvipdfmxでのナビゲーション修正
+\usepackage{pxjahyper}    % 日本語のしおり対応
+\usepackage{minijs}       % 日本語フォント設定
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{bm}
+
+% ==========================================
+% デザイン・テーマ設定
+% ==========================================
+\usetheme{Madrid}         % 定番のテーマ（下部に進捗バーが出る）
+\usecolortheme{default}   % 色のテーマ（defaultは青系）
+% \usecolortheme{beaver}  % 赤系が良ければコメントアウトを外す
+
+% フォント設定（数式をSerifにするなど）
+\usefonttheme{professionalfonts} 
+
+% ナビゲーションバーの記号を消す（スライドがすっきりします）
+\setbeamertemplate{navigation symbols}{}
+
+% 定理環境の日本語化とスタイル設定
+\setbeamertemplate{theorems}[numbered] % 定理に番号を振る
+\theoremstyle{definition}
+\newtheorem{definition}{定義}
+\newtheorem{theorem}{定理}
+\newtheorem{lemma}{補題}
+\newtheorem{example}{例}
+\theoremstyle{plain}
+\newtheorem{proposition}{命題}
+
+% ==========================================
+% タイトル情報
+% ==========================================
+\title[Magnitude Homology]{Magnitude Homology of Graphs and the Magnitude as its Categorification}
+% [ ]内はフッターに表示される略称
+\subtitle{2025年度 卒業研究発表}
+\author[Kensho Yachi]{谷地 健将 (Kensho Yachi)}
+\institute[YNU]{横浜国立大学 理工学部 数理科学EP}
+\date{2026年2月X日}
+
+% ==========================================
+% 本文開始
+% ==========================================
+\begin{document}
+
+% --- タイトルスライド ---
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% --- 目次スライド ---
+\begin{frame}{目次}
+  \tableofcontents
+\end{frame}
+
+% ==========================================
+\section{Introduction}
+% ==========================================
+
+\begin{frame}{研究の背景 (Motivation)}
+  \begin{itemize}
+    \item グラフの不変量として \textbf{Magnitude} が知られている
+    \item これを圏論的視点（Enriched Category）から捉え直す動きがある
+    \item \alert{Magnitude Homology} は、Magnitudeの「オイラー標数化」として定義される
+  \end{itemize}
+
+  \vspace{1em}
+  \begin{block}{本研究の目的}
+    グラフのMagnitude Homologyの性質を調べ、
+    特定の条件下でのMayer-Vietoris完全列の存在を示す。
+  \end{block}
+\end{frame}
+
+% ==========================================
+\section{Preliminaries}
+% ==========================================
+
+\begin{frame}{準備: Magnitudeの定義}
+  グラフ $G=(V,E)$ に対し、そのMagnitudeは以下のように定義される。
+
+  \begin{definition}[Magnitude of Graphs]
+    $G$ のsimilarity matrix $Z$ が可逆であるとき、
+    \[
+      |G| = \sum_{i,j \in V} (Z^{-1})_{ij}
+    \]
+    と定義する。これは $\mathbb{Q}(q)$ の元である。
+  \end{definition}
+
+  \pause % ここでクリック待ちが入ります
+
+  \begin{example}[完全グラフ $K_3$]
+    TikZで図を描画したり、画像を貼ったりできます。
+    \begin{center}
+      \begin{tikzpicture}[scale=0.8]
+        \node (a) at (90:1) {$\bullet$};
+        \node (b) at (210:1) {$\bullet$};
+        \node (c) at (330:1) {$\bullet$};
+        \draw (a) -- (b) -- (c) -- (a);
+      \end{tikzpicture}
+    \end{center}
+    このとき $|K_3| = \frac{3}{1+2q}$ となる。
+  \end{example}
+\end{frame}
+
+% ==========================================
+\section{Main Results}
+% ==========================================
+
+\begin{frame}{主結果: Magnitude Chain Complex}
+  \begin{definition}[Magnitude Chain Complex]
+    長さ $k$ のパス $x=(x_0, \dots, x_k)$ を基底とする自由加群 $MC_k(G)$ を考え、
+    境界作用素 $\partial$ を以下で定義する：
+    \[
+      \partial_k(x) = \sum_{i=1}^{k-1} (-1)^i (x_0, \dots, \widehat{x_i}, \dots, x_k)
+    \]
+  \end{definition}
+
+  \vspace{0.5em}
+  これにより、ホモロジー群 $MH_{k,l}(G)$ が構成される。
+\end{frame}
+
+\begin{frame}{主結果: Mayer-Vietoris Sequence}
+  本研究における主要な定理は以下の通りである。
+
+  \begin{theorem}[Mayer-Vietoris Sequence]
+    グラフ $G$ が特定の分解条件（Projecting Decomposition）を満たすとき、
+    以下の長完全列が存在する：
+    \begin{align*}
+      \cdots \to MH_n(A \cap B) \to MH_n(A) \oplus MH_n(B) \\
+      \to MH_n(G) \to MH_{n-1}(A \cap B) \to \cdots
+    \end{align*}
+  \end{theorem}
+\end{frame}
+
+% ==========================================
+\section{Conclusion}
+% ==========================================
+
+\begin{frame}{まとめと今後の課題}
+  \begin{columns}[T] % 2段組みにする設定
+    \begin{column}{0.48\textwidth}
+      \textbf{まとめ}
+      \begin{itemize}
+        \item Magnitude Homologyの定義を確認した
+        \item MV完全列の存在条件を整理した
+        \item 具体的なグラフで計算を行った
+      \end{itemize}
+    \end{column}
+    
+    \begin{column}{0.48\textwidth}
+      \textbf{今後の課題}
+      \begin{itemize}
+        \item より一般の距離空間への拡張
+        \item Path Homologyとの関連性の調査
+        \item 応用例の探索
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{参考文献}
+  \bibliographystyle{plain}
+  \begin{thebibliography}{99}
+    \bibitem{Leinster2013}
+    T. Leinster, \textit{The magnitude of metric spaces}, Doc. Math. 18 (2013), 857--905.
+    
+    \bibitem{Hepworth2017}
+    R. Hepworth and S. Willerton, \textit{Categorifying the magnitude of a graph}, Homology Homotopy Appl. 19 (2017), 31--60.
+  \end{thebibliography}
+\end{frame}
+
+\begin{frame}
+  \centering
+  \Huge
+  ご清聴ありがとうございました
+\end{frame}
+
+\end{document}

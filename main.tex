@@ -53,23 +53,19 @@
 
 \setlength{\topmargin}{0truecm}
 
-\newcommand{\TITLE}%
+\newcommand{\TITLE}
 {Magnitude Homology of Graphs and the Magnitude as its Categorification}
-%上のタイトルを書く
-\newcommand{\STNO}%
-{2264257}%学籍番号
-\newcommand{\NAME}%
-{Kensho Yachi}%氏名
-\newcommand{\ADVR}%
-{Yuta Nozaki Associate Professor}%指導教員
+\newcommand{\STNO}
+{2264257}
+\newcommand{\NAME}
+{谷内 賢翔}
+\newcommand{\ADVR}
+{野崎 雄太 准教授}
 
-\newcommand{\DATE}%
-{（January 30th, 2025）}%〆切
-
+\newcommand{\DATE}
+{2025年 1月30日}
 
 
-
-% 汎用コマンド
 \newcommand{\tsum}{\text{sum}}
 \newcommand{\tadj}{\text{adj}}
 \newcommand{\aut}{\mathrm{Aut}}
@@ -89,8 +85,17 @@
 \newcommand{\VV}{\mathcal{V}}
 \newcommand{\calA}{\mathcal{A}}
 \newcommand{\ob}{\mathcal{O}\mathrm{b}}
-\newcommand{\graph}[1]{
-  \raisebox{-0.5\height}{\includegraphics{Tikz/Graphs/out/#1}}%
+\newcommand{\graphimg}[1]{
+  \includegraphics{Tikz/Graphs/out/#1}
+}
+
+\newcommand{\figgraph}[3]{
+  \begin{figure}[htbp]
+    \centering
+    \graphimg{#1}
+    \caption{#2}
+    \label{#3}
+  \end{figure}
 }
 
 
@@ -111,7 +116,8 @@
     \LARGE\textbf{\STNO\ \NAME}
   }
   \vskip10Q
-  \hfil\textbf{指導教員：\ADVR }\hfil\textbf{\DATE}
+  \hfil\textbf{指導教員：\ADVR }
+  \hfil\textbf{\DATE}
 }
 \vfill
 \hfill
@@ -124,33 +130,27 @@
 Sample Abstract
 \end{abstract}
 
-
-% Table of Contents
 \newpage
 \tableofcontents
 
-
-% Section 1
 \newpage
 \section{Introduction}
 Lamport's guide to \LaTeX\ \cite{Lamport94}.
 We denote $\approx$ as isomorphisms and $\cong$ as homeomorphisms.
 
-
-% Section 2
 \newpage
 \section{The Magnitude of Graphs}
 This section introduces the magnitude and the magnitude homology of a graph $G$, along with fundamental examples and properties.
-Throughout this paper, a \textit{graph} means a finite undirected graph with no loops or multiple edges. The set of vertices of a graph $G$ is denoted by $V(G)$, and the set of edges of $G$ is denoted by $E(G)$. For vertices $x, y \in V(G)$, the \textit{distance} $d_G(x,y)$ is defined as the length of a shortest edge path between them. If $x$ and $y$ lie in different connected components of $G$, we set $d_G(x,y)=\infty$.
+Throughout this thesis, a \textit{graph} means a finite undirected graph with no loops or multiple edges. The set of vertices of a graph $G$ is denoted by $V(G)$, and the set of edges of $G$ is denoted by $E(G)$. For vertices $x, y \in V(G)$, the \textit{distance} $d_G(x,y)$ is defined as the length of a shortest path between them, where the length of a path is the number of edges it contains. If $x$ and $y$ lie in different connected components of $G$, we set $d_G(x,y)=\infty$. Now, we say that two vertex $x,y$ in $G$ lie in the same connected component if there exists a path between them.
 
 \subsection{The Definition of the Magnitude of Graphs}
-We begin by defining the magnitude of a graph. This invariant takes values in either the field of rational functions over $\QQ$ or the ring of formal power series over $\ZZ$.
+We begin by defining the magnitude of a graph. The magnitude is defined to take values in the field of rational functions over $\QQ$. It can also be interpreted as taking values in the ring of formal power series over $\ZZ$, a property that will be discussed in a later lemma.
 Let $\QQ(q)$ denote the field of rational functions in a variable $q$ over $\QQ$. We also write $\ZZ[q]$ and $\ZZ \llbracket q \rrbracket$ for the polynomial ring and the ring of formal power series in $q$ over $\ZZ$, respectively.
 
 \begin{definition}
   Let $G$ be a graph. We define the \textit{$G$-matrix} $Z_G = Z_G(q)$ over $\ZZ[q]$ whose rows and columns are indexed by the vertices of $G$, and whose $(x,y)$-entry is given by
   \[
-  Z_G(q)(x,y) = q^{d(x,y)} \quad (x,y \in V(G))
+  Z_G(q)(x,y) = q^{d(x,y)} \quad (x,y \in V(G)),
   \]
   where by convention $q^\infty = 0$.
   
@@ -194,7 +194,7 @@ $G$-matrix is the square synmetric matrix.
 
 \begin{example}
   Let $G = K_3$ (complete graph with three vertices). \\
-  \graph{K_3.pdf} \\
+  \figgraph{K_3.pdf}{Complete graph of three vertices}{Example_K_3} \\
   \\
   Then, we can calculate the magnitude of $K_3$ as follows:
   \[
@@ -301,8 +301,8 @@ We can define a \textit{graph automorphism} using the definition above. We denot
     \begin{split}
       S(b) &= \sum_{y \in V(G)} q^{d(b,y)} \\
       &= \sum_{y \in V(G)} q^{d(g(a),y)} \\
-      &= \sum_{y \in V(G)} q^{d(g(a), g(y))} \quad (g \text{ is bijective}) \\
-      &= \sum_{y \in V(G)} q^{d(a,y)} \quad (g \text{ is an isomorphism})  \\
+      &= \sum_{y \in V(G)} q^{d(g(a), g(y))} \quad (\text{since } g \text{ is bijective}) \\
+      &= \sum_{y \in V(G)} q^{d(a,y)} \quad (\text{since } g \text{ is an isomorphism})  \\
       &= S(a).
     \end{split}
   \]
@@ -317,26 +317,26 @@ We can define a \textit{graph automorphism} using the definition above. We denot
 \begin{example}
   \begin{enumerate}[label=(\roman*)]
     \item $G = V_n$ (edgeless graph with $n$ vertices). \\
-    \graph{n_vertex.pdf} \\ 
+    \figgraph{n_vertex.pdf}{The graph with no edges}{example_no_edge_graph} \\ 
     Then, $\aut(G) \approx \mathfrak{S}_n$ and $G$ is vertex-transitive. $S = 1$ and we have $\# V_n = n$.
     \item $G = K_n$ (complete graph with $n$ vertices). \\
-    \graph{K_n.pdf} \\
+    \figgraph{K_n.pdf}{Complete graph}{example_complete_graph} \\
     Then, $\aut(G) \approx \mathfrak{S}_n$ and $G$ is vertex-transitive. $S = 1 + (n-1)q$ and we have $\# K_n = \frac{n}{1 + (n-1)q}$.
     \item $G = C_n$ (cycle graph with $n$ vertices). \\
-    \graph{C_n.pdf} \\
+    \figgraph{C_n.pdf}{Cycle graph}{example_cycle_graph} \\
     Then, $\aut(G) \approx D_{2n}$ and $G$ is vertex-transitive.
     If $n = 2m$, then $S = 1 + 2(q + q^2 + \cdots + q^{m-1}) + q^m = \frac{1 + q - q^m - q^{m+1}}{1 - q}$. Thus, we have $\# C_{2m} = \frac{2m(1-q)}{(1+q)(1-q^m)} = \frac{n(1-q)}{(1+q)(1-q^m)}$.
     If $n=2m-1$, then similarly 
     $\# C_{2m-1} = \frac{n(1-q)}{1+q-2q^m}$.
-    \item $G$ is a Petersen graph. \\
-    \graph{Petersen.pdf} \\
+    \item $G$ is the Petersen graph. \\
+    \figgraph{Petersen.pdf}{Petersen graph}{example_petersen_graph} \\
     Then, $\aut(G)$ contains $D_{10}$ as its subgroup and $G$ is vertex-transitive. $S = 1 + 3q + 6q^2$ and we have $\# G = \frac{10}{1 + 3q + 6q^2}$.
     \item $G = K_{m,n}$(complete bipartite graph). \\
-    \graph{K_mn.pdf} \\
+    \figgraph{K_mn.pdf}{complete bipartite graph}{example_complete_bipartite_graph} \\
     Then, $\aut(G) \approx \mathfrak{S}_m \times \mathfrak{S}_n$ if $m \neq n$ and $G$ is not vertex-transitive. We can calculate the magnitude with other methods. Let $a,b$ be the weight of vertices on each part of $K_{m,n}$. Then, the weighting equation is written by two equations as follows:
     \[
       \begin{cases}
-        \{ q^0 + (m-1)q^2 \} a + nqb = 1 \\
+        \{ q^0 + (m-1)q^2 \} a + nqb = 1. \\
         \{q^0 + (n-1)q^2 \} b + mqa = 1.
       \end{cases}
     \]
@@ -382,7 +382,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
 \end{definition}
 
 \begin{lemma}
-  $\# G \square H = \# G \cdot \# H$.
+  $\# (G \square H) = \# G \cdot \# H$.
 \end{lemma}
 
 \begin{proof}
@@ -393,7 +393,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   Thus, 
   $\# G \square H = \tsum(Z_{G \square H}^{-1}) = \tsum(Z_G^{-1} \otimes Z_H^{-1}) = \tsum(Z_G^{-1}) \cdot \tsum(Z_H^{-1}) = \# G \cdot \# H$.\\
 
-  We used the fact that $(P \otimes Q)(R \otimes S) = (PR) \otimes (QS)$ for proper matrices $P,Q,R, \text{ and } S$.
+  We used the fact that $(P \otimes Q)(R \otimes S) = (PR) \otimes (QS)$ for matrices $P,Q,R, \text{ and } S$ such that the products of $PR$ and $QS$ are defined.
 \end{proof}
 
 \begin{example}
@@ -460,24 +460,26 @@ In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H)
 \begin{definition}
   Let $R$ be a ring. A function $\Phi$ is an \textit{$R$-valued graph invariant} if
   \begin{itemize}
-    \item $\Phi(G) \in R$ for any graph $G$,
-    \item If $G \approx H$ as a graph then $\Phi(G) = \Phi(H)$.
+    \item $\Phi(G) \in R$ for any graph $G$.
+    \item If $G \approx H$ as a graph, then $\Phi(G) = \Phi(H)$.
   \end{itemize}
 \end{definition}
 
 \begin{definition}
-  Let $\Phi$ be an $R$-valued graph invariant. \\
-  1. $\Phi$ is said to be \textit{multiplicative} if
-  \begin{itemize}
-    \item $\Phi(K_1) = 1$,
-    \item $\Phi(G \square H) = \Phi(G) \cdot \Phi(H)$ for any graphs $G$ and $H$.
-  \end{itemize}
+  Let $\Phi$ be an $R$-valued graph invariant.
+  \begin{enumerate}
+    \item $\Phi$ is said to be \textit{multiplicative} if
+    \begin{itemize}
+      \item $\Phi(K_1) = 1$.
+      \item $\Phi(G \square H) = \Phi(G) \cdot \Phi(H)$ for any graphs $G$ and $H$.
+    \end{itemize}
 
-  2. $\Phi$ is said to satisfy the \textit{inclusion-exclusion principle} if
+    \item $\Phi$ is said to satisfy the \textit{inclusion-exclusion principle} if
   \begin{itemize}
-    \item $\Phi(\emptyset) = 0$,
+    \item $\Phi(\emptyset) = 0$.
     \item $\Phi(G \cup H) = \Phi(G) + \Phi(H) - \Phi(G \cap H)$ for any graphs $G$ and $H$.
   \end{itemize}
+  \end{enumerate}
 \end{definition}
 
 \begin{lemma}
@@ -561,7 +563,7 @@ Before proving this theorem, we give the example of graphs for which we can appl
 \begin{example}
   Let  $G$ be a graph and consider the graph $H$ formed by identifying one of the edges of a cycle graph $C_n$ with an edge of $G$. Now, let $n \geq  4$. 
 
-  \graph{connect_C_4.pdf}
+  \figgraph{connect_C_4.pdf}{Cycle graph of four vertices}{example_connect_C_4}
 
   Then, we can apply \cref{incl-excl} to $X = G \cup H$ as follows:
   \[
@@ -600,8 +602,6 @@ Before proving this theorem, we give the example of graphs for which we can appl
 Furthermore examples.
 
 
-
-% Section 3
 \newpage
 \section{The Magnitude Homology of Graphs}
 In this section, we define the magnitude homology of a graph $G$. We provide fundamental examples and properties, and state the Mayer-Vietoris sequence for magnitude homology.
@@ -644,7 +644,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   where 
   \[
     \partial_i (x_0, \dots, x_k) = \begin{cases}
-      (x_0, \dots, \hat{x_i}, \dots, x_k) & \text{if } l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, x_k) \\
+      (x_0, \dots, \hat{x_i}, \dots, x_k) & \text{if } l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, x_k). \\
       0 & \text{otherwise}.
     \end{cases}
   \]
@@ -677,7 +677,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
     \item $G = V_n$. Then,
     \[
       MC_{k,l}(V_n) = \begin{cases}
-        \ZZ\{(x) | x \in V(V_n) \} & (k=l=0) \\
+        \ZZ\{(x) | x \in V(V_n) \} & (k=l=0). \\
         0 & (\text{otherwise}).
       \end{cases}
     \]
@@ -691,14 +691,14 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
     \item $G = K_n (n \geq 2)$. Then, $l(x_0, \cdots, x_k) = k$ for any good tuple $(x_0, \cdots, x_k)$ of $V(K_n)$. Thus,
     \[
       MC_{k,l}(K_n) = \begin{cases}
-        \ZZ\{(x_0, \dots, x_k) | x_0 \neq x_1 \neq \cdots \neq x_k \} & (l=k) \\
+        \ZZ\{(x_0, \dots, x_k) | x_0 \neq x_1 \neq \cdots \neq x_k \} & (l=k). \\
         0 & (\text{otherwise}).
       \end{cases}
     \]
     $\partial = 0$ inplies that
     \[
       MH_{k,l}(K_n) \approx \begin{cases}
-        \ZZ^{n(n-1)^l} & (l=k) \\
+        \ZZ^{n(n-1)^l} & (l=k). \\
         0 & (\text{otherwise}).
       \end{cases}
     \]
@@ -786,7 +786,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   Then, $(x_0, y, x_1, \cdots, x_k)$ is a good tuple in $MC_{k+1, l}(G)$ and \[
     \partial_i(x_0, y, x_1, \cdots, x_k) =
     \begin{cases}
-      (x_0, x_1, \cdots, x_k) & (i=1) \\
+      (x_0, x_1, \cdots, x_k) & (i=1). \\
       0 & (2 \leq i \leq k).
     \end{cases}
   \]
@@ -857,8 +857,8 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
     \item $f_* : MH_{1,1}(G) \rightarrow MH_{1,1}(H)$ is given by
     \[
       f_*(x_0, x_1) = \begin{cases}
-        (f(x_0), f(x_1)) & (\text{ if } ) \\
-        0 & (\text{otherwise}).
+        (f(x_0), f(x_1)) & (\text{ if } f(x_0) \neq f(x_1)) \\
+        0 & (\text{otherwise})
       \end{cases}
     \]
     for any $(x_0, x_1) \in MH_{1,1}(G)$.
@@ -951,7 +951,7 @@ We obtain \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(
 
 \begin{example}
   Let $G = C_2 \square C_2 = C_4$ \\
-  \graph{C_2_square.pdf} \\
+  \figgraph{C_2_square.pdf}{Square graph}{example_square_graph} \\
   Consider the exterior product $\square((x_0, x_1) \otimes (y_0, y_1))$.
   We have the two shuffles of type $(1,1)$:
   \[
@@ -1109,8 +1109,6 @@ We don't prove this theorem in this thesis.
 \end{proof}
 
 
-
-% Section 4
 \newpage
 \section{Motivation: The Magnitude of Enriched Categories}
 In this section, we explain the motivation for studying the magnitude of graphs in a broader context. We employ the notion of enriched categories to define the magnitude.
@@ -1209,7 +1207,7 @@ From this lemma, the sum of the weighting or coweighting on $\zeta$ is unique if
   Let $\zeta$ be an $I \times J$-matrix over a rig $k$.
   If $\zeta$ has a weighting and a coweighting, then the \textit{magnitude} of $\zeta$ is defined to be
   \[
-    \# \zeta = \sum_{i \in I} v(i) = \sum_{j \in J} w(j)
+    \# \zeta = \sum_{i \in I} v(i) = \sum_{j \in J} w(j),
   \]
   where $w$ is the weighting on $\zeta$ and $v$ is the coweighting on $\zeta$.
 \end{definition}
@@ -1361,10 +1359,6 @@ In this document, we only treat the locally small categories, which means that f
 
 
 
-
-
-
-% Appendix
 \newpage
 \appendix
 \counterwithin{theorem}{section}
@@ -1388,7 +1382,9 @@ In this document, we only treat the locally small categories, which means that f
 
 
 
-% Bibliography (参考文献)
+
+
+
 \newpage
 \begin{thebibliography}{9}
 
