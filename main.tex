@@ -66,8 +66,8 @@
 {2025年 1月30日}
 
 
-\newcommand{\tsum}{\text{sum}}
-\newcommand{\tadj}{\text{adj}}
+\newcommand{\tsum}{\mathrm{sum}}
+\newcommand{\tadj}{\mathrm{adj}}
 \newcommand{\aut}{\mathrm{Aut}}
 \newcommand{\isom}{\xrightarrow{\sim}}
 \newcommand{\mor}{\mathrm{Mor}}
@@ -150,7 +150,7 @@ Let $\QQ(q)$ denote the field of rational functions in a variable $q$ over $\QQ$
 \begin{definition}
   Let $G$ be a graph. We define the \textit{$G$-matrix} $Z_G = Z_G(q)$ over $\ZZ[q]$ whose rows and columns are indexed by the vertices of $G$, and whose $(x,y)$-entry is given by
   \[
-  Z_G(q)(x,y) = q^{d(x,y)} \quad (x,y \in V(G)),
+  Z_G(q)(x,y) = q^{d(x,y)} \quad \text{ for } x,y \in V(G),
   \]
   where by convention $q^\infty = 0$.
   
@@ -231,7 +231,7 @@ The magnitude can be expressed using the weighting as follows:
 \begin{lemma}\label{weighting equation}
   For any graph $G$, the weighting $w_G$ satisfies
   \[
-    \sum_{y \in V(G)} q^{d(x,y)} w_G(y) = 1 \quad (x \in V(G)).
+    \sum_{y \in V(G)} q^{d(x,y)} w_G(y) = 1 \quad \text{ for } x \in V(G).
   \]
 \end{lemma}
 
@@ -252,12 +252,12 @@ The magnitude can be expressed using the weighting as follows:
 This equation is called the \textit{weighting equation}.
 
 \begin{lemma}\label{unique property on weighting equation}
-  Let $G$ be a graph and $\tilde{w}_G : V(G) \rightarrow \QQ$ be a function satisfying a weighting equation.
+  Let $G$ be a graph and let $\tilde{w}_G : V(G) \rightarrow \QQ$ be a function satisfying a weighting equation.
   Then, $\tilde{w}_G = w_G$. Now, $w_G$ is the weighting on $G$.
 \end{lemma}
 
 \begin{proof}
-  Let $\bm{b} = (1, 1, \ldots, 1)^T$ where the length of $\bm{b}$ is $|V(G)|$ and $\bm{w}_G$ = $(w_G(x))^T_{x \in V(G)}$.
+  Let $\bm{b} = (1, 1, \dots, 1)^T$ where the length of $\bm{b}$ is $|V(G)|$ and $\bm{w}_G$ = $(w_G(x))^T_{x \in V(G)}$.
   If $\tilde{w}_G$ satisfies the weighting equation, then we have
   \[
     Z_G \tilde{\bm{w}}_G = \bm{b}.
@@ -325,7 +325,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
     \item $G = C_n$ (cycle graph with $n$ vertices). \\
     \figgraph{C_n.pdf}{Cycle graph}{example_cycle_graph} \\
     Then, $\aut(G) \approx D_{2n}$ and $G$ is vertex-transitive.
-    If $n = 2m$, then $S = 1 + 2(q + q^2 + \cdots + q^{m-1}) + q^m = \frac{1 + q - q^m - q^{m+1}}{1 - q}$. Thus, we have $\# C_{2m} = \frac{2m(1-q)}{(1+q)(1-q^m)} = \frac{n(1-q)}{(1+q)(1-q^m)}$.
+    If $n = 2m$, then $S = 1 + 2(q + q^2 + \dots + q^{m-1}) + q^m = \frac{1 + q - q^m - q^{m+1}}{1 - q}$. Thus, we have $\# C_{2m} = \frac{2m(1-q)}{(1+q)(1-q^m)} = \frac{n(1-q)}{(1+q)(1-q^m)}$.
     If $n=2m-1$, then similarly 
     $\# C_{2m-1} = \frac{n(1-q)}{1+q-2q^m}$.
     \item $G$ is the Petersen graph. \\
@@ -377,7 +377,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   Let $G$ and $H$ be graphs. The \textit{cartesian product} $G \square H$ of $G$ and $H$ is the graph defined as follows;
   \begin{itemize}
     \item $V(G \square H) = V(G) \times V(H)$.
-    \item $E(G \square H) = \{\{ (x,y), (x', y') \} | x=x' \text{ and } \{y,y'\} \in E(H) \text{ or } y=y' \text{ and } \{x,x'\} \in E(G)\}$.
+    \item $E(G \square H) = \{\{ (x,y), (x', y') \} \mid x=x' \text{ and } \{y,y'\} \in E(H) \text{ or } y=y' \text{ and } \{x,x'\} \in E(G)\}$.
   \end{itemize}
 \end{definition}
 
@@ -409,13 +409,13 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   Let $G$ be a graph. Then,
   \[
   \begin{split}
-    \# G(q) &= \sum_{k=0}^{\infty} (-1)^k \sum_{x_0 \neq x_1 \neq \cdots \neq x_k} q^{d(x_0, x_1) + d(x_1, x_2) + \cdots + d(x_{k-1}, x_k)} \\
+    \# G(q) &= \sum_{k=0}^{\infty} (-1)^k \sum_{x_0 \neq x_1 \neq \cdots \neq x_k} q^{d(x_0, x_1) + d(x_1, x_2) + \dots + d(x_{k-1}, x_k)} \\
     &= \sum_{n=0}^{\infty} c_n q^n,
   \end{split}
   \]
   where 
   \[
-    c_n = \sum_{k=0}^{n} (-1)^k |\{ (x_0, \dots, x_k) | x_0 \neq x_1 \neq \cdots \neq x_k, d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) = n \}|.
+    c_n = \sum_{k=0}^{n} (-1)^k |\{ (x_0, \dots, x_k) \mid x_0 \neq x_1 \neq \cdots \neq x_k, d(x_0, x_1) + \dots + d(x_{k-1}, x_k) = n \}|.
   \]
 \end{proposition}
 
@@ -433,15 +433,15 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   From the previous proposition, we have
   \[
     \begin{split}
-      c_0 &= \sum_{k=0}^{0}(-1)^k |\{ (x_0, \dots, x_k) | x_0 \neq x_1 \neq \cdots \neq x_k, d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) = n \}| \\
-      &= |\{ (x_0) | x_0 \in V(G) \}| \\
+      c_0 &= \sum_{k=0}^{0}(-1)^k |\{ (x_0, \dots, x_k) \mid x_0 \neq x_1 \neq \cdots \neq x_k, d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) = n \}| \\
+      &= |\{ (x_0) \mid x_0 \in V(G) \}| \\
       &= |V(G)|
     \end{split}
   \]
   and
   \[
     \begin{split}
-      c_1 &= |\{ (x_0) | d(x_0, x_0) = 1 \}| - |\{ (x_0, x_1) | x_0 \neq x_1, d(x_0, x_1) = 1 \}| \\
+      c_1 &= |\{ (x_0) \mid d(x_0, x_0) = 1 \}| - |\{ (x_0, x_1) \mid x_0 \neq x_1, d(x_0, x_1) = 1 \}| \\
       &= 0 - 2|E(G)| \\
       &= -2|E(G)|.
     \end{split}
@@ -483,7 +483,7 @@ In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H)
 \end{definition}
 
 \begin{lemma}
-  Let $R$ be a ring containing no nonzero nilpotents and $\Phi$ be a multiplicative $R$-valued graph invariant satisfying the inclusion-exclusion principle. Then, $\Phi(G) = |V(G)|$ for any graph $G$.
+  Let $R$ be a ring containing no nonzero nilpotents and let $\Phi$ be a multiplicative $R$-valued graph invariant satisfying the inclusion-exclusion principle. Then, $\Phi(G) = |V(G)|$ for any graph $G$.
 \end{lemma}
 
 \begin{proof}
@@ -499,12 +499,12 @@ In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H)
 \end{example}
 
 \begin{definition}
-  Let $X$ be a graph and $U$ be a subgraph of $X$.
+  Let $X$ be a graph and let $U$ be a subgraph of $X$.
   $U$ is said to be \textit{convex} in $X$ if for any vertices $x,y \in V(U)$, $d_U(x,y) = d_X(x,y)$.
 \end{definition}
 
 \begin{lemma}
-  Let $X$ be a graph, $G,H$ be subgraphs of $X$ such that $X = G \cup H$, and $g \in V(G)$ and $h \in V(H)$ such that there is a path $(g = x_0 \rightarrow x_1 \rightarrow \dots \rightarrow x_n = h)$ in $X$.
+  Let $X$ be a graph, let $G,H$ be subgraphs of $X$, $g \in V(G)$, and $h \in V(H)$ such that $X = G \cup H$ and there is a path $(g = x_0 \rightarrow x_1 \rightarrow \dots \rightarrow x_n = h)$ in $X$.
   Then, there exists a vertex $x_i \in V(G) \cap V(H)$.
 \end{lemma}
 
@@ -513,7 +513,7 @@ In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H)
 \end{proof}
 
 \begin{lemma}
-  Let $X$ be a graph and $G,H$ be subgraphs of $X$ such that $X = G \cup H$.
+  Let $X$ be a graph and $G,H$ subgraphs of $X$ such that $X = G \cup H$.
   If $G \cap H$ is convex in $X$, then $G$ and $H$ are also convex in $X$.
 \end{lemma}
 
@@ -522,7 +522,7 @@ In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H)
 \end{proof}
 
 \begin{definition}
-  Let $X$ be a graph and $U$ be a subgraph of $X$ such that $U$ is convex in $X$. We denote $V_U(X) = \{ v \in V(X) | d_X(v,u) < \infty \text{ for some } u \in V(U) \}$.
+  Let $X$ be a graph and let $U$ be a subgraph of $X$ such that $U$ is convex in $X$. We denote $V_U(X) = \{ v \in V(X) \mid d_X(v,u) < \infty \text{ for some } u \in V(U) \}$.
   Then, we say that \textit{$X$ projects to $U$} if for any $x \in V_U(X)$, there exists $\pi(x) \in V(U)$ such that for any $u \in V(U)$, $d_X(x,u) = d_X(x, \pi(x)) + d_X(\pi(x),u)$.
 \end{definition}
 
@@ -539,7 +539,7 @@ In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H)
 \end{example}
 
 \begin{lemma}
-  Let $X$ be a graph and $U \subset X$ be a convex subgraph of $X$ such that $X$ projects to $U$.
+  Let $X$ be a graph and let $U$ be a convex subgraph of $X$ such that $X$ projects to $U$.
   Then, for any $u \in V(U)$, 
   \[
     w_U(u) = \sum_{x \in \pi^{-1}(u)}q^{d_X(u, x)}w_X(x).
@@ -550,8 +550,8 @@ In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H)
   aaa
 \end{proof}
 
-\begin{theorem}\label{incl-excl}(Main theorem I)
-  Let $X$ be a graph and $G,H$ be subgraphs of $X$ such that $X = G \cup H$.
+\begin{theorem}[Main Theorem I]\label{incl-excl}
+  Let $X$ be a graph and let $G,H$ be subgraphs of $X$ such that $X = G \cup H$.
   If $G \cap H$ is convex in $X$ and $H$ projects to $G \cap H$, then
   \[
     \# X = \# G + \# H - \#(G \cap H).
@@ -612,17 +612,17 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   \[
     \begin{split}
       l(x_0, \dots, x_k) &= d(x_0, x_1) + d(x_1, x_2) + \cdots + d(x_{k-1}, x_k) \\
-      &= \sum_{i=1}^{k} d(x_{i-1}, x_i)．
+      &= \sum_{i=1}^{k} d(x_{i-1}, x_i).
     \end{split}
   \]
   Now, let $l(x_0) = 0$.
-  We say the tuple $(x_0, \dots, x_k)$ is \textit{good} if $x_0 \neq x_1 \neq \cdots \neq x_k$.
+  We say a tuple $(x_0, \dots, x_k)$ is \textit{good} if $x_0 \neq x_1 \neq \cdots \neq x_k$.
 \end{definition}
 
-\begin{lemma}(Triangle inequality)
+\begin{lemma}[Triangle inequality]
   If $(x_0, \dots, x_k)$ is a good tuple of $V(G)$, then for any $1 \leq i \leq k-1$,
   \[
-    l(x_0, \dots, x_k) \geq l(x_0, \dots, \hat{x_i}, \dots, x_k)．
+    l(x_0, \dots, x_k) \geq l(x_0, \dots, \hat{x_i}, \dots, x_k).
   \]
 \end{lemma}
 
@@ -630,7 +630,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   We obviously have the statement by the triangle inequality of the distance function $d$.
 \end{proof}
 
-\begin{definition}(\textit{magnitude chain complex})
+\begin{definition}[\textit{Magnitude chain complex}]
   Let $G$ be a graph.
   $MC_{*,*}(G)$ is the \textit{magnitude complex} defined as follows:
   \[
@@ -650,7 +650,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   \]
 \end{definition}
 
-\begin{remark}For a good tuple $(x_0, \dots, x_k)$,
+\begin{remark}For a good tuple $(x_0, \dots, x_k)$ and $1 \leq i \leq k-1$,
   \[
     \partial_i(x_0, \dots, x_k) \neq 0 \iff d(x_{i-1}, x_i) + d(x_i, x_{i+1}) = d(x_{i-1}, x_{i+1}).
   \]  
@@ -677,29 +677,29 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
     \item $G = V_n$. Then,
     \[
       MC_{k,l}(V_n) = \begin{cases}
-        \ZZ\{(x) | x \in V(V_n) \} & (k=l=0). \\
-        0 & (\text{otherwise}).
+        \ZZ\{(x) \mid x \in V(V_n) \} &  \text{if } k=l=0. \\
+        0 & \text{otherwise}.
       \end{cases}
     \]
-    $\partial = 0$ inplies that
+    $\partial = 0$ implies that
     \[
       MH_{k,l}(V_n) \approx \begin{cases}
-        \ZZ^n & (k=l=0) \\
-        0 & (\text{otherwise}).
+        \ZZ^n & \text{if } k=l=0. \\
+        0 & \text{otherwise}.
       \end{cases}
     \]
-    \item $G = K_n (n \geq 2)$. Then, $l(x_0, \cdots, x_k) = k$ for any good tuple $(x_0, \cdots, x_k)$ of $V(K_n)$. Thus,
+    \item $G = K_n (n \geq 2)$. Then, $l(x_0, \dots, x_k) = k$ for any good tuple $(x_0, \dots, x_k)$ of $V(K_n)$. Thus,
     \[
       MC_{k,l}(K_n) = \begin{cases}
-        \ZZ\{(x_0, \dots, x_k) | x_0 \neq x_1 \neq \cdots \neq x_k \} & (l=k). \\
-        0 & (\text{otherwise}).
+        \ZZ\{(x_0, \dots, x_k) \mid x_0 \neq x_1 \neq \cdots \neq x_k \} & \text{if } l=k. \\
+        0 & \text{otherwise}.
       \end{cases}
     \]
-    $\partial = 0$ inplies that
+    $\partial = 0$ implies that
     \[
       MH_{k,l}(K_n) \approx \begin{cases}
-        \ZZ^{n(n-1)^l} & (l=k). \\
-        0 & (\text{otherwise}).
+        \ZZ^{n(n-1)^l} & \text{if } l=k. \\
+        0 & \text{otherwise}.
       \end{cases}
     \]
     \item $G = C_5$. Number the vertices of $C_5$ as shown in the following figure. \\
@@ -732,24 +732,23 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
 \begin{proposition}
   Let $G$ be a graph. Then,
   \begin{itemize}
-    \item $MH_{0,0}(G) \approx \ZZ^{|V(G)|}$.
-    \item $MH_{1,1}(G) \approx \ZZ^{2|E(G)|}$.
+    \item $MH_{0,0}(G) \approx \ZZ^{|V(G)|}$ holds.
+    \item $MH_{1,1}(G) \approx \ZZ^{2|E(G)|}$ holds.
   \end{itemize}
-  holds.
 \end{proposition}
 
 \begin{proof}
   \[
       MC_{k,0}(G) = \begin{cases}
-        \ZZ\{(x) | x \in V(G) \} & (k=0) \\
-        0 & (\text{otherwise})
+        \ZZ\{(x) \mid x \in V(G) \} & \text{if } k=0. \\
+        0 & \text{otherwise}.
       \end{cases}
   \]
   and $\partial = 0$ induces the first equation.
   \[
       MC_{k,1}(G) = \begin{cases}
-        \ZZ\{(x_0, x_1) | x_0 \neq x_1 \} & (k=1) \\
-        0 & (\text{otherwise})
+        \ZZ\{(x_0, x_1) \mid x_0 \neq x_1 \} & \text{if } k=1. \\
+        0 & \text{otherwise}.
       \end{cases}
     \]
   and $\partial = 0$ induces the second equation.
@@ -758,7 +757,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
 \begin{definition}
   The diameter $d$ of a graph $G$ is defined by
   \[
-    d = \max \{ d(x,y) | x,y \in V(G) \text{ and } x,y \text{ lie in the same component of } G \}.
+    d = \max \{ d(x,y) \mid x,y \in V(G) \text{ and } x,y \text{ lie in the same component of } G \}.
   \]
   If $G = V_n$, then we define $d=0$.
   Then, for any graph $G$, $0 \leq d < \infty$ holds.
@@ -766,13 +765,12 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
 \end{definition}
 
 \begin{proposition}
-  Let $G$ be a graph and $d$ be the diameter of $G$ and assume that $MH_{k,l}(G) \neq 0$ for given non-negative integers $k$ and $l$.
+  Let $G$ be a graph and let $d$ be the diameter of $G$ and assume that $MH_{k,l}(G) \neq 0$ for given non-negative integers $k$ and $l$.
   Then,
   \begin{itemize}
-    \item $\frac{l}{d} \leq k \leq l$.
-    \item If $d > 1 \text{ and } l > 0 \text{, then } \frac{l}{d} < k \leq l$.
+    \item $\frac{l}{d} \leq k \leq l$ holds.
+    \item If $d > 1 \text{ and } l > 0 \text{, then } \frac{l}{d} < k \leq l$ holds.
   \end{itemize}
-  holds.
 \end{proposition}
 
 \begin{proof}
@@ -781,13 +779,13 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   This implies that $\frac{l}{d} \leq k \leq l$.
   
   Now, assume that $d > 1$ and $l > 0$ and suppose that $k = \frac{l}{d}$.
-  From the above discussion, we have $d(x_i, x_{i+1}) = d$ for all $i$. $\partial(x_0, \cdots, x_k) = 0$. For the $(k+1)$-tuple $\partial(x_0, \cdots, x_k)$ is a linear combination of at most $k-1$ distinct terms of $k$-tuples, so $\partial(x_0, \cdots, x_k) = 0$ implies $d(x_{i-1}, x_i) + d(x_i, x_{i+1}) \neq d(x_{i-1}, x_{i+1})$ for all $1 \leq i \leq k-1$.
+  From the above discussion, we have $d(x_i, x_{i+1}) = d$ for all $i$. $\partial(x_0, \dots, x_k) = 0$. For the $(k+1)$-tuple $\partial(x_0, \dots, x_k)$ is a linear combination of at most $k-1$ distinct terms of $k$-tuples, so $\partial(x_0, \dots, x_k) = 0$ implies $d(x_{i-1}, x_i) + d(x_i, x_{i+1}) \neq d(x_{i-1}, x_{i+1})$ for all $1 \leq i \leq k-1$.
   Since $d(x_0, x_1) = d \geq 2$, there exists a vertex $y$ such that $d(x_0, y) + d(y, x_1) = d(x_0, x_1)$ and $y \neq x_0, x_1$.
-  Then, $(x_0, y, x_1, \cdots, x_k)$ is a good tuple in $MC_{k+1, l}(G)$ and \[
-    \partial_i(x_0, y, x_1, \cdots, x_k) =
+  Then, $(x_0, y, x_1, \dots, x_k)$ is a good tuple in $MC_{k+1, l}(G)$ and \[
+    \partial_i(x_0, y, x_1, \dots, x_k) =
     \begin{cases}
-      (x_0, x_1, \cdots, x_k) & (i=1). \\
-      0 & (2 \leq i \leq k).
+      (x_0, x_1, \dots, x_k) & \text{for } i=1. \\
+      0 & \text{for } 2 \leq i \leq k.
     \end{cases}
   \]
   It is obvious for $3 \leq i$ by $d(x_{i-1}, x_i) + d(x_i, x_{i+1}) \neq d(x_{i-1}, x_{i+1})$ and is also true for $i=2$ since $d(y, x_1) + d(x_1, x_2) = d(y, x_1) + d > d \geq d(y, x_2)$. This implies $MH_{k,l}(G) = 0$ and contradicts the assumption.
@@ -799,8 +797,10 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   A map $f : V(G) \rightarrow V(H)$ is said to be a \textit{graph map} if for any $\{x,y\} \in E(G)$, either $f(x) = f(y)$ or $\{f(x), f(y)\} \in E(H)$.
 \end{definition}
 
+We note that a graph map is distinguished from a graph homomorphism, which requires that $\{f(x), f(y)\} \in E(H)$ for any $\{x,y\} \in E(G)$.
+
 \begin{proposition}\label{f_inequality}
-  $l(f(x_0), \cdots, f(x_k)) \leq l(x_0, \cdots, x_k)$ for any good tuple $(x_0, \cdots, x_k)$ of $V(G)$.
+  $l(f(x_0), \dots, f(x_k)) \leq l(x_0, \dots, x_k)$ for any good tuple $(x_0, \dots, x_k)$ of $V(G)$.
 \end{proposition}
 
 \begin{proof}
@@ -810,23 +810,23 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   If $x,y$ do not lie in the same component, then $d_G(x,y) = d_H(f(x), f(y)) = \infty$. Then,
   \[
     \begin{split}
-      l(f(x_0), \cdots, f(x_k)) &= \sum_{i=1}^{k} d_H(f(x_{i-1}), f(x_i)) \\
+      l(f(x_0), \dots, f(x_k)) &= \sum_{i=1}^{k} d_H(f(x_{i-1}), f(x_i)) \\
       &\leq \sum_{i=1}^{k} d_G(x_{i-1}, x_i) \\
-      &= l(x_0, \cdots, x_k).
+      &= l(x_0, \dots, x_k).
     \end{split}
   \]
 \end{proof}
 
 \begin{definition}
-  Let $G$ and $H$ be graphs and $f : V(G) \rightarrow V(H)$ be a graph map.
+  Let $G$ and $H$ be graphs and let $f : V(G) \rightarrow V(H)$ be a graph map.
   Then, the \textit{induced map} $f_{\#} : MC_{*,*}(G) \rightarrow MC_{*,*}(H)$ is defined by
   \[
-    f_{\#}(x_0, \cdots, x_k) = \begin{cases}
-      (f(x_0), \cdots, f(x_k)) & (l(f(x_0), \cdots, f(x_k)) = l(x_0, \cdots, x_k)) \\
-      0 & (\text{otherwise})
+    f_{\#}(x_0, \dots, x_k) = \begin{cases}
+      (f(x_0), \dots, f(x_k)) & \text{if } l(f(x_0), \dots, f(x_k)) = l(x_0, \dots, x_k). \\
+      0 & \text{otherwise}.
     \end{cases}
   \]
-  for any good tuple $(x_0, \cdots, x_k)$ of $V(G)$.
+  for any good tuple $(x_0, \dots, x_k)$ of $V(G)$.
 \end{definition}
 
 \begin{proposition}
@@ -841,10 +841,10 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   If $f : G \rightarrow H$ is a graph map, the \textit{induced map in homology} $f_* : MH_{*,*}(G) \rightarrow MH_{*,*}(H)$ is the map induced by the chain map $f_{\#} : MC_{*,*}(G) \rightarrow MC_{*,*}(H)$.
 \end{definition}
 
-\begin{remark}
-  $A$ is called a \textit{bigaded abelian group} if $A = \bigoplus_{k,l \geq 0} A_{k,l}$ where each $A_{k,l}$ is an abelian group.
+\begin{definition}
+  $A$ is called a \textit{bigraded abelian group} if $A = \bigoplus_{k,l \geq 0} A_{k,l}$ where each $A_{k,l}$ is an abelian group.
   A \textit{bigraded homomorphism} $f : A \rightarrow B$ between bigraded abelian groups $A$ and $B$ is a homomorphism such that $f(A_{k,l}) \subset B_{k,l}$ for any $k,l \geq 0$.
-\end{remark}
+\end{definition}
 
 \begin{proposition}
   The assignment $G \mapsto MH_{*,*}(G)$ and $f \mapsto f_*$ defines a functor from the category of graphs and graph maps to the category of bigraded abelian groups and bigraded homomorphisms, denoting by $\mathbf{Graph} \rightarrow \mathbf{BAb}$.
@@ -857,8 +857,8 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
     \item $f_* : MH_{1,1}(G) \rightarrow MH_{1,1}(H)$ is given by
     \[
       f_*(x_0, x_1) = \begin{cases}
-        (f(x_0), f(x_1)) & (\text{ if } f(x_0) \neq f(x_1)) \\
-        0 & (\text{otherwise})
+        (f(x_0), f(x_1)) & \text{ if } f(x_0) \neq f(x_1). \\
+        0 & \text{otherwise}.
       \end{cases}
     \]
     for any $(x_0, x_1) \in MH_{1,1}(G)$.
@@ -870,8 +870,8 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   For the second equation, we obtain by definition;
   \[
     f_*(x_0, x_1) = \begin{cases}
-      (f(x_0), f(x_1)) & l(f(x_0), f(x_1)) = l(x_0, x_1) = 1 \\
-      0 & \text{otherwise}
+      (f(x_0), f(x_1)) & \text{if } l(f(x_0), f(x_1)) = l(x_0, x_1) = 1.\\
+      0 & \text{otherwise}.
     \end{cases}
   \]
   for any $(x_0, x_1) \in MH_{1,1}(G)$. Since $f$ is a graph map, $l(f(x_0), f(x_1)) = 1$ if and only if $f(x_0) \neq f(x_1)$.
@@ -901,7 +901,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   saaa.
 \end{proof}
 
-We obtain \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(A_* \oplus B_*) = \chi(A_*) + \chi(B_*)$.
+We can give another proof of \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(A_* \oplus B_*) = \chi(A_*) + \chi(B_*)$.
 
 
 
@@ -918,11 +918,11 @@ We obtain \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(
   \]
   which is defined by
   \[
-    \square((x_0, \cdots, x_{k_1}), (y_0, \cdots, y_{k_2})) = \sum_{\sigma} \sign(\sigma) ((x_{i_0}, y_{j_0}), (x_{i_1}, y_{j_1}), \cdots, (x_{i_k}, y_{j_k})),
+    \square((x_0, \dots, x_{k_1}), (y_0, \dots, y_{k_2})) = \sum_{\sigma} \sign(\sigma) ((x_{i_0}, y_{j_0}), (x_{i_1}, y_{j_1}), \dots, (x_{i_k}, y_{j_k})),
   \]
   where the sum is over all shuffles $\sigma$ of type $(k_1, k_2)$, that is, all sequences
   \[    
-    ((i_0, j_0), (i_1, j_1), \cdots, (i_k, j_k))
+    ((i_0, j_0), (i_1, j_1), \dots, (i_k, j_k))
   \]
   such that
   \[
@@ -939,7 +939,7 @@ We obtain \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(
   \[
     \sign(\sigma) = (-1)^m,
   \]
-  where $m = \# \{ (i,j) \in \{ \{0, \cdots, k_1\} \times \{0, \cdots, k_2\} \} | i = i_r \Rightarrow j < j_r \}$.
+  where $m = \# \{ (i,j) \in \{ \{0, \dots, k_1\} \times \{0, \dots, k_2\} \} \mid i = i_r \Rightarrow j < j_r \}$.
 
   Here, we extend the map $\square$ bilinearly to the tensor product \\
   \[
@@ -974,7 +974,7 @@ We obtain \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(
 \end{proposition}
 
 \begin{proof}
-  Let $\bf{x} = (x_0, \cdots, x_{k_1}), \bf{y} = (y_0, \cdots, y_{k_2})$.
+  Let $\bf{x} = (x_0, \dots, x_{k_1}), \bf{y} = (y_0, \dots, y_{k_2})$.
   Now, we show that 
   \[
     \partial \circ \square(\bf{x} \otimes \bf{y}) = \square((\partial \bf{x}) \otimes \bf{y}) + (-1)^{k_1} \square (\bf{x} \otimes (\partial \bf{y})) = \square \circ (\partial \otimes \partial) (\bf{x} \otimes \bf{y}).
@@ -996,7 +996,7 @@ We obtain \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(
 From this proposition, we obtain the induced map in homology, also denoting $\square$.
 
 \begin{definition}(Tor functor)
-  Let $R$ be a ring and $A$ and $B$ be $R$-modules.
+  Let $R$ be a ring and let $A, B$ be $R$-modules.
   Then, $\tor(A,B)$ is defined by the derived functor of the tensor product.  
 \end{definition}
 
@@ -1019,7 +1019,7 @@ We don't prove this theorem in this thesis.
 
 \subsection{The Mayer-Vietoris Sequence}
 \begin{definition}
-  Let $X$ be a graph and $G,H$ be subgraphs of $X$.
+  Let $X$ be a graph and let $G,H$ be subgraphs of $X$.
   \begin{enumerate}
     \item $(X;G,H)$ is said to be a \textit{projecting decomposition} if $X = G \cup H$, $G \cap H$ is convex in $X$ and $H$ projects to $G \cap H$. \\ 
     We write $i^G : G \rightarrow X$, $i^H : H \rightarrow X$, $j^G : G \cap H \rightarrow G$, $j^H : G \cap H \rightarrow H$ for the inclusion graph maps.
@@ -1027,7 +1027,7 @@ We don't prove this theorem in this thesis.
     \item Let $(X;G,H), (X';G',H')$ be projecting decompositions. $f : (X;G,H) \rightarrow (X';G',H')$ is said to be a \textit{decomposition map} if $f : X \rightarrow X'$ is a graph map such that $f(V(G)) \subset V(G')$ and $f(V(H)) \subset V(H')$.
     \item Let $f : (X;G,H) \rightarrow (X';G',H')$ be a decomposition map.
     Then, $f$ is said to be a \textit{projecting decomposition map} if $V_{G \cap H}(H) = f^{-1}(V_{G' \cap H'}(H'))$ and $f(\pi(h)) = \pi(f(h))$ for any $h \in V_{G \cap H}(H)$.
-    \item Let $(X;G,H)$ be a projecting decomposition. $MC_{*,*}(G,H)$ denote the subcomplex of $MC_{*,*}(X)$ spanned by good tuples $(x_0, \cdots, x_k)$ whose entries all lie in $G$ or all lie in $H$.
+    \item Let $(X;G,H)$ be a projecting decomposition. $MC_{*,*}(G,H)$ denote the subcomplex of $MC_{*,*}(X)$ spanned by good tuples $(x_0, \dots, x_k)$ whose entries all lie in $G$ or all lie in $H$.
   \end{enumerate}
 \end{definition}
 
@@ -1115,7 +1115,7 @@ In this section, we explain the motivation for studying the magnitude of graphs 
 
 \subsection{The Magnitude of a Matrix}
 \begin{definition}
-  Let $k$ be a set and $+, \cdot $ be a binary operation on $k$, and $0_k, 1_k$ be elements of $k$.
+  Let $k$ be a set and let $+, \cdot $ be binary operations on $k$, and let $0_k, 1_k$ be elements of $k$.
   Then, $(k, +, \cdot, 0_k, 1_k)$ is called a \textit{rig} if the following conditions hold:
   \begin{itemize}
     \item $(k, +, 0_k)$ is a commutative monoid.
@@ -1130,12 +1130,12 @@ In this section, we explain the motivation for studying the magnitude of graphs 
 \end{example}
 
 \begin{definition}
-  Let $k$ be a rig and $I, J$ be finite sets.
+  Let $k$ be a rig and let $I, J$ be finite sets.
   A $I \times J$-matrix is a function $\zeta : I \times J \rightarrow k$.
 \end{definition}
 
 \begin{remark}
-  Let $k$ be a rig, and $I, J, \text{ and } L$ be finite sets.
+  Let $k$ be a rig, and let $I, J, \text{ and } L$ be finite sets.
   \begin{enumerate}
     \item If $\zeta_1$ is an $I \times J$-matrix and $\zeta_2$ is a $J \times L$-matrix, then the product $\zeta_1 \zeta_2$ is defined as follows:
     \[
@@ -1335,7 +1335,7 @@ In this document, we only treat the locally small categories, which means that f
 
 \subsection{The Magnitude of Enriched Categories}
 \begin{definition}
-  Let $(\VV, \otimes, I)$ be a monoidal category and $k$ be a rig.
+  Let $(\VV, \otimes, I)$ be a monoidal category and let $k$ be a rig.
   We define a monoid homomorphism
   \[  | \cdot | : (\ob(\VV)/{\approx}, \otimes, I) \rightarrow (k, \cdot, 1_k)
   \]

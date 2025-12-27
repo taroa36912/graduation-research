@@ -10,10 +10,10 @@
 \contentsline {subsection}{\numberline {3.4}Cartesian Products}{23}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}The Mayer-Vietoris Sequence}{25}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}Diagonal Graphs}{26}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Motivation: The Magnitude of Enriched Categories}{27}{section.4}%
-\contentsline {subsection}{\numberline {4.1}The Magnitude of a Matrix}{27}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The Definition of Enriched Categories}{30}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}The Magnitude of Enriched Categories}{32}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}The Relation of The Magnitudes of Graphs and Enriched Categories}{32}{subsection.4.4}%
-\contentsline {section}{Appendix}{33}{subsection.4.4}%
-\contentsline {section}{\numberline {A}The calculation of Graph Automorphisms}{33}{appendix.A}%
+\contentsline {section}{\numberline {4}Motivation: The Magnitude of Enriched Categories}{28}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The Magnitude of a Matrix}{28}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The Definition of Enriched Categories}{31}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}The Magnitude of Enriched Categories}{33}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}The Relation of The Magnitudes of Graphs and Enriched Categories}{33}{subsection.4.4}%
+\contentsline {section}{Appendix}{34}{subsection.4.4}%
+\contentsline {section}{\numberline {A}The calculation of Graph Automorphisms}{34}{appendix.A}%

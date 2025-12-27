@@ -204,6 +204,8 @@ INPUT ./Tikz/Graphs/out/K_3.pdf
 INPUT ./Tikz/Graphs/out/K_3.pdf
 INPUT ./Tikz/Graphs/out/K_3.pdf
 INPUT extractbb -B cropbox -O Tikz/Graphs/out/K_3.pdf
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT ./Tikz/Graphs/out/n_vertex.pdf
 INPUT ./Tikz/Graphs/out/n_vertex.pdf
 INPUT ./Tikz/Graphs/out/n_vertex.pdf
@@ -235,8 +237,6 @@ INPUT ./Tikz/Graphs/out/connect_C_4.pdf
 INPUT ./Tikz/Graphs/out/connect_C_4.pdf
 INPUT ./Tikz/Graphs/out/connect_C_4.pdf
 INPUT extractbb -B cropbox -O Tikz/Graphs/out/connect_C_4.pdf
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT ./Tikz/Graphs/out/C_2_square.pdf
 INPUT ./Tikz/Graphs/out/C_2_square.pdf
 INPUT ./Tikz/Graphs/out/C_2_square.pdf
