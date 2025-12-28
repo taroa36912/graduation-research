@@ -319,6 +319,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
     \item $G = V_n$ (edgeless graph with $n$ vertices). \\
     \figgraph{n_vertex.pdf}{The graph with no edges}{example_no_edge_graph} \\ 
     Then, $\aut(G) \approx \mathfrak{S}_n$ and $G$ is vertex-transitive. $S = 1$ and we have $\# V_n = n$.
+    Now, the empty graph can be denoted by $V_0$.
     \item $G = K_n$ (complete graph with $n$ vertices). \\
     \figgraph{K_n.pdf}{Complete graph}{example_complete_graph} \\
     Then, $\aut(G) \approx \mathfrak{S}_n$ and $G$ is vertex-transitive. $S = 1 + (n-1)q$ and we have $\# K_n = \frac{n}{1 + (n-1)q}$.
@@ -420,7 +421,24 @@ We can define a \textit{graph automorphism} using the definition above. We denot
 \end{proposition}
 
 \begin{proof}
-  aaa.
+  Let $\tilde{w}_G:V(G) \rightarrow \ZZ[q]$ be a map defined by 
+  \[
+    \tilde{w}_G(x) = \sum_{k=0}^{\infty} (-1)^k \sum_{x = x_0 \neq x_1 \neq \cdots \neq x_k} q^{d(x_0, x_1) + d(x_1, x_2) + \dots + d(x_{k-1}, x_k)}.
+  \]
+  Then, for $x \in V(G)$, 
+  \begin{align*}
+    & \sum_{y \in V(G)} q^{d(x,y)} \tilde{w}_G(y) \\
+    &= \tilde{w}_G(x) + \sum_{y \in V(G) \backslash \{x\}} q^{d(x,y)} \sum_{k=0}^{\infty} (-1)^k \sum_{y = x_0 \neq x_1 \neq \cdots \neq x_k} q^{d(x_0, x_1) + \dots + d(x_{k-1}, x_k)} \\
+    &= \tilde{w}_G(x) + \sum_{k=0}^{\infty} (-1)^k \sum_{x \neq y = x_0 \neq x_1 \neq \cdots \neq x_k} q^{d(x,y) + d(x_0, x_1) + \dots + d(x_{k-1}, x_k)} \\
+    &= \tilde{w}_G(x) + \sum_{k=0}^{\infty} (-1)^k \sum_{x \neq x_0 \neq x_1 \neq \cdots \neq x_k} q^{d(x, x_0) + d(x_0, x_1) + \dots + d(x_{k-1}, x_k)} \\
+    &= \sum_{k=0}^{\infty} (-1)^k \sum_{x = x_0 \neq \cdots \neq x_k} q^{d(x_0, x_1) + \dots + d(x_{k-1}, x_k)} \\
+    &\quad + \sum_{k=0}^{\infty} (-1)^k \sum_{x \neq x_0 \neq \cdots \neq x_k} q^{d(x, x_0) + \dots + d(x_{k-1}, x_k)} \\
+    &= 1.
+\end{align*}
+
+The last equality holds since the first term at $k$ is the second term at $k-1$ in the second term with opposite sign. Now, if $k$ goes to infinity, the term disappers since $q^{\infty} = 0$.
+Thus, by \cref{unique property on weighting equation}, we have $\tilde{w}_G = w_G$ and then the first equality of proposition follows.
+The second equality immediately follows from the first one.
 \end{proof}
 
 \begin{corollary}
@@ -450,7 +468,21 @@ We can define a \textit{graph automorphism} using the definition above. We denot
 \end{proof}
 
 \begin{remark}
-  $c_0 \geq 0, c_1 \leq 0, \text{ and } c_2 \geq 0$. $c_2 = 0$ if and only if
+  $c_0 \geq 0, c_1 \leq 0, \text{ and } c_2 \geq 0$ holds. The last inequality follows from
+  \[ 
+    c_2 = |\{ (x,y,z) \mid d(x,y) = d(y,z) = 1 \}| - |\{ (x,y) \mid d(x,y) = 2 \}|
+  \]
+  by \cref{sum_of_magnitude}. However, in general, the sign of $c_n$ is not determined. For example, if $G$ is the Petersen graph, then $\# G = \frac{10}{1 + 3q + 6q^2} = 10 - 30q + 30q^2 + 90q^3 -450q^4 + \cdots$. By above equation of $c_2$, $c_2 = 0$ if and only if $G$ has no cycles of length $3$ and $4$.
+\end{remark}
+
+\begin{remark}\label{Willerton}
+  The magnitude does not have the data of the number of connected components.
+  For example, let $W$ be the graph obtained by the complete graph $K_6$ with a triangle of edges removed. By easy calculation, 
+  \[
+    \# W = \frac{6}{1 + 4q}.
+  \]
+
+  Since $\# K_5 = \frac{5}{1 + 4q}$, we have $\#5W = \frac{30}{1 + 4q} = \#6K_5$. Here, $nG$ means the disjoint union of $n$ copies of a graph $G$.
 \end{remark}
 
 \subsection{Main Results on the Magnitude of Graphs}
@@ -470,13 +502,13 @@ In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H)
   \begin{enumerate}
     \item $\Phi$ is said to be \textit{multiplicative} if
     \begin{itemize}
-      \item $\Phi(K_1) = 1$.
+      \item $\Phi(V_1) = 1$.
       \item $\Phi(G \square H) = \Phi(G) \cdot \Phi(H)$ for any graphs $G$ and $H$.
     \end{itemize}
 
     \item $\Phi$ is said to satisfy the \textit{inclusion-exclusion principle} if
   \begin{itemize}
-    \item $\Phi(\emptyset) = 0$.
+    \item $\Phi(V_0) = 0$.
     \item $\Phi(G \cup H) = \Phi(G) + \Phi(H) - \Phi(G \cap H)$ for any graphs $G$ and $H$.
   \end{itemize}
   \end{enumerate}
@@ -487,16 +519,36 @@ In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H)
 \end{lemma}
 
 \begin{proof}
-  aaa
+  Now, $\Phi(V_0) = 0$, $\Phi(V_1) = 1$ and by inclusion-exclusion principle, we obtain $\Phi(V_n) = n$ for any $n \geq 0$ by induction. \\
+  Let $G$ be any graph and we fix $e \in E(G)$. Let $v_{e}, w_{e}$ be the vertices joined by $e$.
+  Consider the two subgraphs $G_e = (V(G), E(G) \backslash \{e\})$ and $H_e = ( \{v_e, w_e\}, \{e\})$ of $G$.
+  Then, by inclusion-exclusion principle, we have
+  \begin{align*}
+    \Phi(G) &= \Phi(G_e) + \Phi(H_e) - \Phi(G_e \cap H_e) \\
+    &= \Phi(G_e) + \Phi(K_2) - \Phi(V_2) \\
+    &= \Phi(G_e) + \varepsilon.
+  \end{align*}
+  here, we denote $\varepsilon = \Phi(K_2) - \Phi(V_2)$.
+  Repeating this process for all edges of $G$, we have
+  $\Phi(G) = \Phi(V_{V(G)}) + \varepsilon \cdot |E(G)| = |V(G)| + \varepsilon \cdot |E(G)|$. \\
+  Now, we show that $\varepsilon = 0$.
+  Consider the graph $C_4 = K_2 \square K_2$. 
+  Now, $\Phi(C_4) = 4 + \varepsilon \cdot 4$ and by multiplicativity, we have
+  \begin{align*}
+    \Phi(C_4) &= \Phi(K_2) \cdot \Phi(K_2) \\
+    &= (\Phi(V_2) + \varepsilon)(\Phi(V_2) + \varepsilon) \\
+    &= 4 + 4\varepsilon + \varepsilon^2.
+  \end{align*}
+  We obtain $\varepsilon^2 = 0$ and then $\varepsilon = 0$ since $R$ contains no nonzero nilpotents.
+  Thus, we have $\Phi(G) = |V(G)|$ for any graph $G$.
 \end{proof}
+
+The magnitude of graphs is an $\QQ[q]$-valued graph invariant and is multiplicative and $\# V_0 = 0$. Since $\QQ[q]$ has no nonzero nilpotents, we have the following corollary. 
 
 \begin{corollary}
   The magnitude does not satisfy the inclusion-exclusion principle in general.
 \end{corollary}
 
-\begin{example}\label{Willerton}
-  
-\end{example}
 
 \begin{definition}
   Let $X$ be a graph and let $U$ be a subgraph of $X$.
@@ -601,6 +653,12 @@ Before proving this theorem, we give the example of graphs for which we can appl
 
 Furthermore examples.
 
+\begin{remark}
+  Even though two graphs both have one component and the same magnitude, they may not be isomorphic.
+  We can easily generate such examples using wedge sums of graphs as follows.
+
+  続きを書く
+\end{remark}
 
 \newpage
 \section{The Magnitude Homology of Graphs}
@@ -1388,15 +1446,26 @@ In this document, we only treat the locally small categories, which means that f
 \newpage
 \begin{thebibliography}{9}
 
-\bibitem{Lamport94}
-Leslie Lamport.
-\textit{LaTeX: A Document Preparation System}.
-Addison-Wesley, 2nd edition, 1994.
+\bibitem{Leinster1}
+Leinster, Tom.
+\textit{The magnitude of a graph.(English summary)}.
+Math. Proc. Cambridge Philos. Soc. 166 (2019), no. 2, 247–264.
 
-\bibitem{Knuth84}
-Donald E. Knuth.
-\textit{The TeXbook}.
-Addison-Wesley, 1984.
+\bibitem{Leinster2}
+Leinster, Tom.
+\textit{The magnitude of metric spaces.(English summary)}
+Doc. Math. 18 (2013), 857–905.
+
+\bibitem{HepworthWillerton}
+Hepworth, Richard, Willerton, Simon
+\textit{Categorifying the magnitude of a graph.(English summary)}.
+Homology Homotopy Appl. 19 (2017), no. 2, 31–60.
+
+\bibitem{Kelly}
+Kelly, G. M.
+\textit{Basic concepts of enriched category theory.}
+Reprint of the 1982 original [Cambridge Univ. Press, Cambridge; MR0651714]
+Repr. Theory Appl. Categ. No. 10 (2005), vi+137 pp.
 
 \end{thebibliography}
 
