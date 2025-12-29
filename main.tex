@@ -159,7 +159,7 @@ Let $\QQ(q)$ denote the field of rational functions in a variable $q$ over $\QQ$
 $G$-matrix is the square synmetric matrix.
 
 \begin{proposition}\label{invertible}
-  A の$G$-matrix is invertible.
+  A $G$-matrix is invertible.
 \end{proposition}
 
 \begin{proof}
@@ -1178,7 +1178,10 @@ In this section, we explain the motivation for studying the magnitude of graphs 
   \begin{itemize}
     \item $(k, +, 0_k)$ is a commutative monoid.
     \item $(k, \cdot, 1_k)$ is a monoid.
-    \item multiplication distributes over addition.
+    \item multiplication distributes over addition, that is, for any $a,b,c \in k$,
+    \[
+      a \cdot (b + c) = a \cdot b + a \cdot c, ~ (a + b) \cdot c = a \cdot c + b \cdot c.
+    \]
   \end{itemize}
   Now, we mean a rig as a commutative rig with the operation $\cdot$.
 \end{definition}
@@ -1189,10 +1192,10 @@ In this section, we explain the motivation for studying the magnitude of graphs 
 
 \begin{definition}
   Let $k$ be a rig and let $I, J$ be finite sets.
-  A $I \times J$-matrix is a function $\zeta : I \times J \rightarrow k$.
+  An $I \times J$-matrix is a function $\zeta : I \times J \rightarrow k$.
 \end{definition}
 
-\begin{remark}
+\begin{definition}
   Let $k$ be a rig, and let $I, J, \text{ and } L$ be finite sets.
   \begin{enumerate}
     \item If $\zeta_1$ is an $I \times J$-matrix and $\zeta_2$ is a $J \times L$-matrix, then the product $\zeta_1 \zeta_2$ is defined as follows:
@@ -1206,23 +1209,23 @@ In this section, we explain the motivation for studying the magnitude of graphs 
     
     \item Let $\zeta$ be an $I \times I$-matrix. If there exists an $I \times I$-matrix $\zeta^{-1}$ such that $\zeta \zeta^{-1} = \delta$ and $\zeta^{-1} \zeta = \delta$, then $\zeta$ is said to be \textit{invertible} and $\zeta^{-1}$ is called the \textit{inverse} of $\zeta$.
     
-    \item $w : I \rightarrow k$ is called a \textit{vector}. $w$ can be thought of as an element of $k^I$. If $\zeta$ is an $I \times J$-matrix, $v$ is a $I$-vector, and $w$ is a $J$-vector, then the product $\zeta w : I \rightarrow k$ and $v \zeta : J \rightarrow k$ are defined by
+    \item $w : I \rightarrow k$ is called a \textit{vector}. If $\zeta$ is an $I \times J$-matrix, $v$ is a $I$-vector, and $w$ is a $J$-vector, then the products $\zeta w : I \rightarrow k$ and $v \zeta : J \rightarrow k$ are defined by
     \[
       (\zeta w)(i) = \sum_{j \in J} \zeta(i,j) \cdot w(j) \quad (i \in I)
     \]
     \[
       (v \zeta)(j) = \sum_{i \in I} v(i) \cdot \zeta(i,j) \quad (j \in J)
     \]
-    Now, $\zeta w$ is a $I$-vector and $v \zeta$ is a $J$-vector.
+    Now, $\zeta w$ is an $I$-vector and $v \zeta$ is a $J$-vector.
 
     \item If $w, v$ are $I$-vectors, then the \textit{inner product} $v w$ is defined by
     \[
       v w = \sum_{i \in I} v(i) \cdot w(i)
     \]
 
-    \item A vector $u_I : I \rightarrow k$ is defined by $u_I(i) = 1_k$ for any $i \in I$.
+    \item There is the $I$-vector $u$ defined by $u(i) = 1_k$ for any $i \in I$. We denote this vector by $u_I$.
   \end{enumerate}
-\end{remark}
+\end{definition}
 
 
 \begin{definition}
