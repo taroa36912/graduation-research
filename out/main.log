@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  29 DEC 2025 16:50
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  30 DEC 2025 20:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -731,6 +731,11 @@ LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 (Font)              No change on input line 938.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 (Font)              No change on input line 944.
+
+Overfull \hbox (11.1213pt too wide) in paragraph at lines 948--948
+[]\OT1/cmr/bx/n/14.4 Magnitude Ho-mol-ogy of Dis-joint Union of Graphs 
+ []
+
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 (Font)              No change on input line 949.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
@@ -895,55 +900,86 @@ LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 
 [33]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1361.
+(Font)              No change on input line 1363.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1366.
+(Font)              No change on input line 1368.
 
-Overfull \hbox (6.09651pt too wide) in paragraph at lines 1366--1367
+Overfull \hbox (6.09651pt too wide) in paragraph at lines 1368--1369
 \OT1/cmr/bx/n/12 Definition 4.2.4. \OT1/cmr/m/n/12 An \OT1/cmr/m/it/12 en-riched cat-e-gory $\OMS/cmsy/m/n/12 A$ \OT1/cmr/m/n/12 in a monoidal cat-e-gory $(\OMS/cmsy/m/n/12 V\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 
 \OML/cmm/m/it/12 ; I\OT1/cmr/m/n/12 )$
  []
 
 
-Overfull \hbox (14.10333pt too wide) in paragraph at lines 1370--1371
+Overfull \hbox (14.10333pt too wide) in paragraph at lines 1372--1373
 []\OT1/cmr/m/n/12 For any ob-jects $\OML/cmm/m/it/12 a; b; c$ \OT1/cmr/m/n/12 of $\OMS/cmsy/m/n/12 A$\OT1/cmr/m/n/12 , there ex-ists a mor-phism $\OML/cmm/m/it/12 m[] \OT1/cmr/m/n/12 : [][](\OML/cmm/m/it/12 b; c\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
 
  []
 
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1375.
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1379.
 
 
 [34]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1389.
+(Font)              No change on input line 1377.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1381.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1391.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1402.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1407.
+
+Overfull \hbox (14.97853pt too wide) in paragraph at lines 1408--1410
+\OT1/cmr/bx/n/12 Lemma 4.3.2. \OT1/cmr/m/it/12 Let $\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 V\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 
+\OML/cmm/m/it/12 ; I\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 be a monoidal cat-e-gory. Then, $\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 O\OT1/cmr/m/n/12 b(\OMS/cmsy/m/n/12 V\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 =[]; \OMS/cmsy/m/n/12 
+\OML/cmm/m/it/12 ; I\OT1/cmr/m/n/12 )$
+ []
+
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1413.
 
 
 [35]
-Overfull \hbox (8.9358pt too wide) in paragraph at lines 1429--1429
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1435.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1439.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1441.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1452.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1457.
+
+Overfull \hbox (5.75456pt too wide) in paragraph at lines 1457--1461
+[]\OT1/cmr/m/n/12 First, as we see in ex-am-ples, gen-er-al-ized met-ric spaces are $[0\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 1\OT1/cmr/m/n/12 ]$-categories,
+ []
+
+
+
+[36]
+Overfull \hbox (8.9358pt too wide) in paragraph at lines 1475--1475
 []\OT1/cmr/bx/n/17.28 The cal-cu-la-tion of Graph Au-to-mor-phisms 
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1430.
+(Font)              No change on input line 1476.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1435.
+(Font)              No change on input line 1481.
 
 
-[36]
+[37]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1454.
+(Font)              No change on input line 1500.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1459.
+(Font)              No change on input line 1505.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1464.
+(Font)              No change on input line 1510.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1469.
+(Font)              No change on input line 1515.
 
 
-[37] (out/main.aux)
+[38] (out/main.aux)
  ***********
 pLaTeX2e <2023-02-14u04>+1, based on
 LaTeX2e <2025-06-01> patch level 1
@@ -953,15 +989,15 @@ L3 programming layer <2025-09-02>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E5613FA3F8C4BC994EFD7550250D9599;4050.
+(rerunfilecheck)             Checksum: 06C11CBB43311C19C238A55789FBF919;4731.
  ) 
 Here is how much of TeX's memory you used:
- 12004 strings out of 468392
- 195483 string characters out of 5442311
+ 12008 strings out of 468392
+ 195545 string characters out of 5442311
  621684 words of memory out of 5000000
- 40555 multiletter control sequences out of 15000+600000
+ 40559 multiletter control sequences out of 15000+600000
  647530 words of font info for 133 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 72i,17n,79p,673b,770s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,17n,79p,673b,780s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/main.dvi (37 pages, 114032 bytes).
+Output written on out/main.dvi (38 pages, 119084 bytes).

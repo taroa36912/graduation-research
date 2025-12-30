@@ -166,7 +166,7 @@ $G$-matrix is the square synmetric matrix.
   By definition, the determinant of $Z_G$ has constant term $1$, which implies that $\det Z_G \neq 0$.
 \end{proof}
 
-\begin{definition}
+\begin{definition}\label{magnitude_graphs}
   The \textit{magnitude} of a graph $G$ is defined to be the rational function given by
   \[
   \# G(q) = \sum_{x,y \in V(G)} (Z_G(q))^{-1}(x,y).
@@ -499,7 +499,7 @@ In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H)
 
 \begin{definition}
   Let $\Phi$ be an $R$-valued graph invariant.
-  \begin{enumerate}
+  \begin{enumerate}[label=(\arabic*)]
     \item $\Phi$ is said to be \textit{multiplicative} if
     \begin{itemize}
       \item $\Phi(V_1) = 1$.
@@ -849,7 +849,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   It is obvious for $3 \leq i$ by $d(x_{i-1}, x_i) + d(x_i, x_{i+1}) \neq d(x_{i-1}, x_{i+1})$ and is also true for $i=2$ since $d(y, x_1) + d(x_1, x_2) = d(y, x_1) + d > d \geq d(y, x_2)$. This implies $MH_{k,l}(G) = 0$ and contradicts the assumption.
 \end{proof}
 
-\subsection{Induced Maps}
+\subsection{Induced Maps on Magnitude Homology}
 \begin{definition}
   Let $G$ and $H$ be graphs.
   A map $f : V(G) \rightarrow V(H)$ is said to be a \textit{graph map} if for any $\{x,y\} \in E(G)$, either $f(x) = f(y)$ or $\{f(x), f(y)\} \in E(H)$.
@@ -945,7 +945,7 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
 \end{proof}
 
 
-\subsection{Disjoint Union}
+\subsection{Magnitude Homology of Disjoint Union of Graphs}
 \begin{proposition}\label{magnitude_of_disjoint_union}
   Let $G$ and $H$ be graphs.
   We define the inclusion graph maps $i : G \rightarrow G \bigsqcup H, j : H \rightarrow G \bigsqcup H$. Then,
@@ -964,7 +964,7 @@ We can give another proof of \cref{disjoint_union} by \cref{magnitude_of_disjoin
 
 
 
-\subsection{Cartesian Products}
+\subsection{Magnitude Homology of Cartesian Products}
 \begin{definition}This definition is not true.
   Fix $l \geq 0$. The \textit{exterior product} is the map
   \[
@@ -1075,10 +1075,10 @@ We don't prove this theorem in this thesis.
 
 
 
-\subsection{The Mayer-Vietoris Sequence}
+\subsection{The Mayer-Vietoris Sequence of Magnitude Homology of Graphs}
 \begin{definition}
   Let $X$ be a graph and let $G,H$ be subgraphs of $X$.
-  \begin{enumerate}
+  \begin{enumerate}[label=(\arabic*)]
     \item $(X;G,H)$ is said to be a \textit{projecting decomposition} if $X = G \cup H$, $G \cap H$ is convex in $X$ and $H$ projects to $G \cap H$. \\ 
     We write $i^G : G \rightarrow X$, $i^H : H \rightarrow X$, $j^G : G \cap H \rightarrow G$, $j^H : G \cap H \rightarrow H$ for the inclusion graph maps.
 
@@ -1145,7 +1145,7 @@ We don't prove this theorem in this thesis.
 \end{corollary}
 
 
-\subsection{Diagonal Graphs}
+\subsection{Diagonal Graphs and its Property}
 \begin{definition}
   A graph $G$ is said to be \textit{diagonal} if $MH_{k,l}(G) = 0$ for $k \neq l$.
 \end{definition}
@@ -1175,14 +1175,14 @@ In this section, we explain the motivation for studying the magnitude of graphs 
 \begin{definition}
   Let $k$ be a set and let $+, \cdot $ be binary operations on $k$, and let $0_k, 1_k$ be elements of $k$.
   Then, $(k, +, \cdot, 0_k, 1_k)$ is called a \textit{rig} if the following conditions hold:
-  \begin{itemize}
+  \begin{enumerate}[label=(\arabic*)]
     \item $(k, +, 0_k)$ is a commutative monoid.
     \item $(k, \cdot, 1_k)$ is a monoid.
     \item multiplication distributes over addition, that is, for any $a,b,c \in k$,
     \[
       a \cdot (b + c) = a \cdot b + a \cdot c, ~ (a + b) \cdot c = a \cdot c + b \cdot c.
     \]
-  \end{itemize}
+  \end{enumerate}
   Now, we mean a rig as a commutative rig with the operation $\cdot$.
 \end{definition}
 
@@ -1197,7 +1197,7 @@ In this section, we explain the motivation for studying the magnitude of graphs 
 
 \begin{definition}
   Let $k$ be a rig, and let $I, J, \text{ and } L$ be finite sets.
-  \begin{enumerate}
+  \begin{enumerate}[label=(\arabic*)]
     \item If $\zeta_1$ is an $I \times J$-matrix and $\zeta_2$ is a $J \times L$-matrix, then the product $\zeta_1 \zeta_2$ is defined as follows:
     \[
       (\zeta_1 \zeta_2)(i,l) = \sum_{j \in J} \zeta_1(i,j) \cdot \zeta_2(j,l) \quad (i \in I, l \in L)
@@ -1275,7 +1275,7 @@ From this lemma, the sum of the weighting or coweighting on $\zeta$ is unique if
 
 \begin{lemma}
   Let $\zeta$ be an $I \times I$-matrix over a rig $k$.
-  \begin{enumerate}
+  \begin{enumerate}[label=(\arabic*)]
     \item If $\zeta$ is invertible, then $\zeta$ has the magnitude.
     \item If $k$ is a field and $\zeta$ has the magnitude, then $\zeta$ is invertible.
   \end{enumerate}
@@ -1309,14 +1309,14 @@ From this lemma, the sum of the weighting or coweighting on $\zeta$ is unique if
 In this document, we only treat the locally small categories, which means that for any objects $a,b$ of a category $\CC$, the hom-set $\Hom_{\CC}(a,b)$ is a set.
 
 
-\begin{definition}
-  A category $\CC$ is called a \textit{monoid} if $\CC$ has only one object $*$ and $V=\Hom_{\CC}(*,*)$ is a monoid with the composition of morphisms as the binary operation and the identity morphism $id_*$ as the identity element. We denote the operation of $V$ by $\otimes$.
+\begin{definition}\label{monoid}
+  A category $\CC$ is called a \textit{monoid} if $\CC$ has only one object $*$ and $V=\Hom_{\CC}(*,*)$ is a monoid with the composition of morphisms as the binary operation and the identity morphism $id_*$ as the identity element. We denote the operation of $V$ by $\otimes$. \\
   ここに可換図式を挿入
 \end{definition}
 
 \begin{definition}
   A pair $(\VV, \otimes, I)$ is called a \textit{monoidal category} if it satisfies the following conditions:
-  \begin{enumerate}
+  \begin{enumerate}[label=(\arabic*)]
     \item $\VV$ is a category.
     \item $\otimes : \VV \times \VV \rightarrow \VV$ is a functor.
     \item $I$ is an object of $\VV$.
@@ -1329,6 +1329,8 @@ In this document, we only treat the locally small categories, which means that f
     ここに可換図式を挿入
   \end{enumerate}
 \end{definition}
+
+We also call $\VV$ a monoidal category, omitting $\otimes$ and $I$.
 
 \begin{example}
   \begin{enumerate}[label=(\roman*)]
@@ -1365,7 +1367,7 @@ In this document, we only treat the locally small categories, which means that f
 \begin{definition}
   An \textit{enriched category} $\calA$ in a monoidal category $(\VV, \otimes, I)$ is defined as follows:
 
-  \begin{enumerate}
+  \begin{enumerate}[label=(\arabic*)]
     \item For any objects $a,b$ of $\calA$, $\Hom_{\calA}(a,b)$ is an object of $\VV$.
     \item For any objects $a,b,c$ of $\calA$, there exists a morphism $m_{abc} : \Hom_{\calA}(b,c) \otimes \Hom_{\calA}(a,b) \rightarrow \Hom_{\calA}(a,c)$ in $\VV$, which defines the composition of morphisms.
     \item For any object $a$ of $\calA$, there exists a morphism $j_a : I \rightarrow \Hom_{\calA}(a,a)$ in $\VV$, which defines the identity morphism of $a$.
@@ -1377,7 +1379,7 @@ In this document, we only treat the locally small categories, which means that f
 
 \begin{definition}
   Let $\calA, \calA'$ be $\VV$-categories. A functor $F:\calA \rightarrow \calA'$ is called a \textit{$\VV$-functor} if it satisfies the following conditions. We denote $F_{ab} : \mor_{\calA}(a,b) \rightarrow \mor_{\calA'}(F(a),F(b))$ as the morphism function.
-  \begin{enumerate}
+  \begin{enumerate}[label=(\arabic*)]
     \item The following diagram commutes for any objects $a,b,c$ of $\calA$:
     ここに可換図式を挿入
     \item The following diagram commutes for any object $a$ of $\calA$:
@@ -1396,6 +1398,22 @@ In this document, we only treat the locally small categories, which means that f
 
 \subsection{The Magnitude of Enriched Categories}
 \begin{definition}
+  Let $\CC$ be a category.
+  The \textit{isomorphism classes} of objects of $\CC$ is defined by the quotient classes $\ob(\CC)/{\approx}$, where $a \approx b$ if and only if there exists an isomorphism $f : a \rightarrow b$ in $\CC$.
+\end{definition}
+
+In this section, we consider only monoidal categories $(\VV, \otimes, I)$ satisfying that $\VV / \approx$ forms a set.
+
+\begin{lemma}
+  Let $(\VV, \otimes, I)$ be a monoidal category.
+  Then, $(\ob(\VV)/{\approx}, \otimes, I)$ is a monoid.
+\end{lemma}
+
+\begin{proof}
+  aaa.
+\end{proof}
+
+\begin{definition}
   Let $(\VV, \otimes, I)$ be a monoidal category and let $k$ be a rig.
   We define a monoid homomorphism
   \[  | \cdot | : (\ob(\VV)/{\approx}, \otimes, I) \rightarrow (k, \cdot, 1_k)
@@ -1403,21 +1421,49 @@ In this document, we only treat the locally small categories, which means that f
   such that $|I| = 1_k$ and $|u \otimes v| = |u| \cdot |v|$ for any objects $u,v$ of $\VV$.
 \end{definition}
 
-
 \begin{example}
   aaa.
 \end{example}
 
 \begin{definition}
-  Let $\calA$ be a $\VV$-category.
+  Let $\VV$ be a monoidal category and let $\calA$ be a $\VV$-category which has finitely many objects.
+  \begin{enumerate}[label=(\arabic*)]
+    \item $\ob(\calA) \times \ob(\calA)$-matrix $\zeta_{\calA}$ is defined by 
+    \[
+      \zeta_{\calA}(a,b) = |\Hom_{\calA}(a,b)| \quad (a,b \in \ob(\calA))
+    \]
+    This $\zeta_{\calA}$ is called the \textit{similarity matrix} of $\calA$.
+
+    \item A weighting on $\calA$ is defined to be a weighting on $\zeta_{\calA}$, similarly to a coweighting on $\calA$.
+    
+    \item $\calA$ is said to \textit{have the magnitude} if $\zeta_{\calA}$ has a weighting and a coweighting, denoting it by $\# \calA = \# \zeta_{\calA}$.
+    
+    \item $\calA$ which has the magnitude is said to \textit{have Mobius inversion} if $\zeta_{\calA}$ is invertible, denoting its inverse by $\mu_{\calA} = \zeta_{\calA}^{-1}$.
+  \end{enumerate}
 \end{definition}
 
 
+\begin{example}
+  aaa.
+\end{example}
 
 
   \subsection{The Relation of The Magnitudes of Graphs and Enriched Categories}
-ここが私が一番説明したい部分です．
+\begin{theorem}
+  The magnitude of a graph $G$ defined in \cref{magnitude_graphs} coincides with the magnitude of the $[0, \infty]$-category corresponding to $G$.
+\end{theorem}
 
+\begin{proof}
+  We show that a graph $G$ is $[0, \infty]$-category and its magnitude coincides with the magnitude of $G$ defined in \cref{magnitude_graphs}. \\
+  First, as we see in examples, generalized metric spaces are $[0, \infty]$-categories, which shows that $G$ is $[0, \infty]$-category with the metric $d_G$. \\
+  Second, let a monoid homomorphism $|\cdot| : [0, \infty] \rightarrow \QQ(q)$ defined by $|x| = q^x$.
+  Then, the similarity matrix $\zeta_G$ of the $[0, \infty]$-category corresponding to $G$ is given by
+  \[
+    \zeta_G(a,b) = |\Hom_G(a,b)| = |d_G(a,b)| = q^{d_G(a,b)}.
+  \]
+  This coincides with the $Z_G(q)$ defined in \cref{magnitude_graphs}. \\
+  Therefore, the magnitude of the $[0, \infty]$-category corresponding to $G$ coincides with the magnitude of $G$ defined in \cref{magnitude_graphs}.
+\end{proof}
 
 
 \newpage
