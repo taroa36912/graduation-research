@@ -555,13 +555,14 @@ The magnitude of graphs is an $\QQ[q]$-valued graph invariant and is multiplicat
   $U$ is said to be \textit{convex} in $X$ if for any vertices $x,y \in V(U)$, $d_U(x,y) = d_X(x,y)$.
 \end{definition}
 
-\begin{lemma}
+\begin{lemma}\label{path_lem}
   Let $X$ be a graph, let $G,H$ be subgraphs of $X$, $g \in V(G)$, and $h \in V(H)$ such that $X = G \cup H$ and there is a path $(g = x_0 \rightarrow x_1 \rightarrow \dots \rightarrow x_n = h)$ in $X$.
   Then, there exists a vertex $x_i \in V(G) \cap V(H)$.
 \end{lemma}
 
 \begin{proof}
-  aaa
+  We prove by contradiction. Let $i$ be the largest number with $x_i \in V(G)$. If $i = n$, then $x_n \in V(G) \cap V(H)$.
+  If $i < n$, $x_{i+1} \notin V(G)$ and $\{x_i, x_{i+1} \} \notin E(G)$, then $\{x_i, x_{i+1}\} \in E(H)$ and $x_i \in V(H)$.
 \end{proof}
 
 \begin{lemma}
@@ -570,7 +571,7 @@ The magnitude of graphs is an $\QQ[q]$-valued graph invariant and is multiplicat
 \end{lemma}
 
 \begin{proof}
-  aaa
+  We prove for $G$. Let $g, g' \in V(G)$. If $d_G(g, g') = \infty$, $d_G(g, g') = \infty = d_X(g, g')$. Assume that $d_X(g, g') < \infty$ and let $n = d_X(g, g')$. We can choose a shortest path $(g = x_0 \rightarrow x_1 \rightarrow \dots \rightarrow x_n = g')$ in $X$ such that it contains the most vertices in $G$. Suppose there exists a vertex $x_j \notin V(G)$ in this path. By \cref{path_lem}, there exist vertices $x_i, x_k \in V(G) \cap V(H)$ such that $0 \leq i < j < k \leq n$. Since $G \cap H$ is convex in $X$, there exists a shortest path $(x_i = y_0 \rightarrow y_1 \rightarrow \dots \rightarrow y_m = x_k)$ in $G \cap H$. Now, we obtain a path $(g = x_0 \rightarrow \dots \rightarrow x_i = y_0 \rightarrow y_1 \rightarrow \dots \rightarrow y_m = x_k \rightarrow \dots \rightarrow x_n = g')$ in $X$ which contains more vertices in $G$ than the previous path. This is a contradiction. Thus, all vertices in the chosen path are contained in $V(G)$ and then $d_G(g, g') = d_X(g, g')$.
 \end{proof}
 
 \begin{definition}
@@ -583,7 +584,17 @@ The magnitude of graphs is an $\QQ[q]$-valued graph invariant and is multiplicat
 \end{lemma}
 
 \begin{proof}
-  aaa
+  Let $u_1, u_2 \in V(U)$ be a vertices such that for any $u \in V(U)$, 
+  \begin{align*}
+    d_X(x,u) &= d_X(x, u_1) + d_X(u_1, u) \\
+    d_X(x,u)&= d_X(x, u_2) + d_X(u_2, u).
+  \end{align*}
+  Then,
+  \begin{align*}
+    d_X(x, u_1) = d_X(x, u_2) + d_X(u_1, u_2) \\
+    d_X(x, u_2) = d_X(x, u_1) + d_X(u_2, u_1)
+  \end{align*}
+  and we obtain $d_X(u_1, u_2) = 0$. Thus, $u_1 = u_2$.
 \end{proof}
 
 \begin{example}
@@ -599,7 +610,15 @@ The magnitude of graphs is an $\QQ[q]$-valued graph invariant and is multiplicat
 \end{lemma}
 
 \begin{proof}
-  aaa
+  Let $\tilde{w}_U(u) = \sum_{x \in \pi^{-1}(u)}q^{d_X(u, x)}w_X(x)$ for $u \in V(U)$.
+  Then,
+  \begin{align*}
+    & \sum_{v \in V(U)} q^{d_U(u,v)} \tilde{w}_U(v) \\
+    &= \sum_{v \in V(U)} q^{d_X(u,v)} \sum_{x \in \pi^{-1}(v)} q^{d_X(v,x)} w_X(x) \quad (\text{ since } U \text{ is convex in } X.) \\
+    &= \sum_{v \in V(U)} \sum_{x \in \pi^{-1}(v)} q^{d_X(u, x)w_X(x)} \quad (\text{ since } X \text{ projects to } U.) \\
+    &= \sum_{x \in V(X)} q^{d_X(u,x)} w_X(x) \\
+    &= 1.
+  \end{align*}
 \end{proof}
 
 \begin{theorem}[Main Theorem I]\label{incl-excl}
@@ -629,7 +648,7 @@ Before proving this theorem, we give the example of graphs for which we can appl
 
 
 \begin{proof}[Proof of \cref{incl-excl}]
-  aaa
+  We show that $w_X = w_G + w_H - w_{G \cap H}$. Now, $w_G, w_H$, and $w_{G \cap H}$ is defined on $V(X)$ by extending $0$ to the outside of each graph.
 \end{proof}
 
 \begin{example}
@@ -1464,6 +1483,10 @@ In this section, we consider only monoidal categories $(\VV, \otimes, I)$ satisf
   This coincides with the $Z_G(q)$ defined in \cref{magnitude_graphs}. \\
   Therefore, the magnitude of the $[0, \infty]$-category corresponding to $G$ coincides with the magnitude of $G$ defined in \cref{magnitude_graphs}.
 \end{proof}
+
+\begin{theorem}
+  グラフのテンソル積がcatesian productに対応する
+\end{theorem}
 
 
 \newpage
