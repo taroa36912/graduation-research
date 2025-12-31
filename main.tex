@@ -565,7 +565,7 @@ The magnitude of graphs is an $\QQ[q]$-valued graph invariant and is multiplicat
   If $i < n$, $x_{i+1} \notin V(G)$ and $\{x_i, x_{i+1} \} \notin E(G)$, then $\{x_i, x_{i+1}\} \in E(H)$ and $x_i \in V(H)$.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{convex}
   Let $X$ be a graph and $G,H$ subgraphs of $X$ such that $X = G \cup H$.
   If $G \cap H$ is convex in $X$, then $G$ and $H$ are also convex in $X$.
 \end{lemma}
@@ -601,7 +601,7 @@ The magnitude of graphs is an $\QQ[q]$-valued graph invariant and is multiplicat
   aaa
 \end{example}
 
-\begin{lemma}
+\begin{lemma}\label{weighting_lem}
   Let $X$ be a graph and let $U$ be a convex subgraph of $X$ such that $X$ projects to $U$.
   Then, for any $u \in V(U)$, 
   \[
@@ -648,7 +648,64 @@ Before proving this theorem, we give the example of graphs for which we can appl
 
 
 \begin{proof}[Proof of \cref{incl-excl}]
-  We show that $w_X = w_G + w_H - w_{G \cap H}$. Now, $w_G, w_H$, and $w_{G \cap H}$ is defined on $V(X)$ by extending $0$ to the outside of each graph.
+  We show that 
+  \begin{equation}
+    w_X = w_G + w_H - w_{G \cap H}, \label{eq:weight_sum}
+  \end{equation}
+  where $w_G, w_H$, and $w_{G \cap H}$ are defined on $V(X)$ by extending them by zero to the outside of each graph. If this equation holds, then
+  \begin{align*}
+    \# X &= \sum_{x \in V(X)}w_X(x) \\
+    &= \sum_{x \in V(X)} w_G(x) + \sum_{x \in V(X)} w_H(x) - \sum_{x \in V(X)} w_{G \cap H}(x) \\ 
+    &= \# G + \# H - \#(G \cap H).
+  \end{align*}
+  We now proceed to prove \eqref{eq:weight_sum}.
+  By \cref{convex}, $G, H$, and $G \cap H$ are convex in $X$. This implies that the induced metrics on these subgraphs coincide with the metric on $X$; we denote this common metric by $d$.
+  Let $\pi : V_{G \cap H}(H) \rightarrow V(G \cap H)$ be the projection map.
+  We claim that
+  \begin{equation}
+    d(g, h) = d(g, \pi(h)) + d(\pi(h), h) \label{eq:metric_equality}
+  \end{equation}
+  holds for any $g \in V(G)$ and $h \in V_{G \cap H}(H)$.
+  
+  First, if $d(g, h) = \infty$, then \eqref{eq:metric_equality} holds trivially by the triangle inequality. Assume that $d(g, h) < \infty$. Analogously to the proof of \cref{convex}, invoking \cref{path_lem} guarantees the existence of a vertex $u \in V(G \cap H)$ such that $d(g, h) = d(g, u) + d(u, h)$. Then, 
+  \begin{align*}
+    d(g, u) + d(u, h) &= d(g, u) + d(u, \pi(h)) + d(\pi(h), h) \\
+    &\geq d(g, \pi(h)) + d(\pi(h), h) \\
+    &\geq d(g, h) \\
+    &= d(g, u) + d(u, h).
+  \end{align*}
+  This establishes \eqref{eq:metric_equality}.
+
+  It remains to show that $w_G + w_H - w_{G \cap H}$ satisfies the weighting equation for $X$. That is, we show:
+  \begin{equation}
+    \sum_{g \in V(G)}q^{d(g, x)} w_G(g) + \sum_{h \in V(H)} q^{d(h, x)} w_H(h) - \sum_{u \in V(G \cap H)} q^{d(u, x)} w_{G \cap H}(u) = 1 \label{eq:sufficient_cond}
+  \end{equation}
+  for any $x \in V(X)$. If \eqref{eq:sufficient_cond} holds, then \eqref{eq:weight_sum} follows by \cref{weighting equation}, completing the proof.
+  Let $x \in V(X)$. \\
+  If $x \in V(G)$, 
+  \begin{align*}
+    &\sum_{g \in V(G)}q^{d(g, x)} w_G(g) + \sum_{h \in V(H)} q^{d(h, x)} w_H(h) - \sum_{u \in V(G \cap H)} q^{d(u, x)} w_{G \cap H}(u) \\
+    &= 1 + \sum_{h \in V(H)} q^{d(h, x)} w_H(h) - \sum_{u \in V(G \cap H)} q^{d(u, x)} \sum_{h \in \pi^{-1}(u)} q^{d(h, u)}w_H(h) \\
+    &= 1 + \sum_{h \in V_{G \cap H}(H)} q^{d(h, x)} w_H(h) - \sum_{h \in V_{G \cap H}(H)} q^{d(x, \pi(h)) + d(\pi(h), h)} w_H(h) \\
+    &= 1 + \sum_{h \in V_{G \cap H}(H)} q^{d(h, x)} w_H(h) - \sum_{h \in V_{G \cap H}(H)} q^{d(h, x)} w_H(h) \\
+    &= 1.
+  \end{align*}
+  The first equation holds since $x \in V(G)$ and \cref{weighting_lem}. The second equation holds by $x \in V(G), q^{\infty} = 0, \text{ and } h \in \pi^{-1}(u)$ means $u = \pi(h)$. The third equation holds by \eqref{eq:metric_equality}. \\
+  If $x \in V_{G\cap H}(H)$, 
+  \begin{align*}
+    &\sum_{g \in V(G)}q^{d(g, x)} w_G(g) + \sum_{h \in V(H)} q^{d(h, x)} w_H(h) - \sum_{u \in V(G \cap H)} q^{d(u, x)} w_{G \cap H}(u) \\
+    &= \sum_{g \in V(G)}q^{d(g, \pi(x)) + d(\pi(x), x)} w_G(g) + 1 - \sum_{u \in V(G \cap H)} q^{d(u, \pi(x)) + d(\pi(x), x)} w_{G \cap H}(u) \\
+    &= q^{d(x, \pi(x))} + 1 - q^{d(x, \pi(x))} \\
+    &= 1.
+  \end{align*}
+  The first equation holds by $x \in V(H)$ and \eqref{eq:metric_equality}. The second equation holds by weighting equation for $G$ and $G \cap H$. \\
+  If $x \in V(H) \backslash V_{G \cap H}(H)$, 
+  \begin{align*}
+    &\sum_{g \in V(G)}q^{d(g, x)} w_G(g) + \sum_{h \in V(H)} q^{d(h, x)} w_H(h) - \sum_{u \in V(G \cap H)} q^{d(u, x)} w_{G \cap H}(u) \\
+    &= 0 + 1 - 0 \\
+    &= 1.
+  \end{align*}
+  This completes the proof.
 \end{proof}
 
 \begin{example}
