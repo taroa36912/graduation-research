@@ -795,7 +795,28 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
 \end{lemma}
 
 \begin{proof}
-  aaa.
+  Let $G$ be a graph, let $k \geq 2, l \geq 0$, and let $(x_0, \dots, x_k) \in MC_{k,l}(G)$ be a generator. Now, it holds that 
+  \begin{equation}
+    \partial_i \circ \partial_j = \partial_{j-1} \circ \partial_i
+  \end{equation}
+  for $0 \leq i < j \leq k$. Indeed, 
+  \[
+    (\partial_i \circ \partial_j)(x_0, \dots, x_k) = 
+    (x_0, \dots, \hat{x_i}, \dots, \hat{x_j}, \dots, x_k) \text{ or } 0.
+  \]
+  holds and
+  \[
+    (\partial_{j-1} \circ \partial_i)(x_0, \dots, x_k) =
+    (x_0, \dots, \hat{x_i}, \dots, \hat{x_j}, \dots, x_k) \text{ or } 0.
+  \]
+  also holds. Furthermore, 
+  \begin{align*}
+    &(\partial_i \circ \partial_j)(x_0, \dots, x_k) \neq 0 \\
+    \iff &l(x_0, \dots, \hat{x_j}, \dots, x_k) = l(x_0, \dots, \hat{x_i}, \dots, \hat{x_j}, \dots, x_k) = l \\
+    \iff &l(x_0, \dots, \hat{x_i}, \dots, \hat{x_j}, \dots, x_k) = l \quad (\text{using the triangle inequality.}) \\
+    \iff &(\partial_{j-1} \circ \partial_i)(x_0, \dots, x_k) \neq 0,
+  \end{align*}
+  which induces the equation (4).
 \end{proof}
 
 \begin{definition}(\textit{magnitude homology})
