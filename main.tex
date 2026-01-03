@@ -795,7 +795,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
 \end{lemma}
 
 \begin{proof}
-  Let $G$ be a graph, let $k \geq 2, l \geq 0$, and let $(x_0, \dots, x_k) \in MC_{k,l}(G)$ be a generator. Now, it holds that 
+  Let $G$ be a graph, let $k \geq 2, l \geq 0$, and let $(x_0, \dots, x_k) \in MC_{k,l}(G)$ be a generator. Now, we have
   \begin{equation}
     \partial_i \circ \partial_j = \partial_{j-1} \circ \partial_i
   \end{equation}
@@ -814,9 +814,24 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
     &(\partial_i \circ \partial_j)(x_0, \dots, x_k) \neq 0 \\
     \iff &l(x_0, \dots, \hat{x_j}, \dots, x_k) = l(x_0, \dots, \hat{x_i}, \dots, \hat{x_j}, \dots, x_k) = l \\
     \iff &l(x_0, \dots, \hat{x_i}, \dots, \hat{x_j}, \dots, x_k) = l \quad (\text{using the triangle inequality.}) \\
+    \iff &l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, \hat{x_i}, \dots, \hat{x_j}, \dots, x_k) = l \\
     \iff &(\partial_{j-1} \circ \partial_i)(x_0, \dots, x_k) \neq 0,
   \end{align*}
   which induces the equation (4).
+  Thus, we have 
+  \begin{align*}
+    (\partial \circ \partial)(x_0, \dots, x_k) &= \sum_{i=1}^{k-2} \sum_{j=1}^{k-1} (-1)^{(i-1) + (j-1)} (\partial_i \circ \partial_j)(x_0, \dots, x_k) \\
+    &= \sum_{1 \leq i < j \leq k-1} (-1)^{i+j} (\partial_i \circ \partial_j)(x_0, \dots, x_k) \\
+    &+ \sum_{1 \leq j \leq i \leq k-2} (-1)^{i+j} (\partial_i \circ \partial_j)(x_0, \dots, x_k)
+  \end{align*}
+  and
+  \begin{align*}
+    &\sum_{1 \leq j \leq i \leq k-2} (-1)^{i+j} (\partial_i \circ \partial_j)(x_0, \dots, x_k) \\
+    &= \sum_{1 \leq i \leq j \leq k-2} (-1)^{j+i}(\partial_j \circ \partial_i)(x_0, \dots, x_k) \quad (\text{switch } i \text{ and } j) \\
+    &= \sum_{1 \leq i \leq j'-1 \leq k-2}(-1)^{(j'-1)+i}(\partial_{j'-1} \circ \partial_i)(x_0, \dots, x_k) \quad (j' = j+1) \\
+    &= - \sum_{1 \leq i < j' \leq k-1} (-1)^{i+j'} (\partial_i \circ \partial_{j'})(x_0, \dots, x_k). \quad (\text{using } (4) )
+  \end{align*}
+  Therefore, we have $(\partial \circ \partial)(x_0, \dots, x_k) = 0$.
 \end{proof}
 
 \begin{definition}(\textit{magnitude homology})
