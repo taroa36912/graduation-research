@@ -999,6 +999,19 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
   for any good tuple $(x_0, \dots, x_k)$ of $V(G)$.
 \end{definition}
 
+\begin{lemma}
+  Let $G$ and $H$ be graphs and let $f : V(G) \rightarrow V(H)$ be a map.
+  Then, $f$ is a graph map if and only if $d_H(f(x), f(y)) \leq d_G(x, y)$ for any $x,y \in V(G)$.
+\end{lemma}
+
+\begin{proof}
+  Let $x,y \in V(G)$ such that $d_G(x, y) = n < \infty$. There exists a shortest path $(x = x_0 \rightarrow x_1 \rightarrow \dots \rightarrow x_n = y)$.
+  For each $i = 0, \dots, n-1$, $d_H(f(x_i), f(x_{i+1})) \leq d_G(x_i, x_{i+1}) = 1$ holds and then
+  \[
+    d_H(f(x), f(y)) \leq \sum_{i=0}^{n-1}d_H(f(x_i), f(x_{i+1})) \leq \sum_{i=0}^{n-1}d_G(x_i, x_{i+1}) = d_G(x,y).
+  \]
+\end{proof}
+
 \begin{proposition}
   The induced map $f_{\#} : MC_{*,*}(G) \rightarrow MC_{*,*}(H)$ is a chain map.
 \end{proposition}
