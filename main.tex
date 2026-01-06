@@ -127,7 +127,17 @@
 \end{tabular}
 \newpage
 \begin{abstract}
-Sample Abstract
+The concept of magnitude is introduced by Leinster \cite{Leinster2} and it is defined for enriched categories of finite objects, for example, generalized finite metric spaces such as finite graphs.
+Then, Leinster focuses on the magnitude of graphs in \cite{Leinster1} using his idea of magnitude of a metric space, which is one of a family of cardinality-like invariants extending across mathematics;
+it is a cousin to Euler characteristic and geometric measure. 
+Among its cardinality-like properties are multiplicativity with respect to cartesian product and an inclusion-exclusion formula for the magnitude of a union under mild hypotheses. Formally, the magnitude of a graph is both a rational function over $\QQ$ and a power series over $\ZZ$.
+
+Richard and Simon introduced a bigraded homology theory for graphs which has the magnitude as its graded Euler characteristic and showed how properties of magnitude proved by Leinster categorify to properties such as a Kunneth Theorem and a Mayer-Vietoris Theorem. 
+
+Here, we first review the definition of the magnitude of graphs, the magnitude homology of graphs, and their properties.
+Then we focus on the magnitude of enriched categories and discuss how the magnitude of graphs is introduced from that of enriched categories.
+
+
 \end{abstract}
 
 \newpage
@@ -135,8 +145,59 @@ Sample Abstract
 
 \newpage
 \section{Introduction}
-Lamport's guide to \LaTeX\ \cite{Lamport94}.
-We denote $\approx$ as isomorphisms and $\cong$ as homeomorphisms.
+In many fields of mathematics, there is a canonical measure of size.
+Sets have cardinality, vector spaces have dimension, and topological spaces have Euler characteristic. 
+Many of these cardinality-like invariants arise from a single general definition. 
+This general invariant is called magnitude. 
+
+The full definition of magnitude is framed in the very wide generality of enriched categories of finite objects, as introduced by Leinster \cite{Leinster2}.
+
+ここにenriched categoriesで考えるメリットを書く必要あり.
+
+We give this general definition and discuss them in Section 4.
+
+Moreover, we take one of examples of enriched categories, graphs, in Section 2.
+The magnitude of a graph is defined in context within the magnitude of enriched categories as below;
+Generalized metric spaces are examples of enriched categories($[0, \infty]$-categories) and the magnitude is defined for them if they are finite, as shown in \cite{Leinster2}. Finite graphs are generalized finite metric spaces, with distance between vertices measured as the length of a shortest path. Among their special properties is that distances are integers. As we shall see, this has the consequence that for a graph G, the magnitude $\# G$ is a rational function of $q = e^t$ over $\QQ$. (It can also be expressed as a power series in $q$ over $\ZZ$.) We write it as $\# G = \# G(q)$ to avoid confusion with the usage of G for the number of vertices of G, while still evoking the analogy with cardinality. Among the cardinality-like properties of magnitude are that 
+\[
+  \# (G \square H)=\# G \cdot \# H,
+\] 
+where $\square$ denotes the cartesian product of graphs (defined below), and that
+\[
+  \#(G \sqcup H)=\# G + \# H.
+\] 
+The trivial invariant number of vertices also satisfies these equations, and indeed, the number of vertices can be recovered from its magnitude as $\# G(0)$, but of course, magnitude is much more informative than that. For instance, the number of edges is $- \frac{1}{2} \left. \frac{d}{dq} \# G(q) \right|_{q=0}$ (\cref{count_vertices_edges}).
+
+
+and inclusion-exclusion formula:
+\[
+  \# (G \cup H) = \# G + \# H - \#(G \cap H),
+\]
+
+
+
+
+For instance, the Tutte polynomial [19] is perhaps the most important graph invariant of all, and many other graph invariants are specializations of it, but magnitude is not; it is not even determined by the graphs cycle matroid. This is trivial for disconnected graphs, since the graph with n vertices and no edges has magnitude n but Tutte polynomial 1 and trivial cycle matroid. However, magnitude is not a specialization of the Tutte polynomial even for connected graphs. For example, the graphs 2have the same cycle matroid, hence also the same Tutte polynomial, the same number of proper vertex colourings by any given number of colours, the same number of spanning trees, the same connectivity, the same girth, etc.; but their magnitudes are di erent. Conversely, there are graphs with the same magnitude that are easily distinguished by well-known graph invariants (Example 3.7). In that sense, magnitude seems to capture genuinely new aspects of a graph, at the same time as having uniquely good cardinality-like properties. We prove two main theorems. The rst is the inclusion-exclusion formula (2) (Theorem 4.9). For this we must impose some hypotheses. Indeed, Lemma 4.1 shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both (1) and (2) without restriction. But the hypotheses we impose are mild enough to include, for instance, the case where all the graphs involved are trees, and the case where G\H consists of a single vertex. It follows that when we join a vertex of a graph G to a vertex of a graph H to form a new graph G H, the magnitude of G H depends only on the magnitudes of G and H, not the vertices chosen. This is an invariance property that magnitude shares with the Tutte polynomial. Another important property of the Tutte polynomial is invariance under Whitney twists (Figure 2, page 15). This means the following: given graphs G and H, each with two chosen, distinct vertices, we may form new graphs X and Y by gluing G to H at the chosen vertices one way round or the other; then the Tutte polynomials of X and Y are equal. Our second main theorem (Theorem 5.2) is that this is also true for magnitude, provided that there is an edge between the chosen vertices of either G or H. Speyer and Willerton showed that even in the case of connected graphs, this last hypothesis cannot be dropped [17, 22]. It follows that magnitude is not a specialization of the Tutte polynomial. This paper is laid out as follows. In Section 2, we de ne the magnitude of a graph, expressing it as both a rational function and a power series over Z. Section 3 sets out the most basic properties and examples of magnitude, including a simple formula for the magnitude of any graph whose automorphism group acts transitively on vertices. We prove that magnitude has some basic cardinality-like properties. Viewing G as a power series over Z, we also answer the question: what do the coe cients count? The remaining two sections prove the two main results: the inclusion-exclusion theorem (Section 4) and the theorem on invariance under Whitney twists (Section 5). Although both concern the magnitude of the union of two graphs, the latter is not a special case of the former, as noted after the statement of Theorem 5.2. Recent work of Hepworth and Willerton (in preparation) de nes a homology theory of graphs, of which magnitude is the Euler characteristic. Their homology theory is a categori cation of graph magnitude in the same sense that Khovanovs homology theory of knots is a categori cation of the Jones polynomial [4]. For example, the multiplicativity property (1) for magnitude of graphs can be derived from a Kunneth theorem for magnitude homology of graphs, and similarly, the inclusion-exclusion formula for magnitude (Theorem 4.9) lifts to a MayerVietoris theorem in homology.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+We denote $\approx$ as isomorphisms of graphs and groups.
+
 
 \newpage
 \section{The Magnitude of Graphs}
@@ -441,7 +502,7 @@ Thus, by \cref{unique property on weighting equation}, we have $\tilde{w}_G = w_
 The second equality immediately follows from the first one.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}\label{count_vertices_edges}
   Let $G$ be a graph.
   $|V(G)| = \# G(0), |E(G)| = - \frac{1}{2} \left. \frac{d}{dq} \# G(q) \right|_{q=0}$.
   Here, the derivative is taken in $\ZZ \llbracket q \rrbracket$.
