@@ -154,8 +154,6 @@ The full definition of magnitude is framed in the very wide generality of enrich
 
 ここにenriched categoriesで考えるメリットを書く必要あり.
 
-We give this general definition and discuss them in Section 4.
-
 Moreover, we take one of examples of enriched categories, graphs, in Section 2.
 The magnitude of a graph is defined in context within the magnitude of enriched categories as below;
 Generalized metric spaces are examples of enriched categories($[0, \infty]$-categories) and the magnitude is defined for them if they are finite, as shown in \cite{Leinster2}. Finite graphs are generalized finite metric spaces, with distance between vertices measured as the length of a shortest path. Among their special properties is that distances are integers. As we shall see, this has the consequence that for a graph G, the magnitude $\# G$ is a rational function of $q = e^t$ over $\QQ$. (It can also be expressed as a power series in $q$ over $\ZZ$.) We write it as $\# G = \# G(q)$ to avoid confusion with the usage of G for the number of vertices of G, while still evoking the analogy with cardinality. Among the cardinality-like properties of magnitude are that 
@@ -166,33 +164,18 @@ where $\square$ denotes the cartesian product of graphs (defined below), and tha
 \[
   \#(G \sqcup H)=\# G + \# H.
 \] 
-The trivial invariant number of vertices also satisfies these equations, and indeed, the number of vertices can be recovered from its magnitude as $\# G(0)$, but of course, magnitude is much more informative than that. For instance, the number of edges is $- \frac{1}{2} \left. \frac{d}{dq} \# G(q) \right|_{q=0}$ (\cref{count_vertices_edges}).
+The trivial invariant number of vertices also satisfies these equations, and indeed, the number of vertices can be recovered from its magnitude as $\# G(0)$, but of course, magnitude is much more informative than that. For instance, the number of edges is $- \frac{1}{2} \left. \frac{d}{dq} \# G(q) \right|_{q=0}$ (\cref{count_vertices_edges}). However, there are graphs with the same magnitude
+that are easily distinguished by well-known graph invariants (\cref{ex_same_magnitudes}, easily distinguished by bipartiteness). In that sense, magnitude seems to capture genuinely new aspects of a graph, at the same time as having uniquely good cardinality-like properties.
 
-
-and inclusion-exclusion formula:
+There is a certain property that we would like graph invariants to satisfy, that is, the inclusion-exclusion formula;
 \[
-  \# (G \cup H) = \# G + \# H - \#(G \cap H),
+  \# (G \cup H) = \# G + \# H - \#(G \cap H).
 \]
+For this we must impose some hypotheses. Indeed, Leinster shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and incl-excl formula without restriction (\cref{no_graph_inv}). But the hypotheses we impose are mild enough to include, for instance, the case where all the graphs involved are trees, and ここに当てはまる例をいっぱい書く(wedgeなど). \\
 
+ここにCategorificationの話を書く. \\
 
-
-
-For instance, the Tutte polynomial [19] is perhaps the most important graph invariant of all, and many other graph invariants are specializations of it, but magnitude is not; it is not even determined by the graphs cycle matroid. This is trivial for disconnected graphs, since the graph with n vertices and no edges has magnitude n but Tutte polynomial 1 and trivial cycle matroid. However, magnitude is not a specialization of the Tutte polynomial even for connected graphs. For example, the graphs 2have the same cycle matroid, hence also the same Tutte polynomial, the same number of proper vertex colourings by any given number of colours, the same number of spanning trees, the same connectivity, the same girth, etc.; but their magnitudes are di erent. Conversely, there are graphs with the same magnitude that are easily distinguished by well-known graph invariants (Example 3.7). In that sense, magnitude seems to capture genuinely new aspects of a graph, at the same time as having uniquely good cardinality-like properties. We prove two main theorems. The rst is the inclusion-exclusion formula (2) (Theorem 4.9). For this we must impose some hypotheses. Indeed, Lemma 4.1 shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both (1) and (2) without restriction. But the hypotheses we impose are mild enough to include, for instance, the case where all the graphs involved are trees, and the case where G\H consists of a single vertex. It follows that when we join a vertex of a graph G to a vertex of a graph H to form a new graph G H, the magnitude of G H depends only on the magnitudes of G and H, not the vertices chosen. This is an invariance property that magnitude shares with the Tutte polynomial. Another important property of the Tutte polynomial is invariance under Whitney twists (Figure 2, page 15). This means the following: given graphs G and H, each with two chosen, distinct vertices, we may form new graphs X and Y by gluing G to H at the chosen vertices one way round or the other; then the Tutte polynomials of X and Y are equal. Our second main theorem (Theorem 5.2) is that this is also true for magnitude, provided that there is an edge between the chosen vertices of either G or H. Speyer and Willerton showed that even in the case of connected graphs, this last hypothesis cannot be dropped [17, 22]. It follows that magnitude is not a specialization of the Tutte polynomial. This paper is laid out as follows. In Section 2, we de ne the magnitude of a graph, expressing it as both a rational function and a power series over Z. Section 3 sets out the most basic properties and examples of magnitude, including a simple formula for the magnitude of any graph whose automorphism group acts transitively on vertices. We prove that magnitude has some basic cardinality-like properties. Viewing G as a power series over Z, we also answer the question: what do the coe cients count? The remaining two sections prove the two main results: the inclusion-exclusion theorem (Section 4) and the theorem on invariance under Whitney twists (Section 5). Although both concern the magnitude of the union of two graphs, the latter is not a special case of the former, as noted after the statement of Theorem 5.2. Recent work of Hepworth and Willerton (in preparation) de nes a homology theory of graphs, of which magnitude is the Euler characteristic. Their homology theory is a categori cation of graph magnitude in the same sense that Khovanovs homology theory of knots is a categori cation of the Jones polynomial [4]. For example, the multiplicativity property (1) for magnitude of graphs can be derived from a Kunneth theorem for magnitude homology of graphs, and similarly, the inclusion-exclusion formula for magnitude (Theorem 4.9) lifts to a MayerVietoris theorem in homology.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+This paper is laid out as follows. In Section 2, we define the magnitude of a graph, expressing it as both a rational function and a power series over $\ZZ$, the most basic properties and examples of magnitude, including a simple formula for the magnitude of any graph whose automorphism group acts transitively on vertices, proving that magnitude has some basic cardinality-like properties, viewing $G$ as a power series over $\ZZ$, and the inclusion-exclusion formula above.  
 
 
 
@@ -458,7 +441,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   We used the fact that $(P \otimes Q)(R \otimes S) = (PR) \otimes (QS)$ for matrices $P,Q,R, \text{ and } S$ such that the products of $PR$ and $QS$ are defined.
 \end{proof}
 
-\begin{example}
+\begin{example}\label{ex_same_magnitudes}
   $G = K_2 \square K_3$. \\
   $\# K_2 \square K_3 = \# K_2 \cdot \# K_3 = \frac{2}{1+q} \cdot \frac{3}{1+2q} = \frac{6}{(1+q)(1+2q)} = \# K_{3,3}$.
 \end{example}
@@ -575,7 +558,7 @@ In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H)
   \end{enumerate}
 \end{definition}
 
-\begin{lemma}
+\begin{lemma}\label{no_graph_inv}
   Let $R$ be a ring containing no nonzero nilpotents and let $\Phi$ be a multiplicative $R$-valued graph invariant satisfying the inclusion-exclusion principle. Then, $\Phi(G) = |V(G)|$ for any graph $G$.
 \end{lemma}
 
