@@ -5,10 +5,10 @@
 \contentsline {subsection}{\numberline {2.3}Main Results on the Magnitude of Graphs}{15}{subsection.2.3}%
 \contentsline {section}{\numberline {3}The Magnitude Homology of Graphs}{23}{section.3}%
 \contentsline {subsection}{\numberline {3.1}The Definition of The Magnitude Homology of Graphs}{23}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Induced Maps on Magnitude Homology}{27}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Induced Maps on Magnitude Homology}{28}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Magnitude Homology of Disjoint Union of Graphs}{30}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Magnitude Homology of Cartesian Products}{30}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}The Mayer-Vietoris Sequence of Magnitude Homology of Graphs}{32}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.5}The Mayer-Vietoris Sequence of Magnitude Homology of Graphs}{33}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}Diagonal Graphs and its Property}{34}{subsection.3.6}%
 \contentsline {section}{\numberline {4}Motivation: The Magnitude of Enriched Categories}{35}{section.4}%
 \contentsline {subsection}{\numberline {4.1}The Magnitude of a Matrix}{35}{subsection.4.1}%
