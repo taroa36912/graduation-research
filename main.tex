@@ -88,6 +88,9 @@
 \newcommand{\graphimg}[1]{
   \includegraphics{Tikz/Graphs/out/#1}
 }
+\newcommand{\commutimg}[1]{
+  \includegraphics{Tikz/Commutative/out/#1}
+}
 
 \newcommand{\figgraph}[3]{
   \begin{figure}[htbp]
@@ -96,6 +99,12 @@
     \caption{#2}
     \label{#3}
   \end{figure}
+}
+
+\newcommand{\figcommu}[1]{
+  \begin{center}
+    \commutimg{#1}
+  \end{center}
 }
 
 \newcommand{\boxprod}{\mathbin{\square}}
@@ -1075,10 +1084,35 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
 \end{proposition}
 
 \begin{proof}
-  aaa.
+  We need to show that the following diagram commutes for any $k,l \geq 0$. \\
+
+  \figcommu{chain_map.pdf}
+  Let $(x_0, \dots, x_k)$ be a generator of $MC_{k,l}(G)$. \\
+  If $l(x_0, \dots, x_k) = l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(f(x_0), \dots, \hat{f(x_i)}, \dots, f(x_k))$, 
+  \begin{align*}
+    f_{\#} \circ \partial_i (x_0, \dots, x_k) &= f_{\#}(x_0, \dots, \hat{x_i}, \dots, x_k) \\
+    &= (f(x_0), \dots, \hat{f(x_i)}, \dots, f(x_k)),
+  \end{align*}
+  and otherwise it vanishes by definition. \\
+  If $l(x_0, \dots, x_k) = l(f(x_0), \dots, f(x_k)) = l(f(x_0), \dots, \hat{f(x_i)}, \dots, f(x_k))$,
+  \begin{align*}
+    \partial_i \circ f_{\#} (x_0, \dots, x_k) &= \partial_i (f(x_0), \dots, f(x_k)) \\
+    &= (f(x_0), \dots, \hat{f(x_i)}, \dots, f(x_k)).
+  \end{align*}
+  and otherwise it vanishes. \\
+  Consequently, the two terms agree provided they are non-vanishing. Moreover, the conditions for non-vanishing are equivalent by \cref{f_inequality}. Indeed, we have $l(f(x_0), \dots, f(x_k)) \leq l(x_0, \dots, x_k)$ and then
+  \begin{align*}
+    &l(x_0, \dots, x_k) = l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(f(x_0), \dots, \hat{f(x_i)}, \dots, f(x_k)) \\ 
+    \iff &l(x_0, \dots, x_k) = l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(f(x_0), \dots, \hat{f(x_i)}, \dots, f(x_k)) \\
+    &\leq l(f(x_0), \dots, f(x_k)) \leq l(x_0, \dots, x_k) \\
+    \iff &l(x_0, \dots, x_k) = l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(f(x_0), \dots, \hat{f(x_i)}, \dots, f(x_k)) \\
+    = &l(f(x_0), \dots, f(x_k)) \\
+    \iff &l(x_0, \dots, x_k) = l(f(x_0), \dots, f(x_k)) = l(f(x_0), \dots, \hat{f(x_i)}, \dots, f(x_k))
+  \end{align*}
+  holds. Thus, we have the commutativity of the diagram.
 \end{proof}
 
-\begin{definition}(Induced maps in homoplogy)
+\begin{definition}[Induced maps in homoplogy]
   If $f : G \rightarrow H$ is a graph map, the \textit{induced map in homology} $f_* : MH_{*,*}(G) \rightarrow MH_{*,*}(H)$ is the map induced by the chain map $f_{\#} : MC_{*,*}(G) \rightarrow MC_{*,*}(H)$.
 \end{definition}
 
@@ -1091,7 +1125,7 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
   The assignment $G \mapsto MH_{*,*}(G)$ and $f \mapsto f_*$ defines a functor from the category of graphs and graph maps to the category of bigraded abelian groups and bigraded homomorphisms, denoting by $\mathbf{Graph} \rightarrow \mathbf{BAb}$.
 \end{proposition}
 
-\begin{proposition}
+\begin{proposition}\label{vertex_edge_prop}
   Let $f:G \rightarrow H$ be a graph map.
   \begin{itemize}
     \item $f_* : MH_{0,0}(G) \rightarrow MH_{0,0}(H)$ is given by $f_*(x) = f(x)$ for any $x \in V(G)$.
@@ -1124,7 +1158,9 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
 \end{corollary}
 
 \begin{proof}
-  aaa.
+  If $f$ is a graph isomorphism, then the chain map $f_{\#}$ is obviously bijective, which implies that $f_*$ is an isomorphism.
+  Let $f$ be a graph map such that $f_*$ is an isomorphism. By \cref{vertex_edge_prop}, the isomorphism $f_* : MH_{0,0}(G) \rightarrow MH_{0,0}(H)$ means that $f : V(G) \rightarrow V(H)$ is bijective, and the isomorphism $f_* : MH_{1,1}(G) \rightarrow MH_{1,1}(H)$ means that for any $\{x,y\} \in E(G)$, $l(f(x), f(y)) = l(x,y) = 1$ and then $\{f(x), f(y)\} \in E(H)$. Similarly, for any $\{u,v\} \in E(H)$, there exists $\{x,y\} \in E(G)$ such that $f(x) = u$ and $f(y) = v$ by using $f_*^{-1}$. Thus, $f$ is a graph isomorphism.
+
 \end{proof}
 
 

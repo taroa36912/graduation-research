@@ -245,6 +245,10 @@ INPUT ./Tikz/Graphs/out/connect_C_4.pdf
 INPUT ./Tikz/Graphs/out/connect_C_4.pdf
 INPUT ./Tikz/Graphs/out/connect_C_4.pdf
 INPUT extractbb -B cropbox -O Tikz/Graphs/out/connect_C_4.pdf
+INPUT ./Tikz/Commutative/out/chain_map.pdf
+INPUT ./Tikz/Commutative/out/chain_map.pdf
+INPUT ./Tikz/Commutative/out/chain_map.pdf
+INPUT extractbb -B cropbox -O Tikz/Commutative/out/chain_map.pdf
 INPUT ./Tikz/Graphs/out/C_2_square.pdf
 INPUT ./Tikz/Graphs/out/C_2_square.pdf
 INPUT ./Tikz/Graphs/out/C_2_square.pdf

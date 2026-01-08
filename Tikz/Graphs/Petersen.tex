@@ -4,30 +4,16 @@
 \begin{document}
 
 \begin{tikzpicture}[>=latex]
-    % ===================================
-    % 設定
-    % ===================================
-    \def\R{2.0} % 外側の半径
-    \def\r{1.0} % 内側の半径
+    \def\R{2.0}
+    \def\r{1.0}
     \tikzset{dot/.style={circle, fill=black, inner sep=2pt}}
-    % ===================================
-
-    % 1. 頂点の配置
     \foreach \i in {0,...,4} {
         \node[dot] (v\i) at (90 - \i*72 : \R) {};
         \node[dot] (u\i) at (90 - \i*72 : \r) {};
     }
 
-    % 2. 辺の描画
-
-    % (A) 外側の正五角形
-    % cycle を使わず、最後に (v0) へ戻る
     \draw (v0) -- (v1) -- (v2) -- (v3) -- (v4) -- (v0);
-
-    % cycle を使わず、最後に (u0) へ戻る
     \draw (u0) -- (u2) -- (u4) -- (u1) -- (u3) -- (u0);
-
-    % (C) スポーク
     \foreach \i in {0,...,4} {
         \draw (v\i) -- (u\i);
     }

@@ -1,0 +1,27 @@
+\documentclass[dvipdfmx, border=10pt]{standalone}
+% standaloneクラス: 描画された図のサイズに合わせてPDFのページサイズを自動調整します。
+% border=10pt: 図の周りに少し余白を持たせます（窮屈にならないように）。
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd} % 可換図式用のパッケージ
+
+\begin{document}
+
+% 図式の定義
+\begin{tikzcd}[row sep=large, column sep=large]
+    % --- 1行目 ---
+    \cdots \arrow[r] 
+    & MC_{k,l}(G) \arrow[r, "\partial"] \arrow[d, "f_{\#}^{k,l}"'] 
+    & MC_{k-1, l}(G) \arrow[r] \arrow[d, "f_{\#}^{k-1,l}"'] 
+      % Bから左下(C)に向かって透明な矢印を引き、そこに回転矢印を置く
+      \arrow[dl, phantom, "\circlearrowright"]
+    & \cdots \\
+    % --- 2行目 ---
+    \cdots \arrow[r] 
+    & MC_{k, l}(H) \arrow[r, "\partial"'] 
+    & MC_{k-1, l}(H) \arrow[r] 
+    & \cdots
+\end{tikzcd}
+
+\end{document}
