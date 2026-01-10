@@ -1175,7 +1175,23 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
 \end{proposition}
 
 \begin{proof}
-  saaa.
+  \begin{itemize}
+    \item Surjectivity.
+    Let $(x_0, \dots, x_k) \in MH_{k,l}(G \bigsqcup H)$ be a generator.
+    By $l(x_0, \dots, x_k) = l$, $d(x_j, x_{j+1}) \leq \infty$ for any $0 \leq j \leq k-1$.
+    Then, $\{ x_0, \dots, x_k \} \subset V(G)$ or $\{ x_0, \dots, x_k \} \subset V(H)$.
+    Assume that $\{x_0, \dots, x_k\} \subset V(G)$.
+    Then, $(i_* \oplus j_*)((x_0, \dots, x_k), 0)$ = $(x_0, \dots, x_k)$.
+    \item Injectivity. Assume that there are generators $((x_0, \dots, x_{k_1}),(y_0, \dots, y_{k_2})) \in MH_{*,*}(G) \oplus MH_{*,*}(H)$ such that $(i_* \oplus j_*)((x_0, \dots, x_{k_1}), (y_0, \dots, y_{k_2})) = 0$. 
+    \begin{align*}
+      &(i_* \oplus j_*)((x_0, \dots, x_{k_1}), (y_0, \dots, y_{k_2})) = 0 \\
+      \Rightarrow &i_*((x_0, \dots, x_{k_1})) + j_*((y_0, \dots, y_{k_2})) = 0 \\
+      \Rightarrow &(x_0, \dots, x_{k_1}) + (y_0, \dots, y_{k_2}) = 0
+    \end{align*}
+    in $MH_{*,*}(G \bigsqcup H)$. Now, since $\{x_0, \dots, x_{k_1}\} \subset V(G)$ and $\{y_0, \dots, y_{k_2}\} \subset V(H)$, there is no cancellation between the two terms. Contradiction.
+    
+
+  \end{itemize}
 \end{proof}
 
 We can give another proof of \cref{disjoint_union} by \cref{magnitude_of_disjoint_union} and $\chi(A_* \oplus B_*) = \chi(A_*) + \chi(B_*)$.
@@ -1254,7 +1270,7 @@ We can give another proof of \cref{disjoint_union} by \cref{magnitude_of_disjoin
   Let $\bf{x} = (x_0, \dots, x_{k_1}), \bf{y} = (y_0, \dots, y_{k_2})$.
   Now, we show that 
   \[
-    \partial \circ \boxprod(\bf{x} \otimes \bf{y}) = \boxprod((\partial \bf{x}) \otimes \bf{y}) + (-1)^{k_1} \boxprod (\bf{x} \otimes (\partial \bf{y})) = \boxprod \circ (\partial \otimes \partial) (\bf{x} \otimes \bf{y}).
+    (\partial \circ \boxprod)(\bf{x} \otimes \bf{y}) = \boxprod((\partial \bf{x}) \otimes \bf{y}) + (-1)^{k_1} \boxprod (\bf{x} \otimes (\partial \bf{y})) = (\boxprod \circ (\partial \otimes \partial)) (\bf{x} \otimes \bf{y}).
   \]
   Here, we should consider the sequence of tensor products of the magnitude chain complexes defined by
   \begin{align*}
