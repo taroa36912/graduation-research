@@ -1243,7 +1243,7 @@ We can give another proof of \cref{disjoint_union} by \cref{magnitude_of_disjoin
 \end{definition}
 
 \begin{example}
-  Let $G = C_2 \boxprod C_2 = C_4$ \\
+  Let $G = C_2 \boxprod C_2 = C_4$. \\
   \figgraph{C_2_square.pdf}{Square graph}{example_square_graph} \\
   Consider the exterior product $\boxprod((x_0, x_1) \otimes (y_0, y_1))$.
   We have the two shuffles of type $(1,1)$:
@@ -1293,8 +1293,6 @@ From this proposition, we obtain the induced map in homology, also denoting $\bo
   Then, $\tor(A,B)$ is defined by the derived functor of the tensor product.  
 \end{definition}
 
-The next theorem is one of the main results of this thesis.
-
 \begin{theorem}[Hepworth, Willerton \cite{HepworthWillerton}, Theorem 5.3]
   Let $G$ and $H$ be graphs.
   \[
@@ -1336,12 +1334,6 @@ We don't prove this theorem in this thesis.
   is a quasi-isomorphism for any $l \geq 0$.
 \end{theorem}
 
-\begin{proof}
-  aaa.
-\end{proof}
-
-The next theorem is one of the main results of this thesis.
-
 \begin{theorem}[Hepworth, Willerton \cite{HepworthWillerton}, Theorem 6.6]\label{Mayer-Vietoris}
   Let $(X;G,H)$ be a projecting decomposition.
   Then,
@@ -1351,9 +1343,7 @@ The next theorem is one of the main results of this thesis.
   is a split short exact sequence.
 \end{theorem}
 
-\begin{proof}
-  aaa.
-\end{proof}
+We don't prove these theorems in this thesis.
 
 
 \begin{corollary}
@@ -1379,19 +1369,15 @@ The next theorem is one of the main results of this thesis.
   By \cref{categorifying}, we obtain the desired equation.
 \end{proof}
 
-\begin{corollary}
-  Let $T$ be a tree.
-\end{corollary}
-
 
 \subsection{Diagonal Graphs and its Property}
 \begin{definition}
   A graph $G$ is said to be \textit{diagonal} if $MH_{k,l}(G) = 0$ for $k \neq l$.
 \end{definition}
 
-\begin{lemma}
+\begin{proposition}
   Any trees are diagonal.
-\end{lemma}
+\end{proposition}
 
 \begin{proof}
   aaa
@@ -1402,7 +1388,12 @@ The next theorem is one of the main results of this thesis.
 \end{proposition}
 
 \begin{proof}
-  Obvious by \cref{categorifying}.
+  By \cref{categorifying}, for a diagonal graph $G$, 
+  \begin{align*}
+    \# G &= \sum_{l \geq 0} \chi(MH_{*,l}(G)) q^l \\
+    &= \sum_{l \geq 0} (-1)^l \rank(MH_{l,l}(G)) q^l.
+  \end{align*}
+  Thus, the magnitude $\# G$ determines $\rank(MH_{l,l}(G))$ for each $l \geq 0$.
 \end{proof}
 
 
