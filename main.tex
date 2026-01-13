@@ -161,12 +161,9 @@ Many of these cardinality-like invariants arise from a single general definition
 This general invariant is called magnitude. 
 
 The full definition of magnitude is framed in the very wide generality of enriched categories of finite objects, as introduced by Leinster \cite{Leinster2}.
+First, we take one of examples of enriched categories, graphs, in Section 2.
 
-ここにenriched categoriesで考えるメリットを書く必要あり.
-
-Moreover, we take one of examples of enriched categories, graphs, in Section 2.
-The magnitude of a graph is defined in context within the magnitude of enriched categories as below;
-Generalized metric spaces are examples of enriched categories ($[0, \infty]$-categories) and the magnitude is defined for them if they are finite, as shown in \cite{Leinster2}. Finite graphs are generalized finite metric spaces, with distance between vertices measured as the length of a shortest path. Among their special properties is that distances are integers. As we shall see, this has the consequence that for a graph G, the magnitude $\# G$ is a rational function of $q = e^t$ over $\QQ$. (It can also be expressed as a power series in $q$ over $\ZZ$.) We write it as $\# G = \# G(q)$ to avoid confusion with the usage of $G$ for the number of vertices of G, while still evoking the analogy with cardinality. Among the cardinality-like properties of magnitude are that 
+Finite graphs are seen as generalized finite metric spaces (See \cref{ex_enriched_cat}(ii)), with distance between vertices measured as the length of a shortest path. Among their special properties is that distances are integers. As we shall see, this has the consequence that for a graph G, the magnitude $\# G$ is a rational function of $q $ over $\QQ$. (It can also be expressed as a power series in $q$ over $\ZZ$.) We write it as $\# G = \# G(q)$ to avoid confusion with the usage of $G$ for the number of vertices of G, while still evoking the analogy with cardinality. Among the cardinality-like properties of magnitude are that 
 \[
   \# (G \boxprod H)=\# G \cdot \# H,
 \] 
@@ -183,7 +180,20 @@ There is a certain property that we would like graph invariants to satisfy, the 
 \]
 For this we must impose some hypotheses. Indeed, Leinster shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction (c.f. \cref{no_graph_inv}). But the hypotheses we impose are mild enough to include, for instance, the case where all the graphs involved are trees, and ここに当てはまる例をいっぱい書く(wedgeなど). \\
 
-ここにCategorificationの話を書く. \\
+Richard and Simon then categorify the magnitude of graphs by defining the magnitude homology of graphs in \cite{HepworthWillerton}. This is a bigraded homology theory $MH_{*,*}$. It is functorial with respect to maps of graphs that send vertices to vertices and preserve or contract edges, and its graded Euler characteristic recovers the magnitude:
+\[
+  \sum_{k,l \geq 0} (-1)^k \rank (MH_{k,l}(G)) q^l = \# G ~ \text{in} ~  \ZZ \llbracket q \rrbracket.
+\]
+Being a bigraded abelian group rather than just a power series, the magnitude
+homology has a richer structure than the magnitude. For example, functoriality
+means that for a given graph its magnitude homology is equipped with an action
+of its automorphism group. We will see below that various properties of magnitude described by Leinster, as mentioned above, are shadows of properties of magnitude homology. \\
+
+ここにenriched categoriesで考えるメリットを書く必要あり. \\
+
+Recall that, as noted above, the magnitude of a graph is defined in context within the magnitude of enriched categories as below;
+Generalized metric spaces are examples of enriched categories ($[0, \infty]$-categories) and the magnitude is defined for them if they are finite, as shown in \cite{Leinster2}. Finite graphs are generalized finite metric spaces, with distance between vertices measured as the length of a shortest path. 
+
 
 This thesis is laid out as follows. In Section 2, we define the magnitude of a graph, expressing it as both a rational function and a formal power series over $\ZZ$, the most basic properties and examples of magnitude, including a simple formula for the magnitude of any graph whose automorphism group acts transitively on vertices, proving that magnitude has some basic cardinality-like properties, viewing $G$ as a power series over $\ZZ$, and the inclusion-exclusion formula above. \\
 
@@ -1621,7 +1631,7 @@ We also call $\VV$ a monoidal category, omitting $\otimes$ and $I$.
   The family of all $\VV$-categories and $\VV$-functors form a category, which is denoted by $\VV\textit{-Cat}$.
 \end{remark}
 
-\begin{example}
+\begin{example}\label{ex_enriched_cat}
   aaa
 \end{example}
 
