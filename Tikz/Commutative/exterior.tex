@@ -1,0 +1,18 @@
+\documentclass[dvipdfmx, border=10pt]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd}
+
+\begin{document}
+\begin{tikzcd}[row sep=large, column sep=large]
+    \cdots \arrow[r] 
+    & MC_{k_1,l_1}(G) \otimes MC_{k_2,l_2}(H) \arrow[r, "\partial \otimes \partial"] \arrow[d, "\square"'] 
+    & (MC_{k_1-1, l_1}(G) \otimes MC_{k_2, l_2}(H)) \oplus (MC_{k_1, l_1}(G) \otimes MC_{k_2-1, l_2}(H)) \arrow[r] \arrow[d, "\square"'] 
+      \arrow[dl, phantom, "\circlearrowright"]
+    & \cdots \\
+    \cdots \arrow[r] 
+    & MC_{k, l}(G \square H) \arrow[r, "\partial"'] 
+    & MC_{k-1, l}(G \square H) \arrow[r] 
+    & \cdots
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,14 @@
+\documentclass[dvipdfmx, border=0pt]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd}
+
+\begin{document}
+\begin{tikzcd}[row sep=large, column sep=large]
+    V \times V \times V \arrow[r, "\otimes \times id_V"] \arrow[d, "id_V \times \otimes"'] 
+    & V \times V \arrow[d, "\otimes"'] 
+      \arrow[dl, phantom, "\circlearrowright"] \\
+    V \times V \arrow[r, "\otimes"'] 
+    & V \times V
+\end{tikzcd}
+\end{document}

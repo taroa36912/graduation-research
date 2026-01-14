@@ -15,5 +15,5 @@
 \contentsline {subsection}{\numberline {4.2}The Definition of Enriched Categories}{42}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}The Magnitude of Enriched Categories}{44}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}The Relation of The Magnitudes of Graphs and Enriched Categories}{45}{subsection.4.4}%
-\contentsline {section}{Appendix}{46}{theorem.4.4.2}%
-\contentsline {section}{\numberline {A}The calculation of Graph Automorphisms}{46}{appendix.A}%
+\contentsline {section}{Appendix}{47}{theorem.4.4.2}%
+\contentsline {section}{\numberline {A}The calculation of Graph Automorphisms}{47}{appendix.A}%

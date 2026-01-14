@@ -88,10 +88,6 @@
 \newcommand{\graphimg}[1]{
   \includegraphics{Tikz/Graphs/out/#1}
 }
-\newcommand{\commutimg}[1]{
-  \includegraphics{Tikz/Commutative/out/#1}
-}
-
 \newcommand{\figgraph}[3]{
   \begin{figure}[htbp]
     \centering
@@ -100,7 +96,6 @@
     \label{#3}
   \end{figure}
 }
-
 \newcommand{\mathgraph}[2][1.5em]{
   \raisebox{-0.5\height}{
     \resizebox{!}{#1}{
@@ -108,10 +103,12 @@
     }
   }
 }
-
-\newcommand{\figcommu}[1]{
+\newcommand{\commutimg}[2][]{
+  \includegraphics[#1]{Tikz/Commutative/out/#2}
+}
+\newcommand{\figcommu}[2][]{
   \begin{center}
-    \commutimg{#1}
+    \commutimg[#1]{#2}
   \end{center}
 }
 
@@ -1122,7 +1119,7 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
 \begin{proof}
   We need to show that the following diagram commutes for any $k,l \geq 0$. \\
 
-  \figcommu{chain_map.pdf}
+  \figcommu[width=\linewidth]{chain_map.pdf}
   Let $(x_0, \dots, x_k)$ be a generator of $MC_{k,l}(G)$. \\
   If $l(x_0, \dots, x_k) = l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(f(x_0), \dots, \hat{f(x_i)}, \dots, f(x_k))$, 
   \begin{align*}
@@ -1318,7 +1315,9 @@ We can give another proof of \cref{disjoint_union} by \cref{magnitude_of_disjoin
     &= (\partial \mathbf{x}) \otimes \mathbf{y} + (-1)^{k_1} \mathbf{x} \otimes (\partial \mathbf{y}).
   \end{align*}
   Then, we should show only the first equality. \\
-  ここに可換図式を挿入. 証明も続く
+  \figcommu[width=\linewidth]{exterior.pdf}
+
+  直接計算によって最初の等号を示す.
 \end{proof}
 
 
@@ -1341,7 +1340,7 @@ From this proposition, we obtain the induced map in homology, also denoting $\bo
 We don't prove this theorem in this thesis.
 
 \begin{example}
-  $G = C_4 = C_2 \boxprod C_2$.
+  $G = C_4 = C_2 \boxprod C_2$. 
 \end{example}
 
 
@@ -1512,18 +1511,18 @@ In this section, we explain the motivation for studying the magnitude of graphs 
   Let $\zeta$ be an $I \times I$-matrix over a rig $k$.
   If $\zeta$ has a weighting $w$ and a coweighting $v$, then
   \[
-    \sum_{i \in I} v(i) = \sum_{j \in J} w(j)
+    \sum_{i \in I} v(i) = \sum_{j \in J} w(j).
   \]
 \end{lemma}
 
-\begin{proof}
+\begin{proof} We have
   \[
     \begin{split}
       \sum_{i \in I} v(i) &= v u_I \\
       &= v (\zeta w) \\
       &= (v \zeta) w \\
       &= u_J w \\
-      &= \sum_{j \in J} w(j)
+      &= \sum_{j \in J} w(j).
     \end{split}
   \]
 \end{proof}
@@ -1553,7 +1552,7 @@ From this lemma, the sum of the weighting or coweighting on $\zeta$ is unique if
   (2) If $k$ is a field and $\zeta$ has the magnitude, then there exist a weighting $w$ and a coweighting $v$ on $\zeta$.
   Let $\zeta x$ be a zero-map for some $x : I \rightarrow k$. Then,
   \[
-    0 = v (\zeta x) = (v \zeta) x = u_I x = \sum_{i \in I} x(i)
+    0 = v (\zeta x) = (v \zeta) x = u_I x = \sum_{i \in I} x(i).
   \]
   ここからやり直し
 \end{proof}
@@ -1574,10 +1573,9 @@ From this lemma, the sum of the weighting or coweighting on $\zeta$ is unique if
 \subsection{The Definition of Enriched Categories}
 In this document, we only treat \textit{locally small} categories. Now, a category $\CC$ is locally small if for any objects $a,b$ of $\CC$, the hom-set $\Hom_{\CC}(a,b)$ forms a set.
 
-
 \begin{definition}\label{monoid}
   A category $\CC$ is called a \textit{monoid} if $\CC$ has only one object $*$ and $V=\Hom_{\CC}(*,*)$ is a monoid with the composition of morphisms as the binary operation and the identity morphism $id_*$ as the identity element. We denote the operation of $V$ by $\otimes$. \\
-  ここに可換図式を挿入
+  \figcommu[]{monoid.pdf}
 \end{definition}
 
 \begin{definition}

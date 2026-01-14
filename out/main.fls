@@ -272,6 +272,14 @@ INPUT ./Tikz/Graphs/out/C_2_square.pdf
 INPUT ./Tikz/Graphs/out/C_2_square.pdf
 INPUT ./Tikz/Graphs/out/C_2_square.pdf
 INPUT extractbb -B cropbox -O Tikz/Graphs/out/C_2_square.pdf
+INPUT ./Tikz/Commutative/out/exterior.pdf
+INPUT ./Tikz/Commutative/out/exterior.pdf
+INPUT ./Tikz/Commutative/out/exterior.pdf
+INPUT extractbb -B cropbox -O Tikz/Commutative/out/exterior.pdf
+INPUT ./Tikz/Commutative/out/monoid.pdf
+INPUT ./Tikz/Commutative/out/monoid.pdf
+INPUT ./Tikz/Commutative/out/monoid.pdf
+INPUT extractbb -B cropbox -O Tikz/Commutative/out/monoid.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
 INPUT out/main.aux
