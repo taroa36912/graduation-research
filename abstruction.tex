@@ -11,22 +11,24 @@
 \usepackage{amsthm}
 \usepackage{eucal}
 
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\NN}{\mathbb{N}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\TITLE}%
-{Magnitude Homology of Graphs and the Magnitude as its Categorification}%卒論タイトルを書く
-\newcommand{\STNO}%
-{2264257}%学籍番号
-\newcommand{\NAME}%
-{Kensho Yachi}%氏名
-\newcommand{\ADVR}%
-{Yuta Nozaki Associate Professor}%指導教員氏名
-%%%% 以下は変更しないでください
-\newcommand{\DATE}%
-{(2026年2月6日)}%〆切
-\newcommand{\NENDO}%
-{2025年度}%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\TITLE}
+{Magnitude Homology of Graphs and the Magnitude as its Categorification}
+\newcommand{\STNO}
+{2264257}
+\newcommand{\NAME}
+{谷内 賢翔}
+\newcommand{\ADVR}
+{野崎 雄太 准教授}
+\newcommand{\DATE}
+{(2026年2月6日)}
+\newcommand{\NENDO}
+{2025年度}
 
 \setlength{\textwidth}{52zw}
 \setlength{\textheight}{25cm}
@@ -35,8 +37,8 @@
 \makeatletter
 
 \def\ps@lrheadf{\ps@empty
-  \def\@evenhead{\normalfont%\footnotesize
-      \leftmark{}{}\hfil \rightmark{}{}}%
+  \def\@evenhead{\normalfont
+      \leftmark{}{}\hfil \rightmark{}{}}
   \let\@oddhead\@evenhead
   \def\@oddfoot{}
   \let\@evenfoot\@oddfoot
@@ -47,7 +49,9 @@
 \pagestyle{lrheadf}
 
 \markboth{
-2025年度 横浜国立大学 理工学部 数理科学EP 卒業研究概要
+数物・電子情報系学科数理科学EP 
+\hskip1zw
+卒業研究 \hskip1zw 概要
 }{}
 
 
@@ -71,61 +75,30 @@
 \noindent
 \textbf{１．研究背景・動機}
 
-\NENDO 数理科学ＥＰ卒業研究の概要フォーマットです．
-用紙はA4用紙１枚です．
-最初の1段組の枠に，
-日本語の研究題目，英文の研究題目，学籍番号，
-氏名，指導教員の氏名を記入してください．
+The concept of magnitude is introduced by Leinster and it is defined for enriched categories of finite objects, for example, generalized finite metric spaces such as finite graphs.
+Then, Leinster focuses on the magnitude of graphs in using his idea of magnitude of a metric space, which is one of a family of cardinality-like invariants extending across mathematics;
+it is a cousin to Euler characteristic and geometric measure. 
+Among its cardinality-like properties are multiplicativity with respect to cartesian product and an inclusion-exclusion formula for the magnitude of a union under mild hypotheses. Formally, the magnitude of a graph is both a rational function over $\QQ$ and a power series over $\ZZ$.
 
-用紙はA4用紙で1ページです．文章本体は2段組です．
-文字の
-大きさは10ポイント程度です．
+Richard and Simon introduced a bigraded homology theory for graphs which has the magnitude as its graded Euler characteristic and showed how properties of magnitude proved by Leinster categorify to properties such as a Kunneth Theorem and a Mayer-Vietoris Theorem. 
 
-全体の構成は，１．研究背景・動機， 
-２．主結果， ３．意義・証明のアイデアや方法， 
-４．今後の課題， 参考文献， を参考にしてください． 
-項目ごとに，
-(専門外の人にも概要がわかるように)
-わかりやすく，明確に記述してください．
-○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○○○○○
- ○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
- ○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○○○○○
- ○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
- ○○○○○○○○○
+Here, we first review the definition of the magnitude of graphs, the magnitude homology of graphs, and their properties.
+Then we focus on the magnitude of enriched categories and discuss how the magnitude of graphs is introduced from that of enriched categories. We denote the magnitude of a graph $G$ by $\# G$ and the magnitude homology of $G$ by $\mathrm{MH}_{*,*}(G)$.
 
 \vskip10Q
 \noindent
 \textbf{２．主結果}
 
-ここでは，卒業論文の主結果を簡潔に説明してください．
-必要な用語は(できれば)簡単に説明するなど，専門外の人にもわかるように
-書いてください．
-○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
- ○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-○○○○○○○○○○○○○○○○○○○○○○○
-% ○○○○○○○○○○○○○○○○○○○○○○
-%○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-% ○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○
-%○○○○○○○○○○○○○
+The first main result is a certain property that we would like graph invariants to satisfy, the inclusion-exclusion formula;
+\[
+  \# (G \cup H) = \# G + \# H - \#(G \cap H).
+\]
+For this we must impose some hypotheses. Indeed, Leinster shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction.
+However, the hypotheses we impose are mild enough to cover a wide range of examples, including trees, forests, wedge sums, and graphs containing a cycle of length at least 4. For example, let $G$ be a graph shown below. 
+
+The second main result is confirming that the magnitude defined in the context of enriched categories coincides with that defined in the context of graphs.
+
+$ \# G$はmonoidal categoryで$\mid x \mid = e^x = q$としたものなど書く.
 
 \vskip10Q
 \noindent
