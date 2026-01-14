@@ -1,11 +1,10 @@
 # Fdb version 4
-["dvipdf"] 1768374448.61232 "out/K_3.dvi" "out/K_3.pdf" "out/K_3" 1768374448.80234 0
-  "out/K_3.dvi" 1768374448.59913 2132 c3ebc02ecbedb97dfb7efa872ffb49da "latex"
+["dvipdf"] 1768377371.25132 "out/C_3_wedge_C_2.dvi" "out/C_3_wedge_C_2.pdf" "out/C_3_wedge_C_2" 1768377371.44261 0
+  "out/C_3_wedge_C_2.dvi" 1768377371.22451 3204 cdfdfc8c71432be21add4a40c298f266 "latex"
   (generated)
-  "out/K_3.pdf"
+  "out/C_3_wedge_C_2.pdf"
   (rewritten before read)
-["latex"] 1768374448.33015 "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_3.tex" "out/K_3.dvi" "K_3" 1768374448.8017 0
-  "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_3.tex" 1768374448.15734 365 b04480131184442927de8ca0f5233d98 ""
+["latex"] 1768377370.93893 "C_3_wedge_C_2.tex" "out/C_3_wedge_C_2.dvi" "C_3_wedge_C_2" 1768377371.44206 0
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1673816307 1016 1c2b89187d12a2768764b83b4945667c ""
@@ -93,10 +92,10 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "K_3.tex" 1768374448.15734 365 b04480131184442927de8ca0f5233d98 ""
-  "out/K_3.aux" 1768374448.59871 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "C_3_wedge_C_2.tex" 1768377356.17685 1142 f9f6b24cadb7aa3f08dc5c1743fa0564 ""
+  "out/C_3_wedge_C_2.aux" 1768377371.22418 32 3985256e7290058c681f74d7a3565a19 "latex"
   (generated)
-  "out/K_3.aux"
-  "out/K_3.dvi"
-  "out/K_3.log"
+  "out/C_3_wedge_C_2.aux"
+  "out/C_3_wedge_C_2.dvi"
+  "out/C_3_wedge_C_2.log"
   (rewritten before read)

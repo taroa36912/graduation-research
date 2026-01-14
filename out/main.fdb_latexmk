@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1768211694.10352 "out/main.dvi" "out/main.pdf" "out/main" 1768211694.41657 0
-  "out/main.dvi" 1768211694.07334 156840 5cf1b77ac48771836edae34284f6b032 "latex"
+["dvipdf"] 1768381998.30869 "out/main.dvi" "out/main.pdf" "out/main" 1768381998.61908 0
+  "out/main.dvi" 1768381998.27717 160208 36126730e9a8820e4ce1a03a7a79252f "latex"
   (generated)
   "out/main.pdf"
   (rewritten before read)
-["latex"] 1768211692.76877 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1768211694.41581 0
-  "/Users/kensh/Documents/src/graduation-research/main.tex" 1768211692.57293 77671 6f0f2ede56929f8a0a6d963778122984 ""
+["latex"] 1768381996.55192 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1768381998.61828 0
+  "/Users/kensh/Documents/src/graduation-research/main.tex" 1768381996.3718 79230 a6a214235746884d5df986e5346b3b5f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -104,20 +104,24 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
+  "Tables/out/mag_hom_C_5.pdf" 1768379079.0642 4380 f5bc0b4ce5d3dd86dd58559812506265 ""
   "Tikz/Commutative/out/chain_map.pdf" 1767855494.82411 11969 4eebabcd2c6fdf9e4d32b988931ae619 ""
   "Tikz/Graphs/out/C_2_square.pdf" 1765693340.05055 6558 962b23623276422b622229e9b25c4034 ""
+  "Tikz/Graphs/out/C_3_wedge_C_2.pdf" 1768377371.43146 1187 7b94acdc130d09a1efed3cf96296735b ""
   "Tikz/Graphs/out/C_n.pdf" 1763971149.35278 2204 cb915a0faa49e6f1679de7266245a4d3 ""
-  "Tikz/Graphs/out/K_3.pdf" 1763969969.50069 1015 52b9dcc7bb7255e8dd4cd48dea70856b ""
+  "Tikz/Graphs/out/K_2.pdf" 1768374208.17377 927 78754d57309402feb6012d09fe89729f ""
+  "Tikz/Graphs/out/K_2_sq_K_3.pdf" 1768375165.89839 1351 1a02d4f7f0d615abaea0a5e0a081f90f ""
+  "Tikz/Graphs/out/K_3.pdf" 1768374448.79207 1027 21897ed4e6d3d8e83b82adf03f08b868 ""
   "Tikz/Graphs/out/K_mn.pdf" 1763972013.6366 2335 e2480949c0b5d3a321cbc77057100b05 ""
   "Tikz/Graphs/out/K_n.pdf" 1763970917.66224 2121 705e8b346914d42b9eee9e382e218f83 ""
   "Tikz/Graphs/out/Petersen.pdf" 1767854673.88072 1825 ea93febcb9d651c6bcb557d2c895fdfb ""
   "Tikz/Graphs/out/connect_C_4.pdf" 1764427465.42548 8030 ed527b50ca694e3a9aca1f574cbea91b ""
   "Tikz/Graphs/out/n_vertex.pdf" 1763969192.20198 2085 76f65b71985b64b4306d7748bf0b7ffd ""
   "Tikz/Graphs/out/n_vertex.xbb" 1763969652.45016 239 46931e924c7340ffb2002b72d03fb43e ""
-  "main.tex" 1768211692.57293 77671 6f0f2ede56929f8a0a6d963778122984 ""
-  "out/main.aux" 1768211694.07188 9080 16e2e1aa99aee6d95c194ce2fc790ded "latex"
-  "out/main.out" 1768211694.07303 4731 b67c833bf0fb1725aa81e2d906afd686 "latex"
-  "out/main.toc" 1768211694.0733 1893 9ff75de6499b0b2b2cc399884fae7e4f "latex"
+  "main.tex" 1768381996.3718 79230 a6a214235746884d5df986e5346b3b5f ""
+  "out/main.aux" 1768381998.27585 10126 926f1c65542e4c6cb7200318358b594d "latex"
+  "out/main.out" 1768381998.27692 4731 b67c833bf0fb1725aa81e2d906afd686 "latex"
+  "out/main.toc" 1768381998.27714 1893 4b6342e53de573e2f4a07ff7b9c13565 "latex"
   (generated)
   "out/main.aux"
   "out/main.dvi"

@@ -1,0 +1,20 @@
+\documentclass[dvipdfmx, border=0pt]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+    \coordinate (Top) at (0.5, 0.866);
+    \coordinate (Left) at (0, 0);
+    \coordinate (Right) at (1, 0);
+    \coordinate (TailLeft) at (-0.6, 0.5); 
+    \coordinate (TailRight) at (1.6, 0.5);
+    \draw[thick] (Top) -- (Left) -- (Right) -- cycle;
+    \draw[thick] (Left) -- (TailLeft);
+    \draw[thick] (Right) -- (TailRight);
+    \fill (Top) circle (2pt);
+    \fill (Left) circle (2pt);
+    \fill (Right) circle (2pt);
+    \fill (TailLeft) circle (2pt);
+    \fill (TailRight) circle (2pt);
+\end{tikzpicture}
+\end{document}

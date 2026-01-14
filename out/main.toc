@@ -1,19 +1,19 @@
 \contentsline {section}{\numberline {1}Introduction}{4}{section.1}%
-\contentsline {section}{\numberline {2}The Magnitude of Graphs}{7}{section.2}%
-\contentsline {subsection}{\numberline {2.1}The Definition of the Magnitude of Graphs}{7}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Basic Properties and Examples}{10}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Main Results on the Magnitude of Graphs}{16}{subsection.2.3}%
-\contentsline {section}{\numberline {3}The Magnitude Homology of Graphs}{24}{section.3}%
-\contentsline {subsection}{\numberline {3.1}The Definition of The Magnitude Homology of Graphs}{24}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Induced Maps on Magnitude Homology}{29}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Magnitude Homology of Disjoint Union of Graphs}{32}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Magnitude Homology of Cartesian Products}{33}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}The Mayer-Vietoris Sequence of Magnitude Homology of Graphs}{35}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Diagonal Graphs and its Property}{37}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Motivation: The Magnitude of Enriched Categories}{38}{section.4}%
-\contentsline {subsection}{\numberline {4.1}The Magnitude of a Matrix}{38}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}The Definition of Enriched Categories}{41}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}The Magnitude of Enriched Categories}{43}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}The Relation of The Magnitudes of Graphs and Enriched Categories}{44}{subsection.4.4}%
-\contentsline {section}{Appendix}{45}{theorem.4.4.2}%
-\contentsline {section}{\numberline {A}The calculation of Graph Automorphisms}{45}{appendix.A}%
+\contentsline {section}{\numberline {2}The Magnitude of Graphs}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The Definition of the Magnitude of Graphs}{8}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Basic Properties and Examples}{11}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Main Results on the Magnitude of Graphs}{17}{subsection.2.3}%
+\contentsline {section}{\numberline {3}The Magnitude Homology of Graphs}{25}{section.3}%
+\contentsline {subsection}{\numberline {3.1}The Definition of The Magnitude Homology of Graphs}{25}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Induced Maps on Magnitude Homology}{30}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Magnitude Homology of Disjoint Union of Graphs}{33}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Magnitude Homology of Cartesian Products}{34}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}The Mayer-Vietoris Sequence of Magnitude Homology of Graphs}{36}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Diagonal Graphs and its Property}{38}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Motivation: The Magnitude of Enriched Categories}{39}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The Magnitude of a Matrix}{39}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}The Definition of Enriched Categories}{42}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}The Magnitude of Enriched Categories}{44}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}The Relation of The Magnitudes of Graphs and Enriched Categories}{45}{subsection.4.4}%
+\contentsline {section}{Appendix}{46}{theorem.4.4.2}%
+\contentsline {section}{\numberline {A}The calculation of Graph Automorphisms}{46}{appendix.A}%

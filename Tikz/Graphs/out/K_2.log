@@ -1,10 +1,10 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  14 JAN 2026 16:07
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  14 JAN 2026 16:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_3.tex
-(/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_3.tex
+**/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_2.tex
+(/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_2.tex
 pLaTeX2e <2023-02-14u04>+1, based on
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
@@ -267,8 +267,8 @@ File: l3backend-dvipdfmx.def 2025-06-09 L3 backend support: dvipdfmx
 \g__graphics_track_int=\count307
 \g__pdfannot_backend_int=\count308
 \g__pdfannot_backend_link_int=\count309
-) (out/K_3.aux)
-\openout1 = `K_3.aux'.
+) (out/K_2.aux)
+\openout1 = `K_2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -292,7 +292,7 @@ LaTeX Font Info:    ... okay on input line 4.
 
 [1
 
-] (out/K_3.aux)
+] (out/K_2.aux)
  ***********
 pLaTeX2e <2023-02-14u04>+1, based on
 LaTeX2e <2025-06-01> patch level 1
@@ -300,12 +300,12 @@ L3 programming layer <2025-09-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 11979 strings out of 468392
- 253549 string characters out of 5442311
+ 11972 strings out of 468392
+ 253467 string characters out of 5442311
  624966 words of memory out of 5000000
- 40502 multiletter control sequences out of 15000+600000
+ 40495 multiletter control sequences out of 15000+600000
  630362 words of font info for 58 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  102i,5n,107p,443b,474s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/K_3.dvi (1 page, 2132 bytes).
+Output written on out/K_2.dvi (1 page, 1676 bytes).

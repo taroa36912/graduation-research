@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1765445745.48526 "out/abstruction.dvi" "out/abstruction.pdf" "out/abstruction" 1765445745.77979 0
-  "out/abstruction.dvi" 1765445745.47328 10368 07fda48ab626d803cc004bdb9aa52ebf "latex"
+["dvipdf"] 1768382193.88661 "out/abstruction.dvi" "out/abstruction.pdf" "out/abstruction" 1768382194.13551 0
+  "out/abstruction.dvi" 1768382193.87521 10300 b46d41de4e05b2996ebf4388ab73b7e1 "latex"
   (generated)
   "out/abstruction.pdf"
   (rewritten before read)
-["latex"] 1765445745.23881 "/Users/kensh/Documents/src/graduation-research/abstruction.tex" "out/abstruction.dvi" "abstruction" 1765445745.77937 0
-  "/Users/kensh/Documents/src/graduation-research/abstruction.tex" 1765445744.47368 8345 931d0e925d2b9c522ce72f27b3b138f8 ""
+["latex"] 1768382193.65186 "/Users/kensh/Documents/src/graduation-research/abstruction.tex" "out/abstruction.dvi" "abstruction" 1768382194.13414 0
+  "/Users/kensh/Documents/src/graduation-research/abstruction.tex" 1768382193.47103 8298 ea68f57167709860c5feba6086655c3e ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -56,9 +56,9 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "abstruction.tex" 1765445744.47368 8345 931d0e925d2b9c522ce72f27b3b138f8 ""
-  "out/abstruction.aux" 1765445745.47274 128 852fc3e86949e4a73cd552c13992dc37 "latex"
-  "out/abstruction.out" 1765445745.46668 0 d41d8cd98f00b204e9800998ecf8427e "latex"
+  "abstruction.tex" 1768382193.47103 8298 ea68f57167709860c5feba6086655c3e ""
+  "out/abstruction.aux" 1768382193.87479 128 852fc3e86949e4a73cd552c13992dc37 "latex"
+  "out/abstruction.out" 1768382193.86965 0 d41d8cd98f00b204e9800998ecf8427e "latex"
   (generated)
   "out/abstruction.aux"
   "out/abstruction.dvi"

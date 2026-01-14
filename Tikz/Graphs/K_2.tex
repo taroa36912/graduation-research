@@ -3,12 +3,10 @@
 
 \begin{document}
 \begin{tikzpicture}
-    \coordinate (A) at (0.5, 0.866);
-    \coordinate (B) at (0, 0);
-    \coordinate (C) at (1, 0);
-    \draw[thick] (A) -- (B) -- (C) -- cycle;
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (0, 0.5);
+    \draw[thick] (A) -- (B);
     \fill (A) circle (2pt);
     \fill (B) circle (2pt);
-    \fill (C) circle (2pt);
 \end{tikzpicture}
 \end{document}
