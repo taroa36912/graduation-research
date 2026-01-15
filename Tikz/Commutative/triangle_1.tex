@@ -1,0 +1,15 @@
+\documentclass[dvipdfmx, border=10pt]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd}
+
+\begin{document}
+
+\begin{tikzcd}[row sep=large, column sep=large]
+    (u \otimes I) \otimes v \arrow[r, "\alpha_{uIv}"] \arrow[rd, "\rho_u \otimes id_v"']
+    & u \otimes (I \otimes v) \arrow[d, "id_u \otimes \lambda_v"]
+      \arrow[dl, phantom, "\circlearrowright"{anchor=center, shift={(3em, 0.8em)}}] \\
+    {} & u \otimes v
+\end{tikzcd}
+
+\end{document}

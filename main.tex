@@ -147,7 +147,7 @@ Then, Leinster focuses on the magnitude of graphs in \cite{Leinster1} using his 
 it is a cousin to Euler characteristic and geometric measure. 
 Among its cardinality-like properties are multiplicativity with respect to cartesian product and an inclusion-exclusion formula for the magnitude of a union under mild hypotheses. Formally, the magnitude of a graph is both a rational function over $\QQ$ and a power series over $\ZZ$.
 
-Richard and Simon introduced a bigraded homology theory for graphs which has the magnitude as its graded Euler characteristic and showed how properties of magnitude proved by Leinster categorify to properties such as a Kunneth Theorem and a Mayer-Vietoris Theorem. 
+Richard and Simon introduced a bigraded homology theory in \cite{HepworthWillerton} for graphs which has the magnitude as its graded Euler characteristic and showed how properties of magnitude proved by Leinster categorify to properties such as a Kunneth Theorem and a Mayer-Vietoris Theorem. 
 
 Here, we first review the definition of the magnitude of graphs, the magnitude homology of graphs, and their properties.
 Then we focus on the magnitude of enriched categories and discuss how the magnitude of graphs is introduced from that of enriched categories.
@@ -161,7 +161,7 @@ Then we focus on the magnitude of enriched categories and discuss how the magnit
 \newpage
 \section{Introduction}
 In many fields of mathematics, there is a canonical measure of size.
-Sets have cardinality, vector spaces have dimension, and topological spaces have Euler characteristic. 
+Sets have cardinality, vector spaces have dimension, and topological spaces have Euler characteristic (where defined). 
 Many of these cardinality-like invariants arise from a single general definition. 
 This general invariant is called magnitude. 
 
@@ -189,18 +189,18 @@ There is a certain property that we would like graph invariants to satisfy, the 
 \[
   \# (G \cup H) = \# G + \# H - \#(G \cap H).
 \]
-For this we must impose some hypotheses. Indeed, Leinster shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction (c.f. \cref{no_graph_inv}). However, the hypotheses we impose are mild enough to cover a wide range of examples, including trees, forests, wedge sums, and graphs containing a cycle of length at least 4. For example, let $G$ be a graph shown below. 
+For this we must impose some hypotheses. Indeed, Leinster \cite{Leinster1} shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction (c.f. \cref{no_graph_inv}). However, the hypotheses we impose are mild enough to cover a wide range of examples, including trees, forests, wedge sums, and graphs containing a cycle of length at least 4. For example, let $G$ be a graph shown below. 
 \figgraph{C_3_wedge_C_2.pdf}{A 3-cycle with edges attached to two distinct vertices}{Example_K_3_wedge_K_2}
 
-Then we can calculate the magnitude of $G$ by decomposing it into $C_3 \cup C_2 \cap C_2$ as \cref{ex_C_3_wedge_C_2}:
+Then we can calculate the magnitude of $G$ by decomposing it into one three cycle and two edges as \cref{ex_C_3_wedge_C_2}:
 \[
   \# G = (\# C_3 + \# C_2 - \# C_1) + \# C_2 - \# C_1 = \# C_3 + 2 \# C_2 - 2 \# C_1.
 \]
-Richard and Simon then categorify the magnitude of graphs by defining the magnitude homology of graphs in \cite{HepworthWillerton}. This is a bigraded homology theory $MH_{*,*}$. It is functorial with respect to maps of graphs that send vertices to vertices and preserve or contract edges, and its graded Euler characteristic recovers the magnitude:
+
+Later, Richard and Simon \cite{HepworthWillerton} then categorify the magnitude of graphs by defining the magnitude homology of graphs. This is a bigraded homology theory $MH_{*,*}$. It is functorial with respect to maps of graphs that send vertices to vertices and preserve or contract edges, and its graded Euler characteristic recovers the magnitude:
 \[
   \sum_{k,l \geq 0} (-1)^k \rank (MH_{k,l}(G)) q^l = \# G ~ \text{in} ~  \ZZ \llbracket q \rrbracket.
 \]
-Being a bigraded abelian group rather than just a power series, the magnitude homology has a richer structure than the magnitude. 
 For example, consider the cycle graph $C_5$.
 \newpage
 \begin{table}[htbp]
@@ -214,13 +214,14 @@ We easily check that the graded Euler characteristic of the magnitude homology o
   \# C_5 = 5 - 10q + (-10+20)q^2 - (40 - 40)q^3 + (20 - 120 + 80)q^4 - \dots = \frac{5 - 5q}{1 + q - 2q^3}
 \]
 (See \cref{tab:magnitude_ranks} and \cref{ex_mag_cal}).
+Being a bigraded abelian group rather than just a power series, the magnitude homology has a richer structure than the magnitude. 
 We will see below that various properties of magnitude described by Leinster, as mentioned above, are shadows of properties of magnitude homology. \\
 
 Actually, Leinster first introduced the magnitude in the context of enriched categories in \cite{Leinster2}. Generalized metric spaces are examples of enriched categories ($[0, \infty]$-categories) and the magnitude is defined for them if they are finite. Finite graphs are generalized finite metric spaces, with distance between vertices measured as the length of a shortest path. \\
 
 Based on these results, we confirm in the final section that the magnitude of graphs coincides with that defined for enriched categories. \\
 
-This thesis is laid out as follows. In section 2, we define the magnitude of a graph, expressing it as both a rational function and a formal power series over $\ZZ$, the most basic properties and examples of magnitude, including a simple formula for the magnitude of any graph whose automorphism group acts transitively on vertices, proving that magnitude has some basic cardinality-like properties, viewing $G$ as a power series over $\ZZ$, and the inclusion-exclusion formula above. In section 3, we define the magnitude homology of graphs, showing that its graded Euler characteristic recovers the magnitude, and it satisfies categorified versions of the cardinality-like properties of magnitude, including a Kunneth theorem for cartesian products and a Mayer-Vietoris theorem for unions. In section 4, we introduce the definition of the magnitude of enriched categories and discuss how the magnitude of graphs is introduced from that of enriched categories. 
+This thesis is laid out as follows. In section 2, we define the magnitude of a graph, expressing it as both a rational function and a formal power series over $\ZZ$, the most basic properties and examples of magnitude, including a simple formula for the magnitude of any graph whose automorphism group acts transitively on vertices, proving that magnitude has some basic cardinality-like properties, viewing $G$ as a power series over $\ZZ$, and the inclusion-exclusion formula above. In section 3, we define the magnitude homology of graphs, showing that its graded Euler characteristic recovers the magnitude, and it satisfies categorified versions of the cardinality-like properties of magnitude. these include a Kunneth theorem for cartesian products and a Mayer-Vietoris theorem for unions. In section 4, we introduce the definition of the magnitude of enriched categories and discuss how the magnitude of graphs is introduced from that of enriched categories. 
 
 We denote $\approx$ as isomorphisms of graphs and groups.
 
@@ -1578,7 +1579,7 @@ In this document, we only treat \textit{locally small} categories. Now, a catego
   \figcommu[]{monoid.pdf}
 \end{definition}
 
-\begin{definition}
+\begin{definition}\label{def_monoidal_cat}
   A pair $(\VV, \otimes, I, \alpha, \lambda, \rho)$ is called a \textit{monoidal category} if it satisfies the following conditions:
   \begin{enumerate}[label=(\arabic*)]
     \item $\VV$ is a category.
@@ -1588,9 +1589,9 @@ In this document, we only treat \textit{locally small} categories. Now, a catego
     \item $\lambda$ is the natural isomorphism $I \otimes - \Rightarrow id_{\VV}$ given by $\lambda_u : I \otimes u \isom u$.
     \item $\rho$ is the natural isomorphism $- \otimes I \Rightarrow id_{\VV}$ given by $\rho_u : u \otimes I \isom u$.
     \item The following diagram commutes for any objects $u,v,w,x$ of $\VV$:
-    ここに可換図式を挿入
+    \figcommu[width=\linewidth]{pentagon_1.pdf}
     \item The following diagrams commute for any objects $u,v$ of $\VV$:
-    ここに可換図式を挿入
+    \figcommu[width=\linewidth]{triangle_1.pdf}
   \end{enumerate}
 \end{definition}
 
@@ -1598,12 +1599,18 @@ We also call $\VV$ a monoidal category, omitting $\otimes$ and $I$.
 
 \begin{example}
   \begin{enumerate}[label=(\roman*)]
-    \item $(\textbf{Set}, \times, \{*\})$ is a monoidal category.
-    ここに説明を挿入
-    \item $(\textbf{Vect}_K, \otimes_K, K)$ is a monoidal category, where $K$ is a field.
-    ここに説明を挿入
-    \item $([0, \infty], +, 0)$ is a monoidal category.
-    ここに説明を挿入
+    \item $(\textbf{Set}, \times, \{*\}, id, Pr_2, Pr_1)$ is a monoidal category. Indeed, let $f_1 : A_1 \rightarrow B_1, f_2 : A_2 \rightarrow B_2$ and then $f_1 \times f_2 : A_1 \times B_1 \rightarrow A_2 \times B_2 ; (a, b) \mapsto (f_1(a), f_2(b))$ is a map of \textbf{Set} for the condition (2) in \cref{def_monoidal_cat}. The rest of the conditions are obvious.
+    \item $(\textbf{Vect}_K, \otimes_K, K, id, Pr_2, Pr_1)$ is a monoidal category, where $K$ is a field. We should check that for the vector spaces $V_1, V_2, V_3, W_1, W_2$, $v_i \in V_i \text{ } (i = 1,2,3)$, and the linear maps $f_1 : V_1 \rightarrow W_1, f_2 : V_2 \rightarrow W_2$, the map $f_1 \otimes f_2 : V_1 \otimes_K V_2 \rightarrow W_1 \otimes_K W_2 ; v_1 \otimes v_2 \mapsto f_1(v_1) \otimes f_2(v_2)$ is a linear map for (2), $(v_1 \otimes v_2) \otimes v_3 = v_1 \otimes (v_2 \otimes v_3)$ in $V_1 \otimes V_2 \otimes V_3$ for (4), and $K \otimes V_1 \approx V_1 \approx V_1 \otimes K$ for (5) and (6). The rest of the conditions are obvious.
+    \item $([0, \infty], +, 0, id, id, id)$ is a monoidal category. Here, for $a<b \in [0, \infty]$,
+    \begin{center}
+      \begin{tabular}{c|cc}
+        $\mor$ & $a$ & $b$ \\
+        \hline
+        $a$ & $\{id_a\}$ & $\emptyset$ \\
+        $b$ & $\{*_{ba}\}$ & $\{id_b\}$ \\
+      \end{tabular}.
+    \end{center}
+    Then, the condition (2)~(8)follows from $a_1 < b_1, a_2 < b_2 \Rightarrow a_1 + a_2 < b_1 + b_2, (a+b)+c = a+(b+c), 0+a=a=a+0$, the uniqueness of morphisms.
     \item $(\mathbf{2}, \otimes, t)$ is a monoidal category, where $\mathbf{2}$ is the category defined by $Ob(\mathbf{2}) = \{t,f\}$ and the morphism sets are defined by
     \begin{center}
       \begin{tabular}{c|cc}
@@ -1622,7 +1629,7 @@ We also call $\VV$ a monoidal category, omitting $\otimes$ and $I$.
         $f$ & $f$ & $f$ \\
       \end{tabular}
     \end{center}
-    ここに説明を挿入
+    We can easily check the conditions (1)~(8) similarly to (iii).
 
     Then, $\mathbf{2}$ is a monoidal subcategory of $[0, \infty]$ by the embedding $t \mapsto 0, f \mapsto \infty$ and of $\textit{Set}$ by the embedding $t \mapsto \{*\}, f \mapsto \emptyset$.
   \end{enumerate}

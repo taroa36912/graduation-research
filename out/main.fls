@@ -280,6 +280,14 @@ INPUT ./Tikz/Commutative/out/monoid.pdf
 INPUT ./Tikz/Commutative/out/monoid.pdf
 INPUT ./Tikz/Commutative/out/monoid.pdf
 INPUT extractbb -B cropbox -O Tikz/Commutative/out/monoid.pdf
+INPUT ./Tikz/Commutative/out/pentagon_1.pdf
+INPUT ./Tikz/Commutative/out/pentagon_1.pdf
+INPUT ./Tikz/Commutative/out/pentagon_1.pdf
+INPUT extractbb -B cropbox -O Tikz/Commutative/out/pentagon_1.pdf
+INPUT ./Tikz/Commutative/out/triangle_1.pdf
+INPUT ./Tikz/Commutative/out/triangle_1.pdf
+INPUT ./Tikz/Commutative/out/triangle_1.pdf
+INPUT extractbb -B cropbox -O Tikz/Commutative/out/triangle_1.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
 INPUT out/main.aux
