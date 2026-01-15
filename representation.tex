@@ -1,32 +1,18 @@
 \documentclass[dvipdfmx, 11pt, notheorems]{beamer} 
-% notheorems: amsthmの定理環境と競合しないようにするオプション
-
-% ==========================================
-% パッケージ設定
-% ==========================================
-\usepackage{bxdpx-beamer} % dvipdfmxでのナビゲーション修正
-\usepackage{pxjahyper}    % 日本語のしおり対応
-\usepackage{minijs}       % 日本語フォント設定
+\usepackage{bxdpx-beamer}
+\usepackage{pxjahyper}
+\usepackage{minijs}
 \usepackage{amsmath, amssymb, amsthm}
 \usepackage{tikz}
 \usepackage{graphicx}
 \usepackage{bm}
-
-% ==========================================
-% デザイン・テーマ設定
-% ==========================================
-\usetheme{Madrid}         % 定番のテーマ（下部に進捗バーが出る）
-\usecolortheme{default}   % 色のテーマ（defaultは青系）
-% \usecolortheme{beaver}  % 赤系が良ければコメントアウトを外す
-
-% フォント設定（数式をSerifにするなど）
+\usetheme{Madrid}
+\usecolortheme{default}
 \usefonttheme{professionalfonts} 
 
-% ナビゲーションバーの記号を消す（スライドがすっきりします）
 \setbeamertemplate{navigation symbols}{}
 
-% 定理環境の日本語化とスタイル設定
-\setbeamertemplate{theorems}[numbered] % 定理に番号を振る
+\setbeamertemplate{theorems}[numbered]
 \theoremstyle{definition}
 \newtheorem{definition}{定義}
 \newtheorem{theorem}{定理}
@@ -34,35 +20,24 @@
 \newtheorem{example}{例}
 \theoremstyle{plain}
 \newtheorem{proposition}{命題}
+\newtheorem{corollary}{系}
 
-% ==========================================
-% タイトル情報
-% ==========================================
 \title[Magnitude Homology]{Magnitude Homology of Graphs and the Magnitude as its Categorification}
-% [ ]内はフッターに表示される略称
 \subtitle{2025年度 卒業研究発表}
-\author[Kensho Yachi]{谷地 健将 (Kensho Yachi)}
+\author[Kensho Yachi]{谷内 賢翔 (やち けんしょう)}
 \institute[YNU]{横浜国立大学 理工学部 数理科学EP}
-\date{2026年2月X日}
+\date{2026年2月18日}
 
-% ==========================================
-% 本文開始
-% ==========================================
 \begin{document}
-
-% --- タイトルスライド ---
 \begin{frame}
   \titlepage
 \end{frame}
 
-% --- 目次スライド ---
 \begin{frame}{目次}
   \tableofcontents
 \end{frame}
 
-% ==========================================
 \section{Introduction}
-% ==========================================
 
 \begin{frame}{研究の背景 (Motivation)}
   \begin{itemize}
