@@ -1,19 +1,30 @@
 # Fdb version 4
-["dvipdf"] 1768970896.01897 "out/exterior.dvi" "out/exterior.pdf" "out/exterior" 1768970896.25204 0
-  "out/exterior.dvi" 1768970896.00056 10376 c33396b0a287f86bcf8d8e10e0d1016b "latex"
+["dvipdf"] 1768971389.203 "out/square_1.dvi" "out/square_1.pdf" "out/square_1" 1768971389.42614 0
+  "out/square_1.dvi" 1768971389.18402 6320 5037b9e6335a90a1603fe5d68ff77c99 "latex"
   (generated)
-  "out/exterior.pdf"
+  "out/square_1.pdf"
   (rewritten before read)
-["latex"] 1768970895.60135 "/Users/kensh/Documents/src/graduation-research/Tikz/Commutative/exterior.tex" "out/exterior.dvi" "exterior" 1768970896.25112 0
-  "/Users/kensh/Documents/src/graduation-research/Tikz/Commutative/exterior.tex" 1768970895.38584 667 690eb7c7135007de6a1a32b7014c8054 ""
+["latex"] 1768971388.8168 "/Users/kensh/Documents/src/graduation-research/Tikz/Commutative/square_1.tex" "out/square_1.dvi" "square_1" 1768971389.42529 0
+  "/Users/kensh/Documents/src/graduation-research/Tikz/Commutative/square_1.tex" 1768971388.65103 871 e875a45a987cc967d1b423d1eeae83ad ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1246382020 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1246382020 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1136768653 1520 eccf95517727cb11801f4f1aee3a21b4 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1136768653 1300 b62933e007d01cfd073f79b963c01526 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1136768653 1292 21c1c5bfeaebccffdb478fd231a0997d ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1673816307 1016 1c2b89187d12a2768764b83b4945667c ""
@@ -115,10 +126,10 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "exterior.tex" 1768970895.38584 667 690eb7c7135007de6a1a32b7014c8054 ""
-  "out/exterior.aux" 1768970896.00022 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "out/square_1.aux" 1768971389.18356 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "square_1.tex" 1768971388.65103 871 e875a45a987cc967d1b423d1eeae83ad ""
   (generated)
-  "out/exterior.aux"
-  "out/exterior.dvi"
-  "out/exterior.log"
+  "out/square_1.aux"
+  "out/square_1.dvi"
+  "out/square_1.log"
   (rewritten before read)

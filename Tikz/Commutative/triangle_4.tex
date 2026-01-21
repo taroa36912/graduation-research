@@ -6,12 +6,13 @@
 \newcommand{\mor}{\mathrm{Mor}}
 \newcommand{\calA}{\mathcal{A}}
 \newcommand{\morcalA}{\mor_{\calA}}
+\newcommand{\morcalAd}{\mor_{\calA}'}
 
 \begin{document}
 \begin{tikzcd}[row sep=large, column sep=large]
-    \morcalA(a,b) \otimes I \arrow[r, "id \otimes j_a"] \arrow[rd, "\rho"']
-    & \morcalA(a,b) \otimes \morcalA(a,a) \arrow[d, "m_{aab}"]
+    I \arrow[r, "j_a"] \arrow[rd, "j'_{F(a)}"']
+    & \morcalA(a,a) \arrow[d, "F_{aa}"]
       \arrow[dl, phantom, "\circlearrowright"{anchor=center, shift={(3em, 0.8em)}}] \\
-    {} & \morcalA(a,b)
+    {} & \morcalAd(F(a),F(a))
 \end{tikzcd}
 \end{document}

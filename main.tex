@@ -1361,7 +1361,7 @@ We don't prove this theorem in this thesis.
 \end{definition}
 
 
-\begin{theorem}
+\begin{theorem}[Hepworth, Willerton \cite{HepworthWillerton}, Theorem 6.5]
   Let $(X;G,H)$ be a projecting decomposition.
   Then, the inclusion map
   \[
@@ -1636,30 +1636,29 @@ We also call $\VV$ a monoidal category, omitting $\otimes$ and $I$.
 \end{example}
 
 \begin{definition}
-  An \textit{enriched category} $\calA = \calA$ in a monoidal category $(\VV, \otimes, I)$ is defined as follows:
-
+  An \textit{enriched category} $\calA = (\calA, m, j)$ in a monoidal category $(\VV, \otimes, I)$ is defined as follows.
+  First, $\calA$ consists of the objects and the morphisms, and endowed with the following data:
   \begin{enumerate}[label=(\arabic*)]
     \item For any objects $a,b$ of $\calA$, $\Hom_{\calA}(a,b)$ is an object of $\VV$.
-    \item For any objects $a,b,c$ of $\calA$, there is a morphism $m_{abc} : \Hom_{\calA}(b,c) \otimes \Hom_{\calA}(a,b) \rightarrow \Hom_{\calA}(a,c)$ in $\VV$, which defines the composition of morphisms.
-    \item For any object $a$ of $\calA$, there exists a morphism $j_a : I \rightarrow \Hom_{\calA}(a,a)$ in $\VV$, which defines the identity morphism of $a$.
+    \item For any objects $a,b,c$ of $\calA$, $m_{abc}$ is a morphism in $\VV$ given by $m_{abc} : \Hom_{\calA}(b,c) \otimes \Hom_{\calA}(a,b) \rightarrow \Hom_{\calA}(a,c)$, which defines the composition of morphisms.
+    \item For any object $a$ of $\calA$, $j_a$ is a morphism in $\VV$ given by $j_a : I \rightarrow \Hom_{\calA}(a,a)$, which defines the identity morphism of $a$.
     \item For any objects $a,b,c,d$ of $\calA$, the following diagram commutes:
     \figcommu[width=\linewidth]{pentagon_2.pdf}
     \item For any objects $a,b$ of $\calA$, the following diagrams commute:
     \figcommu[]{triangle_2.pdf}
-    ここに可換図式を挿入
-    さらに可換図式を挿入
+    \figcommu[]{triangle_3.pdf}
   \end{enumerate}
 
   Then, $\calA$ is called a \textit{$\VV$-category}.
 \end{definition}
 
 \begin{definition}
-  Let $\calA, \calA'$ be $\VV$-categories. A functor $F:\calA \rightarrow \calA'$ is called a \textit{$\VV$-functor} if it satisfies the following conditions. We denote $F_{ab} : \mor_{\calA}(a,b) \rightarrow \mor_{\calA'}(F(a),F(b))$ as the morphism function.
+  Let $\calA, \calA'$ be $\VV$-categories. A functor $F:\calA \rightarrow \calA'$ is called a \textit{$\VV$-functor} if it satisfies the following conditions. We denote $F_{ab} : \mor_{\calA}(a,b) \rightarrow \mor_{\calA'}(F(a),F(b))$ as the morphism.
   \begin{enumerate}[label=(\arabic*)]
     \item The following diagram commutes for any objects $a,b,c$ of $\calA$:
-    ここに可換図式を挿入
+    \figcommu[width=\linewidth]{square_1.pdf}
     \item The following diagram commutes for any object $a$ of $\calA$:
-    ここに可換図式を挿入
+    \figcommu[]{triangle_4.pdf}
   \end{enumerate}
 \end{definition}
 
@@ -1694,13 +1693,14 @@ In this section, we consider only monoidal categories $(\VV, \otimes, I)$ satisf
   \end{itemize}
 \end{proof}
 
-\begin{definition}
-  Let $(\VV, \otimes, I)$ be a monoidal category and let $k$ be a rig.
-  We define a monoid homomorphism
-  \[  | \cdot | : (\ob(\VV)/{\approx}, \otimes, I) \rightarrow (k, \cdot, 1_k)
+\begin{remark}
+  Let $(\VV, \otimes, I)$ be a monoidal category and let $k$ be a rig. Then, We define $\mid \cdot \mid$ to be a monoid homomorphism:
+  \[  | \cdot | : (\ob(\VV)/{\approx}, \otimes, I) \rightarrow (k, \cdot, 1_k).
   \]
-  such that $|I| = 1_k$ and $|u \otimes v| = |u| \cdot |v|$ for any objects $u,v$ of $\VV$.
-\end{definition}
+  We endow a monoidal category $\ob(\VV)$ with $| \cdot |$ and also call it a monoidal category.
+\end{remark}
+
+Here, we can choose various monoid homomorphisms depending on the purpose.
 
 \begin{example}
   aaa.
@@ -1747,8 +1747,13 @@ In this section, we consider only monoidal categories $(\VV, \otimes, I)$ satisf
 \end{proof}
 
 \begin{theorem}
+  The cartesian product $G \boxprod H$ of graphs $G,H$.
   グラフのテンソル積がcatesian productに対応する
 \end{theorem}
+
+\begin{proof}
+  aaa.
+\end{proof}
 
 
 \newpage

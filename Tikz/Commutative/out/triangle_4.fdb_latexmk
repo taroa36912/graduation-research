@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1768970896.01897 "out/exterior.dvi" "out/exterior.pdf" "out/exterior" 1768970896.25204 0
-  "out/exterior.dvi" 1768970896.00056 10376 c33396b0a287f86bcf8d8e10e0d1016b "latex"
+["dvipdf"] 1768972808.40102 "out/triangle_4.dvi" "out/triangle_4.pdf" "out/triangle_4" 1768972808.63439 0
+  "out/triangle_4.dvi" 1768972808.38327 6100 a9594c6d54f5937f51f9fcba3c5fa8a2 "latex"
   (generated)
-  "out/exterior.pdf"
+  "out/triangle_4.pdf"
   (rewritten before read)
-["latex"] 1768970895.60135 "/Users/kensh/Documents/src/graduation-research/Tikz/Commutative/exterior.tex" "out/exterior.dvi" "exterior" 1768970896.25112 0
-  "/Users/kensh/Documents/src/graduation-research/Tikz/Commutative/exterior.tex" 1768970895.38584 667 690eb7c7135007de6a1a32b7014c8054 ""
+["latex"] 1768972807.9444 "/Users/kensh/Documents/src/graduation-research/Tikz/Commutative/triangle_4.tex" "out/triangle_4.dvi" "triangle_4" 1768972808.63337 0
+  "/Users/kensh/Documents/src/graduation-research/Tikz/Commutative/triangle_4.tex" 1768972807.76616 550 ec1e521050fcc625b71f86d2cdbbc760 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -115,10 +115,10 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "exterior.tex" 1768970895.38584 667 690eb7c7135007de6a1a32b7014c8054 ""
-  "out/exterior.aux" 1768970896.00022 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "out/triangle_4.aux" 1768972808.38293 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "triangle_4.tex" 1768972807.76616 550 ec1e521050fcc625b71f86d2cdbbc760 ""
   (generated)
-  "out/exterior.aux"
-  "out/exterior.dvi"
-  "out/exterior.log"
+  "out/triangle_4.aux"
+  "out/triangle_4.dvi"
+  "out/triangle_4.log"
   (rewritten before read)
