@@ -294,22 +294,3 @@ INPUT ./Tikz/Commutative/out/pentagon_2.pdf
 INPUT ./Tikz/Commutative/out/pentagon_2.pdf
 INPUT ./Tikz/Commutative/out/pentagon_2.pdf
 INPUT extractbb -B cropbox -O Tikz/Commutative/out/pentagon_2.pdf
-INPUT ./Tikz/Commutative/out/triangle_2.pdf
-INPUT ./Tikz/Commutative/out/triangle_2.pdf
-INPUT ./Tikz/Commutative/out/triangle_2.pdf
-INPUT extractbb -B cropbox -O Tikz/Commutative/out/triangle_2.pdf
-INPUT ./Tikz/Commutative/out/triangle_3.pdf
-INPUT ./Tikz/Commutative/out/triangle_3.pdf
-INPUT ./Tikz/Commutative/out/triangle_3.pdf
-INPUT extractbb -B cropbox -O Tikz/Commutative/out/triangle_3.pdf
-INPUT ./Tikz/Commutative/out/square_1.pdf
-INPUT ./Tikz/Commutative/out/square_1.pdf
-INPUT ./Tikz/Commutative/out/square_1.pdf
-INPUT extractbb -B cropbox -O Tikz/Commutative/out/square_1.pdf
-INPUT ./Tikz/Commutative/out/triangle_4.pdf
-INPUT ./Tikz/Commutative/out/triangle_4.pdf
-INPUT ./Tikz/Commutative/out/triangle_4.pdf
-INPUT extractbb -B cropbox -O Tikz/Commutative/out/triangle_4.pdf
-INPUT out/main.aux
-INPUT out/main.out
-INPUT out/main.out

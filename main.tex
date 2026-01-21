@@ -84,6 +84,7 @@
 \newcommand{\CC}{\mathcal{C}}
 \newcommand{\VV}{\mathcal{V}}
 \newcommand{\calA}{\mathcal{A}}
+\newcommand{\calB}{\mathcal{B}}
 \newcommand{\ob}{\mathcal{O}\mathrm{b}}
 \newcommand{\graphimg}[1]{
   \includegraphics{Tikz/Graphs/out/#1}
@@ -1670,6 +1671,26 @@ We also call $\VV$ a monoidal category, omitting $\otimes$ and $I$.
   aaa
 \end{example}
 
+\begin{definition}
+  Let $(\VV, \otimes, I)$ be a monoidal category and let $\calA, \calB$ be $\VV$-categories. Then, the \textit{tensor product} $\calA \otimes \calB$ is a category defined as follows:
+  \begin{enumerate}[label=(\arabic*)]
+    \item $\ob(\calA \otimes \calB) = \ob(\calA) \times \ob(\calB)$.
+    \item For any objects $(a,b), (a',b')$ of $\calA \otimes \calB$, 
+    \[
+      \Hom_{\calA \otimes \calB}((a,b), (a',b')) = \Hom_{\calA}(a,a') \otimes \Hom_{\calB}(b,b').
+    \]
+  \end{enumerate}
+\end{definition}
+
+\begin{proposition}
+  Let $(\VV, \otimes, I)$ be a monoidal category and let $\calA, \calB$ be $\VV$-categories.
+  Assume that $\VV$ is a symmetric monoidal category, that is, for any objects $u, v \in \VV, u \otimes v \approx v \otimes u$.
+  Then, $\calA \otimes \calB$ is a $\VV$-category.
+\end{proposition}
+
+\begin{proof}
+  aaa,
+\end{proof}
 
 \subsection{The Magnitude of Enriched Categories}
 \begin{definition}
@@ -1747,8 +1768,8 @@ Here, we can choose various monoid homomorphisms depending on the purpose.
 \end{proof}
 
 \begin{theorem}
-  The cartesian product $G \boxprod H$ of graphs $G,H$.
-  グラフのテンソル積がcatesian productに対応する
+  Let $G,H$ be graphs.
+  Then, the catesian product $G \boxprod H$ coincides with the tensor product $G \otimes H$ of the $[0, \infty]$-categories $G,H$.
 \end{theorem}
 
 \begin{proof}
