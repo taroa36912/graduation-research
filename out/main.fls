@@ -290,6 +290,14 @@ INPUT ./Tikz/Commutative/out/triangle_1.pdf
 INPUT extractbb -B cropbox -O Tikz/Commutative/out/triangle_1.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
+INPUT ./Tikz/Commutative/out/pentagon_2.pdf
+INPUT ./Tikz/Commutative/out/pentagon_2.pdf
+INPUT ./Tikz/Commutative/out/pentagon_2.pdf
+INPUT extractbb -B cropbox -O Tikz/Commutative/out/pentagon_2.pdf
+INPUT ./Tikz/Commutative/out/triangle_2.pdf
+INPUT ./Tikz/Commutative/out/triangle_2.pdf
+INPUT ./Tikz/Commutative/out/triangle_2.pdf
+INPUT extractbb -B cropbox -O Tikz/Commutative/out/triangle_2.pdf
 INPUT out/main.aux
 INPUT out/main.out
 INPUT out/main.out

@@ -1636,13 +1636,18 @@ We also call $\VV$ a monoidal category, omitting $\otimes$ and $I$.
 \end{example}
 
 \begin{definition}
-  An \textit{enriched category} $\calA$ in a monoidal category $(\VV, \otimes, I)$ is defined as follows:
+  An \textit{enriched category} $\calA = \calA$ in a monoidal category $(\VV, \otimes, I)$ is defined as follows:
 
   \begin{enumerate}[label=(\arabic*)]
     \item For any objects $a,b$ of $\calA$, $\Hom_{\calA}(a,b)$ is an object of $\VV$.
-    \item For any objects $a,b,c$ of $\calA$, there exists a morphism $m_{abc} : \Hom_{\calA}(b,c) \otimes \Hom_{\calA}(a,b) \rightarrow \Hom_{\calA}(a,c)$ in $\VV$, which defines the composition of morphisms.
+    \item For any objects $a,b,c$ of $\calA$, there is a morphism $m_{abc} : \Hom_{\calA}(b,c) \otimes \Hom_{\calA}(a,b) \rightarrow \Hom_{\calA}(a,c)$ in $\VV$, which defines the composition of morphisms.
     \item For any object $a$ of $\calA$, there exists a morphism $j_a : I \rightarrow \Hom_{\calA}(a,a)$ in $\VV$, which defines the identity morphism of $a$.
-    あと３つの可換図式を挿入
+    \item For any objects $a,b,c,d$ of $\calA$, the following diagram commutes:
+    \figcommu[width=\linewidth]{pentagon_2.pdf}
+    \item For any objects $a,b$ of $\calA$, the following diagrams commute:
+    \figcommu[]{triangle_2.pdf}
+    ここに可換図式を挿入
+    さらに可換図式を挿入
   \end{enumerate}
 
   Then, $\calA$ is called a \textit{$\VV$-category}.
@@ -1681,7 +1686,12 @@ In this section, we consider only monoidal categories $(\VV, \otimes, I)$ satisf
 \end{lemma}
 
 \begin{proof}
-  aaa.
+  \begin{itemize}
+    \item well-definedness: Let $u, u', v, v'$ be objects of $\VV$ such that $u \approx u'$ and $v \approx v'$.
+    Then, there exist isomorphisms $f : u \rightarrow u'$ and $g : v \rightarrow v'$ in $\VV$. Since $\otimes$ is a functor, $f \otimes g : u \otimes v \rightarrow u' \otimes v'$ is an isomorphism in $\VV$. Thus, $u \otimes v \approx u' \otimes v'$.
+    \item associativity: For any objects $u,v,w$ of $\VV$, by the natural isomorphism $\alpha$ in \cref{def_monoidal_cat}, $(u \otimes v) \otimes w \approx u \otimes (v \otimes w)$ holds.
+    \item identity element: For any object $u$ of $\VV$, by the natural isomorphisms $\lambda$ and $\rho$ in \cref{def_monoidal_cat}, $I \otimes u \approx u$ and $u \otimes I \approx u$ hold.
+  \end{itemize}
 \end{proof}
 
 \begin{definition}

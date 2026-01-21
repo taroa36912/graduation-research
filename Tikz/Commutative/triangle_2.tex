@@ -1,0 +1,17 @@
+\documentclass[dvipdfmx, border=10pt]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz-cd}
+
+\newcommand{\mor}{\mathrm{Mor}}
+\newcommand{\calA}{\mathcal{A}}
+\newcommand{\morcalA}{\mor_{\calA}}
+
+\begin{document}
+\begin{tikzcd}[row sep=large, column sep=large]
+    I \otimes \morcalA(a,b)  \arrow[r, "j_b \otimes id"] \arrow[rd, "\lambda"']
+    & \morcalA(b,b) \otimes \morcalA(a,b) \arrow[d, "m_{abb}"]
+      \arrow[dl, phantom, "\circlearrowright"{anchor=center, shift={(3em, 0.8em)}}] \\
+    {} & \morcalA(a,b)
+\end{tikzcd}
+\end{document}
