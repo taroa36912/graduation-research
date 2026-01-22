@@ -1,26 +1,31 @@
 \documentclass[dvipdfmx, border=5pt]{standalone}
 \usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{array}
 
 \begin{document}
-    % 【修正箇所1】 列定義に 'r' を1つ追加して計14列にしました
-    %  c (lラベル用) + r (行番号用) + rrrrrrrrrrrr (データ12列)
-    \begin{tabular}{crrrrrrrrrrrrr}
-        % 【修正箇所2】 multicolumn を 12 に変更 (データの列数)
-        & & \multicolumn{12}{c}{$k$} \\
-        & & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\
-        \toprule
-          & 0 & 5 & & & & & & & & & & & \\
-          & 1 & & 10 & & & & & & & & & & \\
-          & 2 & & 10 & 20 & & & & & & & & & \\
-          & 3 & & & 40 & 40 & & & & & & & & \\
-          & 4 & & & 20 & 120 & 80 & & & & & & & \\
-          & 5 & & & & 120 & 320 & 160 & & & & & & \\
-        $l$ & 6 & & & & 40 & 480 & 800 & 320 & & & & & \\
-          & 7 & & & & & 320 & 1600 & 1920 & 640 & & & & \\
-          & 8 & & & & & 80 & 1600 & 4800 & 4480 & 1280 & & & \\
-          & 9 & & & & & & 800 & 6400 & 13440 & 10240 & 2560 & & \\
-          & 10 & & & & & & 160 & 4800 & 22400 & 35840 & 23040 & 5120 & \\
-          & 11 & & & & & & & 1920 & 22400 & 71680 & 92160 & 51200 & 10240 \\
-        \bottomrule
-    \end{tabular}
+  \arrayrulecolor{black!20}
+  \setlength{\aboverulesep}{0pt}
+  \setlength{\belowrulesep}{0pt}
+  \setlength{\extrarowheight}{0.5ex}
+  \newcolumntype{I}{!{\color{black}\vrule width 1.2pt}}
+  \begin{tabular}{|c|r I r|r|r|r|r|r|r|r|r|r|r|r|}
+    \arrayrulecolor{black}\specialrule{1.2pt}{0pt}{0pt}\arrayrulecolor{black!20}
+    & & \multicolumn{12}{c|}{$k$} \\ \hline
+    & & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\ 
+    \arrayrulecolor{black}\specialrule{1.2pt}{0pt}{0pt}\arrayrulecolor{black!20}
+      &0 &5 &  &  &  &  &  &   &   &   &   &   &  \\ \hline
+      &1 &  &10&  &  &  &  &   &   &   &   &   &  \\ \hline
+      &2 &  &  &10&  &  &  &   &   &   &   &   &  \\ \hline
+      &3 &  &  &10&10&  &  &   &   &   &   &   &  \\ \hline
+      &4 &  &  &  &30&10&  &   &   &   &   &   &  \\ \hline
+      &5 &  &  &  &  &50&10&   &   &   &   &   &  \\ \hline
+   $l$&6 &  &  &  &  &20&70&10 &   &   &   &   &  \\ \hline
+      &7 &  &  &  &  &  &80&90 &10 &   &   &   &  \\ \hline
+      &8 &  &  &  &  &  &  &180&110&10 &   &   &  \\ \hline
+      &9 &  &  &  &  &  &  &40 &320&130&10 &   &  \\ \hline
+      &10&  &  &  &  &  &  &   &200&500&150&10 &  \\ \hline
+      &11&  &  &  &  &  &  &   &   &560&720&170&10\\ 
+    \arrayrulecolor{black}\specialrule{1.2pt}{0pt}{0pt}\arrayrulecolor{black!20}    
+  \end{tabular}
 \end{document}

@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1768974581.87397 "out/main.dvi" "out/main.pdf" "out/main" 1768974582.25763 0
-  "out/main.dvi" 1768974581.83897 168568 29d85bf5d5858abd25b2146038e8bf75 "latex"
+["dvipdf"] 1769088514.23502 "out/main.dvi" "out/main.pdf" "out/main" 1769088514.53013 0
+  "out/main.dvi" 1769088514.20505 169076 0282b2c31cf8491426b400bb7c854be5 "latex"
   (generated)
   "out/main.pdf"
   (rewritten before read)
-["latex"] 1768974578.90209 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1768974582.25673 0
-  "/Users/kensh/Documents/src/graduation-research/main.tex" 1768974578.70622 83130 397af2a16c72c3c35dcd249ba94ecb22 ""
+["latex"] 1769088512.00203 "/Users/kensh/Documents/src/graduation-research/main.tex" "out/main.dvi" "main" 1769088514.52937 0
+  "/Users/kensh/Documents/src/graduation-research/main.tex" 1769088511.78597 83688 7634359d8c0733607a8b0f7f1224d65d ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -72,6 +72,8 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty" 1750190222 88401 0c3d1897569ad77cb9d8fb25b0bdf668 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty" 1748806692 4474 c510a88aa5f51b8c773b50a7ee92befd ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty" 1748806692 2444 9983e1d0683f102e3b190c64a49313aa ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty" 1696191071 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty" 1696191071 72619 ee90b6612147680fd73c3b1406a74245 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/chngcntr/chngcntr.sty" 1525297854 4336 84bc4a8edb126e69abec1a67dc0c36cf ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/cleveref/cleveref.sty" 1525128982 329481 7fc6b003158402a4c694bc0a1b729308 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/enumitem/enumitem.sty" 1738874546 52272 63d293bc0d496619edb57585740861a2 ""
@@ -104,7 +106,7 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "Tables/out/mag_hom_C_5.pdf" 1768379079.0642 4380 f5bc0b4ce5d3dd86dd58559812506265 ""
+  "Tables/out/mag_hom_C_5.pdf" 1769087662.79041 6242 0087b1c48cc84f2272f0e0bbd5d0770b ""
   "Tikz/Commutative/out/chain_map.pdf" 1768385340.96677 11968 f7d9f1a7af3c364dd3f7a283fd303b81 ""
   "Tikz/Commutative/out/exterior.pdf" 1768970896.23913 11305 3750a3ebc0adc211b06e6b66df78dfa9 ""
   "Tikz/Commutative/out/monoid.pdf" 1768399768.51607 7261 b97b4e518afffaaf7e4406e69e587c55 ""
@@ -127,10 +129,10 @@
   "Tikz/Graphs/out/connect_C_4.pdf" 1764427465.42548 8030 ed527b50ca694e3a9aca1f574cbea91b ""
   "Tikz/Graphs/out/n_vertex.pdf" 1763969192.20198 2085 76f65b71985b64b4306d7748bf0b7ffd ""
   "Tikz/Graphs/out/n_vertex.xbb" 1763969652.45016 239 46931e924c7340ffb2002b72d03fb43e ""
-  "main.tex" 1768974578.70622 83130 397af2a16c72c3c35dcd249ba94ecb22 ""
-  "out/main.aux" 1768974581.83742 10349 c5ced7d905daab2a1a142884c4763557 "latex"
-  "out/main.out" 1768974581.83863 4731 b67c833bf0fb1725aa81e2d906afd686 "latex"
-  "out/main.toc" 1768974581.83893 1893 b8eaeef10fac65e70948f7dc02265dd3 "latex"
+  "main.tex" 1769088511.78597 83688 7634359d8c0733607a8b0f7f1224d65d ""
+  "out/main.aux" 1769088514.20372 10655 b4910bd6189db9cdfe6913a6597dc9c0 "latex"
+  "out/main.out" 1769088514.20485 4731 b67c833bf0fb1725aa81e2d906afd686 "latex"
+  "out/main.toc" 1769088514.20503 1893 b8eaeef10fac65e70948f7dc02265dd3 "latex"
   (generated)
   "out/main.aux"
   "out/main.dvi"
