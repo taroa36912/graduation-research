@@ -4,8 +4,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt
-INPUT /Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_mn.tex
-OUTPUT out/K_mn.log
+INPUT /Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_mn_2.tex
+OUTPUT out/K_mn_2.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/shellesc.sty
@@ -149,9 +149,9 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libr
 INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
-INPUT out/K_mn.aux
-INPUT out/K_mn.aux
-INPUT out/K_mn.aux
-OUTPUT out/K_mn.aux
-OUTPUT out/K_mn.dvi
-INPUT out/K_mn.aux
+INPUT out/K_mn_2.aux
+INPUT out/K_mn_2.aux
+INPUT out/K_mn_2.aux
+OUTPUT out/K_mn_2.aux
+OUTPUT out/K_mn_2.dvi
+INPUT out/K_mn_2.aux

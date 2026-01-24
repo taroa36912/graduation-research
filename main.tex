@@ -66,8 +66,8 @@
 \newcommand{\DATE}
 {2026年 1月30日}
 
-\captionsetup[figure]{name=Figure} % 図のラベルを Figure に変更
-\captionsetup[table]{name=Table}   % 表のラベルを Table に変更
+\captionsetup[figure]{name=Figure}
+\captionsetup[table]{name=Table}
 
 \newcommand{\tsum}{\mathrm{sum}}
 \newcommand{\tadj}{\mathrm{adj}}
@@ -193,7 +193,7 @@ There is a certain property that we would like graph invariants to satisfy, the 
 \[
   \# (G \cup H) = \# G + \# H - \#(G \cap H).
 \]
-For this we must impose some hypotheses. Indeed, Leinster \cite{Leinster1} shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction (cf.~\cref{no_graph_inv}). However, the hypotheses we impose are mild enough to cover a wide range of examples, including trees, forests, wedge sums, and certain graphs containing a cycle of length at least 4. For example, let $G$ be a graph shown figure 1. 
+For this we must impose some hypotheses. Indeed, Leinster \cite{Leinster1} shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction (cf.~\cref{no_graph_inv}). However, the hypotheses we impose are mild enough to cover a wide range of examples, including trees, forests, wedge sums, and certain graphs containing a cycle of length at least 4. For example, let $G$ be a graph shown figure \ref{Example_K_3_wedge_K_2}. 
 \figgraph{C_3_wedge_C_2.pdf}{A 3-cycle with edges attached to two distinct vertices}{Example_K_3_wedge_K_2}
 
 Then we can calculate the magnitude of $G$ by decomposing it into one three-cycle and two-edges as \cref{ex_C_3_wedge_C_2}:
@@ -285,7 +285,7 @@ $G$-matrix is the square synmetric matrix.
 \end{proof}
 
 \begin{example}
-  Let $G = K_3$ (complete graph with three vertices as Figure 2). \\
+  Let $G = K_3$ (complete graph with three vertices as Figure \ref{Example_K_3}). \\
   \figgraph{K_3.pdf}{Complete graph of three vertices}{Example_K_3} \\
   \\
   Then, we can calculate the magnitude of $K_3$ as follows:
@@ -408,23 +408,23 @@ We can define a \textit{graph automorphism} using the definition above. We denot
 
 \begin{example}\label{ex_mag_cal}
   \begin{enumerate}[label=(\roman*)]
-    \item $G = V_n$ (edgeless graph with $n$ vertices as in Figure 3). \\
+    \item $G = V_n$ (edgeless graph with $n$ vertices as in Figure \ref{example_no_edge_graph}). \\
     \figgraph{n_vertex.pdf}{The graph with no edges}{example_no_edge_graph} \\ 
     Then, $\aut(G) \approx \mathfrak{S}_n$ and $G$ is vertex-transitive. $S = 1$ and we have $\# V_n = n$.
     Now, the empty graph can be denoted by $V_0$.
-    \item $G = K_n$ (complete graph with $n$ vertices as in Figure 4). \\
+    \item $G = K_n$ (complete graph with $n$ vertices as in Figure \ref{example_complete_graph}). \\
     \figgraph{K_n.pdf}{Complete graph}{example_complete_graph} \\
     Then, $\aut(G) \approx \mathfrak{S}_n$ and $G$ is vertex-transitive. $S = 1 + (n-1)q$ and we have $\# K_n = \frac{n}{1 + (n-1)q}$.
-    \item $G = C_n$ (cycle graph with $n$ vertices as in Figure 5). \\
+    \item $G = C_n$ (cycle graph with $n$ vertices as in Figure \ref{example_cycle_graph}). \\
     \figgraph{C_n.pdf}{Cycle graph}{example_cycle_graph} \\
     Then, $\aut(G) \approx D_{2n}$ and $G$ is vertex-transitive.
     If $n = 2m$, then $S = 1 + 2(q + q^2 + \dots + q^{m-1}) + q^m = \frac{1 + q - q^m - q^{m+1}}{1 - q}$. Thus, we have $\# C_{2m} = \frac{2m(1-q)}{(1+q)(1-q^m)} = \frac{n(1-q)}{(1+q)(1-q^m)}$.
     If $n=2m-1$, then similarly 
     $\# C_{2m-1} = \frac{n(1-q)}{1+q-2q^m}$.
-    \item $G$ is the Petersen graph (Figure 6).\\
+    \item $G$ is the Petersen graph (Figure \ref{example_petersen_graph}).\\
     \figgraph{Petersen.pdf}{Petersen graph}{example_petersen_graph} \\
     Then, $\aut(G)$ contains $D_{10}$ as its subgroup and $G$ is vertex-transitive. $S = 1 + 3q + 6q^2$ and we have $\# G = \frac{10}{1 + 3q + 6q^2}$.
-    \item $G = K_{m,n}$(complete bipartite graph as in Figure 7). \\
+    \item $G = K_{m,n}$(complete bipartite graph as in Figure \ref{example_complete_bipartite_graph}). \\
     \figgraph{K_mn.pdf}{complete bipartite graph}{example_complete_bipartite_graph} \\
     Then, $\aut(G) \approx \mathfrak{S}_m \times \mathfrak{S}_n$ if $m \neq n$ and $G$ is not vertex-transitive. We can calculate the magnitude with other methods. Let $a,b$ be the weight of vertices on each part of $K_{m,n}$. Then, the weighting equation is written by two equations as follows:
     \[
@@ -690,7 +690,8 @@ The magnitude of graphs is an $\QQ[q]$-valued graph invariant and is multiplicat
 \end{proof}
 
 \begin{example}
-  aaa
+  Let $X$ be a bipartite graph and let $e$ be an edge of $X$ (see Figure \ref{example_K_mn_2}). Then, $X$ projects to the subgraph consisting of $e$ and its endpoints.
+  \figgraph{K_mn_2.pdf}{A bipartite graph $X$ with a highlighted edge}{example_K_mn_2}
 \end{example}
 
 \begin{lemma}\label{weighting_lem}
@@ -726,7 +727,7 @@ The next theorem is one of the main theorems of this thesis.
 Before proving this theorem, we give the example of graphs for which we can apply this theorem.
 
 \begin{example}
-  Let  $G$ be a graph and consider the graph $H$ formed by identifying one of the edges of a cycle graph $C_n$ with an edge of $G$ as in Figure 8. Now, let $n \geq  4$. 
+  Let  $G$ be a graph and consider the graph $H$ formed by identifying one of the edges of a cycle graph $C_n$ with an edge of $G$ as in Figure \ref{example_connect_C_4}. Now, let $n \geq  4$. 
 
   \figgraph{connect_C_4.pdf}{Cycle graph of four vertices}{example_connect_C_4}
 
@@ -1281,7 +1282,7 @@ We can give another proof of \cref{disjoint_union} by \cref{magnitude_of_disjoin
 \end{definition}
 
 \begin{example}
-  Let $G = C_2 \boxprod C_2 = C_4$ shown in Figure 9. \\
+  Let $G = C_2 \boxprod C_2 = C_4$ shown in Figure \ref{example_square_graph}. \\
   \figgraph{C_2_square.pdf}{Square graph}{example_square_graph} \\
   Consider the exterior product $\boxprod((x_0, x_1) \otimes (y_0, y_1))$.
   We have the two shuffles of type $(1,1)$:
@@ -1305,12 +1306,14 @@ We can give another proof of \cref{disjoint_union} by \cref{magnitude_of_disjoin
 \end{proposition}
 
 \begin{proof}
-  Let $\bf{x} = (x_0, \dots, x_{k_1}), \bf{y} = (y_0, \dots, y_{k_2})$.
-  Now, we show that 
+  We show that the following diagram commutes. \\
+  \figcommu[width=\linewidth]{exterior.pdf}
+  For this, it is enough to show that 
   \[
-    (\partial \circ \boxprod)(\bf{x} \otimes \bf{y}) = \boxprod((\partial \bf{x}) \otimes \bf{y}) + (-1)^{k_1} \boxprod (\bf{x} \otimes (\partial \bf{y})) = (\boxprod \circ (\partial \otimes \partial)) (\bf{x} \otimes \bf{y}).
+    (\partial \circ \boxprod)(\bf{x} \otimes \bf{y}) = \boxprod((\partial \bf{x}) \otimes \bf{y}) + (-1)^{k_1} \boxprod (\bf{x} \otimes (\partial \bf{y})) = (\boxprod \circ (\partial \otimes \partial)) (\bf{x} \otimes \bf{y}),
   \]
-  Here, we should consider the sequence of tensor products of the magnitude chain complexes defined by
+  
+  Let $\bf{x} = (x_0, \dots, x_{k_1}), \bf{y} = (y_0, \dots, y_{k_2})$. Here, we should consider the sequence of tensor products of the magnitude chain complexes defined by
   \begin{align*}
     \partial \otimes \partial : MC_{k_1, l_1}(G) \otimes MC_{k_2, l_2}(H) 
     &\rightarrow 
@@ -1319,10 +1322,7 @@ We can give another proof of \cref{disjoint_union} by \cref{magnitude_of_disjoin
     (\partial \otimes \partial) (\mathbf{x} \otimes \mathbf{y}) 
     &= (\partial \mathbf{x}) \otimes \mathbf{y} + (-1)^{k_1} \mathbf{x} \otimes (\partial \mathbf{y}).
   \end{align*}
-  Then, we should show only the first equality. \\
-  \figcommu[width=\linewidth]{exterior.pdf}
-
-  直接計算によって最初の等号を示す.
+  Then, we should show only the first equality and this follows by direct calculation. 
 \end{proof}
 
 
@@ -1414,14 +1414,6 @@ We don't prove these theorems in this thesis.
 \begin{definition}
   A graph $G$ is said to be \textit{diagonal} if $MH_{k,l}(G) = 0$ for $k \neq l$.
 \end{definition}
-
-\begin{proposition}
-  Any trees are diagonal.
-\end{proposition}
-
-\begin{proof}
-  aaa
-\end{proof}
 
 \begin{proposition}
   For a diagonal graph, the magnitude completely determines the magnitude homology ranks.
@@ -1544,22 +1536,11 @@ From this lemma, the sum of the weighting or coweighting on $\zeta$ is unique if
 \end{definition}
 
 \begin{lemma}
-  Let $\zeta$ be an $I \times I$-matrix over a rig $k$.
-  \begin{enumerate}[label=(\arabic*)]
-    \item If $\zeta$ is invertible, then $\zeta$ has the magnitude.
-    \item If $k$ is a field and $\zeta$ has the magnitude, then $\zeta$ is invertible.
-  \end{enumerate}
+  Let $\zeta$ be an invertible $I \times I$-matrix over a rig $k$. Then, $\zeta$ has the magnitude.
 \end{lemma}
 
 \begin{proof}
-  (1) If $\zeta$ is invertible, then $w = \zeta^{-1} u_I$ and $v = u_I \zeta^{-1}$ obviously satisfy the definition of weighting and coweighting respectively. Thus $\zeta$ has the magnitude by \cref{sum_of_w.c.}.
-
-  (2) If $k$ is a field and $\zeta$ has the magnitude, then there exist a weighting $w$ and a coweighting $v$ on $\zeta$.
-  Let $\zeta x$ be a zero-map for some $x : I \rightarrow k$. Then,
-  \[
-    0 = v (\zeta x) = (v \zeta) x = u_I x = \sum_{i \in I} x(i).
-  \]
-  ここからやり直し
+  If $\zeta$ is invertible, then $w = \zeta^{-1} u_I$ and $v = u_I \zeta^{-1}$ obviously satisfy the definition of weighting and coweighting respectively. Thus $\zeta$ has the magnitude by \cref{sum_of_w.c.}.
 \end{proof}
 
 \begin{lemma}
