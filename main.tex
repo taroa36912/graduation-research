@@ -1582,7 +1582,7 @@ In this document, we only treat \textit{locally small} categories. Now, a catego
 
 We also call $\VV$ a monoidal category, omitting $\otimes$ and $I$.
 
-\begin{example}
+\begin{example}\label{ex_monoidal_categories}
   \begin{enumerate}[label=(\roman*)]
     \item $(\textbf{Set}, \times, \{*\}, id, Pr_2, Pr_1)$ is a monoidal category. Indeed, let $f_1 : A_1 \rightarrow B_1, f_2 : A_2 \rightarrow B_2$ and then $f_1 \times f_2 : A_1 \times B_1 \rightarrow A_2 \times B_2 ; (a, b) \mapsto (f_1(a), f_2(b))$ is a map of \textbf{Set} for the condition (2) in \cref{def_monoidal_cat}. The rest of the conditions are obvious.
     \item $(\textbf{Vect}_K, \otimes_K, K, id, Pr_2, Pr_1)$ is a monoidal category, where $K$ is a field. We should check that for the vector spaces $V_1, V_2, V_3, W_1, W_2$, $v_i \in V_i \text{ } (i = 1,2,3)$, and the linear maps $f_1 : V_1 \rightarrow W_1, f_2 : V_2 \rightarrow W_2$, the map $f_1 \otimes f_2 : V_1 \otimes_K V_2 \rightarrow W_1 \otimes_K W_2 ; v_1 \otimes v_2 \mapsto f_1(v_1) \otimes f_2(v_2)$ is a linear map for (2), $(v_1 \otimes v_2) \otimes v_3 = v_1 \otimes (v_2 \otimes v_3)$ in $V_1 \otimes V_2 \otimes V_3$ for (4), and $K \otimes V_1 \approx V_1 \approx V_1 \otimes K$ for (5) and (6). The rest of the conditions are obvious.
@@ -1652,7 +1652,41 @@ We also call $\VV$ a monoidal category, omitting $\otimes$ and $I$.
 \end{remark}
 
 \begin{example}\label{ex_enriched_cat}
-  aaa
+  \begin{enumerate}[label=(\roman*)]
+    \item Let $\VV = \textbf{Set}$ be a monoidal category in \cref{ex_monoidal_categories} (i). Then, $(\mathbf{Cat}, \circ, id)$ is a $\VV$-category. Indeed, $\mor(C,D)$ is a set for any categories $C,D$, $m_{CDE} : \mor(D,E) \times \mor(C,D) \rightarrow \mor(C,E) ; (F,G) \mapsto F \circ G$ and $j_C : \{*\} \rightarrow \mor(C,C) ; * \mapsto id_C$ are maps of \textbf{Set}, $F \circ id_C = F = id_D \circ F$ holds for $F : C \rightarrow D$, and $(F \circ G) \circ H = F \circ (G \circ H)$ holds for $F : D \rightarrow E, G : C \rightarrow D, H : B \rightarrow C$.
+    \item $(\textbf{Vect}_K, \otimes_K, K, id, Pr_2, Pr_1)$ is a monoidal category, where $K$ is a field. We should check that for the vector spaces $V_1, V_2, V_3, W_1, W_2$, $v_i \in V_i \text{ } (i = 1,2,3)$, and the linear maps $f_1 : V_1 \rightarrow W_1, f_2 : V_2 \rightarrow W_2$, the map $f_1 \otimes f_2 : V_1 \otimes_K V_2 \rightarrow W_1 \otimes_K W_2 ; v_1 \otimes v_2 \mapsto f_1(v_1) \otimes f_2(v_2)$ is a linear map for (2), $(v_1 \otimes v_2) \otimes v_3 = v_1 \otimes (v_2 \otimes v_3)$ in $V_1 \otimes V_2 \otimes V_3$ for (4), and $K \otimes V_1 \approx V_1 \approx V_1 \otimes K$ for (5) and (6). The rest of the conditions are obvious.
+    \item $([0, \infty], +, 0, id, id, id)$ is a monoidal category. Here, for $a<b \in [0, \infty]$,
+    \begin{center}
+      \begin{tabular}{c|cc}
+        $\mor$ & $a$ & $b$ \\
+        \hline
+        $a$ & $\{id_a\}$ & $\emptyset$ \\
+        $b$ & $\{*_{ba}\}$ & $\{id_b\}$ \\
+      \end{tabular}.
+    \end{center}
+    Then, the condition (2)~(8)follows from $a_1 < b_1, a_2 < b_2 \Rightarrow a_1 + a_2 < b_1 + b_2, (a+b)+c = a+(b+c), 0+a=a=a+0$, the uniqueness of morphisms.
+    \item $(\mathbf{2}, \otimes, t)$ is a monoidal category, where $\mathbf{2}$ is the category defined by $Ob(\mathbf{2}) = \{t,f\}$ and the morphism sets are defined by
+    \begin{center}
+      \begin{tabular}{c|cc}
+        $\hom_{\mathbf{2}}$ & $t$ & $f$ \\
+        \hline
+        $t$ & $\{id_t\}$ & $\emptyset$ \\
+        $f$ & $\{*\}$ & $\{id_f\}$ \\
+      \end{tabular}
+    \end{center}
+    and the operation $\otimes$ is defined by the following table:
+    \begin{center}
+      \begin{tabular}{c|cc}
+        $\otimes$ & $t$ & $f$ \\
+        \hline
+        $t$ & $t$ & $f$ \\
+        $f$ & $f$ & $f$ \\
+      \end{tabular}
+    \end{center}
+    We can easily check the conditions (1)~(8) similarly to (iii).
+
+    Then, $\mathbf{2}$ is a monoidal subcategory of $[0, \infty]$ by the embedding $t \mapsto 0, f \mapsto \infty$ and of $\textit{Set}$ by the embedding $t \mapsto \{*\}, f \mapsto \emptyset$.
+  \end{enumerate}
 \end{example}
 
 \begin{definition}
