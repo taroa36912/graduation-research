@@ -1,10 +1,12 @@
 \documentclass[twocolumn]{ujarticle}
 
-\setlength{\topmargin}{-1.4cm}
-\setlength{\oddsidemargin}{-30Q}
-\setlength{\evensidemargin}{0cm}
+\setlength{\topmargin}{-2.0cm}
+\setlength{\oddsidemargin}{-0.8cm}
+\setlength{\evensidemargin}{-0.8cm}
+\setlength{\textheight}{25.5cm}
+\setlength{\textwidth}{18cm}
+\setlength{\columnsep}{1cm}
 
-\setlength{\columnsep}{2.5zw}
 \usepackage[dvipdfmx, hidelinks]{hyperref}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -30,12 +32,8 @@
 \newcommand{\NENDO}
 {2025年度}
 
-\setlength{\textwidth}{52zw}
-\setlength{\textheight}{25cm}
-
 
 \makeatletter
-
 \def\ps@lrheadf{\ps@empty
   \def\@evenhead{\normalfont
       \leftmark{}{}\hfil \rightmark{}{}}
@@ -49,103 +47,86 @@
 \pagestyle{lrheadf}
 
 \markboth{
-数物・電子情報系学科数理科学EP 
+理工学部
 \hskip1zw
 卒業研究 \hskip1zw 概要
 }{}
 
 
 \begin{document}
-\fontsize{10pt}{14pt}\selectfont
+\fontsize{9pt}{13pt}\selectfont
 
 
 \twocolumn[
 \centering
 \textbf{\Large \TITLE}
 
-\vskip5Q
+\vskip5pt
 \hfil 
 {\large \STNO \hskip1zw \NAME
 \hskip 2zw Supervisor : \ADVR}
 
-\vskip20Q
+\vskip15pt
 
 ]
 
 \noindent
-\textbf{１．研究背景・動機}
+\textbf{1. 研究背景・動機}
 
-The concept of magnitude is introduced by Leinster and it is defined for enriched categories of finite objects, for example, generalized finite metric spaces such as finite graphs.
-Then, Leinster focuses on the magnitude of graphs in using his idea of magnitude of a metric space, which is one of a family of cardinality-like invariants extending across mathematics;
-it is a cousin to Euler characteristic and geometric measure. 
-Among its cardinality-like properties are multiplicativity with respect to cartesian product and an inclusion-exclusion formula for the magnitude of a union under mild hypotheses. Formally, the magnitude of a graph is both a rational function over $\QQ$ and a power series over $\ZZ$.
+The concept of magnitude was introduced by Leinster [3] and it is defined for enriched categories of finite objects, for example, generalized finite metric spaces such as finite graphs. Then, Leinster focuses on the magnitude of graphs in [4] using the idea of magnitude of a metric space, which is one of a family of cardinality-like invariants extending across mathematics; it is a cousin to Euler characteristic and geometric measure. Among its cardinality-like properties are multiplicativity with respect to Cartesian product and an inclusion-exclusion formula for the magnitude of a union under mild hypotheses. Formally, the magnitude of a graph is both a rational function over $\QQ$ and a power series over $\ZZ$.
 
-Richard and Simon introduced a bigraded homology theory for graphs which has the magnitude as its graded Euler characteristic and showed how properties of magnitude proved by Leinster categorify to properties such as a Kunneth Theorem and a Mayer-Vietoris Theorem. 
+Richard and Simon introduced a bigraded homology theory for graphs in [1], which has the magnitude as its graded Euler characteristic, and showed how properties of magnitude proved by Leinster categorify to properties such as a K\"{u}nneth Theorem and a Mayer-Vietoris Theorem.
 
-Here, we first review the definition of the magnitude of graphs, the magnitude homology of graphs, and their properties.
-Then we focus on the magnitude of enriched categories and discuss how the magnitude of graphs is introduced from that of enriched categories. We denote the magnitude of a graph $G$ by $\# G$ and the magnitude homology of $G$ by $\mathrm{MH}_{*,*}(G)$.
+Here, we first review the definition of the magnitude of graphs, the magnitude homology of graphs, and their properties. Then we focus on the magnitude of enriched categories and discuss how the magnitude of graphs is introduced from that of enriched categories. We denote the magnitude of a graph $G$ by $\# G$ and the magnitude homology of $G$ by $MH_{*,*}(G)$.
 
-\vskip10Q
+\vskip10pt
 \noindent
-\textbf{２．主結果}
+\textbf{2. 主結果}
 
 The first main result is a certain property that we would like graph invariants to satisfy, the inclusion-exclusion formula;
 \[
   \# (G \cup H) = \# G + \# H - \#(G \cap H).
 \]
-For this we must impose some hypotheses. Indeed, Leinster shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction.
-However, the hypotheses we impose are mild enough to cover a wide range of examples, including trees, forests, wedge sums, and graphs containing a cycle of length at least 4. For example, let $G$ be a graph shown below. 
+For this we must impose some hypotheses. Indeed, Leinster [4] shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction. However, the hypotheses we impose are mild enough to cover a wide range of examples, including trees, forests, wedge sums, and graphs containing a cycle of length at least 4.
 
 The second main result is confirming that the magnitude defined in the context of enriched categories coincides with that defined in the context of graphs.
 
-$ \# G$はmonoidal categoryで$\mid x \mid = e^x = q$としたものなど書く.
-
-\vskip10Q
+\vskip10pt
 \noindent
-\textbf{３．意義・証明のアイデアや方法}
+\textbf{3. 意義・証明のアイデア}
 
-We use the usage of graph theory.
+The significance of this research lies in understanding the structural properties of magnitude homology, which categorifies the magnitude. The key tool for our main results is the \textbf{Mayer-Vietoris sequence}.
+We construct a short exact sequence of magnitude chain complexes for a decomposition $G = A \cup B$. The existence of this sequence requires a specific geometric condition known as a \textbf{Projecting Decomposition}, where the graph $G$ projects onto the intersection $A \cap B$ in a distance-preserving manner.
+By establishing the Mayer-Vietoris sequence:
+\[
+ \cdots \to MH_n(A \cap B) \to MH_n(A) \oplus MH_n(B) \to MH_n(G) \to \cdots
+\]
+we can compute the magnitude homology of complex graphs from simpler subgraphs. Taking the graded Euler characteristic of this exact sequence recovers the inclusion-exclusion formula for magnitude stated in the main results. This approach highlights the advantage of the homological method over direct combinatorial calculation.
 
-\vskip10Q
+\vskip10pt
 \noindent
-\textbf{４．今後の課題}
+\textbf{4. 今後の課題}
 
-下記の中から未解決なものを残す. (torsionは解決済みなので消す).
-There are examples of non-isomorphic graphs with isomorphic magnitude homol-
-ogy, for example any two trees with the same number of vertices. Are there
-graphs with the same magnitude but different magnitude homology groups?
-• Is there a graph whose magnitude homology contains torsion?
-• Leinster showed that if two graphs differ by a Whitney twist with adjacent gluing
-points, then their magnitudes are equal. Do two graphs related by a Whitney
-twist have isomorphic magnitude homology?
-• Prove the magnitude homology of cyclic graphs is as is conjectured in Appen-
-dix A.1.
-• Computations suggest that the icosahedral graph (i.e., the 1-skeleton of the
-icosahedron) has diagonal homology. We have not been able to apply any of our
-techniques for proving that graphs are diagonal in this case, and, in particular,
-the graph is not a join. Is the icosahedral graph diagonal, and if so why? More
-generally, is there a graph-theoretic characterization of diagonal graphs?
-• We anticipate that there is a theory of magnitude cohomology dual to the
-homological theory developed in this paper. As with cohomology of spaces, it
-should be possible to equip this theory with a product structure
-• One can define MH∗,∗(G) as the reduced homology of a sequence of pointed
-simplicial sets. This is used in Section 8, see, in particular, Remark 8.6. We have
-chosen not to emphasise this approach in the present paper, but there may be
-advantages to doing so in future.
+Based on the results of this thesis, several open problems remain to be explored:
+\begin{itemize}
+    \item \textbf{Whitney Twist:} Leinster showed that if two graphs differ by a Whitney twist with adjacent gluing points, then their magnitudes are equal. Does this equality extend to an isomorphism of magnitude homology groups?
+    \item \textbf{Diagonal Graphs:} Computations suggest that the icosahedral graph has diagonal homology (i.e., $MH_{k,l} = 0$ for $k \neq l$). Is there a general graph-theoretic characterization of diagonal graphs?
+    \item \textbf{Magnitude Cohomology:} We anticipate a dual theory, magnitude cohomology. It should be possible to equip this theory with a product structure, analogous to the cohomology of spaces.
+\end{itemize}
 
-\vskip10Q
+\vskip10pt
 \noindent
 \textbf{参考文献}
 
 {\small
+\noindent
+[1] R. Hepworth and S. Willerton. \textit{Categorifying the magnitude of a graph}. Homology Homotopy Appl. 19 (2017), no. 2, 31-60.
 
 \noindent
-[1] 著者名，論文題目，雑誌名，巻，号 (年号)， ページ番号.
+[2] T. Leinster. \textit{The magnitude of metric spaces}. Doc. Math. 18 (2013), 857-905.
 
 \noindent
-[2] 著者名，論文題目，雑誌名，巻，号 (年号)， ページ番号.
-
-
+[3] T. Leinster. \textit{The magnitude of a graph}. Math. Proc. Cambridge Philos. Soc. 166 (2019), no. 2, 247-264.
 }
 
 \end{document}

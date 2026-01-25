@@ -1,4 +1,6 @@
-\documentclass[dvipdfmx, 11pt, notheorems]{beamer} 
+\documentclass[dvipdfmx, 11pt, notheorems]{beamer}
+
+% uplatex/dvipdfmx用の設定
 \usepackage{bxdpx-beamer}
 \usepackage{pxjahyper}
 \usepackage{minijs}
@@ -6,13 +8,19 @@
 \usepackage{tikz}
 \usepackage{graphicx}
 \usepackage{bm}
-\usetheme{Madrid}
-\usecolortheme{default}
-\usefonttheme{professionalfonts} 
+
+% 日本語フォントをゴシック体に設定（スライドで見やすくするため）
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+
+% Theme selection: 派手で目立つテーマ
+\usetheme{AnnArbor}
+\usecolortheme{crane} % 黄・オレンジ系
+\usefonttheme{professionalfonts}
 
 \setbeamertemplate{navigation symbols}{}
-
 \setbeamertemplate{theorems}[numbered]
+
+% 定理環境の日本語化
 \theoremstyle{definition}
 \newtheorem{definition}{定義}
 \newtheorem{theorem}{定理}
@@ -22,133 +30,179 @@
 \newtheorem{proposition}{命題}
 \newtheorem{corollary}{系}
 
-\title[Magnitude Homology]{Magnitude Homology of Graphs and the Magnitude as its Categorification}
+\title[Magnitude Homology]{グラフのMagnitude\\そのCategorificationとしてのMagnitudeホモロジー}
 \subtitle{2025年度 卒業研究発表}
-\author[Kensho Yachi]{谷内 賢翔 (やち けんしょう)}
+\author[Kensho Yachi]{谷内 賢翔(やち けんしょう)}
 \institute[YNU]{横浜国立大学 理工学部 数理科学EP}
-\date{2026年2月18日}
+\date{2025年2月17-19日}
 
 \begin{document}
+
+% タイトルスライド
 \begin{frame}
   \titlepage
 \end{frame}
 
+% 目次
 \begin{frame}{目次}
   \tableofcontents
 \end{frame}
 
-\section{Introduction}
+\section{導入 (Introduction)}
 
-\begin{frame}{研究の背景 (Motivation)}
+\begin{frame}{背景と動機}
   \begin{itemize}
-    \item グラフの不変量として \textbf{Magnitude} が知られている
-    \item これを圏論的視点（Enriched Category）から捉え直す動きがある
-    \item \alert{Magnitude Homology} は、Magnitudeの「オイラー標数化」として定義される
+    \item \textbf{Magnitude} は、豊穣圏（Enriched Category）に対する「サイズ」の不変量である (Leinster)。
+    \item グラフは、豊穣圏（一般化距離空間）の一種とみなせる。
+    \item \textbf{Magnitude Homology} は、Magnitude の \textit{categorification}（圏化）として導入された (Hepworth \& Willerton)。
   \end{itemize}
 
-  \vspace{1em}
-  \begin{block}{本研究の目的}
-    グラフのMagnitude Homologyの性質を調べ、
-    特定の条件下でのMayer-Vietoris完全列の存在を示す。
+  \begin{block}{研究の主目的}
+    グラフの Magnitude Homology の性質、特に特定の条件下における \textbf{Mayer-Vietoris 完全列} の成立について研究すること。
   \end{block}
 \end{frame}
 
-\section{Preliminaries}
+\section{グラフのMagnitude}
 
-\begin{frame}{準備: Magnitudeの定義}
-  グラフ $G=(V,E)$ に対し、そのMagnitudeは以下のように定義される。
+\begin{frame}{定義: グラフのMagnitude}
+  $G=(V,E)$ を有限グラフとする。
+  $Z_G$ を類似度行列 (similarity matrix) とし、その成分を $(Z_G)_{xy} = q^{d(x,y)}$ で定義する。
 
-  \begin{definition}[Magnitude of Graphs]
-    $G$ のsimilarity matrix $Z$ が可逆であるとき、
+  \begin{definition}[Magnitude]
+    $Z_G$ が $\mathbb{Q}(q)$ 上で可逆であるとき、グラフ $G$ の magnitude は次のように定義される：
     \[
-      |G| = \sum_{i,j \in V} (Z^{-1})_{ij}
+      \# G(q) = \sum_{x,y \in V} (Z_G^{-1})_{xy} \in \mathbb{Q}(q).
     \]
-    と定義する。これは $\mathbb{Q}(q)$ の元である。
+    （逆行列の全成分の和）
   \end{definition}
-
-  \pause
-
-  \begin{example}[完全グラフ $K_3$]
-    TikZで図を描画したり、画像を貼ったりできます。
-    \begin{center}
-      \begin{tikzpicture}[scale=0.8]
-        \node (a) at (90:1) {$\bullet$};
-        \node (b) at (210:1) {$\bullet$};
-        \node (c) at (330:1) {$\bullet$};
-        \draw (a) -- (b) -- (c) -- (a);
-      \end{tikzpicture}
-    \end{center}
-    このとき $|K_3| = \frac{3}{1+2q}$ となる。
-  \end{example}
-\end{frame}
-
-\section{Main Results}
-
-\begin{frame}{主結果: Magnitude Chain Complex}
-  \begin{definition}[Magnitude Chain Complex]
-    長さ $k$ のパス $x=(x_0, \dots, x_k)$ を基底とする自由加群 $MC_k(G)$ を考え、
-    境界作用素 $\partial$ を以下で定義する：
-    \[
-      \partial_k(x) = \sum_{i=1}^{k-1} (-1)^i (x_0, \dots, \widehat{x_i}, \dots, x_k)
-    \]
-  \end{definition}
-
+  
   \vspace{0.5em}
-  これにより、ホモロジー群 $MH_{k,l}(G)$ が構成される。
+  重要な性質: これは「濃度」（オイラー標数）のように振る舞う。
+  % \boxprod -> \square, \sqcup -> \sqcup
+  \[ \#(G \square H) = \#G \cdot \#H, \quad \#(G \sqcup H) = \#G + \#H \]
 \end{frame}
 
-\begin{frame}{主結果: Mayer-Vietoris Sequence}
-  本研究における主要な定理は以下の通りである。
+\begin{frame}{例: 完全グラフ $K_3$}
+  \begin{columns}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \begin{tikzpicture}
+        \foreach \i in {1,2,3}
+          \coordinate (v\i) at (90+120*\i:1.2);
+        \draw (v1) -- (v2) -- (v3) -- cycle;
+        \foreach \i in {1,2,3}
+          \fill (v\i) circle (2pt);
+      \end{tikzpicture}
+      \\ 完全グラフ $K_3$
+    \end{column}
+    \begin{column}{0.6\textwidth}
+      類似度行列は次のようになる：
+      \[
+        Z_{K_3} = \begin{pmatrix} 1 & q & q \\ q & 1 & q \\ q & q & 1 \end{pmatrix}
+      \]
+      逆行列 $Z_{K_3}^{-1}$ の成分和を計算すると：
+      \[
+        \# K_3(q) = \frac{3}{1+2q}
+      \]
+    \end{column}
+  \end{columns}
+\end{frame}
 
-  \begin{theorem}[Mayer-Vietoris Sequence]
-    グラフ $G$ が特定の分解条件（Projecting Decomposition）を満たすとき、
-    以下の長完全列が存在する：
+\section{Magnitude Homology}
+
+\begin{frame}{定義: Magnitude鎖複体}
+  長さ $l$ で次数付けられた鎖複体 (chain complex) $MC_{*, l}(G)$ を定義する。
+
+  \begin{definition}
+    生成元: $x_i \neq x_{i+1}$ を満たす頂点の列 $(x_0, \dots, x_k)$。
+    \\
+    微分 $\partial = \sum (-1)^i \partial_i$:
+    \[
+      \partial_i(x_0, \dots, x_k) = 
+      \begin{cases}
+        (x_0, \dots, \widehat{x_i}, \dots, x_k) & \text{もし長さが保存されるなら} \\
+        0 & \text{それ以外}
+      \end{cases}
+    \]
+    （頂点 $x_i$ を抜いても最短経路性が保たれる場合のみ残る）
+  \end{definition}
+  
+  \alert{Magnitude Homology $MH_{k,l}(G)$} は、この複体のホモロジーである。
+\end{frame}
+
+\begin{frame}{Categorification (圏化)}
+  Magnitude Homology は Magnitude を「圏化」する。
+
+  \begin{theorem}[Hepworth-Willerton]
+    $MH(G)$ の次数付きオイラー標数は、元の magnitude を復元する：
+    % \rank -> \operatorname{rank}
+    \[
+      \sum_{k,l} (-1)^k \operatorname{rank}(MH_{k,l}(G)) q^l = \# G(q).
+    \]
+  \end{theorem}
+
+  これは、$\#G$ の持つ性質が、$MH(G)$ のより深い構造的性質の「影」であることを意味する。
+\end{frame}
+
+\section{主結果}
+
+\begin{frame}{Mayer-Vietoris 完全列}
+  グラフの分解 $G = A \cup B$ から、$MH(G)$ を計算したい。
+
+  \begin{theorem}[Mayer-Vietoris 完全列]
+    もし分解 $(G; A, B)$ が \textbf{Projecting Decomposition (射影分解)} であるならば、以下の長完全列が存在する：
     \begin{align*}
       \cdots \to MH_n(A \cap B) \to MH_n(A) \oplus MH_n(B) \\
       \to MH_n(G) \to MH_{n-1}(A \cap B) \to \cdots
     \end{align*}
   \end{theorem}
+  
+  これは包除原理 $\#G = \#A + \#B - \#(A \cap B)$ の圏化版である。
 \end{frame}
 
-\section{Conclusion}
+\begin{frame}{証明のアイデア: Projecting Decomposition}
+  グラフにおいて、通常の Mayer-Vietoris 列は必ずしも成立しない。
+  我々は \textbf{Projecting (射影)} 条件を課す：
+  
+  \begin{itemize}
+    \item 共通部分 $A \cap B$ は $G$ において \textit{convex (凸)} でなければならない。
+    \item $G$ の各頂点は、$A \cap B$ への距離を保存する一意的な「射影」を持たなければならない（最短パスが射影点を通る）。
+  \end{itemize}
+
+  この条件の下で、鎖複体が適切に分裂し、完全列が導かれる。
+\end{frame}
+
+\section{豊穣圏 (Enriched Categories)}
+
+\begin{frame}{動機: 豊穣圏}
+  なぜ "Magnitude" と呼ぶのか？
+  \begin{itemize}
+    \item グラフは、モノイダル圏 $([0, \infty], +, 0)$ 上の豊穣圏とみなせる。
+    \item 対象: 頂点
+    \item 射 (Hom object): 最短パス距離
+  \end{itemize}
+  
+  \begin{block}{整合性}
+    豊穣圏に対する Magnitude の一般定義が、グラフに対する組合せ的な定義（第2節）と一致することを再確認した。
+  \end{block}
+\end{frame}
+
+\section{結論}
 
 \begin{frame}{まとめと今後の課題}
-  \begin{columns}[T]
-    \begin{column}{0.48\textwidth}
-      \textbf{まとめ}
-      \begin{itemize}
-        \item Magnitude Homologyの定義を確認した
-        \item MV完全列の存在条件を整理した
-        \item 具体的なグラフで計算を行った
-      \end{itemize}
-    \end{column}
-    
-    \begin{column}{0.48\textwidth}
-      \textbf{今後の課題}
-      \begin{itemize}
-        \item より一般の距離空間への拡張
-        \item Path Homologyとの関連性の調査
-        \item 応用例の探索
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
+  \textbf{まとめ:}
+  \begin{itemize}
+    \item Magnitude の復習と Magnitude Homology の定義。
+    \item オイラー標数との関係（Categorification）の確認。
+    \item Projecting Decomposition における Mayer-Vietoris 完全列の導入。
+  \end{itemize}
 
-\begin{frame}[allowframebreaks]{参考文献}
-  \bibliographystyle{plain}
-  \begin{thebibliography}{99}
-    \bibitem{Leinster2013}
-    T. Leinster, \textit{The magnitude of metric spaces}, Doc. Math. 18 (2013), 857--905.
-    
-    \bibitem{Hepworth2017}
-    R. Hepworth and S. Willerton, \textit{Categorifying the magnitude of a graph}, Homology Homotopy Appl. 19 (2017), 31--60.
-  \end{thebibliography}
-\end{frame}
-
-\begin{frame}
-  \centering
-  \Huge
-  ご清聴ありがとうございました
+  \textbf{今後の課題:}
+  \begin{itemize}
+    \item \textbf{Whitney Twist:} ツイスト操作は Magnitude Homology を保存するか？
+    \item \textbf{Diagonal Graphs:} $k \neq l$ で $MH_{k,l}=0$ となるグラフの特徴付け（例: 正二十面体グラフ）。
+    \item \textbf{Cohomology:} Magnitude Cohomology への積構造の導入。
+  \end{itemize}
 \end{frame}
 
 \end{document}
