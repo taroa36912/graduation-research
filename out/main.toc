@@ -14,6 +14,6 @@
 \contentsline {subsection}{\numberline {4.1}The Magnitude of a Matrix}{39}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}The Definition of Enriched Categories}{42}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}The Magnitude of Enriched Categories}{48}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}The Relation of The Magnitudes of Graphs and Enriched Categories}{49}{subsection.4.4}%
-\contentsline {section}{Appendix}{51}{theorem.4.4.2}%
-\contentsline {section}{\numberline {A}The calculation of Graph Automorphisms}{51}{appendix.A}%
+\contentsline {subsection}{\numberline {4.4}The Relation of The Magnitudes of Graphs and Enriched Categories}{51}{subsection.4.4}%
+\contentsline {section}{Appendix}{52}{theorem.4.4.2}%
+\contentsline {section}{\numberline {A}The calculation of Graph Automorphisms}{52}{appendix.A}%
