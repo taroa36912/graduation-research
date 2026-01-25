@@ -1,6 +1,5 @@
 \documentclass[dvipdfmx, 11pt, notheorems]{beamer}
 
-% uplatex/dvipdfmx用の設定
 \usepackage{bxdpx-beamer}
 \usepackage{pxjahyper}
 \usepackage{minijs}
@@ -9,18 +8,15 @@
 \usepackage{graphicx}
 \usepackage{bm}
 
-% 日本語フォントをゴシック体に設定（スライドで見やすくするため）
 \renewcommand{\kanjifamilydefault}{\gtdefault}
 
-% Theme selection: 派手で目立つテーマ
 \usetheme{AnnArbor}
-\usecolortheme{crane} % 黄・オレンジ系
+\usecolortheme{crane}
 \usefonttheme{professionalfonts}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{theorems}[numbered]
 
-% 定理環境の日本語化
 \theoremstyle{definition}
 \newtheorem{definition}{定義}
 \newtheorem{theorem}{定理}
@@ -38,12 +34,10 @@
 
 \begin{document}
 
-% タイトルスライド
 \begin{frame}
   \titlepage
 \end{frame}
 
-% 目次
 \begin{frame}{目次}
   \tableofcontents
 \end{frame}
@@ -78,7 +72,6 @@
   
   \vspace{0.5em}
   重要な性質: これは「濃度」（オイラー標数）のように振る舞う。
-  % \boxprod -> \square, \sqcup -> \sqcup
   \[ \#(G \square H) = \#G \cdot \#H, \quad \#(G \sqcup H) = \#G + \#H \]
 \end{frame}
 
@@ -135,7 +128,6 @@
 
   \begin{theorem}[Hepworth-Willerton]
     $MH(G)$ の次数付きオイラー標数は、元の magnitude を復元する：
-    % \rank -> \operatorname{rank}
     \[
       \sum_{k,l} (-1)^k \operatorname{rank}(MH_{k,l}(G)) q^l = \# G(q).
     \]

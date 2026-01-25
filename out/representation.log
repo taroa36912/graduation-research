@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  25 JAN 2026 20:45
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  25 JAN 2026 20:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -611,7 +611,7 @@ File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
 \sympureletters=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 11.
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 10.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup7
@@ -630,9 +630,9 @@ LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 \c@proposition=\count372
 \c@corollary=\count373
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 39.
+(Font)              scaled to size 10.53629pt on input line 35.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 39.
+(Font)              scaled to size 10.53629pt on input line 35.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 File: l3backend-dvipdfmx.def 2025-06-09 L3 backend support: dvipdfmx
 \g__graphics_track_int=\count374
@@ -641,28 +641,28 @@ File: l3backend-dvipdfmx.def 2025-06-09 L3 backend support: dvipdfmx
 ) (out/representation.aux)
 \openout1 = `representation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 *geometry* detected driver: dvipdfm
 *geometry* verbose mode - [ preamble ] result:
 * driver: dvipdfm
@@ -696,7 +696,7 @@ LaTeX Font Info:    ... okay on input line 39.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 39.
+Package hyperref Info: Link coloring OFF on input line 35.
 (out/representation.out) (out/representation.out)
 \@outlinefile=\write5
 \openout5 = `representation.out'.
@@ -715,23 +715,23 @@ Dictionary: translator-numbers-dictionary, Language: English
 Dictionary: translator-theorem-dictionary, Language: English 
 ) (out/representation.nav)
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 39.
+(Font)              scaled to size 5.77332pt on input line 35.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 39.
+(Font)              scaled to size 5.77332pt on input line 35.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 44.
+(Font)              scaled to size 13.85594pt on input line 39.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 44.
+(Font)              scaled to size 13.85594pt on input line 39.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 44.
+(Font)              scaled to size 7.69775pt on input line 39.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 44.
+(Font)              scaled to size 7.69775pt on input line 39.
 
 
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 3.84888pt on input line 44.
+(Font)              scaled to size 3.84888pt on input line 39.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 3.84888pt on input line 44.
+(Font)              scaled to size 3.84888pt on input line 39.
 [1
 
 ] (out/representation.toc)
@@ -740,29 +740,29 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 
 ]
 LaTeX Font Info:    Font shape `JT2/gt/bx/n' in size <10.95> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 63.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 63.
+(Font)              scaled to size 10.53629pt on input line 57.
 LaTeX Font Info:    Font shape `JY2/gt/bx/n' in size <10.95> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 63.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 57.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 63.
+(Font)              scaled to size 10.53629pt on input line 57.
 LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 63.
+(Font)              No change on input line 57.
 
 
 [3
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 83.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 76.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
@@ -787,7 +787,7 @@ File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mat
 
 ]
 LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 173.
+(Font)              No change on input line 165.
 
 
 [9
