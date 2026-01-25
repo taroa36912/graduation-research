@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  25 JAN 2026 20:13
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  26 JAN 2026 07:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -394,34 +394,34 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 
 ]
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 148.
+(Font)              scaled to size 10.53629pt on input line 144.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 148.
+(Font)              scaled to size 10.53629pt on input line 144.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 148.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 144.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 148.
+(Font)              scaled to size 10.53629pt on input line 144.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 148.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 144.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 148.
+(Font)              scaled to size 10.53629pt on input line 144.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 152.
+(Font)              scaled to size 7.69775pt on input line 148.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 152.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 152.
+(Font)              scaled to size 5.77332pt on input line 148.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 148.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 152.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 148.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 152.
+(Font)              scaled to size 7.69775pt on input line 148.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 152.
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 152.
+(Font)              scaled to size 5.77332pt on input line 148.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 148.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
 [2] (out/main.toc
@@ -447,9 +447,9 @@ File: Tikz/Graphs/out/K_2.pdf Graphic file (type pdf)
 File: Tikz/Graphs/out/K_3.pdf Graphic file (type pdf)
 <Tikz/Graphs/out/K_3.pdf>
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 182.
+(Font)              scaled to size 7.69775pt on input line 178.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 182.
+(Font)              scaled to size 5.77332pt on input line 178.
 
 
 [4]
@@ -466,79 +466,79 @@ File: Tables/out/mag_hom_C_5.pdf Graphic file (type pdf)
 
 [7]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 236.
+(Font)              No change on input line 232.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 236.
+(Font)              No change on input line 232.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 238.
+(Font)              scaled to size 13.85594pt on input line 234.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 238.
+(Font)              scaled to size 13.85594pt on input line 234.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 238.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 234.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 238.
+(Font)              scaled to size 13.85594pt on input line 234.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 238.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 234.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 238.
+(Font)              scaled to size 13.85594pt on input line 234.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 243.
+(Font)              No change on input line 239.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 253.
+(Font)              No change on input line 249.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 254.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 (Font)              No change on input line 258.
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 262.
 
 
 [8]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 275.
+(Font)              No change on input line 271.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 280.
+(Font)              No change on input line 276.
 File: Tikz/Graphs/out/K_3.pdf Graphic file (type pdf)
 <Tikz/Graphs/out/K_3.pdf>
 
-Overfull \hbox (55.63837pt too wide) detected at line 303
+Overfull \hbox (55.63837pt too wide) detected at line 299
 \OML/cmm/m/it/12 Z[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q\OT1/cmr/m/n/12 ) = [] \OML/cmm/m/it/12 ;  Z[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 q\OT1/cmr/m/n/12 )[] = [] [] \OML/cmm/m/it/12 ;
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 310.
+(Font)              No change on input line 306.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 315.
+(Font)              No change on input line 311.
 
 
 [9]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 323.
+(Font)              No change on input line 319.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 331.
+(Font)              No change on input line 327.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 344.
+(Font)              No change on input line 340.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 346.
+(Font)              No change on input line 342.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 352.
+(Font)              No change on input line 348.
 
 
 [10]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 368.
+(Font)              No change on input line 364.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 371.
+(Font)              No change on input line 367.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 369.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 (Font)              No change on input line 373.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 377.
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 389.
+(Font)              No change on input line 385.
 
 
 [11]
 File: Tikz/Graphs/out/n_vertex.pdf Graphic file (type pdf)
 <Tikz/Graphs/out/n_vertex.pdf>
-LaTeX Font Info:    Trying to load font information for U+euf on input line 413.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 409.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
@@ -552,7 +552,7 @@ File: Tikz/Graphs/out/C_n.pdf Graphic file (type pdf)
 File: Tikz/Graphs/out/Petersen.pdf Graphic file (type pdf)
 <Tikz/Graphs/out/Petersen.pdf>
 
-Overfull \hbox (6.36105pt too wide) in paragraph at lines 424--427
+Overfull \hbox (6.36105pt too wide) in paragraph at lines 420--423
 []\OT1/cmr/m/n/12 Then, $[](\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )$ con-tains $\OML/cmm/m/it/12 D[]$ \OT1/cmr/m/n/12 as its sub-group and $\OML/cmm/m/it/12 G$ \OT1/cmr/m/n/12 is vertex-transitive.
  []
 
@@ -562,52 +562,52 @@ File: Tikz/Graphs/out/K_mn.pdf Graphic file (type pdf)
 
 [13]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 443.
+(Font)              No change on input line 439.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 452.
+(Font)              No change on input line 448.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 470.
+(Font)              No change on input line 466.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 477.
+(Font)              No change on input line 473.
 
 
 [14]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 482.
+(Font)              No change on input line 478.
 
-Overfull \hbox (29.02158pt too wide) in paragraph at lines 482--488
+Overfull \hbox (29.02158pt too wide) in paragraph at lines 478--484
 []$\OML/cmm/m/it/12 Z[]\OT1/cmr/m/n/12 ((\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 )) = \OML/cmm/m/it/12 q[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 q[]q[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Z[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; x[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 Z[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y; y[]\OT1/cmr/m/n/12 )$, 
  []
 
 
-Overfull \hbox (11.15407pt too wide) in paragraph at lines 482--488
+Overfull \hbox (11.15407pt too wide) in paragraph at lines 478--484
 []\OT1/cmr/m/n/12 Thus, $#(\OML/cmm/m/it/12 G \U/msa/m/n/12 ^^C \OML/cmm/m/it/12 H\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 Z[]\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 Z[] \OMS/cmsy/m/n/12 
  \OML/cmm/m/it/12 Z[]\OT1/cmr/m/n/12 ) = [](\OML/cmm/m/it/12 Z[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^A []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 Z[]\OT1/cmr/m/n/12 ) =
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 501.
+(Font)              No change on input line 497.
 
-Overfull \hbox (46.78099pt too wide) detected at line 512
+Overfull \hbox (46.78099pt too wide) detected at line 508
 \OML/cmm/m/it/12 c[] \OT1/cmr/m/n/12 = [](\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 1)[]\OMS/cmsy/m/n/12 jf\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; [] ; x[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 = \OML/cmm/m/it/12 x[] \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 6\OT1/cmr/m/n/12 = \OML/cmm/m/it/12 x[]; d\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; x[]\OT1/cmr/m/n/12 ) + [] + \OML/cmm/m/it/12 d\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; x[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 n\OMS/cmsy/m/n/12 gj\OML/cmm/m/it/12 :
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 516.
+(Font)              No change on input line 512.
 
 
 [15]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 536.
+(Font)              No change on input line 532.
 
-Overfull \hbox (45.66191pt too wide) in paragraph at lines 537--540
+Overfull \hbox (45.66191pt too wide) in paragraph at lines 533--536
 \OT1/cmr/bx/n/12 Corollary 2.2.11. \OT1/cmr/m/it/12 Let $\OML/cmm/m/it/12 G$ \OT1/cmr/m/it/12 be a graph. $\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 V\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j \OT1/cmr/m/n/12 = #\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 (0)\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 E\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@[] [][]$\OT1/cmr/m/it/12 .
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 543.
+(Font)              No change on input line 539.
 
-Overfull \hbox (53.27623pt too wide) detected at line 550
+Overfull \hbox (53.27623pt too wide) detected at line 546
 []
  []
 
@@ -615,57 +615,57 @@ Overfull \hbox (53.27623pt too wide) detected at line 550
 
 [16]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 585.
+(Font)              No change on input line 581.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 595.
+(Font)              No change on input line 591.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 601.
+(Font)              No change on input line 597.
 
 
 [17]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 609.
+(Font)              No change on input line 605.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 614.
+(Font)              No change on input line 610.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 640.
+(Font)              No change on input line 636.
 
 
 [18]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 647.
+(Font)              No change on input line 643.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 650.
+(Font)              No change on input line 646.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 652.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 (Font)              No change on input line 656.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 660.
+(Font)              No change on input line 662.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 666.
+(Font)              No change on input line 667.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 671.
+(Font)              No change on input line 670.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 674.
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 679.
+(Font)              No change on input line 675.
 
 
 [19]
 File: Tikz/Graphs/out/K_mn_2.pdf Graphic file (type pdf)
 <Tikz/Graphs/out/K_mn_2.pdf>
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 697.
+(Font)              No change on input line 693.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 706.
+(Font)              No change on input line 702.
 
 
 [20]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 719.
+(Font)              No change on input line 715.
 File: Tikz/Graphs/out/connect_C_4.pdf Graphic file (type pdf)
 <Tikz/Graphs/out/connect_C_4.pdf>
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 745.
+(Font)              No change on input line 741.
 
 
 [21]
@@ -675,29 +675,29 @@ LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 [23]
 
 [24]
-Overfull \hbox (7.44745pt too wide) in paragraph at lines 836--837
+Overfull \hbox (7.44745pt too wide) in paragraph at lines 832--833
 \OT1/cmr/m/n/12 pro-vide fun-da-men-tal ex-am-ples and prop-er-ties, and state the Mayer-Vietoris
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 840.
+(Font)              No change on input line 836.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 848.
+(Font)              No change on input line 844.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 851.
+(Font)              No change on input line 847.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 859.
+(Font)              No change on input line 855.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 862.
+(Font)              No change on input line 858.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 864.
+(Font)              No change on input line 860.
 
-Overfull \hbox (9.12881pt too wide) in paragraph at lines 863--865
+Overfull \hbox (9.12881pt too wide) in paragraph at lines 859--861
 \OT1/cmr/bx/n/12 Definition 3.1.3 \OT1/cmr/m/n/12 (\OT1/cmr/m/it/12 Mag-ni-tude chain com-plex\OT1/cmr/m/n/12 )\OT1/cmr/bx/n/12 . \OT1/cmr/m/n/12 Let $\OML/cmm/m/it/12 G$ \OT1/cmr/m/n/12 be a graph. $\OML/cmm/m/it/12 MC[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )$
  []
 
 
-Overfull \hbox (20.97044pt too wide) detected at line 879
+Overfull \hbox (20.97044pt too wide) detected at line 875
 \OML/cmm/m/it/12 @[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; [] ; x[]\OT1/cmr/m/n/12 ) = []
  []
 
@@ -705,76 +705,76 @@ Overfull \hbox (20.97044pt too wide) detected at line 879
 
 [25]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 888.
+(Font)              No change on input line 884.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 893.
+(Font)              No change on input line 889.
 
 
 [26]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 932.
+(Font)              No change on input line 928.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 934.
+(Font)              No change on input line 930.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 978.
+(Font)              No change on input line 974.
 
 
 [27]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 986.
+(Font)              No change on input line 982.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 994.
+(Font)              No change on input line 990.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1006.
+(Font)              No change on input line 1002.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1014.
+(Font)              No change on input line 1010.
 
 
 [28]
-Overfull \hbox (1.55873pt too wide) detected at line 1037
+Overfull \hbox (1.55873pt too wide) detected at line 1033
 \OML/cmm/m/it/12 d \OT1/cmr/m/n/12 = []\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 d\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 j \OML/cmm/m/it/12 x; y \OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 V\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 x; y[]G\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 :
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1043.
+(Font)              No change on input line 1039.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1053.
+(Font)              No change on input line 1049.
 
-Overfull \hbox (36.53401pt too wide) in paragraph at lines 1053--1056
+Overfull \hbox (36.53401pt too wide) in paragraph at lines 1049--1052
 \OT1/cmr/m/n/12 length $\OML/cmm/m/it/12 l$ \OT1/cmr/m/n/12 such that $\OML/cmm/m/it/12 @\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; [] ; x[]\OT1/cmr/m/n/12 ) = 0$. Thus, $\OML/cmm/m/it/12 l \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 l\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; [] ; x[]\OT1/cmr/m/n/12 ) = [][] \OML/cmm/m/it/12 d\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; x[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^T
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1073.
+(Font)              No change on input line 1069.
 
 
 [29]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1078.
+(Font)              No change on input line 1074.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1083.
+(Font)              No change on input line 1079.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1098.
+(Font)              No change on input line 1094.
 
-Overfull \hbox (16.81526pt too wide) detected at line 1104
+Overfull \hbox (16.81526pt too wide) detected at line 1100
 \OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; [] ; x[]\OT1/cmr/m/n/12 ) = []
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1108.
+(Font)              No change on input line 1104.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1114.
+(Font)              No change on input line 1110.
 
 
 [30]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1121.
+(Font)              No change on input line 1117.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1126.
+(Font)              No change on input line 1122.
 File: Tikz/Commutative/out/chain_map.pdf Graphic file (type pdf)
 <Tikz/Commutative/out/chain_map.pdf>
 
-Overfull \hbox (2.38176pt too wide) in paragraph at lines 1140--1143
+Overfull \hbox (2.38176pt too wide) in paragraph at lines 1136--1139
 []\OT1/cmr/m/n/12 Consequently, the two terms agree pro-vided they are non-vanishing. More-
  []
 
@@ -782,59 +782,59 @@ Overfull \hbox (2.38176pt too wide) in paragraph at lines 1140--1143
 
 [31]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1151.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 (Font)              No change on input line 1155.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1156.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 (Font)              No change on input line 1159.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1160.
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 (Font)              No change on input line 1163.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1167.
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1183.
+(Font)              No change on input line 1179.
 
 
 [32]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1194.
+(Font)              No change on input line 1190.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1200.
+(Font)              No change on input line 1196.
 
-Overfull \hbox (11.1213pt too wide) in paragraph at lines 1206--1206
+Overfull \hbox (11.1213pt too wide) in paragraph at lines 1202--1202
 []\OT1/cmr/bx/n/14.4 Magnitude Ho-mol-ogy of Dis-joint Union of Graphs 
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1207.
+(Font)              No change on input line 1203.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1217.
+(Font)              No change on input line 1213.
 
-Overfull \hbox (35.07256pt too wide) in paragraph at lines 1224--1225
+Overfull \hbox (35.07256pt too wide) in paragraph at lines 1220--1221
 []\OT1/cmr/m/n/12 Injectivity. As-sume that there are gen-er-a-tors $((\OML/cmm/m/it/12 x[]; [] ; x[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y[]; [] ; y[]\OT1/cmr/m/n/12 )) \OMS/cmsy/m/n/12 2
  []
 
 
-Overfull \hbox (11.44151pt too wide) in paragraph at lines 1224--1225
+Overfull \hbox (11.44151pt too wide) in paragraph at lines 1220--1221
 \OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^H \OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 H\OT1/cmr/m/n/12 )$ such that $(\OML/cmm/m/it/12 i[] \OMS/cmsy/m/n/12 ^^H \OML/cmm/m/it/12 j[]\OT1/cmr/m/n/12 )((\OML/cmm/m/it/12 x[]; [] ; x[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y[]; [] ; y[]\OT1/cmr/m/n/12 )) =
  []
 
 
 
 [33]
-Overfull \hbox (20.89856pt too wide) in paragraph at lines 1229--1231
+Overfull \hbox (20.89856pt too wide) in paragraph at lines 1225--1227
 \OT1/cmr/m/n/12 in $\OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G [] H\OT1/cmr/m/n/12 )$. Now, since $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 x[]; [] ; x[]\OMS/cmsy/m/n/12 g ^^Z \OML/cmm/m/it/12 V\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )$ and $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 y[]; [] ; y[]\OMS/cmsy/m/n/12 g ^^Z
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1243.
+(Font)              No change on input line 1239.
 
-Overfull \hbox (44.3119pt too wide) detected at line 1250
+Overfull \hbox (44.3119pt too wide) detected at line 1246
 \U/msa/m/n/12 ^^C \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 MC[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^B \OML/cmm/m/it/12 MC[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 H\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 MC[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G \U/msa/m/n/12 ^^C \OML/cmm/m/it/12 H\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 k[]; k[] \OMS/cmsy/m/n/12 ^^U \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; k \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 k[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 k[]; l \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 l[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 l[];
  []
 
 
-Overfull \hbox (19.09021pt too wide) detected at line 1254
+Overfull \hbox (19.09021pt too wide) detected at line 1250
 \U/msa/m/n/12 ^^C\OT1/cmr/m/n/12 ((\OML/cmm/m/it/12 x[]; [] ; x[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y[]; [] ; y[]\OT1/cmr/m/n/12 )) = [] [](\OML/cmm/m/it/12 ^^[\OT1/cmr/m/n/12 )((\OML/cmm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; y[]\OT1/cmr/m/n/12 ))\OML/cmm/m/it/12 ;
  []
 
@@ -842,140 +842,140 @@ Overfull \hbox (19.09021pt too wide) detected at line 1254
 
 [34]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1281.
+(Font)              No change on input line 1277.
 File: Tikz/Graphs/out/C_2_square.pdf Graphic file (type pdf)
 <Tikz/Graphs/out/C_2_square.pdf>
 
-Overfull \hbox (33.81721pt too wide) detected at line 1297
+Overfull \hbox (33.81721pt too wide) detected at line 1293
 []
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1304.
+(Font)              No change on input line 1300.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1309.
+(Font)              No change on input line 1305.
 File: Tikz/Commutative/out/exterior.pdf Graphic file (type pdf)
 <Tikz/Commutative/out/exterior.pdf>
 
 
 [35]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1336.
+(Font)              No change on input line 1332.
 
-Overfull \hbox (51.20442pt too wide) detected at line 1340
+Overfull \hbox (51.20442pt too wide) detected at line 1336
 \OT1/cmr/m/n/12 0 \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 
  \OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 H\OT1/cmr/m/n/12 ) [] \OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G \U/msa/m/n/12 ^^C \OML/cmm/m/it/12 H\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 H\OT1/cmr/m/n/12 )) \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 0
  []
 
 
-Overfull \hbox (8.7897pt too wide) in paragraph at lines 1340--1343
+Overfull \hbox (8.7897pt too wide) in paragraph at lines 1336--1339
 \OT1/cmr/m/it/12 is a short ex-act se-quence and non-naturally split. In par-tic-u-lar, if $\OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )$
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1357.
+(Font)              No change on input line 1353.
 
 
 [36]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1360.
+(Font)              No change on input line 1356.
 
-Overfull \hbox (32.00494pt too wide) in paragraph at lines 1360--1361
+Overfull \hbox (32.00494pt too wide) in paragraph at lines 1356--1357
 []\OT1/cmr/m/n/12 Let $(\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 G; H\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X[]\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 G[]; H[]\OT1/cmr/m/n/12 )$ be pro-ject-ing de-com-po-si-tions. $\OML/cmm/m/it/12 f \OT1/cmr/m/n/12 : (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ; \OML/cmm/m/it/12 G; H\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 !
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1362.
+(Font)              No change on input line 1358.
 
-Overfull \hbox (33.84044pt too wide) in paragraph at lines 1361--1363
+Overfull \hbox (33.84044pt too wide) in paragraph at lines 1357--1359
 \OT1/cmr/m/n/12 is said to be a \OT1/cmr/m/it/12 pro-ject-ing de-com-po-si-tion map \OT1/cmr/m/n/12 if $\OML/cmm/m/it/12 V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 H\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 V[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 H[]\OT1/cmr/m/n/12 ))$
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1368.
+(Font)              No change on input line 1364.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1377.
+(Font)              No change on input line 1373.
 
-Overfull \hbox (5.06783pt too wide) detected at line 1382
+Overfull \hbox (5.06783pt too wide) detected at line 1378
 \OT1/cmr/m/n/12 0 \OMS/cmsy/m/n/12 ! \OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 H\OT1/cmr/m/n/12 ) [] \OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^H \OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 H\OT1/cmr/m/n/12 ) [] \OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! \OT1/cmr/m/n/12 0
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1389.
+(Font)              No change on input line 1385.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1399.
+(Font)              No change on input line 1395.
 
-Overfull \hbox (81.73846pt too wide) detected at line 1403
+Overfull \hbox (81.73846pt too wide) detected at line 1399
 []
  []
 
 
 
 [37]
-Overfull \hbox (67.4716pt too wide) detected at line 1408
+Overfull \hbox (67.4716pt too wide) detected at line 1404
 [] \OML/cmm/m/it/12 ^^_\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 X\OT1/cmr/m/n/12 ))\OML/cmm/m/it/12 q[] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 ^^_\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 ))\OML/cmm/m/it/12 q[] \OT1/cmr/m/n/12 + [] \OML/cmm/m/it/12 ^^_\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 H\OT1/cmr/m/n/12 ))\OML/cmm/m/it/12 q[] \OMS/cmsy/m/n/12 ^^@ [] \OML/cmm/m/it/12 ^^_\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 MH[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 H\OT1/cmr/m/n/12 ))\OML/cmm/m/it/12 q[]:
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1415.
+(Font)              No change on input line 1411.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1418.
+(Font)              No change on input line 1414.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1423.
+(Font)              No change on input line 1419.
 
 
 [38]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1439.
+(Font)              No change on input line 1435.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1464.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 (Font)              No change on input line 1468.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1472.
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1472.
+(Font)              No change on input line 1468.
 
 
 [39]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1474.
+(Font)              No change on input line 1470.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1483.
+(Font)              No change on input line 1479.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1496.
+(Font)              No change on input line 1492.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1497.
+(Font)              No change on input line 1493.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1498.
+(Font)              No change on input line 1494.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1498.
+(Font)              No change on input line 1494.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1507.
+(Font)              No change on input line 1503.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1515.
+(Font)              No change on input line 1511.
 
 
 [40]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1531.
+(Font)              No change on input line 1527.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1538.
+(Font)              No change on input line 1534.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1543.
+(Font)              No change on input line 1539.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1546.
+(Font)              No change on input line 1542.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1555.
+(Font)              No change on input line 1551.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1560.
+(Font)              No change on input line 1556.
 
 
 [41]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1563.
+(Font)              No change on input line 1559.
 File: Tikz/Commutative/out/monoid.pdf Graphic file (type pdf)
 <Tikz/Commutative/out/monoid.pdf>
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1568.
+(Font)              No change on input line 1564.
 File: Tikz/Commutative/out/pentagon_1.pdf Graphic file (type pdf)
 <Tikz/Commutative/out/pentagon_1.pdf>
 
@@ -987,9 +987,9 @@ File: Tikz/Commutative/out/triangle_1.pdf Graphic file (type pdf)
 
 [43]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1619.
+(Font)              No change on input line 1615.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1624.
+(Font)              No change on input line 1620.
 
 
 [44]
@@ -1000,120 +1000,95 @@ File: Tikz/Commutative/out/triangle_2.pdf Graphic file (type pdf)
 File: Tikz/Commutative/out/triangle_3.pdf Graphic file (type pdf)
 <Tikz/Commutative/out/triangle_3.pdf>
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1637.
+(Font)              No change on input line 1633.
 
 
 [45]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1641.
+(Font)              No change on input line 1637.
 File: Tikz/Commutative/out/square_1.pdf Graphic file (type pdf)
 <Tikz/Commutative/out/square_1.pdf>
 File: Tikz/Commutative/out/triangle_4.pdf Graphic file (type pdf)
 <Tikz/Commutative/out/triangle_4.pdf>
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1651.
+(Font)              No change on input line 1647.
 
-Overfull \hbox (26.8514pt too wide) in paragraph at lines 1656--1657
+Overfull \hbox (26.8514pt too wide) in paragraph at lines 1652--1653
 []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C; D\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C; E\OT1/cmr/m/n/12 ); (\OML/cmm/m/it/12 F; G\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 7! \OML/cmm/m/it/12 F \OMS/cmsy/m/n/12 ^^N \OML/cmm/m/it/12 G$ \OT1/cmr/m/n/12 and $\OML/cmm/m/it/12 j[] \OT1/cmr/m/n/12 : \OMS/cmsy/m/n/12 f^^Cg ! []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C; C\OT1/cmr/m/n/12 ); \OMS/cmsy/m/n/12 ^^C 7!
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1657.
+(Font)              No change on input line 1653.
 
 
 [46]
-Overfull \hbox (23.3765pt too wide) in paragraph at lines 1658--1659
-\OML/cmm/m/it/12 d\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 1\OT1/cmr/m/n/12 ]$, $\OML/cmm/m/it/12 m[] \OT1/cmr/m/n/12 : [][](\OML/cmm/m/it/12 y; z\OT1/cmr/m/n/12 ) + [][](\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! [][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; z\OT1/cmr/m/n/12 ); \OML/cmm/m/it/12 d\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y; z\OT1/cmr/m/n/12 ) +
- []
-
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1664.
+(Font)              No change on input line 1654.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1674.
+(Font)              No change on input line 1662.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1681.
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1687.
+(Font)              No change on input line 1672.
 
 
 [47]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1692.
+(Font)              No change on input line 1679.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1698.
-
-Overfull \hbox (26.8514pt too wide) in paragraph at lines 1717--1718
-[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C; D\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C; E\OT1/cmr/m/n/12 ); (\OML/cmm/m/it/12 F; G\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 7! \OML/cmm/m/it/12 F \OMS/cmsy/m/n/12 ^^N \OML/cmm/m/it/12 G$ \OT1/cmr/m/n/12 and $\OML/cmm/m/it/12 j[] \OT1/cmr/m/n/12 : \OMS/cmsy/m/n/12 f^^Cg ! []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C; C\OT1/cmr/m/n/12 ); \OMS/cmsy/m/n/12 ^^C 7!
- []
-
+(Font)              No change on input line 1685.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1718.
+(Font)              No change on input line 1690.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1696.
 
 
 [48]
-Overfull \hbox (23.3765pt too wide) in paragraph at lines 1719--1720
-\OML/cmm/m/it/12 d\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 1\OT1/cmr/m/n/12 ]$, $\OML/cmm/m/it/12 m[] \OT1/cmr/m/n/12 : [][](\OML/cmm/m/it/12 y; z\OT1/cmr/m/n/12 ) + [][](\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! [][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; z\OT1/cmr/m/n/12 ); \OML/cmm/m/it/12 d\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y; z\OT1/cmr/m/n/12 ) +
- []
-
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1731.
+(Font)              No change on input line 1729.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1733.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 1735.
 
 
 [49]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1735.
+(Font)              No change on input line 1751.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1737.
+(Font)              No change on input line 1756.
 
-Overfull \hbox (26.8514pt too wide) in paragraph at lines 1744--1745
-[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C; D\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C; E\OT1/cmr/m/n/12 ); (\OML/cmm/m/it/12 F; G\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 7! \OML/cmm/m/it/12 F \OMS/cmsy/m/n/12 ^^N \OML/cmm/m/it/12 G$ \OT1/cmr/m/n/12 and $\OML/cmm/m/it/12 j[] \OT1/cmr/m/n/12 : \OMS/cmsy/m/n/12 f^^Cg ! []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C; C\OT1/cmr/m/n/12 ); \OMS/cmsy/m/n/12 ^^C 7!
- []
-
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1745.
-
-Overfull \hbox (23.3765pt too wide) in paragraph at lines 1746--1747
-\OML/cmm/m/it/12 d\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 2 \OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 1\OT1/cmr/m/n/12 ]$, $\OML/cmm/m/it/12 m[] \OT1/cmr/m/n/12 : [][](\OML/cmm/m/it/12 y; z\OT1/cmr/m/n/12 ) + [][](\OML/cmm/m/it/12 x; y\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ! [][]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; z\OT1/cmr/m/n/12 ); \OML/cmm/m/it/12 d\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y; z\OT1/cmr/m/n/12 ) +
- []
-
-
-
-[50]
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1753.
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1758.
-
-Overfull \hbox (5.75456pt too wide) in paragraph at lines 1758--1762
+Overfull \hbox (5.75456pt too wide) in paragraph at lines 1756--1760
 []\OT1/cmr/m/n/12 First, as we see in ex-am-ples, gen-er-al-ized met-ric spaces are $[0\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 1\OT1/cmr/m/n/12 ]$-categories,
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1769.
+(Font)              No change on input line 1767.
+
+
+[50]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1775.
+(Font)              No change on input line 1773.
 
 
 [51]
-Overfull \hbox (8.9358pt too wide) in paragraph at lines 1785--1785
+Overfull \hbox (8.9358pt too wide) in paragraph at lines 1783--1783
 []\OT1/cmr/bx/n/17.28 The cal-cu-la-tion of Graph Au-to-mor-phisms 
  []
 
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1786.
+(Font)              No change on input line 1784.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1791.
+(Font)              No change on input line 1789.
 
 
 [52]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1810.
+(Font)              No change on input line 1808.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1815.
+(Font)              No change on input line 1813.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1821.
+(Font)              No change on input line 1819.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 1826.
+(Font)              No change on input line 1824.
 
 
 [53] (out/main.aux)
@@ -1126,12 +1101,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B67C833BF0FB1725AA81E2D906AFD686;4731.
  ) 
 Here is how much of TeX's memory you used:
- 13475 strings out of 468392
- 225398 string characters out of 5442311
- 635049 words of memory out of 5000000
- 42001 multiletter control sequences out of 15000+600000
+ 13477 strings out of 468392
+ 225441 string characters out of 5442311
+ 635126 words of memory out of 5000000
+ 42003 multiletter control sequences out of 15000+600000
  649595 words of font info for 141 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  72i,17n,79p,1070b,783s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/main.dvi (53 pages, 184600 bytes).
+Output written on out/main.dvi (53 pages, 179516 bytes).

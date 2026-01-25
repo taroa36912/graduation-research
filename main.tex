@@ -140,10 +140,6 @@
 }
 \vfill
 \hfill
-% \begin{tabular}{|p{6zw}|p{6zw}|} \hline
-%   \hskip.5zw 指導教員印 & \hskip1.5zw 受理印 \\ \hline
-%    & \\[2cm] \hline 
-% \end{tabular}
 \newpage
 \begin{abstract}
 The concept of magnitude is introduced by Leinster \cite{Leinster2} and it is defined for enriched categories of finite objects, for example, generalized finite metric spaces such as graphs with finitely many vertices and metric defined aaa.
@@ -221,7 +217,7 @@ We easily check that the graded Euler characteristic of the magnitude homology o
 Being a bigraded abelian group rather than just a power series, the magnitude homology has a richer structure than the magnitude. 
 We will see below that various properties of magnitude described by Leinster, as mentioned above, are shadows of properties of magnitude homology. \\
 
-Actually, Leinster first introduced the magnitude in the context of enriched categories in \cite{Leinster2}. Generalized metric spaces are examples of enriched categories and the magnitude is defined for them if they are finite. \\
+Actually, Leinster first introduced the magnitude in the context of enriched categories in \cite{Leinster2}. Generalized metric spaces are examples of enriched categories (see \cref{ex_enriched_cat} (iii)) and the magnitude is defined for them if they are finite. \\
 
 As mentioned above, finite graphs are generalized finite metric spaces. Based on these results, we confirm in the final section that the magnitude of graphs coincides with that defined for enriched categories. \\
 
@@ -1655,10 +1651,12 @@ We also call $\VV$ a monoidal category, omitting $\otimes$ and $I$.
   \begin{enumerate}[label=(\roman*)]
     \item Let $\VV = \textbf{Set}$ be a monoidal category described in \cref{ex_monoidal_categories} (i). Then, $(\mathbf{Cat}, \circ, id)$ is a $\VV$-category. Indeed, $\mor(C,D)$ is a set for any categories $C,D$, $m_{CDE} : \mor(D,E) \times \mor(C,D) \rightarrow \mor(C,E) ; (F,G) \mapsto F \circ G$ and $j_C : \{*\} \rightarrow \mor(C,C) ; * \mapsto id_C$ are maps of \textbf{Set}, $F \circ id_C = F = id_D \circ F$ holds for $F : C \rightarrow D$, and $(F \circ G) \circ H = F \circ (G \circ H)$ holds for $F : D \rightarrow E, G : C \rightarrow D, H : B \rightarrow C$.
     \item Let $\VV = \textbf{Vect}_K$ be a monoidal category described in \cref{ex_monoidal_categories} (ii). We say that a category is a \textit{$K$-linear category} if it is enriched over $\VV$. Then, $\VV$ is a $K$-linear category. For any vector spaces $V,W,T,U$, $\mor_{\VV}(V,W) = \hom_K(V,W)$ is a vector space, $m_{VWT} : \hom_K(W,T) \otimes_K \hom_K(V,W) \rightarrow \hom_K(V,T) ; (f,g) \mapsto f \circ g$ is a linear map, and $j_V : K \rightarrow \hom_K(V,V) ; a \mapsto a \cdot id_V$ is also a linear map. $(f \circ g) \circ h = f \circ (g \circ h)$, and $f \circ id_T = f, g = id_T \circ g$ for any linear maps $f : T \rightarrow U, g : W \rightarrow T, h : V \rightarrow W$.
-    \item Let $\VV=[0, \infty]$ be a monoidal category described in \cref{ex_monoidal_categories} (iii). Then, a generalized metric space is a $\VV$-category. Indeed, for any points $x,y,z$ of a generalized metric space $M$, $\mor_M(x,y) = d(x,y) \in [0, \infty]$, $m_{xyz} : \mor_M(y,z) + \mor_M(x,y) \rightarrow \mor_M(x,z) ; d(y,z) + d(x,y) \mapsto d(x,z)$ and $j_x : 0 \rightarrow \mor_M(x,x) ; 0 \mapsto d(x,x)$ are morphisms in $[0, \infty]$, $d(x,y) + 0 \geq d(x,y), 0 + d(y,z) \geq d(y,z)$ holds for any points $x,y$ of $M$, and $d(x,y) + d(y,z) \geq d(x,z)$ holds for any points $x,y,z$ of $M$.
+    \item Let $\VV=[0, \infty]$ be a monoidal category described in \cref{ex_monoidal_categories} (iii). We say that a pair of a set $X$ and a map $d : X \times X \rightarrow [0, \infty]$ is a \textit{generalized metric space} if $d$ satisfies that for any elements $a,b,c \in X, d(a,b) + d(b,c) \geq d(a,c)$ and $d(a,a) \geq 0$ hold. Then, a generalized metric space is a $\VV$-category with morphisms $\mor(a,b) = d(a,b)$. Indeed, for any points $x,y,z$ of a generalized metric space $(X,d)$, $\mor(x,y) = d(x,y) \in [0, \infty]$, $m_{xyz} : \mor(y,z) \otimes \mor(x,y) \rightarrow \mor(x,z) ; d(y,z) + d(x,y) \mapsto d(x,z)$ and $j_x : 0 \rightarrow \mor(x,x) ; 0 \mapsto d(x,x)$ are morphisms in $[0, \infty]$ by the definition above, $d(x,y) + 0 \geq d(x,y), 0 + d(y,z) \geq d(y,z)$ holds for any points $x,y$ of $X$, and $d(x,y) + d(y,z) \geq d(x,z)$ holds for any points $x,y,z$ of $X$, which arrows the composition of morphisms.
     \item Let $\VV = \mathbf{2}$ be a monoidal category described in \cref{ex_monoidal_categories} (iv). Then, a preorder is a $\VV$-category. Indeed, for any elements $a,b,c$ of a preorder $P$, $\mor_P(a,b) = t$ if $a \leq b$ and $\mor_P(a,b) = f$ if $a \nleq b$, $m_{abc} : \mor_P(b,c) \otimes \mor_P(a,b) \rightarrow \mor_P(a,c)$ and $j_a : t \rightarrow \mor_P(a,a)$ are morphisms in $\mathbf{2}$, $a \leq b$ implies $a \leq b$ holds for any elements $a,b$ of $P$, and if $a \leq b$ and $b \leq c$, then $a \leq c$ holds for any elements $a,b,c$ of $P$.
   \end{enumerate}
 \end{example}
+
+Indeed, each enriched category above corresponds to the definition of each structure.
 
 \begin{definition}
   Let $(\VV, \otimes, I)$ be a monoidal category and let $\calA, \calB$ be $\VV$-categories. Then, the \textit{tensor product} $\calA \otimes \calB$ is a category defined as follows:
@@ -1712,12 +1710,12 @@ In this section, we consider only monoidal categories $(\VV, \otimes, I)$ satisf
 
 Here, we can choose various monoid homomorphisms depending on the purpose.
 
-\begin{example}
+\begin{example}\label{ex_monoidal_cat_2}
   \begin{enumerate}[label=(\roman*)]
-    \item Let $\VV = \textbf{Set}$ be a monoidal category described in \cref{ex_monoidal_categories} (i). Then, $(\mathbf{Cat}, \circ, id)$ is a $\VV$-category. Indeed, $\mor(C,D)$ is a set for any categories $C,D$, $m_{CDE} : \mor(D,E) \times \mor(C,D) \rightarrow \mor(C,E) ; (F,G) \mapsto F \circ G$ and $j_C : \{*\} \rightarrow \mor(C,C) ; * \mapsto id_C$ are maps of \textbf{Set}, $F \circ id_C = F = id_D \circ F$ holds for $F : C \rightarrow D$, and $(F \circ G) \circ H = F \circ (G \circ H)$ holds for $F : D \rightarrow E, G : C \rightarrow D, H : B \rightarrow C$.
-    \item Let $\VV = \textbf{Vect}_K$ be a monoidal category described in \cref{ex_monoidal_categories} (ii). We say that a category is a \textit{$K$-linear category} if it is enriched over $\VV$. Then, $\VV$ is a $K$-linear category. For any vector spaces $V,W,T,U$, $\mor_{\VV}(V,W) = \hom_K(V,W)$ is a vector space, $m_{VWT} : \hom_K(W,T) \otimes_K \hom_K(V,W) \rightarrow \hom_K(V,T) ; (f,g) \mapsto f \circ g$ is a linear map, and $j_V : K \rightarrow \hom_K(V,V) ; a \mapsto a \cdot id_V$ is also a linear map. $(f \circ g) \circ h = f \circ (g \circ h)$, and $f \circ id_T = f, g = id_T \circ g$ for any linear maps $f : T \rightarrow U, g : W \rightarrow T, h : V \rightarrow W$.
-    \item Let $\VV=[0, \infty]$ be a monoidal category described in \cref{ex_monoidal_categories} (iii). Then, a generalized metric space is a $\VV$-category. Indeed, for any points $x,y,z$ of a generalized metric space $M$, $\mor_M(x,y) = d(x,y) \in [0, \infty]$, $m_{xyz} : \mor_M(y,z) + \mor_M(x,y) \rightarrow \mor_M(x,z) ; d(y,z) + d(x,y) \mapsto d(x,z)$ and $j_x : 0 \rightarrow \mor_M(x,x) ; 0 \mapsto d(x,x)$ are morphisms in $[0, \infty]$, $d(x,y) + 0 \geq d(x,y), 0 + d(y,z) \geq d(y,z)$ holds for any points $x,y$ of $M$, and $d(x,y) + d(y,z) \geq d(x,z)$ holds for any points $x,y,z$ of $M$.
-    \item Let $\VV = \mathbf{2}$ be a monoidal category described in \cref{ex_monoidal_categories} (iv). Then, a preorder is a $\VV$-category. Indeed, for any elements $a,b,c$ of a preorder $P$, $\mor_P(a,b) = t$ if $a \leq b$ and $\mor_P(a,b) = f$ if $a \nleq b$, $m_{abc} : \mor_P(b,c) \otimes \mor_P(a,b) \rightarrow \mor_P(a,c)$ and $j_a : t \rightarrow \mor_P(a,a)$ are morphisms in $\mathbf{2}$, $a \leq b$ implies $a \leq b$ holds for any elements $a,b$ of $P$, and if $a \leq b$ and $b \leq c$, then $a \leq c$ holds for any elements $a,b,c$ of $P$.
+    \item Let $\VV = \textbf{FinSet}$ be a monoidal category described in \cref{ex_monoidal_categories} (i) restricted to finite sets and endowed with the cardinality monoid homomorphism $| \cdot | : \ob(\VV)/{\approx} \rightarrow \QQ_{\geq 0} ; X \mapsto \# X$.
+    \item Let $\VV = \textbf{FDVect}_K$ be a monoidal category described in \cref{ex_monoidal_categories} (ii) restricted to finite vector spaces over $K$ and endowed with the dimension monoid homomorphism $| \cdot | : \ob(\VV)/{\approx} \rightarrow \ZZ_{\geq 0} ; V \mapsto \dim_K V$.
+    \item Let $\VV=[0, \infty]$ be a monoidal category described in \cref{ex_monoidal_categories} (iii) endowed with the monoid homomorphism $| \cdot | : \ob(\VV)/{\approx} \rightarrow \RR_{\geq 0} ; x \mapsto e^{-x}$.
+    \item Let $\VV = \mathbf{2}$ be a monoidal category described in \cref{ex_monoidal_categories} (iv) endowed with the monoid homomorphism $| \cdot | : \ob(\VV)/{\approx} \rightarrow \ZZ ; f \mapsto 0, t \mapsto 1$.
   \end{enumerate}
 \end{example}
 
@@ -1741,17 +1739,17 @@ Here, we can choose various monoid homomorphisms depending on the purpose.
 
 \begin{example}
   \begin{enumerate}[label=(\roman*)]
-    \item Let $\VV = \textbf{Set}$ be a monoidal category described in \cref{ex_monoidal_categories} (i). Then, $(\mathbf{Cat}, \circ, id)$ is a $\VV$-category. Indeed, $\mor(C,D)$ is a set for any categories $C,D$, $m_{CDE} : \mor(D,E) \times \mor(C,D) \rightarrow \mor(C,E) ; (F,G) \mapsto F \circ G$ and $j_C : \{*\} \rightarrow \mor(C,C) ; * \mapsto id_C$ are maps of \textbf{Set}, $F \circ id_C = F = id_D \circ F$ holds for $F : C \rightarrow D$, and $(F \circ G) \circ H = F \circ (G \circ H)$ holds for $F : D \rightarrow E, G : C \rightarrow D, H : B \rightarrow C$.
-    \item Let $\VV = \textbf{Vect}_K$ be a monoidal category described in \cref{ex_monoidal_categories} (ii). We say that a category is a \textit{$K$-linear category} if it is enriched over $\VV$. Then, $\VV$ is a $K$-linear category. For any vector spaces $V,W,T,U$, $\mor_{\VV}(V,W) = \hom_K(V,W)$ is a vector space, $m_{VWT} : \hom_K(W,T) \otimes_K \hom_K(V,W) \rightarrow \hom_K(V,T) ; (f,g) \mapsto f \circ g$ is a linear map, and $j_V : K \rightarrow \hom_K(V,V) ; a \mapsto a \cdot id_V$ is also a linear map. $(f \circ g) \circ h = f \circ (g \circ h)$, and $f \circ id_T = f, g = id_T \circ g$ for any linear maps $f : T \rightarrow U, g : W \rightarrow T, h : V \rightarrow W$.
-    \item Let $\VV=[0, \infty]$ be a monoidal category described in \cref{ex_monoidal_categories} (iii). Then, a generalized metric space is a $\VV$-category. Indeed, for any points $x,y,z$ of a generalized metric space $M$, $\mor_M(x,y) = d(x,y) \in [0, \infty]$, $m_{xyz} : \mor_M(y,z) + \mor_M(x,y) \rightarrow \mor_M(x,z) ; d(y,z) + d(x,y) \mapsto d(x,z)$ and $j_x : 0 \rightarrow \mor_M(x,x) ; 0 \mapsto d(x,x)$ are morphisms in $[0, \infty]$, $d(x,y) + 0 \geq d(x,y), 0 + d(y,z) \geq d(y,z)$ holds for any points $x,y$ of $M$, and $d(x,y) + d(y,z) \geq d(x,z)$ holds for any points $x,y,z$ of $M$.
-    \item Let $\VV = \mathbf{2}$ be a monoidal category described in \cref{ex_monoidal_categories} (iv). Then, a preorder is a $\VV$-category. Indeed, for any elements $a,b,c$ of a preorder $P$, $\mor_P(a,b) = t$ if $a \leq b$ and $\mor_P(a,b) = f$ if $a \nleq b$, $m_{abc} : \mor_P(b,c) \otimes \mor_P(a,b) \rightarrow \mor_P(a,c)$ and $j_a : t \rightarrow \mor_P(a,a)$ are morphisms in $\mathbf{2}$, $a \leq b$ implies $a \leq b$ holds for any elements $a,b$ of $P$, and if $a \leq b$ and $b \leq c$, then $a \leq c$ holds for any elements $a,b,c$ of $P$.
+    \item Let $\VV = \textbf{FinSet}$ be a monoidal category described in \cref{ex_monoidal_cat_2} (i) and let $\calA$ be a $\VV$-category (i.e. a category with finitely many objects and finite hom sets). Then, $|A| \in \QQ$ is defined.
+    \item Let $\VV = \textbf{FDVect}_K$ be a monoidal category described in \cref{ex_monoidal_cat_2} (ii) and let $\calA$ be a $\VV$-category (i.e. a $K$-linear category with finitely many objects and finite-dimensional hom linear spaces). Then, $|A| \in \QQ$ is defined.
+    \item Let $\VV=[0, \infty]$ be a monoidal category described in \cref{ex_monoidal_categories} (iii) and let $\calA$ be a $\VV$-category (i.e. a generalized finite metric space). Then, $|A| \in \RR$ is defined.
+    \item Let $\VV = \mathbf{2}$ be a monoidal category described in \cref{ex_monoidal_categories} (iv) and let $\calA$ be a $\VV$-category (i.e. a finite preorder). Then, $|A| \in \ZZ$ is defined.
   \end{enumerate}
 \end{example}
 
 
   \subsection{The Relation of The Magnitudes of Graphs and Enriched Categories}
 \begin{theorem}
-  The magnitude of a graph $G$ defined in \cref{magnitude_graphs} coincides with the magnitude of the $[0, \infty]$-category corresponding to $G$.
+  The magnitude of a graph $G$ defined in \cref{magnitude_graphs} coincides with the Möbius inversion of the $[0, \infty]$-category corresponding to $G$.
 \end{theorem}
 
 \begin{proof}
