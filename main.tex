@@ -140,20 +140,6 @@
 }
 \vfill
 \hfill
-\newpage
-\begin{abstract}
-The concept of magnitude is introduced by Leinster \cite{Leinster2} and it is defined for enriched categories of finite objects, for example, generalized finite metric spaces such as graphs with finitely many vertices and metric defined aaa.
-Then, Leinster focuses on the magnitude of graphs in \cite{Leinster1} using his idea of magnitude of a metric space, which is one of a family of cardinality-like invariants extending across mathematics;
-it is a cousin to Euler characteristic. 
-The magnitude has properties similar to cardinality. For instance, it satisfies the product rule for Cartesian products and the inclusion-exclusion principle for unions (under mild hypotheses). Formally, the magnitude of a graph is both a rational function over $\QQ$ and a power series over $\ZZ$.
-
-Richard and Simon introduced a bigraded homology theory in \cite{HepworthWillerton} for graphs which has the magnitude as its graded Euler characteristic. They showed how properties of magnitude proved by Leinster categorify to properties such as a Künneth Theorem and a Mayer-Vietoris Theorem. 
-
-Here, we first review the definition of the magnitude of graphs, the magnitude homology of graphs, and their properties.
-Then we focus on the magnitude of enriched categories and discuss how the magnitude of graphs is introduced from that of enriched categories.
-
-
-\end{abstract}
 
 \newpage
 \tableofcontents
@@ -162,11 +148,11 @@ Then we focus on the magnitude of enriched categories and discuss how the magnit
 \section{Introduction}
 In many fields of mathematics, there is a canonical measure of size.
 Sets have cardinality, vector spaces have dimension, and topological spaces have Euler characteristic (under some finiteness condition). 
-Many of these cardinality-like invariants arise from a single general invariant. This invariant is called magnitude. 
+Many of these cardinality-like invariants arise from a single general invariant, which we call magnitude.
 
-We take one of examples of magnitude, graphs, to explain the idea of magnitude in this thesis in Section 2.
+We take one of examples of magnitude, graphs, to explain the idea of magnitude in Section 2 of this thesis.
 The full definition of magnitude is framed in the very wide generality of enriched categories having finitely many objects, as introduced by Leinster \cite{Leinster2}.
-Indeed, graphs are special cases of enriched categories, and the magnitude of graphs is a special case of the magnitude of enriched categories. We shall see this in Section 4.
+Indeed, each graph is a special case of enriched categories, and the magnitude of graphs is a special case of the magnitude of enriched categories. We shall see this in Section 4.
 
 Finite graphs are viewed as generalized finite metric spaces (see \cref{ex_enriched_cat}(ii)) by considering the set of vertices equipped with the shortest path metric. One of their special properties is that the distances take values in integers. As we shall see, this has the consequence that for a graph $G$, the magnitude $\# G$ is a rational function of $q $ over $\QQ$. (It can also be expressed as a power series in $q$ over $\ZZ$.) We write it as $\# G = \# G(q)$ to avoid confusion with the usage of $G$ for the number of vertices of $G$, while still evoking the analogy with cardinality. One of the cardinality-like properties of magnitude is that 
 \[
@@ -202,13 +188,6 @@ Later, Richard and Simon \cite{HepworthWillerton} categorify the magnitude of gr
   \sum_{k,l \geq 0} (-1)^k \rank (MH_{k,l}(G)) q^l = \# G ~ \text{in} ~  \ZZ \llbracket q \rrbracket.
 \]
 For example, consider the cycle graph $C_5$.
-\newpage
-\begin{table}[htbp]
-    \centering
-    \caption{The ranks of $MC_{k,l}(C_5)$, the magnitude chain groups of the five-cycle graph \cite{HepworthWillerton}.}
-    \label{tab:magnitude_ranks}    
-    \includegraphics[width=0.9\linewidth]{Tables/out/mag_hom_C_5.pdf}
-\end{table}
 We easily check that the graded Euler characteristic of the magnitude homology of $C_5$ recovers the magnitude of $C_5$ as follows:
 \[
   5 - 10q + 10q^2 - (10 - 10)q^3 + (10 - 30)q^4 - \dots = \frac{5 - 5q}{1 + q - 2q^3} = \# C_5
@@ -217,11 +196,18 @@ We easily check that the graded Euler characteristic of the magnitude homology o
 Being a bigraded abelian group rather than just a power series, the magnitude homology has a richer structure than the magnitude. 
 We will see below that various properties of magnitude described by Leinster, as mentioned above, are shadows of properties of magnitude homology. \\
 
-Actually, Leinster first introduced the magnitude in the context of enriched categories in \cite{Leinster2}. Generalized metric spaces are examples of enriched categories (see \cref{ex_enriched_cat} (iii)) and the magnitude is defined for them if they are finite. \\
+\begin{table}[htbp]
+    \centering
+    \caption{The ranks of $MC_{k,l}(C_5)$, the magnitude chain groups of the five-cycle graph \cite{HepworthWillerton}.}
+    \label{tab:magnitude_ranks}    
+    \includegraphics[width=0.9\linewidth]{Tables/out/mag_hom_C_5.pdf}
+\end{table}
+
+Actually, Leinster first introduced the magnitude in the context of enriched categories in \cite{Leinster2}. Generalized metric spaces are examples of enriched categories (see \cref{ex_enriched_cat}(iii)) and the magnitude is defined for them if they are finite. \\
 
 As mentioned above, finite graphs are generalized finite metric spaces. Based on these results, we confirm in the final section that the magnitude of graphs coincides with that defined for enriched categories. \\
 
-This thesis is laid out as follows. In section 2, we define the magnitude of a graph, expressing it as both a rational function and a formal power series over $\ZZ$, the most basic properties and examples of magnitude, including a simple formula for the magnitude of any graph whose automorphism group acts transitively on vertices, proving that magnitude has some basic cardinality-like properties, viewing $G$ as a power series over $\ZZ$, and the inclusion-exclusion formula above. In section 3, we define the magnitude homology of graphs, showing that its graded Euler characteristic recovers the magnitude, and it satisfies categorified versions of the cardinality-like properties of magnitude. these include a Kunneth theorem for cartesian products and a Mayer-Vietoris theorem for unions. In section 4, we introduce the definition of the magnitude of enriched categories and discuss how the magnitude of graphs is introduced from that of enriched categories. 
+This thesis is laid out as follows. In Section 2, we define the magnitude of a graph, expressing it as both a rational function and a formal power series over $\ZZ$, the most basic properties and examples of magnitude, including a simple formula for the magnitude of any graph whose automorphism group acts transitively on vertices, proving that magnitude has some basic cardinality-like properties, viewing $G$ as a power series over $\ZZ$, and the inclusion-exclusion formula above. In Section 3, we define the magnitude homology of graphs, showing that its graded Euler characteristic recovers the magnitude, and it satisfies categorified versions of the cardinality-like properties of magnitude. these include a Kunneth theorem for cartesian products and a Mayer-Vietoris theorem for unions. In Section 4, we introduce the definition of the magnitude of enriched categories and discuss how the magnitude of graphs is introduced from that of enriched categories. 
 
 We denote $\approx$ as isomorphisms of graphs and groups.
 
@@ -421,7 +407,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
     \figgraph{Petersen.pdf}{Petersen graph}{example_petersen_graph} \\
     Then, $\aut(G)$ contains $D_{10}$ as its subgroup and $G$ is vertex-transitive. $S = 1 + 3q + 6q^2$ and we have $\# G = \frac{10}{1 + 3q + 6q^2}$.
     \item $G = K_{m,n}$(complete bipartite graph as in Figure \ref{example_complete_bipartite_graph}). \\
-    \figgraph{K_mn.pdf}{complete bipartite graph}{example_complete_bipartite_graph} \\
+    \figgraph{K_mn.pdf}{Complete bipartite graph}{example_complete_bipartite_graph} \\
     Then, $\aut(G) \approx \mathfrak{S}_m \times \mathfrak{S}_n$ if $m \neq n$ and $G$ is not vertex-transitive. We can calculate the magnitude with other methods. Let $a,b$ be the weight of vertices on each part of $K_{m,n}$. Then, the weighting equation is written by two equations as follows:
     \[
       \begin{cases}
@@ -712,7 +698,7 @@ The magnitude of graphs is an $\QQ[q]$-valued graph invariant and is multiplicat
 
 The next theorem is one of the main theorems of this thesis.
 
-\begin{theorem}[Leinster \cite{Leinster1}, Theorem 4.8]\label{incl-excl}
+\begin{theorem}[Leinster \cite{Leinster1} Theorem 4.8]\label{incl-excl}
   Let $X$ be a graph and let $G,H$ be subgraphs of $X$ such that $X = G \cup H$.
   If $G \cap H$ is convex in $X$ and $H$ projects to $G \cap H$, then
   \[
@@ -1202,9 +1188,9 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
 \subsection{Magnitude Homology of Disjoint Union of Graphs}
 \begin{proposition}\label{magnitude_of_disjoint_union}
   Let $G$ and $H$ be graphs.
-  We define the inclusion graph maps $i : G \rightarrow G \bigsqcup H, j : H \rightarrow G \bigsqcup H$. Then,
+  We define the inclusion graph maps $i : G \rightarrow G \sqcup H, j : H \rightarrow G \sqcup H$. Then,
   \[
-    i_* \oplus j_* : MH_{*,*}(G) \oplus MH_{*,*}(H) \rightarrow MH_{*,*}(G \bigsqcup H)
+    i_* \oplus j_* : MH_{*,*}(G) \oplus MH_{*,*}(H) \rightarrow MH_{*,*}(G \sqcup H)
   \]
   is an isomorphism for each $k,l \geq 0$.
 \end{proposition}
@@ -1212,7 +1198,7 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
 \begin{proof}
   \begin{itemize}
     \item Surjectivity.
-    Let $(x_0, \dots, x_k) \in MH_{k,l}(G \bigsqcup H)$ be a generator.
+    Let $(x_0, \dots, x_k) \in MH_{k,l}(G \sqcup H)$ be a generator.
     By $l(x_0, \dots, x_k) = l$, $d(x_j, x_{j+1}) \leq \infty$ for any $0 \leq j \leq k-1$.
     Then, $\{ x_0, \dots, x_k \} \subset V(G)$ or $\{ x_0, \dots, x_k \} \subset V(H)$.
     Assume that $\{x_0, \dots, x_k\} \subset V(G)$.
@@ -1223,9 +1209,7 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
       \Rightarrow &i_*((x_0, \dots, x_{k_1})) + j_*((y_0, \dots, y_{k_2})) = 0 \\
       \Rightarrow &(x_0, \dots, x_{k_1}) + (y_0, \dots, y_{k_2}) = 0
     \end{align*}
-    in $MH_{*,*}(G \bigsqcup H)$. Now, since $\{x_0, \dots, x_{k_1}\} \subset V(G)$ and $\{y_0, \dots, y_{k_2}\} \subset V(H)$, there is no cancellation between the two terms. Contradiction.
-    
-
+    in $MH_{*,*}(G \sqcup H)$. Now, since $\{x_0, \dots, x_{k_1}\} \subset V(G)$ and $\{y_0, \dots, y_{k_2}\} \subset V(H)$, there is no cancellation between the two terms. Contradiction.
   \end{itemize}
 \end{proof}
 
@@ -1242,7 +1226,7 @@ We can give another proof of \cref{disjoint_union} by \cref{magnitude_of_disjoin
   \]
   is defined as follows. Let $\boxprod$ be the map
   \[
-    \boxprod : MC_{k_1, l_1}(G) \times MC_{k_2, l_2}(H) \rightarrow MC_{k, l}(G \boxprod H) \text{ for } k_1, k_2 \geq 0, k = k_1 + k_2, l = l_1 + l_2,
+    \boxprod : MC_{k_1, l_1}(G) \times MC_{k_2, l_2}(H) \rightarrow MC_{k, l}(G \boxprod H) \text{ for } k_1, k_2 \geq 0, ~k = k_1 + k_2, l = l_1 + l_2,
   \]
   which is defined by
   \[
@@ -1271,8 +1255,8 @@ We can give another proof of \cref{disjoint_union} by \cref{magnitude_of_disjoin
 
   Here, we extend the map $\boxprod$ bilinearly to the tensor product \\
   \[
-    MC_{k_1, l_1}(G) \otimes MC_{k_2, l_2}(H) \rightarrow MC_{k, l}(G \boxprod H)
-  \]. 
+    MC_{k_1, l_1}(G) \otimes MC_{k_2, l_2}(H) \rightarrow MC_{k, l}(G \boxprod H).
+  \]
   
   We denote this induced map also by $\boxprod$ and call it the \textit{exterior product}.
 \end{definition}
@@ -1338,7 +1322,7 @@ From this proposition, we obtain the induced map in homology, also denoting $\bo
   In particular, if $MH_{*,*}(G)$ or $MH_{*,*}(H)$ is torsion-free, then the exterior product $\boxprod$ is an isomorphism.
 \end{theorem}
 
-We don't prove this theorem in this thesis.
+We do not prove this theorem in this thesis.
 
 \begin{example}
   $G = C_4 = C_2 \boxprod C_2$. 
@@ -1379,7 +1363,7 @@ We don't prove this theorem in this thesis.
   is a split short exact sequence.
 \end{theorem}
 
-We don't prove these theorems in this thesis.
+We do not prove these theorems in this thesis.
 
 
 \begin{corollary}
@@ -1739,10 +1723,10 @@ Here, we can choose various monoid homomorphisms depending on the purpose.
 
 \begin{example}
   \begin{enumerate}[label=(\roman*)]
-    \item Let $\VV = \textbf{FinSet}$ be a monoidal category described in \cref{ex_monoidal_cat_2} (i) and let $\calA$ be a $\VV$-category (i.e. a category with finitely many objects and finite hom sets). Then, $|A| \in \QQ$ is defined.
-    \item Let $\VV = \textbf{FDVect}_K$ be a monoidal category described in \cref{ex_monoidal_cat_2} (ii) and let $\calA$ be a $\VV$-category (i.e. a $K$-linear category with finitely many objects and finite-dimensional hom linear spaces). Then, $|A| \in \QQ$ is defined.
-    \item Let $\VV=[0, \infty]$ be a monoidal category described in \cref{ex_monoidal_categories} (iii) and let $\calA$ be a $\VV$-category (i.e. a generalized finite metric space). Then, $|A| \in \RR$ is defined.
-    \item Let $\VV = \mathbf{2}$ be a monoidal category described in \cref{ex_monoidal_categories} (iv) and let $\calA$ be a $\VV$-category (i.e. a finite preorder). Then, $|A| \in \ZZ$ is defined.
+    \item Let $\VV = \textbf{FinSet}$ be a monoidal category described in \cref{ex_monoidal_cat_2} (i) and let $\calA$ be a $\VV$-category (i.e.~a category with finitely many objects and finite hom sets). Then, $|A| \in \QQ$ is defined.
+    \item Let $\VV = \textbf{FDVect}_K$ be a monoidal category described in \cref{ex_monoidal_cat_2} (ii) and let $\calA$ be a $\VV$-category (i.e.~a $K$-linear category with finitely many objects and finite-dimensional hom linear spaces). Then, $|A| \in \QQ$ is defined.
+    \item Let $\VV=[0, \infty]$ be a monoidal category described in \cref{ex_monoidal_categories} (iii) and let $\calA$ be a $\VV$-category (i.e.~a generalized finite metric space). Then, $|A| \in \RR$ is defined.
+    \item Let $\VV = \mathbf{2}$ be a monoidal category described in \cref{ex_monoidal_categories} (iv) and let $\calA$ be a $\VV$-category (i.e.~a finite preorder). Then, $|A| \in \ZZ$ is defined.
   \end{enumerate}
 \end{example}
 
@@ -1805,24 +1789,24 @@ Here, we can choose various monoid homomorphisms depending on the purpose.
 
 \bibitem{HepworthWillerton}
 Richard Hepworth and Simon Willerton.
-\textit{Categorifying the magnitude of a graph.(English summary)}.
-Homology Homotopy Appl. 19 (2017), no. 2, 31-60.
+\textit{Categorifying the magnitude of a graph.}
+Homology Homotopy Appl. 19 (2017), no. 2, 31--60.
 
 \bibitem{Kelly}
 G. M. Kelly.
 \textit{Basic concepts of enriched category theory.}
-Reprint of the 1982 original [Cambridge Univ. Press, Cambridge; MR0651714]
+Reprint of the 1982 original [Cambridge Univ. Press, Cambridge]
 Repr. Theory Appl. Categ. No. 10 (2005), vi+137 pp.
 
 \bibitem{Leinster2}
 Tom Leinster.
-\textit{The magnitude of metric spaces.(English summary)}
-Doc. Math. 18 (2013), 857-905.
+\textit{The magnitude of metric spaces.}
+Doc. Math. 18 (2013), 857--905.
 
 \bibitem{Leinster1}
 Tom Leinster.
-\textit{The magnitude of a graph.(English summary)}.
-Math. Proc. Cambridge Philos. Soc. 166 (2019), no. 2, 247-264.
+\textit{The magnitude of a graph.}
+Math. Proc. Cambridge Philos. Soc. 166 (2019), no. 2, 247--264.
 
 \end{thebibliography}
 
