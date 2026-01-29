@@ -189,6 +189,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm
 OUTPUT out/main.toc
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-v.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-v.tfm
 INPUT ./Tikz/Graphs/out/K_2_sq_K_3.pdf
 INPUT ./Tikz/Graphs/out/K_2_sq_K_3.pdf
 INPUT ./Tikz/Graphs/out/K_2_sq_K_3.pdf
@@ -201,8 +203,6 @@ INPUT ./Tikz/Graphs/out/K_3.pdf
 INPUT ./Tikz/Graphs/out/K_3.pdf
 INPUT ./Tikz/Graphs/out/K_3.pdf
 INPUT extractbb -B cropbox -O Tikz/Graphs/out/K_3.pdf
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-v.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-v.tfm
 INPUT ./Tikz/Graphs/out/C_3_wedge_C_2.pdf
 INPUT ./Tikz/Graphs/out/C_3_wedge_C_2.pdf
 INPUT ./Tikz/Graphs/out/C_3_wedge_C_2.pdf

@@ -154,9 +154,9 @@ We take one of examples of magnitude, graphs, to explain the idea of magnitude i
 The full definition of magnitude is framed in the very wide generality of enriched categories having finitely many objects, as introduced by Leinster \cite{Leinster2}.
 Indeed, each graph is a special case of enriched categories, and the magnitude of graphs is a special case of the magnitude of enriched categories. We shall see this in Section 4.
 
-Finite graphs are viewed as generalized finite metric spaces (see \cref{ex_enriched_cat}(ii)) by considering the set of vertices equipped with the shortest path metric. One of their special properties is that the distances take values in integers. As we shall see, this has the consequence that for a graph $G$, the magnitude $\# G$ is a rational function of $q $ over $\QQ$. (It can also be expressed as a power series in $q$ over $\ZZ$.) We write it as $\# G = \# G(q)$ to avoid confusion with the usage of $G$ for the number of vertices of $G$, while still evoking the analogy with cardinality. One of the cardinality-like properties of magnitude is that 
+Given a finite graph $G$, let $X_G$ be the generalized finite metric space consisting of the set of vertices equipped with the shortest path metric (see \cref{ex_enriched_cat}(ii)). By abuse of notation, we denote this metric space $X_G$ simply by $G$. The magnitude $\# G$ of a graph $G$ is a rational function of $q$ over $\QQ$. By the identification of graphs and metric spaces above, the distances of graphs take values in integers, which has the consequence that the magnitude of a graph can also be expressed as a power series in $q$ over $\ZZ$. We write it as $\# G = \# G(q)$ to avoid confusion with the usage of $G$ for the number of vertices of $G$, while still evoking the analogy with cardinality. One of the cardinality-like properties of magnitude is that 
 \[
-  \# (G \boxprod H)=\# G \cdot \# H,
+  \# (G \boxprod H)=\# G \cdot \# H \quad (\text{\cite{Leinster1} Lemma 3.6}),
 \] 
 where $\boxprod$ denotes the cartesian product of graphs (defined in \cref{cartesian_product}).
 For example, let $G = K_2 \boxprod K_3$. Then we have
@@ -166,14 +166,14 @@ For example, let $G = K_2 \boxprod K_3$. Then we have
 
 Also, for the disjoint union $\sqcup$ of graphs, we have
 \[
-  \#(G \sqcup H)=\# G + \# H.
+  \#(G \sqcup H)=\# G + \# H \quad (\text{\cite{Leinster1} Lemma 3.5}).
 \] 
 The invariant number of vertices (the trivial invariant) also satisfies these equations, and indeed, the number of vertices can be recovered from its magnitude as $\# G(0)$, but of course, magnitude is much more informative than that. For instance, the number of edges is $- \frac{1}{2} \left. \frac{d}{dq} \# G(q) \right|_{q=0}$ (see \cref{count_vertices_edges}). However, there are graphs with the same magnitude
 that are easily distinguished by well-known graph invariants (see \cref{ex_same_magnitudes}, easily distinguished by bipartiteness). In that sense, magnitude seems to capture genuinely new aspects of a graph, at the same time as having uniquely good cardinality-like properties.
 
 There is a certain property that we would like graph invariants to satisfy, the inclusion-exclusion formula:
 \[
-  \# (G \cup H) = \# G + \# H - \#(G \cap H).
+  \# (G \cup H) = \# G + \# H - \#(G \cap H) \quad (\text{\cite{Leinster1} Theorem 4.9}).
 \]
 For this we must impose some hypotheses. Indeed, Leinster \cite{Leinster1} shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction (cf.~\cref{no_graph_inv}). However, the hypotheses we impose are mild enough to cover a wide range of examples, including trees, forests, wedge sums, and certain graphs containing a cycle of length at least 4. For example, let $G$ be a graph shown figure \ref{Example_K_3_wedge_K_2}. 
 \figgraph{C_3_wedge_C_2.pdf}{A 3-cycle with edges attached to two distinct vertices}{Example_K_3_wedge_K_2}
@@ -185,7 +185,7 @@ Then we can calculate the magnitude of $G$ by decomposing it into one three-cycl
 
 Later, Richard and Simon \cite{HepworthWillerton} categorify the magnitude of graphs by defining the magnitude homology of graphs. This is a bigraded homology theory $MH_{*,*}$. It is functorial with respect to maps of graphs that send vertices to vertices and preserve or contract edges, and its graded Euler characteristic recovers the magnitude:
 \[
-  \sum_{k,l \geq 0} (-1)^k \rank (MH_{k,l}(G)) q^l = \# G ~ \text{in} ~  \ZZ \llbracket q \rrbracket.
+  \sum_{k,l \geq 0} (-1)^k \rank (MH_{k,l}(G)) q^l = \# G ~ \text{in} ~  \ZZ \llbracket q \rrbracket \quad (\text{\cite{HepworthWillerton} Theorem 2.8}).
 \]
 For example, consider the cycle graph $C_5$.
 We easily check that the graded Euler characteristic of the magnitude homology of $C_5$ recovers the magnitude of $C_5$ as follows:
@@ -205,16 +205,18 @@ We will see below that various properties of magnitude described by Leinster, as
 
 Actually, Leinster first introduced the magnitude in the context of enriched categories in \cite{Leinster2}. Generalized metric spaces are examples of enriched categories (see \cref{ex_enriched_cat}(iii)) and the magnitude is defined for them if they are finite. \\
 
-As mentioned above, finite graphs are generalized finite metric spaces. Based on these results, we confirm in the final section that the magnitude of graphs coincides with that defined for enriched categories. \\
+As mentioned above, finite graphs are generalized finite metric spaces. I would like to summarize the main results presented in \cite{HepworthWillerton} and \cite{Leinster1}. Based on these results, we confirm in the final section that the magnitude of graphs coincides with that defined for enriched categories. \\
 
-This thesis is laid out as follows. In Section 2, we define the magnitude of a graph, expressing it as both a rational function and a formal power series over $\ZZ$, the most basic properties and examples of magnitude, including a simple formula for the magnitude of any graph whose automorphism group acts transitively on vertices, proving that magnitude has some basic cardinality-like properties, viewing $G$ as a power series over $\ZZ$, and the inclusion-exclusion formula above. In Section 3, we define the magnitude homology of graphs, showing that its graded Euler characteristic recovers the magnitude, and it satisfies categorified versions of the cardinality-like properties of magnitude. these include a Kunneth theorem for cartesian products and a Mayer-Vietoris theorem for unions. In Section 4, we introduce the definition of the magnitude of enriched categories and discuss how the magnitude of graphs is introduced from that of enriched categories. 
+This thesis is laid out as follows.In Section 2, following \cite{Leinster1}, we define the magnitude of a graph, expressing it as both a rational function and a formal power series over $\mathbb{Z}$. We also review basic properties and examples, including a simple formula for the magnitude of vertex-transitive graphs, prove that magnitude has cardinality-like properties, and derive the inclusion-exclusion formula.In Section 3, based on \cite{HepworthWillerton}, we define the magnitude homology of graphs. We show that its graded Euler characteristic recovers the magnitude and that it satisfies categorified versions of the cardinality-like properties, including a Künneth theorem for cartesian products and a Mayer-Vietoris theorem for unions.In Section 4, referring to \cite{Leinster2}, we introduce the definition of the magnitude of enriched categories and discuss how the magnitude of graphs is derived from this general theory.
 
 We denote $\approx$ as isomorphisms of graphs and groups.
+
+\section*{Acknowledgments} I would like to thank my advisor, Associate Professor Yuta Nozaki, for his continuous support and guidance throughout my research. I would also like to express my sincere gratitude to all the members of the Seminar, Hiroto Miyazi, Kazuki Sugiyama, for their valuable advice and constant encouragement.
 
 
 \newpage
 \section{The Magnitude of Graphs}
-This section introduces the magnitude and the magnitude homology of a graph $G$, along with fundamental examples and properties.
+This section introduces the magnitude of a graph $G$, along with fundamental examples and properties following \cite{Leinster1}.
 Throughout this thesis, a \textit{graph} means a finite undirected graph with no loops or multiple edges. The set of vertices of a graph $G$ is denoted by $V(G)$, and the set of edges of $G$ is denoted by $E(G)$. For vertices $x, y \in V(G)$, the \textit{distance} $d_G(x,y)$ is defined as the length of a shortest path between them, where the length of a path is the number of edges it contains. If $x$ and $y$ lie in different connected components of $G$, we set $d_G(x,y)=\infty$. Now, we say that two vertex $x,y$ in $G$ lie in the same connected component if there exists a path between them.
 
 \subsection{The Definition of the Magnitude of Graphs}
@@ -240,7 +242,7 @@ $G$-matrix is the square synmetric matrix.
   By definition, the determinant of $Z_G$ has constant term $1$, which implies that $\det Z_G \neq 0$.
 \end{proof}
 
-\begin{definition}\label{magnitude_graphs}
+\begin{definition}[Leinster \cite{Leinster1} Definition 2.1]\label{magnitude_graphs}
   The \textit{magnitude} of a graph $G$ is defined to be the rational function given by
   \[
   \# G(q) = \sum_{x,y \in V(G)} (Z_G(q))^{-1}(x,y).
@@ -287,7 +289,7 @@ $G$-matrix is the square synmetric matrix.
 
 \end{example}
 
-\begin{definition}
+\begin{definition}[Leinster \cite{Leinster1}]
   Let $G$ be a graph and $x \in V(G)$.
   The \textit{weight} of $x$ in $G$ is defined 
   \[
@@ -325,7 +327,7 @@ The magnitude can be expressed using the weighting as follows:
 
 This equation is called the \textit{weighting equation}.
 
-\begin{lemma}\label{unique property on weighting equation}
+\begin{lemma}[Leinster \cite{Leinster1} Lemma 2.3]\label{unique property on weighting equation}
   Let $G$ be a graph and let $\tilde{w}_G : V(G) \rightarrow \QQ$ be a function satisfying a weighting equation.
   Then, $\tilde{w}_G = w_G$. Now, $w_G$ is the weighting on $G$.
 \end{lemma}
@@ -422,7 +424,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   \end{enumerate}
 \end{example}
 
-\begin{lemma}\label{disjoint_union}
+\begin{lemma}[Leinster \cite{Leinster1} Lemma 3.5]\label{disjoint_union}
   Let $G$ and $H$ be graphs. Then, 
   \[
     \#(G \sqcup H) = \# G + \# H,
@@ -456,7 +458,8 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   \end{itemize}
 \end{definition}
 
-\begin{lemma}
+\begin{lemma}[Leinster \cite{Leinster1} Lemma 3.6]\label{cartesian_magnitude}
+  Let $G$ and $H$ be graphs. Then,
   $\# (G \boxprod H) = \# G \cdot \# H$.
 \end{lemma}
 
@@ -480,7 +483,7 @@ We can define a \textit{graph automorphism} using the definition above. We denot
   Here we use the catesian product for graph product, but there are other graph products. However, there is a reason that we use the catesian product. This will be clear in Section 4.
 \end{remark}
 
-\begin{proposition}\label{sum_of_magnitude}
+\begin{proposition}[Leinster \cite{Leinster1} Proposition 3.9]\label{sum_of_magnitude}
   Let $G$ be a graph. Then,
   \[
   \begin{split}
@@ -515,7 +518,7 @@ Thus, by \cref{unique property on weighting equation}, we have $\tilde{w}_G = w_
 The second equality immediately follows from the first one.
 \end{proof}
 
-\begin{corollary}\label{count_vertices_edges}
+\begin{corollary}[Leinster \cite{Leinster1} Corollary 3.10]\label{count_vertices_edges}
   Let $G$ be a graph.
   $|V(G)| = \# G(0), |E(G)| = - \frac{1}{2} \left. \frac{d}{dq} \# G(q) \right|_{q=0}$.
   Here, the derivative is taken in $\ZZ \llbracket q \rrbracket$.
@@ -588,7 +591,7 @@ In this document, we mean $G \cup H$ as a graph $(V(G) \cup V(H), E(G) \cup E(H)
   \end{enumerate}
 \end{definition}
 
-\begin{lemma}\label{no_graph_inv}
+\begin{lemma}[Leinster \cite{Leinster1} Lemma 4.1]\label{no_graph_inv}
   Let $R$ be a ring containing no nonzero nilpotents and let $\Phi$ be a multiplicative $R$-valued graph invariant satisfying the inclusion-exclusion principle. Then, $\Phi(G) = |V(G)|$ for any graph $G$.
 \end{lemma}
 
@@ -624,7 +627,7 @@ The magnitude of graphs is an $\QQ[q]$-valued graph invariant and is multiplicat
 \end{corollary}
 
 
-\begin{definition}
+\begin{definition}[Leinster \cite{Leinster1} Definition 4.2]
   Let $X$ be a graph and let $U$ be a subgraph of $X$.
   $U$ is said to be \textit{convex} in $X$ if for any vertices $x,y \in V(U)$, $d_U(x,y) = d_X(x,y)$.
 \end{definition}
@@ -648,7 +651,7 @@ The magnitude of graphs is an $\QQ[q]$-valued graph invariant and is multiplicat
   We prove for $G$. Let $g, g' \in V(G)$. If $d_G(g, g') = \infty$, $d_G(g, g') = \infty = d_X(g, g')$. Assume that $d_X(g, g') < \infty$ and let $n = d_X(g, g')$. We can choose a shortest path $(g = x_0 \rightarrow x_1 \rightarrow \dots \rightarrow x_n = g')$ in $X$ such that it contains the most vertices in $G$. Suppose there exists a vertex $x_j \notin V(G)$ in this path. By \cref{path_lem}, there exist vertices $x_i, x_k \in V(G) \cap V(H)$ such that $0 \leq i < j < k \leq n$. Since $G \cap H$ is convex in $X$, there exists a shortest path $(x_i = y_0 \rightarrow y_1 \rightarrow \dots \rightarrow y_m = x_k)$ in $G \cap H$. Now, we obtain a path $(g = x_0 \rightarrow \dots \rightarrow x_i = y_0 \rightarrow y_1 \rightarrow \dots \rightarrow y_m = x_k \rightarrow \dots \rightarrow x_n = g')$ in $X$ which contains more vertices in $G$ than the previous path. This is a contradiction. Thus, all vertices in the chosen path are contained in $V(G)$ and then $d_G(g, g') = d_X(g, g')$.
 \end{proof}
 
-\begin{definition}
+\begin{definition}[Leinster \cite{Leinster1} Definition 4.6]
   Let $X$ be a graph and let $U$ be a subgraph of $X$ such that $U$ is convex in $X$. We denote $V_U(X) = \{ v \in V(X) \mid d_X(v,u) < \infty \text{ for some } u \in V(U) \}$.
   Then, we say that \textit{$X$ projects to $U$} if for any $x \in V_U(X)$, there exists $u' \in V(U)$ such that for any $u \in V(U)$, $d_X(x,u) = d_X(x, u') + d_X(u',u)$. For each $x \in V_U(X)$, we fix one such $u'$ and denote it by $\pi(x)$.
 \end{definition}
@@ -804,21 +807,13 @@ Before proving this theorem, we give the example of graphs for which we can appl
   \]
 \end{example}
 
-Furthermore examples.
-
-\begin{remark}
-  Even though two graphs both have one component and the same magnitude, they may not be isomorphic.
-  We can easily generate such examples using wedge sums of graphs as follows.
-
-  続きを書く
-\end{remark}
 
 \newpage
 \section{The Magnitude Homology of Graphs}
-In this section, we define the magnitude homology of a graph $G$. We provide fundamental examples and properties, and state the Mayer-Vietoris sequence for magnitude homology.
+In this section, we define the magnitude homology of a graph $G$. We provide fundamental examples and properties, and state the Mayer-Vietoris sequence for magnitude homology following \cite{HepworthWillerton}.
 
 \subsection{The Definition of The Magnitude Homology of Graphs}
-\begin{definition}
+\begin{definition}[Hepworth, Willerton \cite{HepworthWillerton} Definition 2.1]
   Let $G$ be a graph. For a positive integer $k$, the \textit{length} of a tuple $(x_0, \dots, x_k)$ of $V(G)$ is defined to be
   \[
     \begin{split}
@@ -829,6 +824,8 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   Now, let $l(x_0) = 0$.
   We say a tuple $(x_0, \dots, x_k)$ is \textit{good} if $x_0 \neq x_1 \neq \cdots \neq x_k$.
 \end{definition}
+
+We mean the tuple $(x_0, \dots, \hat{x_i}, \dots, x_k)$ obtained by removing $x_i$ from $(x_0, \dots, x_k)$.
 
 \begin{lemma}[Triangle inequality]
   If $(x_0, \dots, x_k)$ is a good tuple of $V(G)$, then for any $1 \leq i \leq k-1$,
@@ -841,7 +838,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   We obviously have the statement by the triangle inequality of the distance function $d$.
 \end{proof}
 
-\begin{definition}[\textit{Magnitude chain complex}]
+\begin{definition}[Hepworth, Willerton \cite{HepworthWillerton} Definition 2.2, \textit{Magnitude chain complex}]
   Let $G$ be a graph.
   $MC_{*,*}(G)$ is the \textit{magnitude complex} defined as follows:
   \[
@@ -867,7 +864,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   \]  
 \end{remark}
 
-\begin{lemma}
+\begin{lemma}[Hepworth, Willerton \cite{HepworthWillerton} Lemma 2.11]
   $\partial \circ \partial = 0$.
 \end{lemma}
 
@@ -911,7 +908,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
   Therefore, we have $(\partial \circ \partial)(x_0, \dots, x_k) = 0$.
 \end{proof}
 
-\begin{definition}[\textit{magnitude homology}]
+\begin{definition}[Hepworth, Willerton \cite{HepworthWillerton} Definition 2.4, \textit{magnitude homology}]
   Let $G$ be a graph.
   The \textit{magnitude homology} $MH_{*,*}(G)$ of $G$ is the homology of the magnitude chain complex $MC_{*,*}(G)$, that is,
   \[
@@ -965,7 +962,7 @@ In this section, we define the magnitude homology of a graph $G$. We provide fun
 
 In the definition above, $\rank(X)$ is the number of copies of $\ZZ$ in the decomposition of $X$ into a direct sum of cyclic groups (using structure theorem for finitely generated abelian groups).
 
-\begin{theorem}\label{categorifying}
+\begin{theorem}[Hepworth, Willerton \cite{HepworthWillerton} Theorem 2.8]\label{categorifying}
   Let $G$ be a graph. Then, 
   \[
     \sum_{k,l \geq 0} (-1)^k \rank (MH_{k,l}(G)) q^l = \# G ~ \text{in} ~  \ZZ \llbracket q \rrbracket.
@@ -985,7 +982,7 @@ In the definition above, $\rank(X)$ is the number of copies of $\ZZ$ in the deco
   The last equality is obtained by \cref{sum_of_magnitude}.
 \end{proof}
 
-\begin{proposition}
+\begin{proposition}[Hepworth, Willerton \cite{HepworthWillerton} Proposition 2.9]
   Let $G$ be a graph. Then,
   \begin{itemize}
     \item $MH_{0,0}(G) \approx \ZZ^{|V(G)|}$.
@@ -1001,7 +998,7 @@ In the definition above, $\rank(X)$ is the number of copies of $\ZZ$ in the deco
         0 & \text{otherwise},
       \end{cases}
   \]
-  and $\partial = 0$ induces the first equation.
+  and $\partial = 0$ induces the first statement.
   For $l=1$,
   \[
       MC_{k,1}(G) = \begin{cases}
@@ -1009,7 +1006,7 @@ In the definition above, $\rank(X)$ is the number of copies of $\ZZ$ in the deco
         0 & \text{otherwise},
       \end{cases}
     \]
-  and $\partial = 0$ induces the second equation.
+  and $\partial = 0$ induces the second statement.
 \end{proof}
 
 \begin{definition}
@@ -1022,7 +1019,7 @@ In the definition above, $\rank(X)$ is the number of copies of $\ZZ$ in the deco
 
 \end{definition}
 
-\begin{proposition}
+\begin{proposition}[Hepworth, Willerton \cite{HepworthWillerton} Proposition 2.10]
   Let $G$ be a graph and let $d$ be the diameter of $G$ and assume that $MH_{k,l}(G) \neq 0$ for given non-negative integers $k$ and $l$.
   Then,
   \begin{itemize}
@@ -1075,7 +1072,7 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
   \]
 \end{proof}
 
-\begin{definition}
+\begin{definition}[Hepworth, Willerton \cite{HepworthWillerton} Definition 3.1, \textit{induced chain maps}]
   Let $G$ and $H$ be graphs and let $f : V(G) \rightarrow V(H)$ be a graph map.
   Then, the \textit{induced map} $f_{\#} : MC_{*,*}(G) \rightarrow MC_{*,*}(H)$ is defined by
   \[
@@ -1089,7 +1086,7 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
 
 \begin{lemma}
   Let $G$ and $H$ be graphs and let $f : V(G) \rightarrow V(H)$ be a map.
-  Then, $f$ is a graph map if and only if $d_H(f(x), f(y)) \leq d_G(x, y)$ for any $x,y \in V(G)$.
+  Then, if $f$ is a graph map, then $d_H(f(x), f(y)) \leq d_G(x, y)$ holds for any $x,y \in V(G)$.
 \end{lemma}
 
 \begin{proof}
@@ -1133,7 +1130,7 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
   holds. Thus, we have the commutativity of the diagram.
 \end{proof}
 
-\begin{definition}[Induced maps in homoplogy]
+\begin{definition}[Hepworth, Willerton \cite{HepworthWillerton} Definition 3.2, \textit{Induced maps in homology}]
   If $f : G \rightarrow H$ is a graph map, the \textit{induced map in homology} $f_* : MH_{*,*}(G) \rightarrow MH_{*,*}(H)$ is the map induced by the chain map $f_{\#} : MC_{*,*}(G) \rightarrow MC_{*,*}(H)$.
 \end{definition}
 
@@ -1162,8 +1159,8 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
 \end{proposition}
 
 \begin{proof}
-  The first equation is obvious. \\
-  For the second equation, we obtain by definition;
+  The first statement is obvious. \\
+  For the second statement, we obtain by definition;
   \[
     f_*(x_0, x_1) = \begin{cases}
       (f(x_0), f(x_1)) & \text{if } l(f(x_0), f(x_1)) = l(x_0, x_1) = 1, \\
@@ -1186,7 +1183,7 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
 
 
 \subsection{Magnitude Homology of Disjoint Union of Graphs}
-\begin{proposition}\label{magnitude_of_disjoint_union}
+\begin{proposition}[Hepworth, Willerton \cite{HepworthWillerton} Proposition 4.1]\label{magnitude_of_disjoint_union}
   Let $G$ and $H$ be graphs.
   We define the inclusion graph maps $i : G \rightarrow G \sqcup H, j : H \rightarrow G \sqcup H$. Then,
   \[
@@ -1197,6 +1194,7 @@ We note that a graph map is distinguished from a graph homomorphism, which requi
 
 \begin{proof}
   \begin{itemize}
+    We show the surjectivity and injectivity.
     \item Surjectivity.
     Let $(x_0, \dots, x_k) \in MH_{k,l}(G \sqcup H)$ be a generator.
     By $l(x_0, \dots, x_k) = l$, $d(x_j, x_{j+1}) \leq \infty$ for any $0 \leq j \leq k-1$.
@@ -1219,7 +1217,7 @@ We can give another proof of \cref{disjoint_union} by \cref{magnitude_of_disjoin
 
 
 \subsection{Magnitude Homology of Cartesian Products}
-\begin{definition}This definition is not true.
+\begin{definition}[Hepworth, Willerton \cite{HepworthWillerton} Definition 5.2, \textit{exterior product}]
   Fix $l \geq 0$. The \textit{exterior product} is the map
   \[
     \boxprod : MC_{*,*}(G) \otimes MC_{*,*}(H) \rightarrow MC_{*,*}(G \boxprod H)
@@ -1331,7 +1329,7 @@ We do not prove this theorem in this thesis.
 
 
 \subsection{The Mayer-Vietoris Sequence of Magnitude Homology of Graphs}
-\begin{definition}
+\begin{definition}[Hepworth, Willerton \cite{HepworthWillerton} Definition 6.3, 6.4]
   Let $X$ be a graph and let $G,H$ be subgraphs of $X$.
   \begin{enumerate}[label=(\arabic*)]
     \item $(X;G,H)$ is said to be a \textit{projecting decomposition} if $X = G \cup H$, $G \cap H$ is convex in $X$ and $H$ projects to $G \cap H$. \\ 
@@ -1391,11 +1389,11 @@ We do not prove these theorems in this thesis.
 
 
 \subsection{Diagonal Graphs and its Property}
-\begin{definition}
+\begin{definition}[Hepworth, Willerton \cite{HepworthWillerton} Definition 7.1]
   A graph $G$ is said to be \textit{diagonal} if $MH_{k,l}(G) = 0$ for $k \neq l$.
 \end{definition}
 
-\begin{proposition}
+\begin{proposition}[Hepworth, Willerton \cite{HepworthWillerton} Proposition 7.2]
   For a diagonal graph, the magnitude completely determines the magnitude homology ranks.
 \end{proposition}
 
@@ -1411,10 +1409,10 @@ We do not prove these theorems in this thesis.
 
 \newpage
 \section{Motivation: The Magnitude of Enriched Categories}
-In this section, we explain the motivation for studying the magnitude of graphs in a broader context. We employ the notion of enriched categories to define the magnitude.
+In this section, following \cite{Leinster2}, we explain the motivation for studying the magnitude of graphs in a broader context. We employ the notion of enriched categories to define the magnitude.
 
 \subsection{The Magnitude of a Matrix}
-\begin{definition}
+\begin{definition}[Leinster \cite{Leinster2}]
   Let $k$ be a set and let $+, \cdot $ be binary operations on $k$, and let $0_k, 1_k$ be elements of $k$.
   Then, $(k, +, \cdot, 0_k, 1_k)$ is called a \textit{rig} if the following conditions hold:
   \begin{enumerate}[label=(\arabic*)]
@@ -1556,7 +1554,7 @@ In this document, we only treat \textit{locally small} categories. Now, a catego
     \item The following diagram commutes for any objects $u,v,w,x$ of $\VV$:
     \figcommu[width=\linewidth]{pentagon_1.pdf}
     \item The following diagrams commute for any objects $u,v$ of $\VV$:
-    \figcommu[width=\linewidth]{triangle_1.pdf}
+    \figcommu[width=0.6\linewidth]{triangle_1.pdf}
   \end{enumerate}
 \end{definition}
 
@@ -1653,16 +1651,6 @@ Indeed, each enriched category above corresponds to the definition of each struc
   \end{enumerate}
 \end{definition}
 
-\begin{proposition}
-  Let $(\VV, \otimes, I)$ be a monoidal category and let $\calA, \calB$ be $\VV$-categories.
-  Assume that $\VV$ is a symmetric monoidal category, that is, for any objects $u, v \in \VV, u \otimes v \approx v \otimes u$.
-  Then, $\calA \otimes \calB$ is a $\VV$-category.
-\end{proposition}
-
-\begin{proof}
-  Left to the reader.
-\end{proof}
-
 \subsection{The Magnitude of Enriched Categories}
 \begin{definition}
   Let $\CC$ be a category.
@@ -1703,7 +1691,7 @@ Here, we can choose various monoid homomorphisms depending on the purpose.
   \end{enumerate}
 \end{example}
 
-\begin{definition}
+\begin{definition}[Leinster \cite{Leinster2} Definition 1.3.2]
   Let $\VV$ be a monoidal category and let $\calA$ be a $\VV$-category which has finitely many objects.
   \begin{enumerate}[label=(\arabic*)]
     \item An $\ob(\calA) \times \ob(\calA)$-matrix $\zeta_{\calA}$ is defined by 
@@ -1732,7 +1720,7 @@ Here, we can choose various monoid homomorphisms depending on the purpose.
 
 
   \subsection{The Relation of The Magnitudes of Graphs and Enriched Categories}
-\begin{theorem}
+\begin{theorem}[Leinster \cite{Leinster2}, \cite{Leinster1}]
   The magnitude of a graph $G$ defined in \cref{magnitude_graphs} coincides with the Möbius inversion of the $[0, \infty]$-category corresponding to $G$.
 \end{theorem}
 
@@ -1746,15 +1734,6 @@ Here, we can choose various monoid homomorphisms depending on the purpose.
   \]
   This coincides with the $Z_G(q)$ defined in \cref{magnitude_graphs}. \\
   Therefore, the magnitude of the $[0, \infty]$-category corresponding to $G$ coincides with the magnitude of $G$ defined in \cref{magnitude_graphs}.
-\end{proof}
-
-\begin{theorem}
-  Let $G,H$ be graphs.
-  Then, the catesian product $G \boxprod H$ coincides with the tensor product $G \otimes H$ of the $[0, \infty]$-categories $G,H$.
-\end{theorem}
-
-\begin{proof}
-  Left to the reader.
 \end{proof}
 
 
