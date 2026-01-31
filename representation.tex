@@ -127,13 +127,23 @@
   ※ $\ZZ \llbracket q \rrbracket = \{ \sum_{n=0}^\infty a_n q^n \mid a_n \in \ZZ \}$ (整係数形式的冪級数環)
 \end{frame}
 
-\begin{frame}{Magnitudeとweighting}
+\begin{frame}{Magnitudeのcalculationとweighting}
   \begin{definition}[weighting]
-    グラフ $G$ の各頂点 $x$ に対し, 次の方程式を満たす数値 $w_G(x) \in \QQ(q)$ の組 $(w_G(x))_{x \in V(G)}$ を \textbf{weighting} と呼ぶ：
+    グラフ $G$ の各頂点 $x$ に対し, 
     \[
-      \sum_{y \in V(G)} q^{d(x,y)} w_G(y) = 1 \quad (\forall x \in V(G)).
+      w_G(x)(q) = \sum_{y \in V(G)}(Z_G(q))^{-1}(x,y)
     \]
+    で関数 $w_G: V(G) \to \QQ (q)$ を定義し, これを $G$ の weighting と呼ぶ.
   \end{definition}
+   $G$ の各頂点 $x$ に対し, weighting $w_G(x)$ は次の方程式を満たす：
+   \[
+    \sum_{y \in V(G)} q^{d(x,y)} w_G(y) = 1 \quad \text{ for } x \in V(G).
+  \]
+  これを, weighting equation と呼ぶ. weighting equation を満たす他の関数 $V(G) \to \QQ(q)$ は存在しない.
+\end{frame}
+
+\begin{frame}{実際の計算例}
+  
 \end{frame}
 
 \begin{frame}{定義: Magnitude鎖複体}

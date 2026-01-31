@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  31 JAN 2026 19:49
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  31 JAN 2026 20:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -785,15 +785,6 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 85
 [5
 
 ]
-LaTeX Font Info:    Font shape `JT2/gt/bx/n' in size <10.95> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 137.
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 137.
-LaTeX Font Info:    Font shape `JY2/gt/bx/n' in size <10.95> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 137.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 137.
-
 
 [6
 
@@ -810,19 +801,32 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 [9
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 198.
+LaTeX Font Info:    Font shape `JT2/gt/bx/n' in size <10.95> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 196.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 196.
+LaTeX Font Info:    Font shape `JY2/gt/bx/n' in size <10.95> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 196.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 196.
 
 
 [10
 
 ]
+LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
+(Font)              No change on input line 208.
+
 
 [11
 
 ]
 
 [12
+
+]
+
+[13
 
 ]
 \tf@nav=\write6
@@ -844,12 +848,12 @@ Package rerunfilecheck Info: File `representation.out' has not changed.
 (rerunfilecheck)             Checksum: 11518B599546CDF0F30CF10D681ADE07;363.
  ) 
 Here is how much of TeX's memory you used:
- 27264 strings out of 468392
- 550001 string characters out of 5442311
+ 27266 strings out of 468392
+ 550017 string characters out of 5442311
  933422 words of memory out of 5000000
- 55416 multiletter control sequences out of 15000+600000
+ 55418 multiletter control sequences out of 15000+600000
  712402 words of font info for 146 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  128i,16n,123p,447b,832s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/representation.dvi (12 pages, 98004 bytes).
+Output written on out/representation.dvi (13 pages, 101680 bytes).
