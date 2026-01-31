@@ -17,6 +17,7 @@
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\NN}{\mathbb{N}}
+\newcommand{\boxprod}{\mathbin{\square}}
 
 
 \newcommand{\TITLE}
@@ -73,7 +74,11 @@
 \noindent
 \textbf{1. 研究背景・動機}
 
-The concept of magnitude was introduced by Leinster [3] and it is defined for enriched categories of finite objects, for example, generalized finite metric spaces such as finite graphs. Then, Leinster focuses on the magnitude of graphs in [4] using the idea of magnitude of a metric space, which is one of a family of cardinality-like invariants extending across mathematics; it is a cousin to Euler characteristic and geometric measure. Among its cardinality-like properties are multiplicativity with respect to Cartesian product and an inclusion-exclusion formula for the magnitude of a union under mild hypotheses. Formally, the magnitude of a graph is both a rational function over $\QQ$ and a power series over $\ZZ$.
+The concept of magnitude was introduced by Leinster [2] and it is defined for enriched categories of finite objects, for example, generalized finite metric spaces such as finite graphs equipped with the shortest path metric on their vertex sets. Then, Leinster focuses on the magnitude of graphs in [3] using the idea of magnitude of a metric space, which is one of a family of cardinality-like invariants extending across mathematics; it is a cousin to Euler characteristic and geometric measure. Some cardinality-like properties of magnitude are multiplicativity with respect to Cartesian product and an inclusion-exclusion formula for the magnitude of a union under mild hypotheses:
+\[
+  \# (G \boxprod H)=\# G \cdot \# H, \quad \# (G \cup H) = \# G + \# H - \#(G \cap H).
+\]
+Formally, the magnitude of a graph is both a rational function over $\QQ$ and a power series over $\ZZ$.
 
 Richard and Simon introduced a bigraded homology theory for graphs in [1], which has the magnitude as its graded Euler characteristic, and showed how properties of magnitude proved by Leinster categorify to properties such as a K\"{u}nneth Theorem and a Mayer-Vietoris Theorem.
 
@@ -87,24 +92,26 @@ The first main result is a certain property that we would like graph invariants 
 \[
   \# (G \cup H) = \# G + \# H - \#(G \cap H).
 \]
-For this we must impose some hypotheses. Indeed, Leinster [4] shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction. However, the hypotheses we impose are mild enough to cover a wide range of examples, including trees, forests, wedge sums, and graphs containing a cycle of length at least 4.
+For this we must impose some hypotheses. Indeed, Leinster [3] shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction. However, the hypotheses we impose are mild enough to cover a wide range of examples, including trees, forests, wedge sums, and certain graphs containing a cycle of length at least 4.
 
 The second main result is confirming that the magnitude defined in the context of enriched categories coincides with that defined in the context of graphs.
 
 \vskip10pt
 \noindent
+
 \textbf{3. 意義・証明のアイデア}
 
-The significance of this research lies in understanding the structural properties of magnitude homology, which categorifies the magnitude. The key tool for our main results is the \textbf{Mayer-Vietoris sequence}.
-We construct a short exact sequence of magnitude chain complexes for a decomposition $G = A \cup B$. The existence of this sequence requires a specific geometric condition known as a \textbf{Projecting Decomposition}, where the graph $G$ projects onto the intersection $A \cap B$ in a distance-preserving manner.
-By establishing the Mayer-Vietoris sequence:
-\[
- \cdots \to MH_n(A \cap B) \to MH_n(A) \oplus MH_n(B) \to MH_n(G) \to \cdots
-\]
-we can compute the magnitude homology of complex graphs from simpler subgraphs. Taking the graded Euler characteristic of this exact sequence recovers the inclusion-exclusion formula for magnitude stated in the main results. This approach highlights the advantage of the homological method over direct combinatorial calculation.
+The significance of this research lies in establishing an effective inclusion-exclusion formula for the magnitude of graphs and clarifying its categorical foundation.
 
-\vskip10pt
-\noindent
+For the first main result regarding the inclusion-exclusion formula, the core idea of the proof is to construct the weighting $w_X$ for $X$ linearly as $w_X = w_G + w_H - w_{G \cap H}$.
+The validity of this construction relies on the metric property induced by the projection $\pi: V(H) \to V(G \cap H)$. Specifically, the projection condition ensures the metric equality
+$d(g, h) = d(g, \pi(h)) + d(\pi(h), h)$
+for any $g \in V(G)$ and $h \in V(H)$. Using this equality, one can verify that the linear combination of weightings satisfies the weighting equation $\sum_{y \in V(X)} q^{d(x,y)}w_X(y) = 1$ for all $x \in V(X)$.
+
+For the second main result connecting graphs to enriched categories, the proof proceeds as follows.
+A finite graph $G$ is identified with a generalized metric space, which is structurally a $[0, \infty]$-enriched category. We define a valuation homomorphism $|\cdot|: [0, \infty] \to \QQ(q)$ by $|x| = q^x$.
+Under this valuation, the similarity matrix of the category, defined by $\zeta(a,b) = |\mathrm{Hom}(a,b)|$, becomes exactly $q^{d_G(a,b)}$. Thus, the categorical definition of magnitude naturally recovers the graph magnitude defined by weighting vectors.
+
 \textbf{4. 今後の課題}
 
 Based on the results of this thesis, several open problems remain to be explored:

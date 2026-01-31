@@ -1,6 +1,3 @@
-\beamer@sectionintoc {1}{導入 (Introduction)}{3}{0}{1}
-\beamer@sectionintoc {2}{グラフのMagnitude}{4}{0}{2}
-\beamer@sectionintoc {3}{Magnitude Homology}{6}{0}{3}
-\beamer@sectionintoc {4}{主結果}{8}{0}{4}
-\beamer@sectionintoc {5}{豊穣圏 (Enriched Categories)}{10}{0}{5}
-\beamer@sectionintoc {6}{結論}{11}{0}{6}
+\beamer@sectionintoc {1}{前提知識 (Introduction)}{3}{0}{1}
+\beamer@sectionintoc {2}{主結果}{9}{0}{2}
+\beamer@sectionintoc {3}{今後の課題}{12}{0}{3}

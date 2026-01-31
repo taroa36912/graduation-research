@@ -2,13 +2,37 @@
 
 \usepackage{bxdpx-beamer}
 \usepackage{pxjahyper}
-\usepackage{minijs}
 \usepackage{amsmath, amssymb, amsthm}
-\usepackage{tikz}
-\usepackage{graphicx}
 \usepackage{bm}
+\usepackage{stmaryrd}
+\usepackage{aliascnt}
+\usepackage{tikz}
+\usepackage{chngcntr}
+\usepackage[capitalize]{cleveref}
 
 \renewcommand{\kanjifamilydefault}{\gtdefault}
+
+\newcommand{\tsum}{\mathrm{sum}}
+\newcommand{\tadj}{\mathrm{adj}}
+\newcommand{\aut}{\mathrm{Aut}}
+\newcommand{\isom}{\xrightarrow{\sim}}
+\newcommand{\mor}{\mathrm{Mor}}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\sign}{\mathrm{sign}}
+\newcommand{\tor}{\mathrm{Tor}}
+\newcommand{\Ker}{\mathrm{Ker}}
+\newcommand{\Hom}{\mathrm{Hom}}
+\newcommand{\im}{\mathrm{Im}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\VV}{\mathcal{V}}
+\newcommand{\calA}{\mathcal{A}}
+\newcommand{\calB}{\mathcal{B}}
+\newcommand{\ob}{\mathcal{O}\mathrm{b}}
+
 
 \usetheme{AnnArbor}
 \usecolortheme{crane}
@@ -42,28 +66,14 @@
   \tableofcontents
 \end{frame}
 
-\section{導入 (Introduction)}
+\section{前提知識 (Introduction)}
 
-\begin{frame}{背景と動機}
-  \begin{itemize}
-    \item \textbf{Magnitude} は、豊穣圏（Enriched Category）に対する「サイズ」の不変量である (Leinster)。
-    \item グラフは、豊穣圏（一般化距離空間）の一種とみなせる。
-    \item \textbf{Magnitude Homology} は、Magnitude の \textit{categorification}（圏化）として導入された (Hepworth \& Willerton)。
-  \end{itemize}
-
-  \begin{block}{研究の主目的}
-    グラフの Magnitude Homology の性質、特に特定の条件下における \textbf{Mayer-Vietoris 完全列} の成立について研究すること。
-  \end{block}
-\end{frame}
-
-\section{グラフのMagnitude}
-
-\begin{frame}{定義: グラフのMagnitude}
-  $G=(V,E)$ を有限グラフとする。
-  $Z_G$ を類似度行列 (similarity matrix) とし、その成分を $(Z_G)_{xy} = q^{d(x,y)}$ で定義する。
-
+\begin{frame}{グラフのMagnitude}
+  $G=(V,E)$ を, loopとmultiple edgeを許さない有限グラフとする.
+  $G$ の similarity matrix $Z_G$を, その成分が $(Z_G)_{xy} = q^{d(x,y)}$ である $|V| \times |V|$-行列として定義する.
+  このとき，$detZ_G$ の定数項は$1$であるため, $Z_G$は可逆である.
   \begin{definition}[Magnitude]
-    $Z_G$ が $\mathbb{Q}(q)$ 上で可逆であるとき、グラフ $G$ の magnitude は次のように定義される：
+    グラフ $G$ の magnitude は次のように定義される：
     \[
       \# G(q) = \sum_{x,y \in V} (Z_G^{-1})_{xy} \in \mathbb{Q}(q).
     \]
@@ -71,8 +81,7 @@
   \end{definition}
   
   \vspace{0.5em}
-  重要な性質: これは「濃度」（オイラー標数）のように振る舞う。
-  \[ \#(G \square H) = \#G \cdot \#H, \quad \#(G \sqcup H) = \#G + \#H \]
+  $q^{\infty} = 0$ とする.
 \end{frame}
 
 \begin{frame}{例: 完全グラフ $K_3$}
@@ -95,19 +104,43 @@
       \]
       逆行列 $Z_{K_3}^{-1}$ の成分和を計算すると：
       \[
-        \# K_3(q) = \frac{3}{1+2q}
+        \# K_3(q) = \frac{3}{1+2q}.
       \]
     \end{column}
   \end{columns}
+
+  \vspace{0.5em}
+  一般に, \[\# K_n = \frac{n}{1 + (n-1)q}\].
 \end{frame}
 
-\section{Magnitude Homology}
+\begin{frame}{Magnitudeを $\ZZ \llbracket q \rrbracket$ の元として見る}
+  定義より, 
+  \[
+    \# G(q) = \tsum(Z_G(q)^{-1}) = \frac{\tsum(\tadj(Z_G(q)))}{\det(Z_G(q))}
+  \]
+  である．ここで，$\tsum$ は行列の全成分の和, $\tadj$ はadjoint行列を表す.
+  これと, $\det(Z_G)$ の定数項が $1$ であることより, $\# G(q)$ は $\ZZ \llbracket q \rrbracket$ に属する. 
+
+  $\ZZ \llbracket q \rrbracket$ で見ることが今後重要となる.
+
+  \vspace{0.5em}
+  ※ $\ZZ \llbracket q \rrbracket = \{ \sum_{n=0}^\infty a_n q^n \mid a_n \in \ZZ \}$ (整係数形式的冪級数環)
+\end{frame}
+
+\begin{frame}{Magnitudeとweighting}
+  \begin{definition}[weighting]
+    グラフ $G$ の各頂点 $x$ に対し, 次の方程式を満たす数値 $w_G(x) \in \QQ(q)$ の組 $(w_G(x))_{x \in V(G)}$ を \textbf{weighting} と呼ぶ：
+    \[
+      \sum_{y \in V(G)} q^{d(x,y)} w_G(y) = 1 \quad (\forall x \in V(G)).
+    \]
+  \end{definition}
+\end{frame}
 
 \begin{frame}{定義: Magnitude鎖複体}
-  長さ $l$ で次数付けられた鎖複体 (chain complex) $MC_{*, l}(G)$ を定義する。
+  長さ $l$ で次数付けられた鎖複体 (chain complex) $MC_{*, l}(G)$ を定義する.
 
   \begin{definition}
-    生成元: $x_i \neq x_{i+1}$ を満たす頂点の列 $(x_0, \dots, x_k)$。
+    生成元: $x_i \neq x_{i+1}$ を満たす頂点の列 $(x_0, \dots, x_k)$.
     \\
     微分 $\partial = \sum (-1)^i \partial_i$:
     \[
@@ -120,11 +153,11 @@
     （頂点 $x_i$ を抜いても最短経路性が保たれる場合のみ残る）
   \end{definition}
   
-  \alert{Magnitude Homology $MH_{k,l}(G)$} は、この複体のホモロジーである。
+  \alert{Magnitude Homology $MH_{k,l}(G)$} は、この複体のホモロジーである.
 \end{frame}
 
 \begin{frame}{Categorification (圏化)}
-  Magnitude Homology は Magnitude を「圏化」する。
+  Magnitude Homology は Magnitude を「圏化」する.
 
   \begin{theorem}[Hepworth-Willerton]
     $MH(G)$ の次数付きオイラー標数は、元の magnitude を復元する：
@@ -133,13 +166,13 @@
     \]
   \end{theorem}
 
-  これは、$\#G$ の持つ性質が、$MH(G)$ のより深い構造的性質の「影」であることを意味する。
+  これは、$\#G$ の持つ性質が、$MH(G)$ のより深い構造的性質の「影」であることを意味する.
 \end{frame}
 
 \section{主結果}
 
 \begin{frame}{Mayer-Vietoris 完全列}
-  グラフの分解 $G = A \cup B$ から、$MH(G)$ を計算したい。
+  グラフの分解 $G = A \cup B$ から、$MH(G)$ を計算したい.
 
   \begin{theorem}[Mayer-Vietoris 完全列]
     もし分解 $(G; A, B)$ が \textbf{Projecting Decomposition (射影分解)} であるならば、以下の長完全列が存在する：
@@ -149,51 +182,50 @@
     \end{align*}
   \end{theorem}
   
-  これは包除原理 $\#G = \#A + \#B - \#(A \cap B)$ の圏化版である。
+  これは包除原理 $\#G = \#A + \#B - \#(A \cap B)$ の圏化版である.
 \end{frame}
 
 \begin{frame}{証明のアイデア: Projecting Decomposition}
-  グラフにおいて、通常の Mayer-Vietoris 列は必ずしも成立しない。
+  グラフにおいて、通常の Mayer-Vietoris 列は必ずしも成立しない.
   我々は \textbf{Projecting (射影)} 条件を課す：
   
   \begin{itemize}
-    \item 共通部分 $A \cap B$ は $G$ において \textit{convex (凸)} でなければならない。
-    \item $G$ の各頂点は、$A \cap B$ への距離を保存する一意的な「射影」を持たなければならない（最短パスが射影点を通る）。
+    \item 共通部分 $A \cap B$ は $G$ において \textit{convex (凸)} でなければならない.
+    \item $G$ の各頂点は、$A \cap B$ への距離を保存する一意的な「射影」を持たなければならない（最短パスが射影点を通る）.
   \end{itemize}
 
-  この条件の下で、鎖複体が適切に分裂し、完全列が導かれる。
+  この条件の下で、鎖複体が適切に分裂し、完全列が導かれる.
 \end{frame}
 
-\section{豊穣圏 (Enriched Categories)}
 
 \begin{frame}{動機: 豊穣圏}
   なぜ "Magnitude" と呼ぶのか？
   \begin{itemize}
-    \item グラフは、モノイダル圏 $([0, \infty], +, 0)$ 上の豊穣圏とみなせる。
+    \item グラフは、モノイダル圏 $([0, \infty], +, 0)$ 上の豊穣圏とみなせる.
     \item 対象: 頂点
     \item 射 (Hom object): 最短パス距離
   \end{itemize}
   
   \begin{block}{整合性}
-    豊穣圏に対する Magnitude の一般定義が、グラフに対する組合せ的な定義（第2節）と一致することを再確認した。
+    豊穣圏に対する Magnitude の一般定義が、グラフに対する組合せ的な定義（第2節）と一致することを再確認した.
   \end{block}
 \end{frame}
 
-\section{結論}
+\section{今後の課題}
 
 \begin{frame}{まとめと今後の課題}
   \textbf{まとめ:}
   \begin{itemize}
-    \item Magnitude の復習と Magnitude Homology の定義。
-    \item オイラー標数との関係（Categorification）の確認。
-    \item Projecting Decomposition における Mayer-Vietoris 完全列の導入。
+    \item Magnitude の復習と Magnitude Homology の定義.
+    \item オイラー標数との関係（Categorification）の確認.
+    \item Projecting Decomposition における Mayer-Vietoris 完全列の導入.
   \end{itemize}
 
   \textbf{今後の課題:}
   \begin{itemize}
     \item \textbf{Whitney Twist:} ツイスト操作は Magnitude Homology を保存するか？
-    \item \textbf{Diagonal Graphs:} $k \neq l$ で $MH_{k,l}=0$ となるグラフの特徴付け（例: 正二十面体グラフ）。
-    \item \textbf{Cohomology:} Magnitude Cohomology への積構造の導入。
+    \item \textbf{Diagonal Graphs:} $k \neq l$ で $MH_{k,l}=0$ となるグラフの特徴付け（例: 正二十面体グラフ）.
+    \item \textbf{Cohomology:} Magnitude Cohomology への積構造の導入.
   \end{itemize}
 \end{frame}
 
