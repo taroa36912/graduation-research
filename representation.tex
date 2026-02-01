@@ -32,6 +32,22 @@
 \newcommand{\calA}{\mathcal{A}}
 \newcommand{\calB}{\mathcal{B}}
 \newcommand{\ob}{\mathcal{O}\mathrm{b}}
+\newcommand{\graphimg}[2][]{
+  \includegraphics[#1]{Tikz/Graphs/out/#2}
+}
+
+\newcommand{\commutimg}[2][]{
+  \includegraphics[#1]{Tikz/Commutative/out/#2}
+}
+\newcommand{\figcommu}[2][]{
+  \begin{center}
+    \commutimg[#1]{#2}
+  \end{center}
+}
+
+\newcommand{\boxprod}{\mathbin{\square}}
+
+
 
 
 \usetheme{AnnArbor}
@@ -42,13 +58,13 @@
 \setbeamertemplate{theorems}[numbered]
 
 \theoremstyle{definition}
-\newtheorem{definition}{定義}
-\newtheorem{theorem}{定理}
-\newtheorem{lemma}{補題}
-\newtheorem{example}{例}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{example}{Example}
 \theoremstyle{plain}
-\newtheorem{proposition}{命題}
-\newtheorem{corollary}{系}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
 
 \title[Magnitude Homology]{グラフのMagnitude\\そのCategorificationとしてのMagnitudeホモロジー}
 \subtitle{2025年度 卒業研究発表}
@@ -66,7 +82,7 @@
   \tableofcontents
 \end{frame}
 
-\section{前提知識 (Introduction)}
+\section{前提知識 1}
 
 \begin{frame}{グラフのMagnitude}
   $G=(V,E)$ を, loopとmultiple edgeを許さない有限グラフとする.
@@ -110,7 +126,7 @@
   \end{columns}
 
   \vspace{0.5em}
-  一般に, \[\# K_n = \frac{n}{1 + (n-1)q}\].
+  一般に, \[\# K_n (q) = \frac{n}{1 + (n-1)q} \quad \text{(後ほど証明)}.\]
 \end{frame}
 
 \begin{frame}{Magnitudeを $\ZZ \llbracket q \rrbracket$ の元として見る}
@@ -127,7 +143,7 @@
   ※ $\ZZ \llbracket q \rrbracket = \{ \sum_{n=0}^\infty a_n q^n \mid a_n \in \ZZ \}$ (整係数形式的冪級数環)
 \end{frame}
 
-\begin{frame}{Magnitudeのcalculationとweighting}
+\begin{frame}{weighting}
   \begin{definition}[weighting]
     グラフ $G$ の各頂点 $x$ に対し, 
     \[
@@ -135,7 +151,9 @@
     \]
     で関数 $w_G: V(G) \to \QQ (q)$ を定義し, これを $G$ の weighting と呼ぶ.
   \end{definition}
-   $G$ の各頂点 $x$ に対し, weighting $w_G(x)$ は次の方程式を満たす：
+  定義より, $\# G (q) = \sum_{x \in V(G)} w_G(x)(q)$ である．
+
+  また, $G$ の各頂点 $x$ に対し, weighting $w_G(x)$ は次の方程式を満たす：
    \[
     \sum_{y \in V(G)} q^{d(x,y)} w_G(y) = 1 \quad \text{ for } x \in V(G).
   \]
@@ -143,83 +161,265 @@
 \end{frame}
 
 \begin{frame}{実際の計算例}
-  
+  \begin{lemma}
+    グラフ $G$ が vertex-transitive ならば, 任意の頂点 $x \in V(G)$ に対し,
+    \[
+    \# G(q) = \frac{|V(G)|}{\sum_{y \in V(G)} q^{d(x,y)}}.
+    \]
+  \end{lemma}
+  \vspace{0.5em}
+  ※ vertex-transitive: 作用 $\aut (G) \curvearrowright V(G)$ の軌道が唯1つであるグラフ.
+  \begin{proof}
+    $S : V(G) \rightarrow \QQ(q) ; x \mapsto \sum_{y \in V(G)} q^{d(x,y)}$ とおくと, 仮定より, $S(x)$ の値は $x$ によらず, これを $S$ とすると, 定値関数 $\frac{1}{S}$ は weighting equation を満たす． よって, 
+    \[
+      \# G(q) = \sum_{x \in V(G)} \frac{1}{S} = \frac{|V(G)|}{S}.
+    \]
+  \end{proof}
 \end{frame}
 
-\begin{frame}{定義: Magnitude鎖複体}
-  長さ $l$ で次数付けられた鎖複体 (chain complex) $MC_{*, l}(G)$ を定義する.
+\begin{frame}{実際の計算例: 完全グラフ $K_n$}
+  $n$頂点完全グラフ $K_n$ は vertex-transitive である.
+  Lemma 1 において, $S = 1 + (n-1)q$ であるから,
+  \[ 
+    \# K_n(q) = \frac{n}{1 + (n-1)q}.
+  \]
+\end{frame}
 
-  \begin{definition}
-    生成元: $x_i \neq x_{i+1}$ を満たす頂点の列 $(x_0, \dots, x_k)$.
-    \\
-    微分 $\partial = \sum (-1)^i \partial_i$:
+\begin{frame}{実際の計算例: Petersenグラフ}
+  \begin{columns}[c]
+    \begin{column}{0.45\textwidth}
+      \centering
+      \graphimg[width=\linewidth]{petersen.pdf}
+    \end{column}
+    \begin{column}{0.55\textwidth}
+      $G$ を左図のグラフ (Petersen グラフ) とすると, $G$ もvertex-transitive となる (回転と内外の入れ替え). $S = 1 + 3q + 6q^2$ なので, 
+      \[
+        \# G (q) = \frac{10}{1 + 3q + 6q^2}. 
+      \]
+      \bigskip
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{組み合わせ的表現}
+  \begin{proposition}
+    $G$ をグラフとするとき, 
     \[
-      \partial_i(x_0, \dots, x_k) = 
-      \begin{cases}
-        (x_0, \dots, \widehat{x_i}, \dots, x_k) & \text{もし長さが保存されるなら} \\
-        0 & \text{それ以外}
-      \end{cases}
+    \begin{split}
+      \# G(q) &= \sum_{k=0}^{\infty} (-1)^k \sum_{x_0 \neq \cdots \neq x_k} q^{d(x_0, x_1) + \dots + d(x_{k-1}, x_k)} \\
+      &= \sum_{n=0}^{\infty} c_n q^n
+    \end{split}
     \]
-    （頂点 $x_i$ を抜いても最短経路性が保たれる場合のみ残る）
+    が成り立つ．ここで, 
+    \begin{multline*}
+      c_n = \sum_{k=0}^{n} (-1)^k \Bigl| \Bigl\{ (x_0, \dots, x_k) \Bigm| x_0 \neq \cdots \neq x_k, \\
+       d(x_0, x_1) + \dots + d(x_{k-1}, x_k) = n \Bigr\} \Bigr|.
+    \end{multline*}
+\end{proposition}
+\end{frame}
+
+\begin{frame}{Proposition 1 の証明の概略}
+  \begin{proof}
+    $\tilde{w}_G:V(G) \rightarrow \ZZ[q]$ を, 定理1行目で $x_0$ をfixしたものとする↓
+    \[
+      \tilde{w}_G(x) = \sum_{k=0}^{\infty} (-1)^k \sum_{x = x_0 \neq x_1 \neq \cdots \neq x_k} q^{d(x_0, x_1) + d(x_1, x_2) + \dots + d(x_{k-1}, x_k)}.
+    \]
+    これが weighting equation を満たすことを示せばよい．
+  \end{proof}
+\end{frame}
+
+\begin{frame}{Proposition 1 からわかること}
+  \begin{corollary}
+    $G$ をグラフとするとき, 
+    \[
+      |V(G)| = \# G(0), |E(G)| = - \frac{1}{2} \left. \frac{d}{dq} \# G(q) \right|_{q=0}.
+    \]   
+  \end{corollary}
+  \begin{proof}
+    Proposition 1 で, $c_1, c_2$ の定義を確認する.
+  \end{proof}
+\end{frame}
+
+\begin{frame}{convex}
+  \begin{definition}
+    $X$ をグラフ, $U$ を $X$ の部分グラフとする.
+    $U$ が \textit{convex} in $X$ であるとは, 任意の頂点 $x,y \in V(U)$ に対し, $d_U(x,y) = d_X(x,y)$ が成り立つことをいう.
   \end{definition}
   
-  \alert{Magnitude Homology $MH_{k,l}(G)$} は、この複体のホモロジーである.
 \end{frame}
 
-\begin{frame}{Categorification (圏化)}
-  Magnitude Homology は Magnitude を「圏化」する.
+\begin{frame}{projection}
+  \begin{definition}
+    $X$ をグラフ, $U$ を convex in $X$ な $X$ の部分グラフとする. また, 
+    $V_U(X) = \{ v \in V(X) \mid d_X(v,u) < \infty \text{ for some } u \in V(U) \}$ とする. 
+    
+    $X$ \textit{projects to $U$} とは, 任意の $x \in V_U(X)$ に対し, ある $u' \in V(U)$ が存在して, 任意の $u \in V(U)$ について $d_X(x,u) = d_X(x, u') + d_X(u',u)$ が成り立つことをいう. 各 $x \in V_U(X)$ に対し, そのような $u'$ を1つ固定し, これを $\pi(x)$ と表す.
+  \end{definition}
+  上記の $u'$ は一意に定まる.
+  \begin{center}  
+    \graphimg[]{K_mn_2.pdf}
+  \end{center}
+\end{frame}
 
-  \begin{theorem}[Hepworth-Willerton]
-    $MH(G)$ の次数付きオイラー標数は、元の magnitude を復元する：
+
+\section{主結果 1}
+\begin{frame}{主結果}
+  \begin{theorem}
+    $X$ をグラフ,  $G,H$ を $X$ の部分グラフとし, $X = G \cup H$ とする.
+    $G \cap H$ が convex in $X$ であり, $H$ projects to $G \cap H$ ならば,
     \[
-      \sum_{k,l} (-1)^k \operatorname{rank}(MH_{k,l}(G)) q^l = \# G(q).
+      \# X = \# G + \# H - \#(G \cap H).
     \]
   \end{theorem}
 
-  これは、$\#G$ の持つ性質が、$MH(G)$ のより深い構造的性質の「影」であることを意味する.
+  上記の状況を満たす pair $(X;G,H)$ を, \textit{projecting decomposition} と呼ぶ.
+  
+  \begin{proof}
+    $w_X = w_G + w_H - w_{G \cap H}$ を頑張って示す.
+  \end{proof}
 \end{frame}
 
-\section{主結果}
+\begin{frame}{計算の様子}
+  \tiny
+  \begin{align*}
+    d(g, u) + d(u, h) &= d(g, u) + d(u, \pi(h)) + d(\pi(h), h) \\
+    &\geq d(g, \pi(h)) + d(\pi(h), h) \\
+    &\geq d(g, h) \\
+    &= d(g, u) + d(u, h)
+  \end{align*}
+  means
+  \[
+    d(g, h) = d(g, \pi(h)) + d(\pi(h), h).
+  \]
+  If $x \in V(G)$, 
+  \begin{align*}
+    &\sum_{g \in V(G)}q^{d(g, x)} w_G(g) + \sum_{h \in V(H)} q^{d(h, x)} w_H(h) - \sum_{u \in V(G \cap H)} q^{d(u, x)} w_{G \cap H}(u) \\
+    &= 1 + \sum_{h \in V(H)} q^{d(h, x)} w_H(h) - \sum_{u \in V(G \cap H)} q^{d(u, x)} \sum_{h \in \pi^{-1}(u)} q^{d(h, u)}w_H(h) \\
+    &= 1 + \sum_{h \in V_{G \cap H}(H)} q^{d(h, x)} w_H(h) - \sum_{h \in V_{G \cap H}(H)} q^{d(x, \pi(h)) + d(\pi(h), h)} w_H(h) \\
+    &= 1 + \sum_{h \in V_{G \cap H}(H)} q^{d(h, x)} w_H(h) - \sum_{h \in V_{G \cap H}(H)} q^{d(h, x)} w_H(h) \\
+    &= 1.
+  \end{align*}
+  If $x \in V_{G\cap H}(H)$, 
+  \begin{align*}
+    &\sum_{g \in V(G)}q^{d(g, x)} w_G(g) + \sum_{h \in V(H)} q^{d(h, x)} w_H(h) - \sum_{u \in V(G \cap H)} q^{d(u, x)} w_{G \cap H}(u) \\
+    &= \sum_{g \in V(G)}q^{d(g, \pi(x)) + d(\pi(x), x)} w_G(g) + 1 - \sum_{u \in V(G \cap H)} q^{d(u, \pi(x)) + d(\pi(x), x)} w_{G \cap H}(u)
+  \end{align*}
+\end{frame}
 
-\begin{frame}{Mayer-Vietoris 完全列}
-  グラフの分解 $G = A \cup B$ から、$MH(G)$ を計算したい.
+\begin{frame}{主定理の使用例 : Bull Graph}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \centering
+      \begin{tikzpicture}[
+        scale=1.5,
+        dot/.style={circle, fill=black, inner sep=2pt, outer sep=1pt}, 
+        thick
+      ]
+        \node[dot] (v1) at (0, 0) {};
+        \node[dot] (v2) at (1, 0) {};
+        \node[dot] (v3) at (0.5, -0.866) {};
+        \node[dot] (v4) at (-0.5, 0.5) {};
+        \node[dot] (v5) at (1.5, 0.5) {};
+        \draw (v1) -- (v2) -- (v3) -- (v1);
+        \draw (v1) -- (v4);
+        \draw (v2) -- (v5);
+      \end{tikzpicture}
+    \end{column}
 
-  \begin{theorem}[Mayer-Vietoris 完全列]
-    もし分解 $(G; A, B)$ が \textbf{Projecting Decomposition (射影分解)} であるならば、以下の長完全列が存在する：
-    \begin{align*}
-      \cdots \to MH_n(A \cap B) \to MH_n(A) \oplus MH_n(B) \\
-      \to MH_n(G) \to MH_{n-1}(A \cap B) \to \cdots
-    \end{align*}
+    \begin{column}{0.5\textwidth}      
+      \bigskip
+      左図のグラフ $G$ 場合, $G = K_2 \vee C_3 \vee K_2$ とみなせる ($\vee$ は, 1点の同一視).
+      この場合, 1点和は projecting decomposition を与えるので, 主定理を2回適応することにより,
+      \[
+        \# G = \# C_3 + 2 \cdot \# K_2 - 2 \cdot \# K_1.
+      \]
+      となる. 
+    \end{column}
+    
+  \end{columns}
+\end{frame}
+
+\section{前提知識 2}
+
+\begin{frame}{Magnitude Complexes}
+  chain complex $MC_{*, *}(G)$ を定義する.
+  \begin{definition}
+    グラフ $G$, 非負整数 $k,l$ に対し, $MC_{k,l}(G)$ とは, $V(G)$ の長さ $l$ の列 $(x_0, \dots, x_k)$ によってfreelyにgeneratedされる $\ZZ$-加群である. ただし, 列の要素は, 前後で異なるもの $x_i \neq x_{i+1} (i = 0, \dots, k-1)$ とする.
+    微分 $\partial : MC_{k,l}(G) \rightarrow MC_{k-1,l}(G)$ を
+    $\partial = \sum_{i=1}^{k-1} (-1)^{i-1} \partial_i,~\partial_i (x_0, \dots, x_k) =$
+    \[
+      \begin{cases}
+        (x_0, \dots, \hat{x_i}, \dots, x_k) & \text{if } l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, x_k), \\
+        0 & \text{otherwise}.
+      \end{cases}
+    \]
+    で定義する.
+    ただし, $l(x_0, \dots, x_k) = d(x_0, x_1) + \dots + d(x_{k-1}, x_k)$ を, 列の長さとする.
+  \end{definition}
+
+  \vspace{0.6em}
+  このように定義された $\partial$ は, 2回適用すると0になり, これにより各 $l$ に対し, 鎖複体 $(MC_{*,l}(G), \partial)$ が得られる.
+  
+\end{frame}
+
+\begin{frame}{Magnitude Homology}
+  \begin{definition}
+    グラフ $G$ の \textit{magnitude homology} とは, homology
+    \[
+      MH_{*, l}(G) = H_{\partial}(MC_{*, l}(G))
+    \]
+    のことである. 各 $l$ について得られる.
+  \end{definition}
+\end{frame}
+
+
+
+\begin{frame}{Magniude との関係}
+  \begin{theorem}
+    $G$ をグラフとするとき, 
+    \[
+      \sum_{k,l} (-1)^k \rank (MH_{k,l}(G)) q^l = \# G(q).
+    \]
   \end{theorem}
-  
-  これは包除原理 $\#G = \#A + \#B - \#(A \cap B)$ の圏化版である.
+  \begin{proof}
+    各 $k, l$ について,
+    \[
+      \rank (MC_{k,l}(G))q^l = \sum_{x_0 \neq \cdots \neq x_k} q^{d(x_0, x_1) + \cdots + d(x_{k-1}, x_k)}
+    \]
+    であることや, 複体のオイラー標数に関する定理, Proposition 1 を利用する.
+  \end{proof}
 \end{frame}
 
-\begin{frame}{証明のアイデア: Projecting Decomposition}
-  グラフにおいて、通常の Mayer-Vietoris 列は必ずしも成立しない.
-  我々は \textbf{Projecting (射影)} 条件を課す：
+\begin{frame}{Magnitude Homology の例}
   
-  \begin{itemize}
-    \item 共通部分 $A \cap B$ は $G$ において \textit{convex (凸)} でなければならない.
-    \item $G$ の各頂点は、$A \cap B$ への距離を保存する一意的な「射影」を持たなければならない（最短パスが射影点を通る）.
-  \end{itemize}
+\end{frame}
 
-  この条件の下で、鎖複体が適切に分裂し、完全列が導かれる.
+\begin{frame}{monoidal category}
+  \begin{definition}
+    圏 $\VV$ とそのobject $I$, 関手 $\otimes : \VV \times \VV \to \VV$, 自然変換 $\alpha : \otimes \circ (\otimes \times id_{\VV} \Rightarrow \otimes \circ (id_{\VV} \times \otimes)), \lambda : I \otimes - \Rightarrow id_{\VV}, \rho : - \otimes I \Rightarrow id_{\VV}$ に対し, pair $(\VV, \otimes, I, \alpha, \lambda, \rho)$ が \textit{monoidal category} であるとは, 以下の性質を満たすものをいう:
+  \end{definition}
+\end{frame}
+
+\begin{frame}{Enriched Category}
+  \begin{definition}
+    $(\VV, I, \otimes, \alpha, \lambda, \rho)$ を monoidal categoryとする. 圏 $\calA$, a collection of morphisms $m, j$ に対し, pair $(\calA, m, j)$ が \textit{$\VV$-enriched category} であるとは, 以下の性質を満たすものをいう:
+  \end{definition}
+\end{frame}
+
+\begin{frame}{Enriched Category の例}
+
+\end{frame}
+
+\begin{frame}{Enriched Category の Magnitude}
+  
+\end{frame}
+
+\section{主定理 2}
+\begin{frame}{Enriched Category から見た グラフ の Magnitude}
+  
 \end{frame}
 
 
-\begin{frame}{動機: 豊穣圏}
-  なぜ "Magnitude" と呼ぶのか？
-  \begin{itemize}
-    \item グラフは、モノイダル圏 $([0, \infty], +, 0)$ 上の豊穣圏とみなせる.
-    \item 対象: 頂点
-    \item 射 (Hom object): 最短パス距離
-  \end{itemize}
-  
-  \begin{block}{整合性}
-    豊穣圏に対する Magnitude の一般定義が、グラフに対する組合せ的な定義（第2節）と一致することを再確認した.
-  \end{block}
-\end{frame}
 
 \section{今後の課題}
 
@@ -237,6 +437,61 @@
     \item \textbf{Diagonal Graphs:} $k \neq l$ で $MH_{k,l}=0$ となるグラフの特徴付け（例: 正二十面体グラフ）.
     \item \textbf{Cohomology:} Magnitude Cohomology への積構造の導入.
   \end{itemize}
+\end{frame}
+
+\begin{frame}{参考文献}
+  \begin{thebibliography}{9}
+
+  \bibitem{HepworthWillerton}
+  Richard Hepworth and Simon Willerton.
+  \textit{Categorifying the magnitude of a graph.}
+  Homology Homotopy Appl. 19 (2017), no. 2, 31--60.
+
+  \bibitem{Kelly}
+  G. M. Kelly.
+  \textit{Basic concepts of enriched category theory.}
+  Reprint of the 1982 original [Cambridge Univ. Press, Cambridge]
+  Repr. Theory Appl. Categ. No. 10 (2005), vi+137 pp.
+
+  \bibitem{Leinster2}
+  Tom Leinster.
+  \textit{The magnitude of metric spaces.}
+  Doc. Math. 18 (2013), 857--905.
+
+  \bibitem{Leinster1}
+  Tom Leinster.
+  \textit{The magnitude of a graph.}
+  Math. Proc. Cambridge Philos. Soc. 166 (2019), no. 2, 247--264.
+
+  \bibitem{Petersen}
+  The Automorphism Group of the Petersen Graph is Isomorphic to $S_5$.
+  https://arxiv.org/abs/2012.02942
+
+\end{thebibliography}
+\end{frame}
+
+
+\begin{frame}{Petersen グラフの Autom Grp が 5-dim synmetric group に同型であること(ここは要修正)}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \includegraphics[height=0.9\textheight, keepaspectratio]{Referrence/Petersen_proof.pdf}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      右図で, 黄色, 赤色, オレンジ色, 青色, 緑色の頂点をセットにして, 任意に5つの組を入れ替えることが可能.
+      よって, $S_5 \subset \aut (G)$ (部分群)
+    \end{column}
+    
+  \end{columns}
+
+\end{frame}
+
+\begin{frame}{Magnitude では, connected components の個数 は特定できない}
+  Remark 2.2.12, 2.2.13 あたりをまとめましょう. 
+  簡単で非自明なグラフいくつかについて、3次くらいまでの一覧表を用意する.
+\end{frame}
+
+\begin{frame}{条件なしでは, 主結果は得られない}
+  Lemma 2.3.3 や cartesian product 周りの話をまとめる.
 \end{frame}
 
 \end{document}

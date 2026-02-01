@@ -464,8 +464,29 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/sansmathaccent/mathker
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary7.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
+INPUT ./Tikz/Graphs/out/petersen.pdf
+INPUT ./Tikz/Graphs/out/petersen.pdf
+INPUT ./Tikz/Graphs/out/petersen.pdf
+INPUT extractbb -B cropbox -O Tikz/Graphs/out/petersen.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmssi10.tfm
+INPUT ./Tikz/Graphs/out/K_mn_2.pdf
+INPUT ./Tikz/Graphs/out/K_mn_2.pdf
+INPUT ./Tikz/Graphs/out/K_mn_2.pdf
+INPUT extractbb -B cropbox -O Tikz/Graphs/out/K_mn_2.pdf
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssi8.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssxi8.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
+INPUT ./Referrence/Petersen_proof.pdf
+INPUT ./Referrence/Petersen_proof.pdf
+INPUT ./Referrence/Petersen_proof.pdf
+INPUT extractbb -B cropbox -O Referrence/Petersen_proof.pdf
 OUTPUT out/representation.nav
 OUTPUT out/representation.toc
 OUTPUT out/representation.snm
