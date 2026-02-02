@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1769940757.05004 "out/abstruction.dvi" "out/abstruction.pdf" "out/abstruction" 1769940757.30098 0
-  "out/abstruction.dvi" 1769940757.03695 8604 a329e37042106065045084248c51d35d "latex"
+["dvipdf"] 1770042720.04676 "out/abstruction.dvi" "out/abstruction.pdf" "out/abstruction" 1770042720.31048 0
+  "out/abstruction.dvi" 1770042720.03215 9364 68dbd673da40c0081840ac9469f754bf "latex"
   (generated)
   "out/abstruction.pdf"
   (rewritten before read)
-["latex"] 1769940756.8017 "/Users/kensh/Documents/src/graduation-research/abstruction.tex" "out/abstruction.dvi" "abstruction" 1769940757.30049 0
-  "/Users/kensh/Documents/src/graduation-research/abstruction.tex" 1769940756.64743 6349 a8bd4de1d3cbed174a7c0917f9ec389d ""
+["latex"] 1770042719.39398 "/Users/kensh/Documents/src/graduation-research/abstruction.tex" "out/abstruction.dvi" "abstruction" 1770042720.30991 0
+  "/Users/kensh/Documents/src/graduation-research/abstruction.tex" 1770042718.53429 6684 d394b692a0adcd9ffcf0f83502a482ba ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm0900.tfm" 1136768653 1536 c4f439db76ef96a9c53bc437f35ffe20 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -53,9 +53,15 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty" 1750190222 88401 0c3d1897569ad77cb9d8fb25b0bdf668 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty" 1748806692 4474 c510a88aa5f51b8c773b50a7ee92befd ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty" 1748806692 2444 9983e1d0683f102e3b190c64a49313aa ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/cleveref/cleveref.sty" 1525128982 329481 7fc6b003158402a4c694bc0a1b729308 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/etoolbox/etoolbox.sty" 1759437024 46885 8953c67ffba03252c6090aa19568b8ba ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1465944070 1224 978390e9c2234eab29404bc21b268d1e ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/dvipdfmx.def" 1759176675 12466 254cda60ce262fd4e1f9dbb063f46499 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/color.sty" 1748806692 7245 a7e8457a46cda4920df85d975267efb4 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty" 1748806692 18363 69bb4f5538964bfea50d1e6d89cbe69f ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty" 1748806692 8118 43b99e52946c33a23f5f43b52d5cc5ec ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty" 1748806692 2671 d9941f4bf4750e9b0603c9a2ec54693b ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty" 1748806692 4023 e66acf578d6b564c4670fb57ff336a7a ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/hycolor/hycolor.sty" 1580250785 17914 4c28a13fc3d975e6e81c9bea1d697276 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hdvipdfm.def" 1752350709 42723 7eaff0166d1df1be28b50017d7078558 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/hyperref.sty" 1752350709 223112 93e90b2b1b3ef21af41adaf029922dd3 ""
@@ -73,9 +79,13 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "abstruction.tex" 1769940756.64743 6349 a8bd4de1d3cbed174a7c0917f9ec389d ""
-  "out/abstruction.aux" 1769940757.03656 128 852fc3e86949e4a73cd552c13992dc37 "latex"
-  "out/abstruction.out" 1769940757.02719 0 d41d8cd98f00b204e9800998ecf8427e "latex"
+  "Tikz/Graphs/out/K_2.pdf" 1768374208.17377 927 78754d57309402feb6012d09fe89729f ""
+  "Tikz/Graphs/out/K_2_sq_K_3.pdf" 1768375165.89839 1351 1a02d4f7f0d615abaea0a5e0a081f90f ""
+  "Tikz/Graphs/out/K_3.pdf" 1768374448.79207 1027 21897ed4e6d3d8e83b82adf03f08b868 ""
+  "Tikz/Graphs/out/connect_C_4.pdf" 1764427465.42548 8030 ed527b50ca694e3a9aca1f574cbea91b ""
+  "abstruction.tex" 1770042718.53429 6684 d394b692a0adcd9ffcf0f83502a482ba ""
+  "out/abstruction.aux" 1770042720.03175 128 852fc3e86949e4a73cd552c13992dc37 "latex"
+  "out/abstruction.out" 1770042719.68777 0 d41d8cd98f00b204e9800998ecf8427e "latex"
   (generated)
   "out/abstruction.aux"
   "out/abstruction.dvi"

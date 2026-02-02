@@ -7,11 +7,15 @@
 \setlength{\textwidth}{18cm}
 \setlength{\columnsep}{1cm}
 
-\usepackage[dvipdfmx, hidelinks]{hyperref}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{eucal}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx, hidelinks]{hyperref}
+\usepackage[capitalize]{cleveref}
+
+\DeclareMathOperator{\Hom}{Hom}
 
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
@@ -19,6 +23,12 @@
 \newcommand{\NN}{\mathbb{N}}
 \newcommand{\boxprod}{\mathbin{\square}}
 
+\newcommand{\graphimg}[2][]{%
+  \includegraphics[#1]{Tikz/Graphs/out/#2}%
+}
+\newcommand{\mathgraph}[2][3em]{%
+  \resizebox{!}{#1}{\graphimg{#2}}%
+}
 
 \newcommand{\TITLE}
 {Magnitude Homology of Graphs and the Magnitude as its Categorification}
@@ -33,7 +43,6 @@
 \newcommand{\NENDO}
 {2025年度}
 
-
 \makeatletter
 \def\ps@lrheadf{\ps@empty
   \def\@evenhead{\normalfont
@@ -43,7 +52,6 @@
   \let\@evenfoot\@oddfoot
   \let\@mkboth\markboth}
 \makeatother
-
 
 \pagestyle{lrheadf}
 
@@ -76,6 +84,10 @@ The concept of magnitude was introduced by Leinster [2] and it is defined for en
 \[
   \# (G \boxprod H)=\# G \cdot \# H, \quad \# (G \cup H) = \# G + \# H - \#(G \cap H).
 \]
+For example, the magnitude of the Cartesian product of the complete graph on 2 vertices $K_2$ and that on 3 vertices $K_3$ satisfies
+\[
+  \# \mathgraph[3em]{K_2_sq_K_3.pdf} = \# \mathgraph[3em]{K_2.pdf} \cdot \# \mathgraph[3em]{K_3.pdf}.
+\]
 Formally, the magnitude of a graph is both a rational function over $\QQ$ and a power series over $\ZZ$.
 
 Richard and Simon introduced a bigraded homology theory for graphs in [1], which has the magnitude as its graded Euler characteristic, and showed how properties of magnitude proved by Leinster categorify to properties such as a K\"{u}nneth Theorem and a Mayer-Vietoris Theorem.
@@ -91,6 +103,8 @@ The first main result is a certain property that we would like graph invariants 
   \# (G \cup H) = \# G + \# H - \#(G \cap H).
 \]
 For this we must impose some hypotheses. Indeed, Leinster [3] shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction. However, the hypotheses we impose are mild enough to cover a wide range of examples, including trees, forests, wedge sums, and certain graphs containing a cycle of length at least 4.
+
+\graphimg[width=0.4\linewidth]{connect_C_4.pdf}
 
 The second main result is confirming that the magnitude defined in the context of enriched categories coincides with that defined in the context of graphs.
 
@@ -116,7 +130,6 @@ Based on the results of this thesis, several open problems remain to be explored
 \begin{itemize}
     \item \textbf{Whitney Twist:} Leinster showed that if two graphs differ by a Whitney twist with adjacent gluing points, then their magnitudes are equal. Does this equality extend to an isomorphism of magnitude homology groups?
     \item \textbf{Diagonal Graphs:} Computations suggest that the icosahedral graph has diagonal homology (i.e., $MH_{k,l} = 0$ for $k \neq l$). Is there a general graph-theoretic characterization of diagonal graphs?
-    \item \textbf{Magnitude Cohomology:} We anticipate a dual theory, magnitude cohomology. It should be possible to equip this theory with a product structure, analogous to the cohomology of spaces.
 \end{itemize}
 
 \vskip10pt
