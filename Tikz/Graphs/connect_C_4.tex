@@ -23,19 +23,18 @@
         \node[dot] (g2) at (0.8, -1.5) {};
         \draw (L_u) -- (g1) -- (L_v);
         \draw (g1) -- (g2) -- (L_v);
-        \node[graph_label] at (0, -1) {$G$};
+        \node[graph_label] at (0, -1) {};
         \coordinate (L_x) at (1.5, 2);
         \coordinate (L_y) at (-1.5, 2);
         \draw (L_u) -- (L_y) -- (L_x) -- (L_v);
-        \node[graph_label] at (0, 1) {$H$};
+        \node[graph_label] at (0, 1) {};
         \draw[shared_edge] (L_u) -- (L_v);
         \node[dot] at (L_u) {}; \node[dot] at (L_v) {};
         \node[dot] at (L_x) {}; \node[dot] at (L_y) {};
-        \node at (0, -3.5) {$G \cup H$};
     \end{scope}
     \draw[->, ultra thick, shorten >= 1cm, shorten <= 1cm] 
         ($(UnionGraph.east) + (0.5, 0)$) -- ++(3, 0) 
-        node[midway, above] {separation};
+        node[midway, above] {};
     \begin{scope}[shift={(8, 0)}, local bounding box=SepGraph]
         \coordinate (R_Gu) at (-1.5, 0);
         \coordinate (R_Gv) at (1.5, 0);
@@ -48,7 +47,7 @@
         \draw (rg1) -- (rg2) -- (R_Gv);
         \draw[shared_edge] (R_Gu) -- (R_Gv);
         \node[dot] at (R_Gu) {}; \node[dot] at (R_Gv) {};
-        \node[graph_label] at (0, -1) {$G$};
+        \node[graph_label] at (0, -1) {};
         \begin{scope}[yshift=1.5cm] 
             \coordinate (R_Hu) at (-1.5, 0);
             \coordinate (R_Hv) at (1.5, 0);
@@ -60,12 +59,10 @@
 
             \node[dot] at (R_Hu) {}; \node[dot] at (R_Hv) {};
             \node[dot] at (R_Hx) {}; \node[dot] at (R_Hy) {};
-            \node[graph_label] at (0, 1) {$H$};
+            \node[graph_label] at (0, 1) {};
         \end{scope}
         \draw[dotted, gray] (R_Gu) -- ++(0, 1.5);
         \draw[dotted, gray] (R_Gv) -- ++(0, 1.5);
-        \node at (0, -3.5) {$G, H$ (separated)};
-
     \end{scope}
 
 \end{tikzpicture}

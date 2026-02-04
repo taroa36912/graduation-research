@@ -1,16 +1,14 @@
 # Fdb version 4
-["dvipdf"] 1764427465.24334 "out/connect_C_4.dvi" "out/connect_C_4.pdf" "out/connect_C_4" 1764427465.43679 0
-  "out/connect_C_4.dvi" 1764427465.22737 17524 bafe4229562deb1a56d200d073b66c55 "latex"
+["dvipdf"] 1770212999.51009 "out/connect_C_4.dvi" "out/connect_C_4.pdf" "out/connect_C_4" 1770212999.71154 0
+  "out/connect_C_4.dvi" 1770212999.49481 16512 b95341f7d20a5a330762d626cef898d3 "latex"
   (generated)
   "out/connect_C_4.pdf"
   (rewritten before read)
-["latex"] 1764427464.90672 "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/connect_C_4.tex" "out/connect_C_4.dvi" "connect_C_4" 1764427465.43604 0
-  "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/connect_C_4.tex" 1764427464.74378 2663 8c308ebec55d2a5b0e9581e119bdf523 ""
+["latex"] 1770212999.16461 "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/connect_C_4.tex" "out/connect_C_4.dvi" "connect_C_4" 1770212999.71078 0
+  "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/connect_C_4.tex" 1770212998.99891 2550 dc2f5278559604daf46f71ca6c8e0d31 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
-  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
-  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-h.tfm" 1522271273 812 52bd92aa20c58a398601cda6dd62c8d1 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm" 1522271273 536 5f2475e9deb198c23894800d3c5eed00 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-h.tfm" 1522271273 812 52bd92aa20c58a398601cda6dd62c8d1 ""
@@ -117,8 +115,8 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "connect_C_4.tex" 1764427464.74378 2663 8c308ebec55d2a5b0e9581e119bdf523 ""
-  "out/connect_C_4.aux" 1764427465.22693 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "connect_C_4.tex" 1770212998.99891 2550 dc2f5278559604daf46f71ca6c8e0d31 ""
+  "out/connect_C_4.aux" 1770212999.49439 32 3985256e7290058c681f74d7a3565a19 "latex"
   (generated)
   "out/connect_C_4.aux"
   "out/connect_C_4.dvi"

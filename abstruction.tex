@@ -14,20 +14,26 @@
 \usepackage[dvipdfmx]{graphicx}
 \usepackage[dvipdfmx, hidelinks]{hyperref}
 \usepackage[capitalize]{cleveref}
+\usepackage{tikz}
+\usetikzlibrary{calc}
 
+\newcommand{\tikzinline}[2][3em]{
+  \resizebox{!}{#1}{#2}
+}
+
+\renewcommand{\figurename}{Figure}
 \DeclareMathOperator{\Hom}{Hom}
-
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\RR}{\mathbb{R}}
 \newcommand{\NN}{\mathbb{N}}
 \newcommand{\boxprod}{\mathbin{\square}}
 
-\newcommand{\graphimg}[2][]{%
-  \includegraphics[#1]{Tikz/Graphs/out/#2}%
+\newcommand{\graphimg}[2][]{
+  \includegraphics[#1]{Tikz/Graphs/out/#2}
 }
-\newcommand{\mathgraph}[2][3em]{%
-  \resizebox{!}{#1}{\graphimg{#2}}%
+\newcommand{\mathgraph}[2][3em]{
+  \resizebox{!}{#1}{\graphimg{#2}}
 }
 
 \newcommand{\TITLE}
@@ -80,19 +86,67 @@
 \noindent
 \textbf{1. 研究背景・動機}
 
-The concept of magnitude was introduced by Leinster [2] and it is defined for enriched categories of finite objects such as generalized metric spaces. For example, given a finite graph $G$, let $X_G$ be the generalized finite metric space consisting of the set of vertices of $G$ equipped with the shortest path metric. Subsequently, Leinster focuses on the magnitude of graphs in [3] using the idea of magnitude of a metric space. Some properties of magnitude are multiplicativity with respect to Cartesian product and an inclusion-exclusion formula for the magnitude of a union under mild hypotheses:
+The concept of magnitude was introduced by Leinster [2] and it is defined for enriched categories of finite objects such as generalized metric spaces. For example, given a finite graph $G$, let $X_G$ be the generalized finite metric space consisting of vertices of $G$ equipped with the shortest path metric. Subsequently, Leinster focuses on the magnitude of graphs in [3] using the idea of magnitude of a metric space. Some properties of magnitude are multiplicativity with respect to cartesian product, denoted by $\boxprod$, and an inclusion-exclusion formula for the magnitude of a union under mild hypotheses:
 \[
   \# (G \boxprod H)=\# G \cdot \# H, \quad \# (G \cup H) = \# G + \# H - \#(G \cap H).
 \]
-For example, the magnitude of the Cartesian product of the complete graph on 2 vertices $K_2$ and that on 3 vertices $K_3$ satisfies
+For example, the magnitude of the Cartesian product of the complete graph on 2 vertices $K_2$ and that on 3 vertices $K_3$ satisfies:
+
 \[
-  \# \mathgraph[3em]{K_2_sq_K_3.pdf} = \# \mathgraph[3em]{K_2.pdf} \cdot \# \mathgraph[3em]{K_3.pdf}.
+  \# \tikzinline[1.5em]{
+    \begin{tikzpicture}[
+      baseline=(current bounding box.center),
+      vertex/.style={circle, fill=black, inner sep=0pt, minimum size=18pt},
+      edge/.style={thick},
+      hidden edge/.style={thick, dashed, gray}
+    ]
+    \coordinate (B1) at (0, 1);
+    \coordinate (B2) at (2.5, 1);
+    \coordinate (B3) at (1.25, -0.5);
+    \coordinate (T1) at ($(B1)+(0, 3)$);
+    \coordinate (T2) at ($(B2)+(0, 3)$);
+    \coordinate (T3) at ($(B3)+(0, 3)$);
+    \draw[edge] (B1) -- (B2);
+    \draw[edge] (B1) -- (B3) -- (B2);
+    \draw[edge] (B1) -- (T1);
+    \draw[edge] (B2) -- (T2);
+    \draw[edge] (B3) -- (T3);
+    \draw[edge] (T1) -- (T2) -- (T3) -- cycle;
+    \foreach \v in {B1, B2, B3, T1, T2, T3} {
+      \node[vertex] at (\v) {};
+    }
+    \end{tikzpicture}
+  }
+  = 
+  \# \tikzinline[1em]{
+    \begin{tikzpicture}[baseline=(current bounding box.center)]
+        \coordinate (A) at (0, 0);
+        \coordinate (B) at (0, 0.5);
+        \draw[thick] (A) -- (B);
+        \fill (A) circle (2pt);
+        \fill (B) circle (2pt);
+    \end{tikzpicture}
+  }
+  \cdot 
+  \# \tikzinline[1em]{
+    \begin{tikzpicture}[baseline=(current bounding box.center)]
+        \coordinate (A) at (0.5, 0.866);
+        \coordinate (B) at (0, 0);
+        \coordinate (C) at (1, 0);
+        \draw[thick] (A) -- (B) -- (C) -- cycle;
+        \fill (A) circle (2pt);
+        \fill (B) circle (2pt);
+        \fill (C) circle (2pt);
+    \end{tikzpicture}
+  }
 \]
+
+
 Formally, the magnitude of a graph is defined to be a rational function over $\QQ$. Since the distance on a graph takes value in integers, it can also be expressed as a formal power series over $\ZZ$.
 
 Hepworth and Willerton introduced a bigraded homology theory for graphs in [1], which has the magnitude as its graded Euler characteristic, and showed how properties of magnitude proved by Leinster categorify to properties such as a K\"{u}nneth Theorem and a Mayer-Vietoris Theorem.
 
-Here, we first review the definition of the magnitude of graphs, the magnitude homology of graphs, and their properties. Next, we focus on the magnitude of enriched categories and discuss how the magnitude of graphs is introduced from that of enriched categories. We denote the magnitude of a graph $G$ by $\# G$ and the magnitude homology of $G$ by $MH_{*,*}(G)$.
+Here, we focus on the inclusion-exclusion formula and the relation between the magnitude of graphs and that of enriched categories. We denote the magnitude of a graph $G$ by $\# G$ and the magnitude homology of $G$ by $MH_{*,*}(G)$.
 
 \vskip10pt
 \noindent
@@ -102,11 +156,16 @@ The first main result establishes the inclusion-exclusion formula, a fundamental
 \[
   \# (G \cup H) = \# G + \# H - \#(G \cap H).
 \]
-For this we must impose some hypotheses. Indeed, Leinster [3] shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction. However, the hypotheses we impose are mild enough to cover a wide range of examples, including trees, forests, wedge sums, and certain graphs containing a cycle of length at least 4.
-
-\graphimg[width=0.4\linewidth]{connect_C_4.pdf}
+For this we must impose some hypotheses. Indeed, Leinster [3] shows that there is no nontrivial graph invariant that is fully cardinality-like in the sense of satisfying both multiplication and inclusion-exclusion formula without restriction. However, the hypotheses we impose are mild enough to cover a wide range of examples, including trees, forests, wedge sums, and certain graphs containing a cycle of length at least 4 (for example, see Figure \ref{fig:connect_c4}).
+\begin{figure}[htbp]
+    \centering
+    \graphimg[width=0.5\linewidth]{connect_C_4.pdf}
+    \caption{The graph containing a cycle of length 4}
+    \label{fig:connect_c4}
+\end{figure}
 
 The second main result confirms that the magnitude defined in the context of enriched categories coincides with that defined in the context of graphs.
+
 
 \vskip10pt
 \noindent
@@ -121,7 +180,7 @@ $d(g, h) = d(g, \pi(h)) + d(\pi(h), h)$
 for any $g \in V(G)$ and $h \in V(H)$. Using this equality, one can verify that the linear combination of weightings satisfies the weighting equation $\sum_{y \in V(X)} q^{d(x,y)}w_X(y) = 1$ for all $x \in V(X)$.
 
 For the second main result connecting graphs to enriched categories, the proof proceeds as follows.
-A finite graph $G$ is identified with a generalized metric space, which is structurally a $[0, \infty]$-enriched category. We define a valuation homomorphism $|\cdot|: [0, \infty] \to \QQ(q)$ by $|x| = q^x$.
+A finite graph $G$ is identified with a generalized metric space, which is structurally a $[0, \infty]$-enriched category. We define a map $|\cdot|$ by $|x| = q^x$. Since the distance function $d$ on a graph $G$ takes values in $\NN \cup \{\infty\}$, this map satisfies the properties required for a valuation on the enriched category.
 Under this valuation, the similarity matrix of the category, defined by $\zeta(a,b) = |\mathrm{Hom}(a,b)|$, becomes exactly $q^{d_G(a,b)}$. Thus, the categorical definition of magnitude naturally recovers the graph magnitude defined by weighting vectors.
 
 \textbf{4. 今後の課題}
