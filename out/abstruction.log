@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  4 FEB 2026 16:29
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  4 FEB 2026 16:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -323,14 +323,14 @@ LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 11.54663pt on input line 78.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 84.
+(Font)              scaled to size 5.77332pt on input line 83.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 84.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
+(Font)              scaled to size 4.8111pt on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -371,6 +371,6 @@ Here is how much of TeX's memory you used:
  39636 multiletter control sequences out of 15000+600000
  636743 words of font info for 85 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 72i,5n,79p,778b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,5n,79p,738b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/abstruction.dvi (1 page, 9332 bytes).
+Output written on out/abstruction.dvi (1 page, 9360 bytes).
