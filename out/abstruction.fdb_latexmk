@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1770042720.04676 "out/abstruction.dvi" "out/abstruction.pdf" "out/abstruction" 1770042720.31048 0
-  "out/abstruction.dvi" 1770042720.03215 9364 68dbd673da40c0081840ac9469f754bf "latex"
+["dvipdf"] 1770190157.28122 "out/abstruction.dvi" "out/abstruction.pdf" "out/abstruction" 1770190157.53261 0
+  "out/abstruction.dvi" 1770190157.26693 9332 6ea17a8f363e8c988e2224fe35d8ffa2 "latex"
   (generated)
   "out/abstruction.pdf"
   (rewritten before read)
-["latex"] 1770042719.39398 "/Users/kensh/Documents/src/graduation-research/abstruction.tex" "out/abstruction.dvi" "abstruction" 1770042720.30991 0
-  "/Users/kensh/Documents/src/graduation-research/abstruction.tex" 1770042718.53429 6684 d394b692a0adcd9ffcf0f83502a482ba ""
+["latex"] 1770190156.62417 "/Users/kensh/Documents/src/graduation-research/abstruction.tex" "out/abstruction.dvi" "abstruction" 1770190157.53204 0
+  "/Users/kensh/Documents/src/graduation-research/abstruction.tex" 1770190156.45688 6681 83ce221b10775d842145a84798116b81 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm0900.tfm" 1136768653 1536 c4f439db76ef96a9c53bc437f35ffe20 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -83,9 +83,9 @@
   "Tikz/Graphs/out/K_2_sq_K_3.pdf" 1768375165.89839 1351 1a02d4f7f0d615abaea0a5e0a081f90f ""
   "Tikz/Graphs/out/K_3.pdf" 1768374448.79207 1027 21897ed4e6d3d8e83b82adf03f08b868 ""
   "Tikz/Graphs/out/connect_C_4.pdf" 1764427465.42548 8030 ed527b50ca694e3a9aca1f574cbea91b ""
-  "abstruction.tex" 1770042718.53429 6684 d394b692a0adcd9ffcf0f83502a482ba ""
-  "out/abstruction.aux" 1770042720.03175 128 852fc3e86949e4a73cd552c13992dc37 "latex"
-  "out/abstruction.out" 1770042719.68777 0 d41d8cd98f00b204e9800998ecf8427e "latex"
+  "abstruction.tex" 1770190156.45688 6681 83ce221b10775d842145a84798116b81 ""
+  "out/abstruction.aux" 1770190157.26653 128 852fc3e86949e4a73cd552c13992dc37 "latex"
+  "out/abstruction.out" 1770190156.93128 0 d41d8cd98f00b204e9800998ecf8427e "latex"
   (generated)
   "out/abstruction.aux"
   "out/abstruction.dvi"
