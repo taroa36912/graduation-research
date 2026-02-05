@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  4 FEB 2026 23:07
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  5 FEB 2026 14:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -559,10 +559,10 @@ Package rerunfilecheck Info: File `abstruction.out' has not changed.
 Here is how much of TeX's memory you used:
  21676 strings out of 468392
  409923 string characters out of 5442311
- 810345 words of memory out of 5000000
+ 810343 words of memory out of 5000000
  50057 multiletter control sequences out of 15000+600000
  636743 words of font info for 85 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  85i,6n,91p,751b,714s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/abstruction.dvi (1 page, 18456 bytes).
+Output written on out/abstruction.dvi (1 page, 18452 bytes).
