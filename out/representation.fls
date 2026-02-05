@@ -475,6 +475,10 @@ INPUT ./Tikz/Graphs/out/K_mn_2.pdf
 INPUT ./Tikz/Graphs/out/K_mn_2.pdf
 INPUT ./Tikz/Graphs/out/K_mn_2.pdf
 INPUT extractbb -B cropbox -O Tikz/Graphs/out/K_mn_2.pdf
+INPUT ./Tikz/Graphs/out/Grid_Graph_Red_U.pdf
+INPUT ./Tikz/Graphs/out/Grid_Graph_Red_U.pdf
+INPUT ./Tikz/Graphs/out/Grid_Graph_Red_U.pdf
+INPUT extractbb -B cropbox -O Tikz/Graphs/out/Grid_Graph_Red_U.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm

@@ -24,6 +24,7 @@
 \newcommand{\Ker}{\mathrm{Ker}}
 \newcommand{\Hom}{\mathrm{Hom}}
 \newcommand{\im}{\mathrm{Im}}
+\newcommand{\Span}{\mathrm{span}}
 \newcommand{\ZZ}{\mathbb{Z}}
 \newcommand{\QQ}{\mathbb{Q}}
 \newcommand{\NN}{\mathbb{N}}
@@ -75,6 +76,11 @@
 
 \begin{document}
 
+\setlength\abovedisplayskip{3pt}
+\setlength\belowdisplayskip{3pt}
+\setlength\abovedisplayshortskip{-8pt}
+\setlength\belowdisplayshortskip{2pt}
+
 \begin{frame}
   \titlepage
 \end{frame}
@@ -86,19 +92,17 @@
 \section{前提知識 1}
 
 \begin{frame}{グラフのMagnitude}
-  $G=(V,E)$ を, loopとmultiple edgeを許さない有限グラフとする.
-  $G$ の similarity matrix $Z_G$を, その成分が $(Z_G)_{xy} = q^{d(x,y)}$ である $|V| \times |V|$-行列として定義する.
-  このとき，$detZ_G$ の定数項は$1$であるため, $Z_G$は可逆である.
-  \begin{definition}[Magnitude]
+  $G=(V(G),E(G))$ を, ループと多重辺を許さない有限グラフとする.
+  $G$ の similarity matrix $Z_G (q)$を, その成分が $Z_G(x,y) = q^{d(x,y)}$ である $|V(G)| \times |V(G)|$-行列として定義する. ここで，$q$ は変数であり，$q^{\infty} = 0$ とする.
+  このとき，$Z_G(q)$ の対角成分は全て $1$ なので，$detZ_G$ の定数項は$1$であり, よって  $Z_G$ は可逆である.
+  \begin{definition}[magnitude]\label{magnitude}
     グラフ $G$ の magnitude は次のように定義される：
     \[
-      \# G(q) = \sum_{x,y \in V} (Z_G^{-1})_{xy} \in \mathbb{Q}(q).
+      \# G(q) = \sum_{x,y \in V(G)} (Z_G(q)^{-1})(x,y) \in \mathbb{Q}(q).
     \]
     （逆行列の全成分の和）
   \end{definition}
   
-  \vspace{0.5em}
-  $q^{\infty} = 0$ とする.
 \end{frame}
 
 \begin{frame}{例: 完全グラフ $K_3$}
@@ -115,7 +119,7 @@
       \\ 完全グラフ $K_3$
     \end{column}
     \begin{column}{0.6\textwidth}
-      類似度行列は次のようになる：
+      $K_3$ のsimilarity matrixは次のようになる:
       \[
         Z_{K_3} = \begin{pmatrix} 1 & q & q \\ q & 1 & q \\ q & q & 1 \end{pmatrix}
       \]
@@ -135,7 +139,7 @@
   \[
     \# G(q) = \tsum(Z_G(q)^{-1}) = \frac{\tsum(\tadj(Z_G(q)))}{\det(Z_G(q))}
   \]
-  である．ここで，$\tsum$ は行列の全成分の和, $\tadj$ はadjoint行列を表す.
+  である．ここで，$\tsum$ は行列の全成分の和, $\tadj$ は余因子行列を表す.
   これと, $\det(Z_G)$ の定数項が $1$ であることより, $\# G(q)$ は $\ZZ \llbracket q \rrbracket$ に属する. 
 
   $\ZZ \llbracket q \rrbracket$ で見ることが今後重要となる.
@@ -144,7 +148,7 @@
   ※ $\ZZ \llbracket q \rrbracket = \{ \sum_{n=0}^\infty a_n q^n \mid a_n \in \ZZ \}$ (整係数形式的冪級数環)
 \end{frame}
 
-\begin{frame}{weighting}
+\begin{frame}{Weighting}
   \begin{definition}[weighting]
     グラフ $G$ の各頂点 $x$ に対し, 
     \[
@@ -158,7 +162,7 @@
    \[
     \sum_{y \in V(G)} q^{d(x,y)} w_G(y) = 1 \quad \text{ for } x \in V(G).
   \]
-  これを, weighting equation と呼ぶ. weighting equation を満たす他の関数 $V(G) \to \QQ(q)$ は存在しない.
+  これを, weighting equation と呼ぶ. $Z_G(q)$ の可逆性より, weighting equation を満たす他の関数 $V(G) \to \QQ(q)$ は存在しない.
 \end{frame}
 
 \begin{frame}{実際の計算例}
@@ -221,11 +225,11 @@
 
 \begin{frame}{Proposition 1 の証明の概略}
   \begin{proof}
-    $\tilde{w}_G:V(G) \rightarrow \ZZ[q]$ を, 定理1行目で $x_0$ をfixしたものとする↓
+    $\tilde{w}_G:V(G) \rightarrow \ZZ[q]$ を, 定理1行目で $x_0$ を固定したものとする↓
     \[
       \tilde{w}_G(x) = \sum_{k=0}^{\infty} (-1)^k \sum_{x = x_0 \neq x_1 \neq \cdots \neq x_k} q^{d(x_0, x_1) + d(x_1, x_2) + \dots + d(x_{k-1}, x_k)}.
     \]
-    これが weighting equation を満たすことを示せばよい．
+    これは weighting equation を満たす．
   \end{proof}
 \end{frame}
 
@@ -237,28 +241,35 @@
     \]   
   \end{corollary}
   \begin{proof}
-    Proposition 1 で, $c_1, c_2$ の定義を確認する.
+    Proposition 1 を見ると, 以下を確認できる:
+    \[
+      c_0 = |V(G)|, c_1 = -2|E(G)|.
+    \]
   \end{proof}
 \end{frame}
 
-\begin{frame}{convex}
-  \begin{definition}
+\begin{frame}{Convexとprojection}
+  \begin{definition}[convex]
     $X$ をグラフ, $U$ を $X$ の部分グラフとする.
-    $U$ が \textit{convex} in $X$ であるとは, 任意の頂点 $x,y \in V(U)$ に対し, $d_U(x,y) = d_X(x,y)$ が成り立つことをいう.
+    $U$ が $X$ で凸であるとは, 任意の頂点 $x,y \in V(U)$ に対し, $d_U(x,y) = d_X(x,y)$ が成り立つことをいう.
   \end{definition}
-  
+  \begin{definition}[projection]
+    $X$ をグラフ, $U$ を $X$ で凸な $X$ の部分グラフとする. また, 
+    $V_U(X) = \{ v \in V(X) \mid d_X(v,u) < \infty \text{ for some } u \in V(U) \}$ とする($U$ に接続されている頂点全体). 
+    
+    $X$ \textit{projects to $U$} とは, 
+    任意の $x \in V_U(X)$ に対し, ある $u' \in V(U)$ が存在して, 任意の $u \in V(U)$ について $d_X(x,u) = d_X(x, u') + d_X(u',u)$ が成り立つことをいう. 各 $x \in V_U(X)$ に対し, そのような $u'$ を1つ固定し, これを $\pi(x)$ と表す.
+  \end{definition}
 \end{frame}
 
-\begin{frame}{projection}
-  \begin{definition}
-    $X$ をグラフ, $U$ を convex in $X$ な $X$ の部分グラフとする. また, 
-    $V_U(X) = \{ v \in V(X) \mid d_X(v,u) < \infty \text{ for some } u \in V(U) \}$ とする. 
-    
-    $X$ \textit{projects to $U$} とは, 任意の $x \in V_U(X)$ に対し, ある $u' \in V(U)$ が存在して, 任意の $u \in V(U)$ について $d_X(x,u) = d_X(x, u') + d_X(u',u)$ が成り立つことをいう. 各 $x \in V_U(X)$ に対し, そのような $u'$ を1つ固定し, これを $\pi(x)$ と表す.
-  \end{definition}
+\begin{frame}{projectの例}
+  (赤に接続された)すべての頂点に対し，赤の中から1点選んでfactor throughすることで, 赤の全ての点との距離が最短になるようにできる．
+  
   上記の $u'$ は一意に定まる.
-  \begin{center}  
-    \graphimg[]{K_mn_2.pdf}
+  \begin{center}
+    \graphimg[height=4cm, keepaspectratio]{K_mn_2.pdf}
+    \hspace{1cm}
+    \graphimg[height=4cm, keepaspectratio]{Grid_Graph_Red_U.pdf}
   \end{center}
 \end{frame}
 
@@ -267,7 +278,7 @@
 \begin{frame}{主結果}
   \begin{theorem}
     $X$ をグラフ,  $G,H$ を $X$ の部分グラフとし, $X = G \cup H$ とする.
-    $G \cap H$ が convex in $X$ であり, $H$ projects to $G \cap H$ ならば,
+    $G \cap H$ が $X$ で凸であり, $H$ projects to $G \cap H$ ならば,
     \[
       \# X = \# G + \# H - \#(G \cap H).
     \]
@@ -276,7 +287,8 @@
   上記の状況を満たす pair $(X;G,H)$ を, \textit{projecting decomposition} と呼ぶ.
   
   \begin{proof}
-    $w_X = w_G + w_H - w_{G \cap H}$ を頑張って示す.
+    $w_G + w_H - w_{G \cap H}$ が$X$ のweighting equationを満たすので, $w_X = w_G + w_H - w_{G \cap H}$ が導かれる.
+    weighting equationを満たすことは, 計算により確認できる．
   \end{proof}
 \end{frame}
 
@@ -342,20 +354,26 @@
 
 \section{前提知識 2}
 
-\begin{frame}{Magnitude Complexes}
-  chain complex $MC_{*, *}(G)$ を定義する.
+\begin{frame}{Magnitude complex}
   \begin{definition}
-    グラフ $G$, 非負整数 $k,l$ に対し, $MC_{k,l}(G)$ とは, $V(G)$ の長さ $l$ の列 $(x_0, \dots, x_k)$ によってfreelyにgeneratedされる $\ZZ$-加群である. ただし, 列の要素は, 前後で異なるもの $x_i \neq x_{i+1} (i = 0, \dots, k-1)$ とする.
-    微分 $\partial : MC_{k,l}(G) \rightarrow MC_{k-1,l}(G)$ を
-    $\partial = \sum_{i=1}^{k-1} (-1)^{i-1} \partial_i,~\partial_i (x_0, \dots, x_k) =$
+    グラフ $G$, 非負整数 $k,l$ に対し, 自由アーベル群
     \[
-      \begin{cases}
-        (x_0, \dots, \hat{x_i}, \dots, x_k) & \text{if } l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, x_k), \\
-        0 & \text{otherwise}.
-      \end{cases}
+    \begin{split}
+      MC_{k,l}(G) = \Span_{\ZZ} \bigl\{ (x_0, \dots, x_k) \bigm| x_i \in V(G), x_0 \neq \cdots \neq x_k, \\
+      l = d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) \bigr\}
+    \end{split}
     \]
+    を定め, boundary $\partial : MC_{k,l}(G) \rightarrow MC_{k-1,l}(G)$ を
+    \[
+      \begin{split}
+        &\partial = \sum_{i=1}^{k-1} (-1)^{i-1} \partial_i,~\partial_i (x_0, \dots, x_k) = \\
+        &\begin{cases}
+          (x_0, \dots, \hat{x_i}, \dots, x_k) & \text{if } l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, x_k), \\
+          0 & \text{otherwise}.
+        \end{cases}
+      \end{split}
+      \]
     で定義する.
-    ただし, $l(x_0, \dots, x_k) = d(x_0, x_1) + \dots + d(x_{k-1}, x_k)$ を, 列の長さとする.
   \end{definition}
 
   \vspace{0.6em}
@@ -363,7 +381,7 @@
   
 \end{frame}
 
-\begin{frame}{Magnitude Homology}
+\begin{frame}{Magnitude homology}
   \begin{definition}
     グラフ $G$ の \textit{magnitude homology} とは, homology
     \[
@@ -395,28 +413,27 @@
   
 \end{frame}
 
-\begin{frame}{monoidal category}
-  \begin{definition}
-    圏 $\VV$ とそのobject $I$, 関手 $\otimes : \VV \times \VV \to \VV$, 自然変換 $\alpha : \otimes \circ (\otimes \times id_{\VV} \Rightarrow \otimes \circ (id_{\VV} \times \otimes)), \lambda : I \otimes - \Rightarrow id_{\VV}, \rho : - \otimes I \Rightarrow id_{\VV}$ に対し, pair $(\VV, \otimes, I, \alpha, \lambda, \rho)$ が \textit{monoidal category} であるとは, 以下の性質を満たすものをいう:
-  \end{definition}
-\end{frame}
-
-\begin{frame}{Enriched Category}
-  \begin{definition}
-    $(\VV, I, \otimes, \alpha, \lambda, \rho)$ を monoidal categoryとする. 圏 $\calA$, a collection of morphisms $m, j$ に対し, pair $(\calA, m, j)$ が \textit{$\VV$-enriched category} であるとは, 以下の性質を満たすものをいう:
-  \end{definition}
-\end{frame}
-
-\begin{frame}{Enriched Category の例}
-
-\end{frame}
 
 \begin{frame}{Enriched Category の Magnitude}
-  
+  $(\VV, \otimes, I, \alpha, \lambda, \rho, |\cdot|)$ をモノイダル圏, $(\calA, m, j)$ を 有限のオブジェクトを持つ $\VV$-enriched category とする.
+
+  \begin{definition}{magnitude}
+
+    
+  \end{definition}
 \end{frame}
 
 \section{主定理 2}
 \begin{frame}{Enriched Category から見た グラフ の Magnitude}
+  \begin{theorem}
+    $G$ をグラフとするとき, $G$ には一般化距離空間の構造が入る. その上で $G$ を $[0, \infty]$-enriched category として考えると, その magnitude は, 先ほど定義したグラフの magnitude と一致する.
+  \end{theorem}
+
+  \begin{proof}
+    グラフの頂点集合 $V(G)$ に，最短経路が定める距離 $d_G$ を入れることで，$V(G)$ は一般化距離空間となる. これを $G$ の距離とする.
+
+    モノイダル圏 $([0, \infty], +, 0, \leq, id, |\cdot|)$ には, 部分的に定義されるモノイド準同型 $| \cdot | : Z \to \QQ(q)$ を $|x| = q^x$ が付加されており, $G$ の距離が $Z$ に値をとることから $G$ は $[0, \infty]$-enriched categoryの構造を持つ. (ただし, $Z = \ZZ_{\geq 0} \cup \{ \infty \}$). これにより \cref{magnitude} と一致させることができる.
+  \end{proof}
   
 \end{frame}
 
@@ -472,6 +489,26 @@
 
 \appendix
 
+\begin{frame}{Motivationの話を書く}
+  
+\end{frame}
+
+\begin{frame}{monoidal category}
+  \begin{definition}
+    圏 $\VV$ とそのobject $I$, 関手 $\otimes : \VV \times \VV \to \VV$, 自然変換 $\alpha : \otimes \circ (\otimes \times id_{\VV} \Rightarrow \otimes \circ (id_{\VV} \times \otimes)), \lambda : I \otimes - \Rightarrow id_{\VV}, \rho : - \otimes I \Rightarrow id_{\VV}$ に対し, pair $(\VV, \otimes, I, \alpha, \lambda, \rho)$ が \textit{monoidal category} であるとは, 以下の性質を満たすものをいう:
+  \end{definition}
+\end{frame}
+
+\begin{frame}{Enriched Category}
+  \begin{definition}
+    $(\VV, I, \otimes, \alpha, \lambda, \rho)$ を monoidal categoryとする. 圏 $\calA$, a collection of morphisms $m, j$ に対し, pair $(\calA, m, j)$ が \textit{$\VV$-enriched category} であるとは, 以下の性質を満たすものをいう:
+  \end{definition}
+\end{frame}
+
+\begin{frame}{Enriched Category の例}
+
+\end{frame}
+
 \begin{frame}{Petersen グラフの Autom Grp が 5-dim synmetric group に同型であること(ここは要修正)}
   \begin{columns}[c]
     \begin{column}{0.5\textwidth}
@@ -493,6 +530,11 @@
 
 \begin{frame}{条件なしでは, 主結果は得られない}
   Lemma 2.3.3 や cartesian product 周りの話をまとめる.
+\end{frame}
+
+
+\begin{frame}{端折った計算のアイデアを記載する}
+
 \end{frame}
 
 \end{document}
