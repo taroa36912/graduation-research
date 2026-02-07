@@ -91,12 +91,25 @@
 
 \section{前提知識 1}
 
+\begin{frame}{グラフと距離(前提)}
+  \begin{itemize}
+    \item グラフ $\rightarrow$ ループと多重辺を許さない有限グラフ
+    \item グラフ $G$ の頂点集合を $V(G)$, 辺集合を $E(G)$ と表す
+    \item グラフ $G$ が与えられたとき，頂点集合 $V(G)$ に，最短経路が定める距離 $d$ を与え，グラフ自体を(一般化)距離空間とみなす
+    \item 上記で定義した距離は，非負整数および $\infty$ の値をとる
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{グラフのMagnitude}
-  $G=(V(G),E(G))$ を, ループと多重辺を許さない有限グラフとする.
-  $G$ の similarity matrix $Z_G (q)$を, その成分が $Z_G(x,y) = q^{d(x,y)}$ である $|V(G)| \times |V(G)|$-行列として定義する. ここで，$q$ は変数であり，$q^{\infty} = 0$ とする.
-  このとき，$Z_G(q)$ の対角成分は全て $1$ なので，$detZ_G$ の定数項は$1$であり, よって  $Z_G$ は可逆である.
+  
+  \begin{definition}
+    グラフ $G$ の similarity matrix $Z_G (q)$を, その成分が $Z_G(x,y) = q^{d(x,y)}$ である $|V(G)| \times |V(G)|$-行列として定義する.
+  \end{definition}
+  ここで，$q$ は変数であり，$q^{\infty} = 0$ とする.
+
+  このとき，$Z_G(q)$ の対角成分は全て $1$ なので，$\det Z_G$ の定数項は $1$ であり, よって $Z_G$ は可逆である.
   \begin{definition}[magnitude]\label{magnitude}
-    グラフ $G$ の magnitude は次のように定義される：
+    グラフ $G$ の magnitude は次のように定義される:
     \[
       \# G(q) = \sum_{x,y \in V(G)} (Z_G(q)^{-1})(x,y) \in \mathbb{Q}(q).
     \]
@@ -140,11 +153,12 @@
     \# G(q) = \tsum(Z_G(q)^{-1}) = \frac{\tsum(\tadj(Z_G(q)))}{\det(Z_G(q))}
   \]
   である．ここで，$\tsum$ は行列の全成分の和, $\tadj$ は余因子行列を表す.
+
   これと, $\det(Z_G)$ の定数項が $1$ であることより, $\# G(q)$ は $\ZZ \llbracket q \rrbracket$ に属する. 
 
   $\ZZ \llbracket q \rrbracket$ で見ることが今後重要となる.
 
-  \vspace{0.5em}
+  \vspace{1em}
   ※ $\ZZ \llbracket q \rrbracket = \{ \sum_{n=0}^\infty a_n q^n \mid a_n \in \ZZ \}$ (整係数形式的冪級数環)
 \end{frame}
 
@@ -156,7 +170,7 @@
     \]
     で関数 $w_G: V(G) \to \QQ (q)$ を定義し, これを $G$ の weighting と呼ぶ.
   \end{definition}
-  定義より, $\# G (q) = \sum_{x \in V(G)} w_G(x)(q)$ である．
+  定義から, $\# G (q) = \sum_{x \in V(G)} w_G(x)(q)$ が成り立つ.
 
   また, $G$ の各頂点 $x$ に対し, weighting $w_G(x)$ は次の方程式を満たす：
    \[
@@ -230,6 +244,7 @@
       \tilde{w}_G(x) = \sum_{k=0}^{\infty} (-1)^k \sum_{x = x_0 \neq x_1 \neq \cdots \neq x_k} q^{d(x_0, x_1) + d(x_1, x_2) + \dots + d(x_{k-1}, x_k)}.
     \]
     これは weighting equation を満たす．
+    $x_0$ の固定を解除して足すことで題意を得る.
   \end{proof}
 \end{frame}
 
@@ -251,11 +266,15 @@
 \begin{frame}{Convexとprojection}
   \begin{definition}[convex]
     $X$ をグラフ, $U$ を $X$ の部分グラフとする.
-    $U$ が $X$ で凸であるとは, 任意の頂点 $x,y \in V(U)$ に対し, $d_U(x,y) = d_X(x,y)$ が成り立つことをいう.
+    グラフ $X, U$ の距離をそれぞれ $d_X, d_U$ とする.
+
+    $U$ が $X$ で凸であるとは, 任意の頂点 $x,y \in V(U)$ に対し, $d_U(x,y) = d_X  (x,y)$ が成り立つことをいう.
   \end{definition}
   \begin{definition}[projection]
     $X$ をグラフ, $U$ を $X$ で凸な $X$ の部分グラフとする. また, 
-    $V_U(X) = \{ v \in V(X) \mid d_X(v,u) < \infty \text{ for some } u \in V(U) \}$ とする($U$ に接続されている頂点全体). 
+    $V_U(X) = \{ v \in V(X) \mid d_X(v,u) < \infty \text{ for some } u \in V(U) \}$ とする
+    
+    ($U$ に接続されている頂点全体). 
     
     $X$ \textit{projects to $U$} とは, 
     任意の $x \in V_U(X)$ に対し, ある $u' \in V(U)$ が存在して, 任意の $u \in V(U)$ について $d_X(x,u) = d_X(x, u') + d_X(u',u)$ が成り立つことをいう. 各 $x \in V_U(X)$ に対し, そのような $u'$ を1つ固定し, これを $\pi(x)$ と表す.
@@ -270,6 +289,12 @@
     \graphimg[height=4cm, keepaspectratio]{K_mn_2.pdf}
     \hspace{1cm}
     \graphimg[height=4cm, keepaspectratio]{Grid_Graph_Red_U.pdf}
+  \end{center}
+\end{frame}
+
+\begin{frame}{projectでない例}
+  \begin{center}
+    \graphimg[width=0.5\linewidth]{C_3_red.pdf}
   \end{center}
 \end{frame}
 
@@ -343,9 +368,10 @@
       \bigskip
       左図のグラフ $G$ 場合, $G = K_2 \vee C_3 \vee K_2$ とみなせる ($\vee$ は, 1点の同一視).
       この場合, 1点和は projecting decomposition を与えるので, 主定理を2回適応することにより,
-      \[
-        \# G = \# C_3 + 2 \cdot \# K_2 - 2 \cdot \# K_1.
-      \]
+      \begin{align*}
+        \# G &= \# K_3 + 2 \cdot \# K_2 - 2 \cdot \# K_1 \\
+            &= \frac{3}{1 + 2q} + 2 \cdot \frac{2}{1 + q} - 2 \cdot 1 \\
+      \end{align*}
       となる. 
     \end{column}
     
@@ -363,7 +389,7 @@
       l = d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) \bigr\}
     \end{split}
     \]
-    を定め, boundary $\partial : MC_{k,l}(G) \rightarrow MC_{k-1,l}(G)$ を
+    を定め, 境界準同型 $\partial : MC_{k,l}(G) \rightarrow MC_{k-1,l}(G)$ を
     \[
       \begin{split}
         &\partial = \sum_{i=1}^{k-1} (-1)^{i-1} \partial_i,~\partial_i (x_0, \dots, x_k) = \\
@@ -391,7 +417,7 @@
   \end{definition}
 \end{frame}
 
-
+\section{主結果 2}
 
 \begin{frame}{Magniude との関係}
   \begin{theorem}
@@ -410,49 +436,31 @@
 \end{frame}
 
 \begin{frame}{Magnitude Homology の例}
-  
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \graphimg[width=0.7\linewidth]{C_5.pdf}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      各 $k, l$ についての $MH_{k,l}(C_5)$ のランクは以下の通り:
+      \includegraphics[width=0.9\linewidth]{Tables/out/mag_hom_C_5_v2.pdf}
+
+    \end{column}
+  \end{columns}
 \end{frame}
 
 
-\begin{frame}{Enriched category の magnitude}
-  $(\VV, \otimes, I, \alpha, \lambda, \rho, |\cdot|)$ をモノイダル圏, $(\calA, m, j)$ を 有限のオブジェクトを持つ $\VV$-enriched category とする.
-
-  \begin{definition}{magnitude}
-
-    
-  \end{definition}
-\end{frame}
-
-\section{主定理 2}
-\begin{frame}{Enriched category から見た グラフ の magnitude}
-  \begin{theorem}
-    $G$ をグラフとするとき, $G$ には一般化距離空間の構造が入る. その上で $G$ を $[0, \infty]$-enriched category として考えると, その magnitude は, 先ほど定義したグラフの magnitude と一致する.
-  \end{theorem}
-
-  \begin{proof}
-    グラフの頂点集合 $V(G)$ に，最短経路が定める距離 $d_G$ を入れることで，$V(G)$ は一般化距離空間となる. これを $G$ の距離とする.
-
-    モノイダル圏 $([0, \infty], +, 0, \leq, id, |\cdot|)$ には, 部分的に定義されるモノイド準同型 $| \cdot | : Z \to \QQ(q)$ を $|x| = q^x$ が付加されており, $G$ の距離が $Z$ に値をとることから $G$ は $[0, \infty]$-enriched categoryの構造を持つ. (ただし, $Z = \ZZ_{\geq 0} \cup \{ \infty \}$). これにより \cref{magnitude} と一致させることができる.
-  \end{proof}
-  
-\end{frame}
 
 
 
 \section{今後の課題}
 
-\begin{frame}{まとめと今後の課題}
-  \textbf{まとめ:}
-  \begin{itemize}
-    \item Magnitude の復習と Magnitude Homology の定義.
-    \item オイラー標数との関係（Categorification）の確認.
-    \item Projecting Decomposition における Mayer-Vietoris 完全列の導入.
-  \end{itemize}
-
+\begin{frame}{今後の課題}
   \textbf{今後の課題:}
   \begin{itemize}
     \item \textbf{Whitney Twist:} ツイスト操作は Magnitude Homology を保存するか？
     \item \textbf{Diagonal Graphs:} $k \neq l$ で $MH_{k,l}=0$ となるグラフの特徴付け（例: 正二十面体グラフ）.
+    \item \textbf{距離空間, enriched categories:} Magnitudeは, もともと (コンパクトでpositive definite な)距離空間, さらに広く, enriched categoriesに対して定義されている. 他に有用なクラスがあるか？
   \end{itemize}
 \end{frame}
 
@@ -509,6 +517,30 @@
 
 \end{frame}
 
+\begin{frame}{Enriched category の magnitude}
+  $(\VV, \otimes, I, \alpha, \lambda, \rho, |\cdot|)$ をモノイダル圏, $(\calA, m, j)$ を 有限のオブジェクトを持つ $\VV$-enriched category とする.
+
+  \begin{definition}{magnitude}
+
+    
+  \end{definition}
+\end{frame}
+
+
+\begin{frame}{Enriched category から見た グラフ の magnitude}
+  \begin{theorem}
+    $G$ をグラフとするとき, $G$ には一般化距離空間の構造が入る. その上で $G$ を $[0, \infty]$-enriched category として考えると, その magnitude は, 先ほど定義したグラフの magnitude と一致する.
+  \end{theorem}
+
+  \begin{proof}
+    グラフの頂点集合 $V(G)$ に，最短経路が定める距離 $d$ を入れることで，$V(G)$ は一般化距離空間となる. これを $G$ の距離とする.
+
+    モノイダル圏 $([0, \infty], +, 0, \leq, id, |\cdot|)$ には, 部分的に定義されるモノイド準同型 $| \cdot | : Z \to \QQ(q)$ を $|x| = q^x$ が付加されており, $G$ の距離が $Z$ に値をとることから $G$ は $[0, \infty]$-enriched categoryの構造を持つ. (ただし, $Z = \ZZ_{\geq 0} \cup \{ \infty \}$). これにより \cref{magnitude} と一致させることができる.
+  \end{proof}
+  
+\end{frame}
+
+
 \begin{frame}{Petersen グラフの Autom Grp が 5-dim synmetric group に同型であること(ここは要修正)}
   \begin{columns}[c]
     \begin{column}{0.5\textwidth}
@@ -535,6 +567,14 @@
 
 \begin{frame}{端折った計算のアイデアを記載する}
 
+\end{frame}
+
+\begin{frame}{torsionについて}
+  今回扱ったグラフの magnitude homology には, torsion は存在しない. 
+
+  しかし, torsion を持つグラフも存在する.
+
+  
 \end{frame}
 
 \end{document}

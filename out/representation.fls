@@ -479,6 +479,10 @@ INPUT ./Tikz/Graphs/out/Grid_Graph_Red_U.pdf
 INPUT ./Tikz/Graphs/out/Grid_Graph_Red_U.pdf
 INPUT ./Tikz/Graphs/out/Grid_Graph_Red_U.pdf
 INPUT extractbb -B cropbox -O Tikz/Graphs/out/Grid_Graph_Red_U.pdf
+INPUT ./Tikz/Graphs/out/C_3_red.pdf
+INPUT ./Tikz/Graphs/out/C_3_red.pdf
+INPUT ./Tikz/Graphs/out/C_3_red.pdf
+INPUT extractbb -B cropbox -O Tikz/Graphs/out/C_3_red.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
@@ -488,6 +492,14 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/sansmathaccent/mathkerncmssxi8.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm
+INPUT ./Tikz/Graphs/out/C_5.pdf
+INPUT ./Tikz/Graphs/out/C_5.pdf
+INPUT ./Tikz/Graphs/out/C_5.pdf
+INPUT extractbb -B cropbox -O Tikz/Graphs/out/C_5.pdf
+INPUT ./Tables/out/mag_hom_C_5_v2.pdf
+INPUT ./Tables/out/mag_hom_C_5_v2.pdf
+INPUT ./Tables/out/mag_hom_C_5_v2.pdf
+INPUT extractbb -B cropbox -O Tables/out/mag_hom_C_5_v2.pdf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT ./Referrence/Petersen_proof.pdf
 INPUT ./Referrence/Petersen_proof.pdf

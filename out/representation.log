@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  5 FEB 2026 17:36
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  7 FEB 2026 16:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -759,19 +759,19 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 106.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 101.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 106.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 101.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 106.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 101.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 106.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 101.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
 [3
@@ -797,36 +797,40 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 10
 [8
 
 ]
-File: Tikz/Graphs/out/petersen.pdf Graphic file (type pdf)
-<Tikz/Graphs/out/petersen.pdf>
-
 
 [9
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 224.
+File: Tikz/Graphs/out/petersen.pdf Graphic file (type pdf)
+<Tikz/Graphs/out/petersen.pdf>
 
 
 [10
 
 ]
+LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
+(Font)              No change on input line 238.
+
 
 [11
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 249.
-
 
 [12
 
 ]
 LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 263.
+(Font)              No change on input line 264.
 
 
 [13
+
+]
+LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
+(Font)              No change on input line 282.
+
+
+[14
 
 ]
 File: Tikz/Graphs/out/K_mn_2.pdf Graphic file (type pdf)
@@ -835,43 +839,42 @@ File: Tikz/Graphs/out/Grid_Graph_Red_U.pdf Graphic file (type pdf)
 <Tikz/Graphs/out/Grid_Graph_Red_U.pdf>
 
 
-[14
-
-]
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 293.
-
-
 [15
 
 ]
+File: Tikz/Graphs/out/C_3_red.pdf Graphic file (type pdf)
+<Tikz/Graphs/out/C_3_red.pdf>
+
 
 [16
 
 ]
+LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
+(Font)              No change on input line 318.
+
 
 [17
 
 ]
-Overfull \vbox (1.40814pt too high) detected at line 382
- []
-
-
 
 [18
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 392.
-
 
 [19
 
 ]
+Overfull \vbox (1.40814pt too high) detected at line 408
+ []
+
+
 
 [20
 
 ]
+LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
+(Font)              No change on input line 418.
+
 
 [21
 
@@ -880,31 +883,36 @@ LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
 [22
 
 ]
+File: Tikz/Graphs/out/C_5.pdf Graphic file (type pdf)
+<Tikz/Graphs/out/C_5.pdf>
+File: Tables/out/mag_hom_C_5_v2.pdf Graphic file (type pdf)
+<Tables/out/mag_hom_C_5_v2.pdf>
+
 
 [23
 
 ]
 LaTeX Font Info:    Font shape `JT2/gt/bx/n' in size <10.95> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 457.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 465.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 457.
+(Font)              scaled to size 10.53629pt on input line 465.
 LaTeX Font Info:    Font shape `JY2/gt/bx/n' in size <10.95> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 457.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 465.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 457.
+(Font)              scaled to size 10.53629pt on input line 465.
 
 
 [24
 
 ]
 LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 488.
+(Font)              No change on input line 496.
 LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 488.
+(Font)              No change on input line 496.
 LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 488.
+(Font)              No change on input line 496.
 LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 488.
+(Font)              No change on input line 496.
 
 
 [25
@@ -912,7 +920,7 @@ LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 490.
+(hyperref)                removing `\translate ' on input line 498.
 
 
 
@@ -920,14 +928,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 ]
 LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 500.
+(Font)              No change on input line 508.
 
 
 [27
 
 ]
 LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 506.
+(Font)              No change on input line 514.
 
 
 [28
@@ -937,18 +945,6 @@ LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
 [29
 
 ]
-File: Referrence/Petersen_proof.pdf Graphic file (type pdf)
-<Referrence/Petersen_proof.pdf>
-
-Overfull \hbox (2.30707pt too wide) in paragraph at lines 524--524
-[][]  
- []
-
-
-Overfull \vbox (24.46654pt too high) detected at line 524
- []
-
-
 
 [30
 
@@ -957,12 +953,36 @@ Overfull \vbox (24.46654pt too high) detected at line 524
 [31
 
 ]
+File: Referrence/Petersen_proof.pdf Graphic file (type pdf)
+<Referrence/Petersen_proof.pdf>
+
+Overfull \hbox (2.30707pt too wide) in paragraph at lines 556--556
+[][]  
+ []
+
+
+Overfull \vbox (24.46654pt too high) detected at line 556
+ []
+
+
 
 [32
 
 ]
 
 [33
+
+]
+
+[34
+
+]
+
+[35
+
+]
+
+[36
 
 ]
 \tf@nav=\write6
@@ -981,15 +1001,15 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
 Package rerunfilecheck Info: File `representation.out' has not changed.
-(rerunfilecheck)             Checksum: 30EA472506A9543D30A05458596FE5CF;554.
+(rerunfilecheck)             Checksum: C7DC3DC3FE5687F7243CC317485F85A5;554.
  ) 
 Here is how much of TeX's memory you used:
- 27569 strings out of 468392
- 558318 string characters out of 5442311
+ 27601 strings out of 468392
+ 559224 string characters out of 5442311
  940422 words of memory out of 5000000
- 55702 multiletter control sequences out of 15000+600000
+ 55729 multiletter control sequences out of 15000+600000
  715288 words of font info for 155 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  128i,28n,123p,497b,946s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/representation.dvi (33 pages, 274468 bytes).
+Output written on out/representation.dvi (36 pages, 292560 bytes).

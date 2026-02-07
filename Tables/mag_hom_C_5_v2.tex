@@ -1,0 +1,25 @@
+\documentclass[dvipdfmx, border=5pt]{standalone}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{array}
+
+\begin{document}
+  \arrayrulecolor{black!20}
+  \setlength{\aboverulesep}{0pt}
+  \setlength{\belowrulesep}{0pt}
+  \setlength{\extrarowheight}{0.5ex}
+  \newcolumntype{I}{!{\color{black}\vrule width 1.2pt}}
+  \begin{tabular}{|c|r I r|r|r|r|r|r|}
+    \arrayrulecolor{black}\specialrule{1.2pt}{0pt}{0pt}\arrayrulecolor{black!20}
+    & & \multicolumn{6}{c|}{$k$} \\ \hline
+    & & 0 & 1 & 2 & 3 & 4 & 5 \\ 
+    \arrayrulecolor{black}\specialrule{1.2pt}{0pt}{0pt}\arrayrulecolor{black!20}
+      &0 &5 &  &  &  &  & \\ \hline
+      &1 &  &10&  &  &  & \\ \hline
+   $l$&2 &  &  &10&  &  & \\ \hline
+      &3 &  &  &10&10&  & \\ \hline
+      &4 &  &  &  &30&10& \\ \hline
+      &5 &  &  &  &  &50&10\\ 
+    \arrayrulecolor{black}\specialrule{1.2pt}{0pt}{0pt}\arrayrulecolor{black!20}    
+  \end{tabular}
+\end{document}
