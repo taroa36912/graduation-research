@@ -8,8 +8,6 @@
     \def\w{1.5}
     \def\sep{1.5}
     \tikzset{dot/.style={circle, fill=black, inner sep=2pt}}
-    
-    % --- 頂点の配置 (変更なし) ---
     \node[dot] (u1) at (0, \h) {};
     \node[dot] (u2) at (\w, \h) {};
     \node at (\w + \w*\sep*0.5, \h) {$\dots$};
@@ -19,9 +17,9 @@
     \node[dot] (v2) at (\w, 0) {}; 
     \node at (\w + \w*\sep*0.5, 0) {$\dots$};
     \node[dot, fill=red] (vn) at (\w + \w*\sep, 0) {};
-    \foreach \v in {v1, vn} {
-        \draw (u1) -- (\v);
-    }
+
+    \draw (u1) -- (v1);
+    
     \foreach \v in {v2} {
         \draw (u2) -- (\v);
     }

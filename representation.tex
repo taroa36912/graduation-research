@@ -95,7 +95,11 @@
   \begin{itemize}
     \item グラフ $\rightarrow$ ループと多重辺を許さない有限グラフ
     \item グラフ $G$ の頂点集合を $V(G)$, 辺集合を $E(G)$ と表す
-    \item グラフ $G$ が与えられたとき，頂点集合 $V(G)$ に，最短経路が定める距離 $d$ を与え，グラフ自体を(一般化)距離空間とみなす
+    \item \colorbox{yellow!30}{\parbox{0.9\linewidth}{
+      グラフ $G$ が与えられたとき，頂点集合 $V(G)$ に，最短経路が定める距離 $d$ を与え，グラフ自体を(一般化)距離空間とみなす.
+    }}
+    
+    一辺の長さを1とする.
     \item 上記で定義した距離は，非負整数および $\infty$ の値をとる
   \end{itemize}
 \end{frame}
@@ -134,9 +138,9 @@
     \begin{column}{0.6\textwidth}
       $K_3$ のsimilarity matrixは次のようになる:
       \[
-        Z_{K_3} = \begin{pmatrix} 1 & q & q \\ q & 1 & q \\ q & q & 1 \end{pmatrix}
+        Z_{K_3} = \begin{pmatrix} 1 & q & q \\ q & 1 & q \\ q & q & 1 \end{pmatrix}.
       \]
-      逆行列 $Z_{K_3}^{-1}$ の成分和を計算すると：
+      逆行列 $Z_{K_3}^{-1}$ の成分和を計算すると,
       \[
         \# K_3(q) = \frac{3}{1+2q}.
       \]
@@ -179,8 +183,8 @@
   これを, weighting equation と呼ぶ. $Z_G(q)$ の可逆性より, weighting equation を満たす他の関数 $V(G) \to \QQ(q)$ は存在しない.
 \end{frame}
 
-\begin{frame}{実際の計算例}
-  \begin{lemma}
+\begin{frame}{実際に計算する}
+  \begin{lemma}\label{vertex_transitive_magnitude}
     グラフ $G$ が vertex-transitive ならば, 任意の頂点 $x \in V(G)$ に対し,
     \[
     \# G(q) = \frac{|V(G)|}{\sum_{y \in V(G)} q^{d(x,y)}}.
@@ -197,6 +201,13 @@
 \end{frame}
 
 \begin{frame}{実際の計算例: 完全グラフ $K_n$}
+  \begin{block}{Lemma 1}
+    グラフ $G$ が vertex-transitive ならば, 任意の頂点 $x \in V(G)$ に対し,
+    \[
+    \# G(q) = \frac{|V(G)|}{S}.
+    \]
+    ただし, $S = \sum_{y \in V(G)} q^{d(x,y)}$.
+  \end{block}
   $n$頂点完全グラフ $K_n$ は vertex-transitive である.
   Lemma 1 において, $S = 1 + (n-1)q$ であるから,
   \[ 
@@ -204,9 +215,16 @@
   \]
 \end{frame}
 
-\begin{frame}{実際の計算例: Petersenグラフ}
+\begin{frame}{実際の計算例2: Petersenグラフ}
+  \begin{block}{Lemma 1}
+    グラフ $G$ が vertex-transitive ならば, 任意の頂点 $x \in V(G)$ に対し,
+    \[
+    \# G(q) = \frac{|V(G)|}{S}.
+    \]
+    ただし, $S = \sum_{y \in V(G)} q^{d(x,y)}$.
+  \end{block}
   \begin{columns}[c]
-    \begin{column}{0.45\textwidth}
+    \begin{column}{0.35\textwidth}
       \centering
       \graphimg[width=\linewidth]{petersen.pdf}
     \end{column}
@@ -219,6 +237,8 @@
     \end{column}
   \end{columns}
 \end{frame}
+
+
 
 \begin{frame}{組み合わせ的表現}
   \begin{proposition}
@@ -237,30 +257,21 @@
 \end{proposition}
 \end{frame}
 
-\begin{frame}{Proposition 1 の証明の概略}
-  \begin{proof}
-    $\tilde{w}_G:V(G) \rightarrow \ZZ[q]$ を, 定理1行目で $x_0$ を固定したものとする↓
-    \[
-      \tilde{w}_G(x) = \sum_{k=0}^{\infty} (-1)^k \sum_{x = x_0 \neq x_1 \neq \cdots \neq x_k} q^{d(x_0, x_1) + d(x_1, x_2) + \dots + d(x_{k-1}, x_k)}.
-    \]
-    これは weighting equation を満たす．
-    $x_0$ の固定を解除して足すことで題意を得る.
-  \end{proof}
-\end{frame}
+
 
 \begin{frame}{Proposition 1 からわかること}
+  \begin{block}{Proposition 1の $c_n$ の式}
+    \begin{multline*}
+      c_n = \sum_{k=0}^{n} (-1)^k \Bigl| \Bigl\{ (x_0, \dots, x_k) \Bigm| x_0 \neq \cdots \neq x_k, \\
+       d(x_0, x_1) + \dots + d(x_{k-1}, x_k) = n \Bigr\} \Bigr|.
+    \end{multline*}
+  \end{block}
+    上記より, $c_0 = |V(G)|, c_1 = -2|E(G)|$. よって,
   \begin{corollary}
-    $G$ をグラフとするとき, 
     \[
       |V(G)| = \# G(0), |E(G)| = - \frac{1}{2} \left. \frac{d}{dq} \# G(q) \right|_{q=0}.
     \]   
   \end{corollary}
-  \begin{proof}
-    Proposition 1 を見ると, 以下を確認できる:
-    \[
-      c_0 = |V(G)|, c_1 = -2|E(G)|.
-    \]
-  \end{proof}
 \end{frame}
 
 \begin{frame}{Convexとprojection}
@@ -344,7 +355,12 @@
   \end{align*}
 \end{frame}
 
-\begin{frame}{主定理の使用例 : Bull Graph}
+\begin{frame}{主結果1の使用例 : Bull Graph}
+  \begin{block}{Theorem 1}
+    \[
+      \# X = \# G + \# H - \#(G \cap H).
+    \]
+  \end{block}
   \begin{columns}[c]
     \begin{column}{0.5\textwidth}
       \centering
@@ -386,14 +402,14 @@
     \[
     \begin{split}
       MC_{k,l}(G) = \Span_{\ZZ} \bigl\{ (x_0, \dots, x_k) \bigm| x_i \in V(G), x_0 \neq \cdots \neq x_k, \\
-      l = d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) \bigr\}
+      d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) = l \bigr\}
     \end{split}
     \]
     を定め, 境界準同型 $\partial : MC_{k,l}(G) \rightarrow MC_{k-1,l}(G)$ を
     \[
       \begin{split}
-        &\partial = \sum_{i=1}^{k-1} (-1)^{i-1} \partial_i,~\partial_i (x_0, \dots, x_k) = \\
-        &\begin{cases}
+        &\partial = \sum_{i=1}^{k-1} (-1)^{i-1} \partial_i,~\partial_i (x_0, \dots, x_k)  \\
+        &=\begin{cases}
           (x_0, \dots, \hat{x_i}, \dots, x_k) & \text{if } l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, x_k), \\
           0 & \text{otherwise}.
         \end{cases}
@@ -497,6 +513,17 @@
 
 \appendix
 
+\begin{frame}{Proposition 1 の証明の概略}
+  \begin{proof}
+    $\tilde{w}_G:V(G) \rightarrow \ZZ[q]$ を, 定理1行目で $x_0$ を固定したものとする↓
+    \[
+      \tilde{w}_G(x) = \sum_{k=0}^{\infty} (-1)^k \sum_{x = x_0 \neq x_1 \neq \cdots \neq x_k} q^{d(x_0, x_1) + d(x_1, x_2) + \dots + d(x_{k-1}, x_k)}.
+    \]
+    これは weighting equation を満たす．
+    $x_0$ の固定を解除して足すことで題意を得る.
+  \end{proof}
+\end{frame}
+
 \begin{frame}{Motivationの話を書く}
   
 \end{frame}
@@ -574,7 +601,11 @@
 
   しかし, torsion を持つグラフも存在する.
 
-  
+
+\end{frame}
+
+\begin{frame}{4頂点以下のグラフについて}
+  4頂点以下の全てのグラフについて調べた結果, Magnitudeが同じもののペアは以下の通りであった:
 \end{frame}
 
 \end{document}

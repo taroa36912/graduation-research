@@ -6,7 +6,8 @@
     node distance=1.5cm and 1.5cm,
     vertex/.style={circle, fill=black, inner sep=2pt, outer sep=0pt},
     red vertex/.style={circle, fill=red, draw=red, inner sep=2pt, outer sep=0pt},
-    edge/.style={draw, thick, gray!80}
+    edge/.style={draw, thick, gray!80},
+    red edge/.style={draw, thick, red}
 ]
     \foreach \x in {0,...,3} {
         \foreach \y in {0,...,4} {
@@ -19,12 +20,20 @@
     }
     \foreach \x in {0,...,3} {
         \foreach \y [count=\ny from 1] in {0,...,3} {
-            \draw[edge] (n-\x-\y) -- (n-\x-\ny);
+            \ifnum \x>1
+                \draw[red edge] (n-\x-\y) -- (n-\x-\ny);
+            \else
+                \draw[edge] (n-\x-\y) -- (n-\x-\ny);
+            \fi
         }
     }
     \foreach \y in {0,...,4} {
         \foreach \x [count=\nx from 1] in {0,...,2} {
-            \draw[edge] (n-\x-\y) -- (n-\nx-\y);
+            \ifnum \x>1
+                \draw[red edge] (n-\x-\y) -- (n-\nx-\y);
+            \else
+                \draw[edge] (n-\x-\y) -- (n-\nx-\y);
+            \fi
         }
     }
 

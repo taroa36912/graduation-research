@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  5 FEB 2026 15:57
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  9 FEB 2026 15:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -302,12 +302,12 @@ L3 programming layer <2025-09-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12206 strings out of 468392
- 258256 string characters out of 5442311
- 651157 words of memory out of 5000000
- 40726 multiletter control sequences out of 15000+600000
+ 12208 strings out of 468392
+ 258307 string characters out of 5442311
+ 651267 words of memory out of 5000000
+ 40728 multiletter control sequences out of 15000+600000
  630362 words of font info for 58 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 117i,5n,121p,488b,751s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,5n,121p,488b,753s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/Grid_Graph_Red_U.dvi (1 page, 21884 bytes).
+Output written on out/Grid_Graph_Red_U.dvi (1 page, 21900 bytes).

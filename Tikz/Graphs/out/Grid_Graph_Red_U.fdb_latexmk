@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1770274651.13048 "out/Grid_Graph_Red_U.dvi" "out/Grid_Graph_Red_U.pdf" "out/Grid_Graph_Red_U" 1770274651.34359 0
-  "out/Grid_Graph_Red_U.dvi" 1770274651.11721 21884 874eafa341572ab2a1ef06d080e4c5cf "latex"
+["dvipdf"] 1770619285.19475 "out/Grid_Graph_Red_U.dvi" "out/Grid_Graph_Red_U.pdf" "out/Grid_Graph_Red_U" 1770619285.39903 0
+  "out/Grid_Graph_Red_U.dvi" 1770619285.18097 21900 d2815b33d18e1ad0c6131f3023816755 "latex"
   (generated)
   "out/Grid_Graph_Red_U.pdf"
   (rewritten before read)
-["latex"] 1770274650.75248 "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/Grid_Graph_Red_U.tex" "out/Grid_Graph_Red_U.dvi" "Grid_Graph_Red_U" 1770274651.34296 0
-  "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/Grid_Graph_Red_U.tex" 1770274650.57877 955 a2f09175eaee687ca5bf0b2842574761 ""
+["latex"] 1770619284.7963 "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/Grid_Graph_Red_U.tex" "out/Grid_Graph_Red_U.dvi" "Grid_Graph_Red_U" 1770619285.39839 0
+  "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/Grid_Graph_Red_U.tex" 1770619284.49796 1233 f91993acde3f648fa2c7df7c49f9d2c1 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1673816307 1016 1c2b89187d12a2768764b83b4945667c ""
@@ -94,8 +94,8 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "Grid_Graph_Red_U.tex" 1770274650.57877 955 a2f09175eaee687ca5bf0b2842574761 ""
-  "out/Grid_Graph_Red_U.aux" 1770274651.11691 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "Grid_Graph_Red_U.tex" 1770619284.49796 1233 f91993acde3f648fa2c7df7c49f9d2c1 ""
+  "out/Grid_Graph_Red_U.aux" 1770619285.18059 32 3985256e7290058c681f74d7a3565a19 "latex"
   (generated)
   "out/Grid_Graph_Red_U.aux"
   "out/Grid_Graph_Red_U.dvi"

@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1769235059.41295 "out/K_mn_2.dvi" "out/K_mn_2.pdf" "out/K_mn_2" 1769235059.60757 0
-  "out/K_mn_2.dvi" 1769235059.39954 6812 8bb1b9719704fc675864dff5164e7872 "latex"
+["dvipdf"] 1770619137.86769 "out/K_mn_2.dvi" "out/K_mn_2.pdf" "out/K_mn_2" 1770619138.07313 0
+  "out/K_mn_2.dvi" 1770619137.85307 6736 f721aa9a6c276064ea1804d40186624b "latex"
   (generated)
   "out/K_mn_2.pdf"
   (rewritten before read)
-["latex"] 1769235059.13701 "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_mn_2.tex" "out/K_mn_2.dvi" "K_mn_2" 1769235059.60697 0
-  "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_mn_2.tex" 1769235058.98078 856 e428ade4c51fb3293425942909730f4d ""
+["latex"] 1770619137.48849 "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_mn_2.tex" "out/K_mn_2.dvi" "K_mn_2" 1770619138.0724 0
+  "/Users/kensh/Documents/src/graduation-research/Tikz/Graphs/K_mn_2.tex" 1770619137.14377 772 e2f296ee6f8c332c4a233ab5d23ced44 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex" 1673816307 1016 1c2b89187d12a2768764b83b4945667c ""
@@ -93,8 +93,8 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "K_mn_2.tex" 1769235058.98078 856 e428ade4c51fb3293425942909730f4d ""
-  "out/K_mn_2.aux" 1769235059.39924 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "K_mn_2.tex" 1770619137.14377 772 e2f296ee6f8c332c4a233ab5d23ced44 ""
+  "out/K_mn_2.aux" 1770619137.85274 32 3985256e7290058c681f74d7a3565a19 "latex"
   (generated)
   "out/K_mn_2.aux"
   "out/K_mn_2.dvi"
