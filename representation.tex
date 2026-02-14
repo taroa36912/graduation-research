@@ -538,40 +538,50 @@
 \section{今後の課題}
 
 \begin{frame}{今後の課題}
-\begin{tikzpicture}[
-    scale=1.2,
+  
+  \begin{tikzpicture}[
+    scale=1.0,
     dot/.style={circle, fill=black, inner sep=2pt, outer sep=0pt},
     shared/.style={circle, fill=red, inner sep=2pt, outer sep=0pt},
     thick
-  ]
-  \begin{scope}[shift={(-3, 0)}]
+    ]
+  \begin{scope}[shift={(-3.5, 0)}]
     \node[shared, label=above:{$u$}] (u) at (0, 1) {};
     \node[shared, label=below:{$v$}] (v) at (0, -1) {};
     
     \node[dot] (l1) at (-1.5, 0) {};
+    \node[dot] (l2) at (-1, 1.5) {};
     \draw (u) -- (l1) -- (v) -- (u);
+    \draw (u) -- (l2);
     
     \node[dot, draw=blue, fill=blue] (r1) at (1, 1) {};
-    \node[dot, draw=blue, fill=blue] (r2) at (2, 0.5) {};
-    \node[dot, draw=blue, fill=blue] (r3) at (1.5, -0.5) {};
+    \node[dot, draw=blue, fill=blue] (r2) at (1.5, 0) {};
+    \node[dot, draw=blue, fill=blue] (r3) at (1, -1) {};
+    \node[dot, draw=blue, fill=blue] (r4) at (2, 1) {};
     \draw[blue] (u) -- (r1) -- (r2) -- (r3) -- (v);
+    \draw[blue] (r1) -- (r4);
   \end{scope}
 
   \draw[<->, very thick] (-1, 0) -- (1, 0);
 
-  \begin{scope}[shift={(3, 0)}]
+  \begin{scope}[shift={(3.5, 0)}]
     \node[shared, label=above:{$u$}] (u) at (0, 1) {};
     \node[shared, label=below:{$v$}] (v) at (0, -1) {};
     
     \node[dot] (l1) at (-1.5, 0) {};
+    \node[dot] (l2) at (-1, 1.5) {};
     \draw (u) -- (l1) -- (v) -- (u);
+    \draw (u) -- (l2);
     
     \node[dot, draw=blue, fill=blue] (r1) at (1, -1) {};
-    \node[dot, draw=blue, fill=blue] (r2) at (2, -0.5) {};
-    \node[dot, draw=blue, fill=blue] (r3) at (1.5, 0.5) {};
+    \node[dot, draw=blue, fill=blue] (r2) at (1.5, 0) {};
+    \node[dot, draw=blue, fill=blue] (r3) at (1, 1) {};
+    \node[dot, draw=blue, fill=blue] (r4) at (2, -1) {};
     \draw[blue] (v) -- (r1) -- (r2) -- (r3) -- (u);
+    \draw[blue] (r1) -- (r4);
   \end{scope}
-\end{tikzpicture}
+  \end{tikzpicture}
+
   \textbf{今後の課題:}
   \begin{itemize}
     \item \textbf{Whitney Twist:} ツイスト操作は Magnitude Homology を保存するか？

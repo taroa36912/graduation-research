@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  15 FEB 2026 08:53
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  15 FEB 2026 08:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -904,13 +904,13 @@ File: Tables/out/mag_hom_C_5_v2.pdf Graphic file (type pdf)
 
 ]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 612.
+(Font)              No change on input line 622.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 612.
+(Font)              No change on input line 622.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 612.
+(Font)              No change on input line 622.
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 612.
+(Font)              No change on input line 622.
 
 
 [24
@@ -918,7 +918,7 @@ LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 614.
+(hyperref)                removing `\translate ' on input line 624.
 
 
 
@@ -930,14 +930,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 ]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 636.
+(Font)              No change on input line 646.
 
 
 [27
 
 ]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 642.
+(Font)              No change on input line 652.
 
 
 [28
@@ -958,12 +958,12 @@ LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 File: Referrence/Petersen_proof.pdf Graphic file (type pdf)
 <Referrence/Petersen_proof.pdf>
 
-Overfull \hbox (2.30707pt too wide) in paragraph at lines 684--684
+Overfull \hbox (2.30707pt too wide) in paragraph at lines 694--694
 [][]  
  []
 
 
-Overfull \vbox (24.46654pt too high) detected at line 684
+Overfull \vbox (24.46654pt too high) detected at line 694
  []
 
 
@@ -1014,12 +1014,12 @@ Package rerunfilecheck Info: File `representation.out' has not changed.
 (rerunfilecheck)             Checksum: C7DC3DC3FE5687F7243CC317485F85A5;554.
  ) 
 Here is how much of TeX's memory you used:
- 27830 strings out of 468392
- 563392 string characters out of 5442311
+ 27845 strings out of 468392
+ 563587 string characters out of 5442311
  946422 words of memory out of 5000000
- 55958 multiletter control sequences out of 15000+600000
+ 55973 multiletter control sequences out of 15000+600000
  715288 words of font info for 155 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  128i,28n,123p,497b,1122s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/representation.dvi (38 pages, 349596 bytes).
+Output written on out/representation.dvi (38 pages, 353188 bytes).
