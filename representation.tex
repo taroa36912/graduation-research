@@ -11,7 +11,8 @@
 \usepackage[capitalize]{cleveref}
 \usepackage{appendixnumberbeamer}
 
-\renewcommand{\kanjifamilydefault}{\gtdefault}
+\renewcommand{\kanjifamilydefault}{\mcdefault}
+\renewcommand{\kanjiseriesdefault}{m}
 
 \newcommand{\tsum}{\mathrm{sum}}
 \newcommand{\tadj}{\mathrm{adj}}
@@ -68,11 +69,11 @@
 \newtheorem{proposition}{Proposition}
 \newtheorem{corollary}{Corollary}
 
-\title[Magnitude Homology]{グラフのMagnitude\\そのCategorificationとしてのMagnitudeホモロジー}
+\title[Magnitude Homology]{The magnitude of graphs and the magnitude homology as its categorification}
 \subtitle{2025年度 卒業研究発表}
 \author[Kensho Yachi]{谷内 賢翔(やち けんしょう)}
 \institute[YNU]{横浜国立大学 理工学部 数理科学EP}
-\date{2025年2月17-19日}
+\date{2025年2月17日}
 
 \begin{document}
 
@@ -101,19 +102,20 @@
     
     一辺の長さを1とする.
     \item 上記で定義した距離は，非負整数および $\infty$ の値をとる
+    \item 頂点が連結されていないとき，距離が $\infty$ となる
   \end{itemize}
 \end{frame}
 
 \begin{frame}{グラフのMagnitude}
   
-  \begin{definition}
-    グラフ $G$ の similarity matrix $Z_G (q)$を, その成分が $Z_G(x,y) = q^{d(x,y)}$ である $|V(G)| \times |V(G)|$-行列として定義する.
+  \begin{definition}[Leinster \cite{Leinster2}, 2016]
+    グラフ $G$ の \textbf{similarity matrix} $Z_G (q)$を, その成分が $Z_G(x,y) = q^{d(x,y)}$ である $|V(G)| \times |V(G)|$-行列として定義する.
   \end{definition}
   ここで，$q$ は変数であり，$q^{\infty} = 0$ とする.
 
   このとき，$Z_G(q)$ の対角成分は全て $1$ なので，$\det Z_G$ の定数項は $1$ であり, よって $Z_G$ は可逆である.
-  \begin{definition}[magnitude]\label{magnitude}
-    グラフ $G$ の magnitude は次のように定義される:
+  \begin{definition}[Leinster \cite{Leinster2}, 2016]\label{magnitude}
+    グラフ $G$ の \textbf{magnitude} は次のように定義される:
     \[
       \# G(q) = \sum_{x,y \in V(G)} (Z_G(q)^{-1})(x,y) \in \mathbb{Q}(q).
     \]
@@ -140,12 +142,19 @@
       \[
         Z_{K_3} = \begin{pmatrix} 1 & q & q \\ q & 1 & q \\ q & q & 1 \end{pmatrix}.
       \]
-      逆行列 $Z_{K_3}^{-1}$ の成分和を計算すると,
+      
+    \end{column}
+  \end{columns}
+  \vspace{0.5em}
+  その逆行列 $Z_{K_3}^{-1}$ は
+  \[
+    Z_{K_3} = \frac{1}{(1+2q)(q-1)} \begin{pmatrix} -q-1 & q & q \\ q & -q-1 & q \\ q & q & -q-1 \end{pmatrix}.
+  \]
+
+  よって, その成分和は
       \[
         \# K_3(q) = \frac{3}{1+2q}.
       \]
-    \end{column}
-  \end{columns}
 
   \vspace{0.5em}
   一般に, \[\# K_n (q) = \frac{n}{1 + (n-1)q} \quad \text{(後ほど証明)}.\]
@@ -167,12 +176,12 @@
 \end{frame}
 
 \begin{frame}{Weighting}
-  \begin{definition}[weighting]
+  \begin{definition}[Leinster \cite{Leinster2}, 2016]
     グラフ $G$ の各頂点 $x$ に対し, 
     \[
       w_G(x)(q) = \sum_{y \in V(G)}(Z_G(q))^{-1}(x,y)
     \]
-    で関数 $w_G: V(G) \to \QQ (q)$ を定義し, これを $G$ の weighting と呼ぶ.
+    で関数 $w_G: V(G) \to \QQ (q)$ を定義し, これを $G$ の \textbf{weighting} と呼ぶ.
   \end{definition}
   定義から, $\# G (q) = \sum_{x \in V(G)} w_G(x)(q)$ が成り立つ.
 
@@ -180,18 +189,17 @@
    \[
     \sum_{y \in V(G)} q^{d(x,y)} w_G(y) = 1 \quad \text{ for } x \in V(G).
   \]
-  これを, weighting equation と呼ぶ. $Z_G(q)$ の可逆性より, weighting equation を満たす他の関数 $V(G) \to \QQ(q)$ は存在しない.
+  これを, \textbf{weighting equation} と呼ぶ. $Z_G(q)$ の可逆性より, weighting equation を満たす関数 $V(G) \to \QQ(q)$ は一意的である.
 \end{frame}
 
 \begin{frame}{実際に計算する}
-  \begin{lemma}\label{vertex_transitive_magnitude}
+  \begin{lemma}[Leinster \cite{Leinster2}, 2016]\label{vertex_transitive_magnitude}
     グラフ $G$ が vertex-transitive ならば, 任意の頂点 $x \in V(G)$ に対し,
     \[
     \# G(q) = \frac{|V(G)|}{\sum_{y \in V(G)} q^{d(x,y)}}.
     \]
   \end{lemma}
-  \vspace{0.5em}
-  ※ vertex-transitive: 作用 $\aut (G) \curvearrowright V(G)$ の軌道が唯1つであるグラフ.
+  ※ \textbf{vertex-transitive}: 作用 $\aut (G) \curvearrowright V(G)$ の軌道が唯1つであるグラフ.
   \begin{proof}
     $S : V(G) \rightarrow \QQ(q) ; x \mapsto \sum_{y \in V(G)} q^{d(x,y)}$ とおくと, 仮定より, $S(x)$ の値は $x$ によらず, これを $S$ とすると, 定値関数 $\frac{1}{S}$ は weighting equation を満たす． よって, 
     \[
@@ -201,7 +209,7 @@
 \end{frame}
 
 \begin{frame}{実際の計算例: 完全グラフ $K_n$}
-  \begin{block}{Lemma 1}
+  \begin{block}{Lemma 1 (再掲)}
     グラフ $G$ が vertex-transitive ならば, 任意の頂点 $x \in V(G)$ に対し,
     \[
     \# G(q) = \frac{|V(G)|}{S}.
@@ -210,13 +218,15 @@
   \end{block}
   $n$頂点完全グラフ $K_n$ は vertex-transitive である.
   Lemma 1 において, $S = 1 + (n-1)q$ であるから,
-  \[ 
-    \# K_n(q) = \frac{n}{1 + (n-1)q}.
-  \]
+  \begin{align*}
+    \# K_n(q) &= \frac{n}{1 + (n-1)q} \\
+    &= n \sum_{k=0}^{\infty} - \{(n-1)q \}^k \\
+  \end{align*}
+  $k$ 次の係数は $c_k = \{ -(n-1)q \}^k n$ である. 特に, $c_0 = n, c_1 = -(n-1)n$.
 \end{frame}
 
 \begin{frame}{実際の計算例2: Petersenグラフ}
-  \begin{block}{Lemma 1}
+  \begin{block}{Lemma 1 (再掲)}
     グラフ $G$ が vertex-transitive ならば, 任意の頂点 $x \in V(G)$ に対し,
     \[
     \# G(q) = \frac{|V(G)|}{S}.
@@ -230,9 +240,10 @@
     \end{column}
     \begin{column}{0.55\textwidth}
       $G$ を左図のグラフ (Petersen グラフ) とすると, $G$ もvertex-transitive となる (回転と内外の入れ替え). $S = 1 + 3q + 6q^2$ なので, 
-      \[
-        \# G (q) = \frac{10}{1 + 3q + 6q^2}. 
-      \]
+      \begin{align*}
+        \# G (q) &= \frac{10}{1 + 3q + 6q^2} \\
+        &= 10 - 30q + \cdots.
+      \end{align*}
       \bigskip
     \end{column}
   \end{columns}
@@ -241,7 +252,7 @@
 
 
 \begin{frame}{組み合わせ的表現}
-  \begin{proposition}
+  \begin{proposition}[Leinster \cite{Leinster2}, 2016]
     $G$ をグラフとするとき, 
     \[
     \begin{split}
@@ -254,7 +265,7 @@
       c_n = \sum_{k=0}^{n} (-1)^k \Bigl| \Bigl\{ (x_0, \dots, x_k) \Bigm| x_0 \neq \cdots \neq x_k, \\
        d(x_0, x_1) + \dots + d(x_{k-1}, x_k) = n \Bigr\} \Bigr|.
     \end{multline*}
-\end{proposition}
+  \end{proposition}
 \end{frame}
 
 
@@ -266,28 +277,28 @@
        d(x_0, x_1) + \dots + d(x_{k-1}, x_k) = n \Bigr\} \Bigr|.
     \end{multline*}
   \end{block}
-    上記より, $c_0 = |V(G)|, c_1 = -2|E(G)|$. よって,
-  \begin{corollary}
+    上記より,
+  \begin{corollary}[Leinster \cite{Leinster2}, 2016]
     \[
-      |V(G)| = \# G(0), |E(G)| = - \frac{1}{2} \left. \frac{d}{dq} \# G(q) \right|_{q=0}.
-    \]   
+      |V(G)| = c_0, \quad |E(G)| = -\frac{1}{2} c_1
+    \]
   \end{corollary}
 \end{frame}
 
 \begin{frame}{Convexとprojection}
-  \begin{definition}[convex]
+  \begin{definition}[Leinster \cite{Leinster2}, 2016]
     $X$ をグラフ, $U$ を $X$ の部分グラフとする.
     グラフ $X, U$ の距離をそれぞれ $d_X, d_U$ とする.
 
-    $U$ が $X$ で凸であるとは, 任意の頂点 $x,y \in V(U)$ に対し, $d_U(x,y) = d_X  (x,y)$ が成り立つことをいう.
+    $U$ が $X$ で \textbf{凸である} とは, 任意の頂点 $x,y \in V(U)$ に対し, $d_U(x,y) = d_X  (x,y)$ が成り立つことをいう.
   \end{definition}
-  \begin{definition}[projection]
+  \begin{definition}[Leinster \cite{Leinster2}, 2016]
     $X$ をグラフ, $U$ を $X$ で凸な $X$ の部分グラフとする. また, 
     $V_U(X) = \{ v \in V(X) \mid d_X(v,u) < \infty \text{ for some } u \in V(U) \}$ とする
     
     ($U$ に接続されている頂点全体). 
     
-    $X$ \textit{projects to $U$} とは, 
+    $X$ \textbf{projects to $U$} とは, 
     任意の $x \in V_U(X)$ に対し, ある $u' \in V(U)$ が存在して, 任意の $u \in V(U)$ について $d_X(x,u) = d_X(x, u') + d_X(u',u)$ が成り立つことをいう. 各 $x \in V_U(X)$ に対し, そのような $u'$ を1つ固定し, これを $\pi(x)$ と表す.
   \end{definition}
 \end{frame}
@@ -312,7 +323,7 @@
 
 \section{主結果 1}
 \begin{frame}{主結果}
-  \begin{theorem}
+  \begin{theorem}[Leinster \cite{Leinster2}, 2016]
     $X$ をグラフ,  $G,H$ を $X$ の部分グラフとし, $X = G \cup H$ とする.
     $G \cap H$ が $X$ で凸であり, $H$ projects to $G \cap H$ ならば,
     \[
@@ -365,39 +376,83 @@
     \begin{column}{0.5\textwidth}
       \centering
       \begin{tikzpicture}[
-        scale=1.5,
+        scale=0.8,
         dot/.style={circle, fill=black, inner sep=2pt, outer sep=1pt}, 
         thick
       ]
-        \node[dot] (v1) at (0, 0) {};
-        \node[dot] (v2) at (1, 0) {};
-        \node[dot] (v3) at (0.5, -0.866) {};
-        \node[dot] (v4) at (-0.5, 0.5) {};
-        \node[dot] (v5) at (1.5, 0.5) {};
-        \draw (v1) -- (v2) -- (v3) -- (v1);
-        \draw (v1) -- (v4);
-        \draw (v2) -- (v5);
+      \node[dot] (t_v1) at (0, 0) {};
+      \node[dot] (t_v2) at (1, 0) {};
+      \node[dot] (t_v3) at (0.5, -0.866) {};
+      \node[dot] (t_v4) at (-0.5, 0.5) {};
+      \node[dot] (t_v5) at (1.5, 0.5) {};
+      \draw (t_v1) -- (t_v2) -- (t_v3) -- (t_v1);
+      \draw (t_v1) -- (t_v4);
+      \draw (t_v2) -- (t_v5);
+
+      \draw[->] (0.5, -1.1) -- (0.5, -1.4);
+
+      \begin{scope}[shift={(0, -2.3)}]
+        \begin{scope}[shift={(-0.25, 0)}]
+          \node[dot] (m1_v1) at (0, 0) {};
+          \node[dot] (m1_v2) at (1, 0) {};
+          \node[dot] (m1_v3) at (0.5, -0.866) {};
+          \node[dot] (m1_v4) at (-0.5, 0.5) {};
+          \draw (m1_v1) -- (m1_v2) -- (m1_v3) -- (m1_v1);
+          \draw (m1_v1) -- (m1_v4);
+        \end{scope}
+          
+        \begin{scope}[shift={(1.25, 0)}]
+          \node[dot] (m2_v1) at (0, 0) {};
+          \node[dot] (m2_v2) at (0.5, 0.5) {};
+          \draw (m2_v1) -- (m2_v2);
+        \end{scope}
+      \end{scope}
+
+      \draw[->] (0.5, -3.4) -- (0.5, -3.7);
+
+      \begin{scope}[shift={(0, -4.6)}]
+        \begin{scope}[shift={(-0.5, 0)}]
+          \node[dot] (b1_v1) at (0, 0) {};
+          \node[dot] (b1_v2) at (-0.5, 0.5) {};
+          \draw (b1_v1) -- (b1_v2);
+        \end{scope}
+        
+        \begin{scope}[shift={(0, 0)}]
+          \node[dot] (b2_v1) at (0, 0) {};
+          \node[dot] (b2_v2) at (1, 0) {};
+          \node[dot] (b2_v3) at (0.5, -0.866) {};
+          \draw (b2_v1) -- (b2_v2) -- (b2_v3) -- (b2_v1);
+        \end{scope}
+        
+        \begin{scope}[shift={(1.5, 0)}]
+          \node[dot] (b3_v1) at (0, 0) {};
+          \node[dot] (b3_v2) at (0.5, 0.5) {};
+          \draw (b3_v1) -- (b3_v2);
+        \end{scope}
+      \end{scope}
       \end{tikzpicture}
     \end{column}
 
     \begin{column}{0.5\textwidth}      
       \bigskip
-      左図のグラフ $G$ 場合, $G = K_2 \vee C_3 \vee K_2$ とみなせる ($\vee$ は, 1点の同一視).
-      この場合, 1点和は projecting decomposition を与えるので, 主定理を2回適応することにより,
+      \vspace{-1em}
+      左図のグラフ $G$ 場合, 
+      $G = K_2 \vee C_3 \vee K_2$ とみなせる ($\vee$ は, 1点の同一視).
+      この場合, 1点和は projecting decomposition を与えるので, 主定理を2回適応することにより, 以下のようになる.
       \begin{align*}
         \# G &= \# K_3 + 2 \cdot \# K_2 - 2 \cdot \# K_1 \\
             &= \frac{3}{1 + 2q} + 2 \cdot \frac{2}{1 + q} - 2 \cdot 1 \\
+            &= 5 - 10q + \cdots.
       \end{align*}
-      となる. 
     \end{column}
-    
   \end{columns}
+  次に, このMagnitudeという性質に, 代数トポロジー的な情報を増やすこと(categorification)を考える.
 \end{frame}
 
 \section{前提知識 2}
 
 \begin{frame}{Magnitude complex}
-  \begin{definition}
+  \begin{definition}[Hepworth, Willerton \cite{HepworthWillerton}, 2019]
     グラフ $G$, 非負整数 $k,l$ に対し, 自由アーベル群
     \[
     \begin{split}
@@ -424,11 +479,12 @@
 \end{frame}
 
 \begin{frame}{Magnitude homology}
-  \begin{definition}
-    グラフ $G$ の \textit{magnitude homology} とは, homology
-    \[
-      MH_{*, l}(G) = H_{\partial}(MC_{*, l}(G))
-    \]
+  \begin{definition}[Hepworth, Willerton \cite{HepworthWillerton}, 2019]
+    グラフ $G$ の \textbf{magnitude homology} とは, homology
+    \begin{align*}
+      MH_{*, l}(G) &= H(MC_{*, l}(G), \partial) \\
+      (MH_{k, l}(G) &= \Ker \partial \cap MC_{k, l}(G) / \im \partial \cap MC_{k, l}(G))
+    \end{align*}
     のことである. 各 $l$ について得られる.
   \end{definition}
 \end{frame}
@@ -436,30 +492,41 @@
 \section{主結果 2}
 
 \begin{frame}{Magniude との関係}
-  \begin{theorem}
+  \begin{theorem}[Hepworth, Willerton \cite{HepworthWillerton}, 2019]
     $G$ をグラフとするとき, 
     \[
       \sum_{k,l} (-1)^k \rank (MH_{k,l}(G)) q^l = \# G(q).
     \]
   \end{theorem}
+
+  \vspace{-0.3em}
+
   \begin{proof}
     各 $k, l$ について,
     \[
       \rank (MC_{k,l}(G))q^l = \sum_{x_0 \neq \cdots \neq x_k} q^{d(x_0, x_1) + \cdots + d(x_{k-1}, x_k)}
     \]
-    であることや, 複体のオイラー標数に関する定理, Proposition 1 を利用する.
+    であること, 複体のオイラー標数に関する定理, Proposition 1 を利用.
   \end{proof}
+
+  \vspace{-0.3em}
+
+  \begin{block}{Proposition 1(再掲)}
+    \[
+      \# G(q) = \sum_{k=0}^{\infty} (-1)^k \sum_{x_0 \neq \cdots \neq x_k} q^{d(x_0, x_1) + \dots + d(x_{k-1}, x_k)}.
+    \]
+  \end{block}
 \end{frame}
 
 \begin{frame}{Magnitude Homology の例}
   \begin{columns}
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.3\textwidth}
       \centering
-      \graphimg[width=0.7\linewidth]{C_5.pdf}
+      \graphimg[width=0.9\linewidth]{C_5.pdf}
     \end{column}
-    \begin{column}{0.5\textwidth}
-      各 $k, l$ についての $MH_{k,l}(C_5)$ のランクは以下の通り:
-      \includegraphics[width=0.9\linewidth]{Tables/out/mag_hom_C_5_v2.pdf}
+    \begin{column}{0.7\textwidth}
+      各 $k, l$ についての $MH_{k,l}(C_5)$ のランク:
+      \includegraphics[width=\linewidth]{Tables/out/mag_hom_C_5_v2.pdf}
 
     \end{column}
   \end{columns}
@@ -468,14 +535,47 @@
 
 
 
-
 \section{今後の課題}
 
 \begin{frame}{今後の課題}
+\begin{tikzpicture}[
+    scale=1.2,
+    dot/.style={circle, fill=black, inner sep=2pt, outer sep=0pt},
+    shared/.style={circle, fill=red, inner sep=2pt, outer sep=0pt},
+    thick
+  ]
+  \begin{scope}[shift={(-3, 0)}]
+    \node[shared, label=above:{$u$}] (u) at (0, 1) {};
+    \node[shared, label=below:{$v$}] (v) at (0, -1) {};
+    
+    \node[dot] (l1) at (-1.5, 0) {};
+    \draw (u) -- (l1) -- (v) -- (u);
+    
+    \node[dot, draw=blue, fill=blue] (r1) at (1, 1) {};
+    \node[dot, draw=blue, fill=blue] (r2) at (2, 0.5) {};
+    \node[dot, draw=blue, fill=blue] (r3) at (1.5, -0.5) {};
+    \draw[blue] (u) -- (r1) -- (r2) -- (r3) -- (v);
+  \end{scope}
+
+  \draw[<->, very thick] (-1, 0) -- (1, 0);
+
+  \begin{scope}[shift={(3, 0)}]
+    \node[shared, label=above:{$u$}] (u) at (0, 1) {};
+    \node[shared, label=below:{$v$}] (v) at (0, -1) {};
+    
+    \node[dot] (l1) at (-1.5, 0) {};
+    \draw (u) -- (l1) -- (v) -- (u);
+    
+    \node[dot, draw=blue, fill=blue] (r1) at (1, -1) {};
+    \node[dot, draw=blue, fill=blue] (r2) at (2, -0.5) {};
+    \node[dot, draw=blue, fill=blue] (r3) at (1.5, 0.5) {};
+    \draw[blue] (v) -- (r1) -- (r2) -- (r3) -- (u);
+  \end{scope}
+\end{tikzpicture}
   \textbf{今後の課題:}
   \begin{itemize}
     \item \textbf{Whitney Twist:} ツイスト操作は Magnitude Homology を保存するか？
-    \item \textbf{Diagonal Graphs:} $k \neq l$ で $MH_{k,l}=0$ となるグラフの特徴付け（例: 正二十面体グラフ）.
+    \item \textbf{Diagonal Graphs} ($k \neq l$ で $MH_{k,l}=0$ となるグラフ) についての特徴付け
     \item \textbf{距離空間, enriched categories:} Magnitudeは, もともと (コンパクトでpositive definite な)距離空間, さらに広く, enriched categoriesに対して定義されている. 他に有用なクラスがあるか？
   \end{itemize}
 \end{frame}
@@ -524,7 +624,8 @@
   \end{proof}
 \end{frame}
 
-\begin{frame}{Motivationの話を書く}
+\begin{frame}{Motivation}
+
   
 \end{frame}
 
@@ -606,6 +707,11 @@
 
 \begin{frame}{4頂点以下のグラフについて}
   4頂点以下の全てのグラフについて調べた結果, Magnitudeが同じもののペアは以下の通りであった:
+\end{frame}
+
+\begin{frame}{categorificationについて}
+  categorificationなので, 実際はfunctorの構造が入る.
+
 \end{frame}
 
 \end{document}

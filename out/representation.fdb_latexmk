@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1770623812.63527 "out/representation.dvi" "out/representation.pdf" "out/representation" 1770623812.91414 0
-  "out/representation.dvi" 1770623812.59908 312152 04e6dc7b929340475d0612584cb9b797 "latex"
+["dvipdf"] 1771113204.21804 "out/representation.dvi" "out/representation.pdf" "out/representation" 1771113204.53858 0
+  "out/representation.dvi" 1771113204.18062 349596 fa5367bae0f2c61996e592ee4cb1d850 "latex"
   (generated)
   "out/representation.pdf"
   (rewritten before read)
-["latex"] 1770623810.49791 "/Users/kensh/Documents/src/graduation-research/representation.tex" "out/representation.dvi" "representation" 1770623812.91259 0
-  "/Users/kensh/Documents/src/graduation-research/representation.tex" 1770623810.32048 21499 b455ee25e8fba095d3249f1d534ef032 ""
+["latex"] 1771113201.94338 "/Users/kensh/Documents/src/graduation-research/representation.tex" "out/representation.dvi" "representation" 1771113204.53678 0
+  "/Users/kensh/Documents/src/graduation-research/representation.tex" 1771113200.09501 25534 2bcda82b44b79e8f6ce3a17a1dbc8942 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -255,17 +255,17 @@
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "Referrence/Petersen_proof.pdf" 1769925621.57355 103967 1c38651b420344ad80d24e7e987e9312 ""
-  "Tables/out/mag_hom_C_5_v2.pdf" 1770449747.65661 4380 952a3e3e8c31b778a7868a23cf006963 ""
+  "Tables/out/mag_hom_C_5_v2.pdf" 1771112835.09179 5281 b97ac477aa8a28cfd2ba3b0410ccd1d2 ""
   "Tikz/Graphs/out/C_3_red.pdf" 1770440241.94237 1052 4c73bf5656f95c01f6f19191b68099e0 ""
   "Tikz/Graphs/out/C_5.pdf" 1770442653.41067 1158 d32a6876e8a377410a252dbea0f1dd43 ""
   "Tikz/Graphs/out/Grid_Graph_Red_U.pdf" 1770619285.38731 2291 c2070668fa4c11190d09c42c45f9b645 ""
   "Tikz/Graphs/out/K_mn_2.pdf" 1770619138.0615 2305 8d83971d91ffd8024f7621812222bfd3 ""
   "Tikz/Graphs/out/petersen.pdf" 1767854673.88072 1825 ea93febcb9d651c6bcb557d2c895fdfb ""
-  "out/representation.aux" 1770623812.59764 9336 25e64de19002d29b0f488a34164c76f8 "latex"
-  "out/representation.nav" 1770623812.599 4793 42614af8b12c45098c4a7e543fd5ca7e "latex"
-  "out/representation.out" 1770623812.59884 554 c7dc3dc3fe5687f7243cc317485f85a5 "latex"
-  "out/representation.toc" 1770623812.59903 249 44922b10cb859919302b200b1b94b455 "latex"
-  "representation.tex" 1770623810.32048 21499 b455ee25e8fba095d3249f1d534ef032 ""
+  "out/representation.aux" 1771113204.17906 9838 d108289cc2ca9b61d9753ab74d1c34f9 "latex"
+  "out/representation.nav" 1771113204.18053 4886 9f53863b96d409e16f74aad8c050193f "latex"
+  "out/representation.out" 1771113204.18036 554 c7dc3dc3fe5687f7243cc317485f85a5 "latex"
+  "out/representation.toc" 1771113204.18057 249 44922b10cb859919302b200b1b94b455 "latex"
+  "representation.tex" 1771113200.09501 25534 2bcda82b44b79e8f6ce3a17a1dbc8942 ""
   (generated)
   "out/representation.aux"
   "out/representation.dvi"

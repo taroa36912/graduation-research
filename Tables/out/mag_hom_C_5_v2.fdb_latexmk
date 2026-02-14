@@ -1,11 +1,11 @@
 # Fdb version 4
-["dvipdf"] 1770449747.47823 "out/mag_hom_C_5_v2.dvi" "out/mag_hom_C_5_v2.pdf" "out/mag_hom_C_5_v2" 1770449747.6677 0
-  "out/mag_hom_C_5_v2.dvi" 1770449747.47158 4608 e111c6ce6d6be526813d67ddfb739eca "latex"
+["dvipdf"] 1771112834.91228 "out/mag_hom_C_5_v2.dvi" "out/mag_hom_C_5_v2.pdf" "out/mag_hom_C_5_v2" 1771112835.10274 0
+  "out/mag_hom_C_5_v2.dvi" 1771112834.90513 6672 dbc788c30f774188c5ac7e32a0e5ec99 "latex"
   (generated)
   "out/mag_hom_C_5_v2.pdf"
   (rewritten before read)
-["latex"] 1770449747.31958 "/Users/kensh/Documents/src/graduation-research/Tables/mag_hom_C_5_v2.tex" "out/mag_hom_C_5_v2.dvi" "mag_hom_C_5_v2" 1770449747.66748 0
-  "/Users/kensh/Documents/src/graduation-research/Tables/mag_hom_C_5_v2.tex" 1770449747.15539 926 031af2fd063b20e5a8c02bb0b8287900 ""
+["latex"] 1771112834.73232 "/Users/kensh/Documents/src/graduation-research/Tables/mag_hom_C_5_v2.tex" "out/mag_hom_C_5_v2.dvi" "mag_hom_C_5_v2" 1771112835.10252 0
+  "/Users/kensh/Documents/src/graduation-research/Tables/mag_hom_C_5_v2.tex" 1771112834.55185 1071 2a4e3ce587617b713faabe7acf87610e ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty" 1572645307 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty" 1734129479 7984 7dbb9280f03c0a315425f1b4f35d43ee ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/keyval.tex" 1655411236 2725 1a42bd9e7e57e25fc7763c445f4b785b ""
@@ -30,8 +30,8 @@
   "/usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf" 1749313668 42213 4e2ca030e8e2640502016e9e45868dcb ""
   "/usr/local/texlive/2025/texmf-var/web2c/euptex/uplatex.fmt" 1760021064 3632325 cb3c425e495fb1ffc745eef14691231c ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "mag_hom_C_5_v2.tex" 1770449747.15539 926 031af2fd063b20e5a8c02bb0b8287900 ""
-  "out/mag_hom_C_5_v2.aux" 1770449747.47101 32 3985256e7290058c681f74d7a3565a19 "latex"
+  "mag_hom_C_5_v2.tex" 1771112834.55185 1071 2a4e3ce587617b713faabe7acf87610e ""
+  "out/mag_hom_C_5_v2.aux" 1771112834.90487 32 3985256e7290058c681f74d7a3565a19 "latex"
   (generated)
   "out/mag_hom_C_5_v2.aux"
   "out/mag_hom_C_5_v2.dvi"

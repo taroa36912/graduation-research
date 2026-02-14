@@ -338,8 +338,6 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/beamer/beamercolorthemecrane.
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/beamer/beamercolorthemecrane.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-h.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 INPUT out/representation.aux
@@ -374,17 +372,17 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/translator/translator-theorem
 INPUT out/representation.nav
 INPUT out/representation.nav
 INPUT out/representation.nav
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-h.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-v.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-h.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-h.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-v.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-h.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-h.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-v.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-h.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-h.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-v.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisr-h.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 OUTPUT out/representation.dvi
 INPUT out/representation.toc
@@ -437,6 +435,9 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/stmaryrd/Ustmry.fd
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-v.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/uptex-fonts/jis/upjisg-h.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
@@ -500,7 +501,6 @@ INPUT ./Tables/out/mag_hom_C_5_v2.pdf
 INPUT ./Tables/out/mag_hom_C_5_v2.pdf
 INPUT ./Tables/out/mag_hom_C_5_v2.pdf
 INPUT extractbb -B cropbox -O Tables/out/mag_hom_C_5_v2.pdf
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT ./Referrence/Petersen_proof.pdf
 INPUT ./Referrence/Petersen_proof.pdf
 INPUT ./Referrence/Petersen_proof.pdf

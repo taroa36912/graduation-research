@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  9 FEB 2026 16:56
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  15 FEB 2026 08:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -649,10 +649,6 @@ Package cleveref Info: always capitalise cross-reference names on input line 785
 \c@example=\count371
 \c@proposition=\count372
 \c@corollary=\count373
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 77.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 77.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 File: l3backend-dvipdfmx.def 2025-06-09 L3 backend support: dvipdfmx
 \g__graphics_track_int=\count374
@@ -661,28 +657,28 @@ File: l3backend-dvipdfmx.def 2025-06-09 L3 backend support: dvipdfmx
 ) (out/representation.aux)
 \openout1 = `representation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
 *geometry* detected driver: dvipdfm
 *geometry* verbose mode - [ preamble ] result:
 * driver: dvipdfm
@@ -716,7 +712,7 @@ LaTeX Font Info:    ... okay on input line 77.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 77.
+Package hyperref Info: Link coloring OFF on input line 78.
 (out/representation.out) (out/representation.out)
 \@outlinefile=\write5
 \openout5 = `representation.out'.
@@ -734,24 +730,24 @@ Dictionary: translator-numbers-dictionary, Language: English
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 ) (out/representation.nav)
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 77.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 77.
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 86.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 86.
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 86.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 86.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 5.77332pt on input line 78.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 5.77332pt on input line 78.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 13.85594pt on input line 87.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 13.85594pt on input line 87.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 87.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 87.
 
 
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 3.84888pt on input line 86.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 3.84888pt on input line 86.
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 3.84888pt on input line 87.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 3.84888pt on input line 87.
 [1
 
 ] (out/representation.toc)
@@ -759,24 +755,33 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 105.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 107.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 105.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 107.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 105.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 107.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 105.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 107.
 (/usr/local/texlive/2025/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
 [3
 
 ]
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 125.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 125.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 125.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 125.
+
 
 [4
 
@@ -797,6 +802,10 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 10
 [8
 
 ]
+Overfull \vbox (0.28775pt too high) detected at line 226
+ []
+
+
 
 [9
 
@@ -804,7 +813,7 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 10
 File: Tikz/Graphs/out/petersen.pdf Graphic file (type pdf)
 <Tikz/Graphs/out/petersen.pdf>
 
-Overfull \vbox (0.58765pt too high) detected at line 239
+Overfull \vbox (3.4929pt too high) detected at line 250
  []
 
 
@@ -812,23 +821,20 @@ Overfull \vbox (0.58765pt too high) detected at line 239
 [10
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 258.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 269.
 
 
 [11
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 275.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 286.
 
 
 [12
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 293.
-
 
 [13
 
@@ -849,8 +855,8 @@ File: Tikz/Graphs/out/C_3_red.pdf Graphic file (type pdf)
 [15
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 329.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 340.
 
 
 [16
@@ -864,7 +870,7 @@ LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
 [18
 
 ]
-Overfull \vbox (1.40814pt too high) detected at line 424
+Overfull \vbox (3.25397pt too high) detected at line 479
  []
 
 
@@ -872,13 +878,14 @@ Overfull \vbox (1.40814pt too high) detected at line 424
 [19
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 434.
-
 
 [20
 
 ]
+Overfull \vbox (0.13919pt too high) detected at line 519
+ []
+
+
 
 [21
 
@@ -892,27 +899,18 @@ File: Tables/out/mag_hom_C_5_v2.pdf Graphic file (type pdf)
 [22
 
 ]
-LaTeX Font Info:    Font shape `JT2/gt/bx/n' in size <10.95> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 481.
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 481.
-LaTeX Font Info:    Font shape `JY2/gt/bx/n' in size <10.95> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 481.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 481.
-
 
 [23
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 512.
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 512.
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 512.
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 512.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 612.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 612.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 612.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 612.
 
 
 [24
@@ -920,7 +918,7 @@ LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 514.
+(hyperref)                removing `\translate ' on input line 614.
 
 
 
@@ -931,15 +929,15 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [26
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 535.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 636.
 
 
 [27
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
-(Font)              No change on input line 541.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 642.
 
 
 [28
@@ -960,12 +958,12 @@ LaTeX Font Info:    Kanji font shape `JY2/gt/m/it' undefined
 File: Referrence/Petersen_proof.pdf Graphic file (type pdf)
 <Referrence/Petersen_proof.pdf>
 
-Overfull \hbox (2.30707pt too wide) in paragraph at lines 583--583
+Overfull \hbox (2.30707pt too wide) in paragraph at lines 684--684
 [][]  
  []
 
 
-Overfull \vbox (24.46654pt too high) detected at line 583
+Overfull \vbox (24.46654pt too high) detected at line 684
  []
 
 
@@ -993,6 +991,10 @@ Overfull \vbox (24.46654pt too high) detected at line 583
 [37
 
 ]
+
+[38
+
+]
 \tf@nav=\write6
 \openout6 = `representation.nav'.
 
@@ -1012,12 +1014,12 @@ Package rerunfilecheck Info: File `representation.out' has not changed.
 (rerunfilecheck)             Checksum: C7DC3DC3FE5687F7243CC317485F85A5;554.
  ) 
 Here is how much of TeX's memory you used:
- 27618 strings out of 468392
- 559845 string characters out of 5442311
- 940422 words of memory out of 5000000
- 55746 multiletter control sequences out of 15000+600000
+ 27830 strings out of 468392
+ 563392 string characters out of 5442311
+ 946422 words of memory out of 5000000
+ 55958 multiletter control sequences out of 15000+600000
  715288 words of font info for 155 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 128i,28n,123p,497b,948s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,28n,123p,497b,1122s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/representation.dvi (37 pages, 312152 bytes).
+Output written on out/representation.dvi (38 pages, 349596 bytes).
