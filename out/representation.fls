@@ -505,6 +505,14 @@ INPUT ./Referrence/Petersen_proof.pdf
 INPUT ./Referrence/Petersen_proof.pdf
 INPUT ./Referrence/Petersen_proof.pdf
 INPUT extractbb -B cropbox -O Referrence/Petersen_proof.pdf
+INPUT ./Tables/out/magnitude_coefficient.pdf
+INPUT ./Tables/out/magnitude_coefficient.pdf
+INPUT ./Tables/out/magnitude_coefficient.pdf
+INPUT extractbb -B cropbox -O Tables/out/magnitude_coefficient.pdf
+INPUT ./Img/torsion.png
+INPUT ./Img/torsion.png
+INPUT ./Img/torsion.png
+INPUT extractbb -B cropbox -O Img/torsion.png
 OUTPUT out/representation.nav
 OUTPUT out/representation.toc
 OUTPUT out/representation.snm

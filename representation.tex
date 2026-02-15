@@ -70,10 +70,10 @@
 \newtheorem{corollary}{Corollary}
 
 \title[Magnitude Homology]{The magnitude of graphs and the magnitude homology as its categorification}
-\subtitle{2025年度 卒業研究発表}
+\subtitle{2026年度 卒業研究発表}
 \author[Kensho Yachi]{谷内 賢翔(やち けんしょう)}
 \institute[YNU]{横浜国立大学 理工学部 数理科学EP}
-\date{2025年2月17日}
+\date{2026年2月17日}
 
 \begin{document}
 
@@ -108,20 +108,20 @@
 
 \begin{frame}{グラフのMagnitude}
   
-  \begin{definition}[Leinster \cite{Leinster2}, 2016]
-    グラフ $G$ の \textbf{similarity matrix} $Z_G (q)$を, その成分が $Z_G(x,y) = q^{d(x,y)}$ である $|V(G)| \times |V(G)|$-行列として定義する.
+  \begin{definition}[Leinster, 2014]
+    グラフ $G$ の \textbf{similarity matrix} $Z_G (q)$を, その成分が $Z_G(q)(x,y) = q^{d(x,y)}$ である $|V(G)| \times |V(G)|$-行列として定義する.
   \end{definition}
   ここで，$q$ は変数であり，$q^{\infty} = 0$ とする.
 
   このとき，$Z_G(q)$ の対角成分は全て $1$ なので，$\det Z_G$ の定数項は $1$ であり, よって $Z_G$ は可逆である.
-  \begin{definition}[Leinster \cite{Leinster2}, 2016]\label{magnitude}
+  \begin{definition}[Leinster, 2014]\label{magnitude}
     グラフ $G$ の \textbf{magnitude} は次のように定義される:
     \[
-      \# G(q) = \sum_{x,y \in V(G)} (Z_G(q)^{-1})(x,y) \in \mathbb{Q}(q).
+      \# G(q) = \tsum(Z_G(q)^{-1}) \in \mathbb{Q}(q).
     \]
     （逆行列の全成分の和）
   \end{definition}
-  
+  ここで, $\tsum$ は行列の全成分の和を表す.
 \end{frame}
 
 \begin{frame}{例: 完全グラフ $K_3$}
@@ -148,7 +148,7 @@
   \vspace{0.5em}
   その逆行列 $Z_{K_3}^{-1}$ は
   \[
-    Z_{K_3} = \frac{1}{(1+2q)(q-1)} \begin{pmatrix} -q-1 & q & q \\ q & -q-1 & q \\ q & q & -q-1 \end{pmatrix}.
+    Z_{K_3}^{-1} = \frac{1}{(1+2q)(q-1)} \begin{pmatrix} -q-1 & q & q \\ q & -q-1 & q \\ q & q & -q-1 \end{pmatrix}.
   \]
 
   よって, その成分和は
@@ -176,10 +176,10 @@
 \end{frame}
 
 \begin{frame}{Weighting}
-  \begin{definition}[Leinster \cite{Leinster2}, 2016]
+  \begin{definition}[Leinster, 2014]
     グラフ $G$ の各頂点 $x$ に対し, 
     \[
-      w_G(x)(q) = \sum_{y \in V(G)}(Z_G(q))^{-1}(x,y)
+      w_G(x)(q) = \sum_{y \in V(G)}(Z_G(q)^{-1})(x,y)
     \]
     で関数 $w_G: V(G) \to \QQ (q)$ を定義し, これを $G$ の \textbf{weighting} と呼ぶ.
   \end{definition}
@@ -193,19 +193,13 @@
 \end{frame}
 
 \begin{frame}{実際に計算する}
-  \begin{lemma}[Leinster \cite{Leinster2}, 2016]\label{vertex_transitive_magnitude}
+  \begin{lemma}[Leinster, 2014]\label{vertex_transitive_magnitude}
     グラフ $G$ が vertex-transitive ならば, 任意の頂点 $x \in V(G)$ に対し,
     \[
     \# G(q) = \frac{|V(G)|}{\sum_{y \in V(G)} q^{d(x,y)}}.
     \]
   \end{lemma}
   ※ \textbf{vertex-transitive}: 作用 $\aut (G) \curvearrowright V(G)$ の軌道が唯1つであるグラフ.
-  \begin{proof}
-    $S : V(G) \rightarrow \QQ(q) ; x \mapsto \sum_{y \in V(G)} q^{d(x,y)}$ とおくと, 仮定より, $S(x)$ の値は $x$ によらず, これを $S$ とすると, 定値関数 $\frac{1}{S}$ は weighting equation を満たす． よって, 
-    \[
-      \# G(q) = \sum_{x \in V(G)} \frac{1}{S} = \frac{|V(G)|}{S}.
-    \]
-  \end{proof}
 \end{frame}
 
 \begin{frame}{実際の計算例: 完全グラフ $K_n$}
@@ -252,7 +246,7 @@
 
 
 \begin{frame}{組み合わせ的表現}
-  \begin{proposition}[Leinster \cite{Leinster2}, 2016]
+  \begin{proposition}[Leinster, 2014]
     $G$ をグラフとするとき, 
     \[
     \begin{split}
@@ -286,13 +280,13 @@
 \end{frame}
 
 \begin{frame}{Convexとprojection}
-  \begin{definition}[Leinster \cite{Leinster2}, 2016]
+  \begin{definition}[Leinster, 2014]
     $X$ をグラフ, $U$ を $X$ の部分グラフとする.
     グラフ $X, U$ の距離をそれぞれ $d_X, d_U$ とする.
 
     $U$ が $X$ で \textbf{凸である} とは, 任意の頂点 $x,y \in V(U)$ に対し, $d_U(x,y) = d_X  (x,y)$ が成り立つことをいう.
   \end{definition}
-  \begin{definition}[Leinster \cite{Leinster2}, 2016]
+  \begin{definition}[Leinster, 2014]
     $X$ をグラフ, $U$ を $X$ で凸な $X$ の部分グラフとする. また, 
     $V_U(X) = \{ v \in V(X) \mid d_X(v,u) < \infty \text{ for some } u \in V(U) \}$ とする
     
@@ -323,7 +317,7 @@
 
 \section{主結果 1}
 \begin{frame}{主結果}
-  \begin{theorem}[Leinster \cite{Leinster2}, 2016]
+  \begin{theorem}[Leinster, 2014]
     $X$ をグラフ,  $G,H$ を $X$ の部分グラフとし, $X = G \cup H$ とする.
     $G \cap H$ が $X$ で凸であり, $H$ projects to $G \cap H$ ならば,
     \[
@@ -331,7 +325,7 @@
     \]
   \end{theorem}
 
-  上記の状況を満たす pair $(X;G,H)$ を, \textit{projecting decomposition} と呼ぶ.
+  上記の状況を満たす組 $(X;G,H)$ を, \textit{projecting decomposition} と呼ぶ.
   
   \begin{proof}
     $w_G + w_H - w_{G \cap H}$ が$X$ のweighting equationを満たすので, $w_X = w_G + w_H - w_{G \cap H}$ が導かれる.
@@ -452,12 +446,12 @@
 \section{前提知識 2}
 
 \begin{frame}{Magnitude complex}
-  \begin{definition}[Hepworth, Willerton \cite{HepworthWillerton}, 2019]
+  \begin{definition}[Hepworth, Willerton, 2017]
     グラフ $G$, 非負整数 $k,l$ に対し, 自由アーベル群
     \[
     \begin{split}
       MC_{k,l}(G) = \Span_{\ZZ} \bigl\{ (x_0, \dots, x_k) \bigm| x_i \in V(G), x_0 \neq \cdots \neq x_k, \\
-      d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) = l \bigr\}
+      L(x_0, \dots, x_k) := d(x_0, x_1) + \cdots + d(x_{k-1}, x_k) = l \bigr\}
     \end{split}
     \]
     を定め, 境界準同型 $\partial : MC_{k,l}(G) \rightarrow MC_{k-1,l}(G)$ を
@@ -465,7 +459,7 @@
       \begin{split}
         &\partial = \sum_{i=1}^{k-1} (-1)^{i-1} \partial_i,~\partial_i (x_0, \dots, x_k)  \\
         &=\begin{cases}
-          (x_0, \dots, \hat{x_i}, \dots, x_k) & \text{if } l(x_0, \dots, \hat{x_i}, \dots, x_k) = l(x_0, \dots, x_k), \\
+          (x_0, \dots, \hat{x_i}, \dots, x_k) & \text{if } L(x_0, \dots, \hat{x_i}, \dots, x_k) = L(x_0, \dots, x_k), \\
           0 & \text{otherwise}.
         \end{cases}
       \end{split}
@@ -479,7 +473,7 @@
 \end{frame}
 
 \begin{frame}{Magnitude homology}
-  \begin{definition}[Hepworth, Willerton \cite{HepworthWillerton}, 2019]
+  \begin{definition}[Hepworth, Willerton, 2017]
     グラフ $G$ の \textbf{magnitude homology} とは, homology
     \begin{align*}
       MH_{*, l}(G) &= H(MC_{*, l}(G), \partial) \\
@@ -492,10 +486,10 @@
 \section{主結果 2}
 
 \begin{frame}{Magniude との関係}
-  \begin{theorem}[Hepworth, Willerton \cite{HepworthWillerton}, 2019]
+  \begin{theorem}[Hepworth, Willerton, 2017]
     $G$ をグラフとするとき, 
     \[
-      \sum_{k,l} (-1)^k \rank (MH_{k,l}(G)) q^l = \# G(q).
+      \# G(q) = \sum_{k,l} (-1)^k \rank (MH_{k,l}(G)) q^l.
     \]
   \end{theorem}
 
@@ -511,7 +505,7 @@
 
   \vspace{-0.3em}
 
-  \begin{block}{Proposition 1(再掲)}
+  \begin{block}{Proposition 1 (再掲)}
     \[
       \# G(q) = \sum_{k=0}^{\infty} (-1)^k \sum_{x_0 \neq \cdots \neq x_k} q^{d(x_0, x_1) + \dots + d(x_{k-1}, x_k)}.
     \]
@@ -538,7 +532,7 @@
 \section{今後の課題}
 
 \begin{frame}{今後の課題}
-  
+
   \begin{tikzpicture}[
     scale=1.0,
     dot/.style={circle, fill=black, inner sep=2pt, outer sep=0pt},
@@ -623,6 +617,17 @@
 
 \appendix
 
+\begin{frame}{Motivation}
+  集合の要素数や, ベクトル空間の次元, 位相空間のオイラー標数などの不変量は, magnitude という一つの定義で統一的に扱うことができる.
+
+  Magnitude は, Enriched categoryの上定義されるもの.
+
+  距離空間は, $[0, \infty]$-enriched category として考えることができる.
+
+  グラフを距離空間として見ることでグラフにも一般的な不変量を構成できる.
+\end{frame}
+
+
 \begin{frame}{Proposition 1 の証明の概略}
   \begin{proof}
     $\tilde{w}_G:V(G) \rightarrow \ZZ[q]$ を, 定理1行目で $x_0$ を固定したものとする↓
@@ -632,50 +637,6 @@
     これは weighting equation を満たす．
     $x_0$ の固定を解除して足すことで題意を得る.
   \end{proof}
-\end{frame}
-
-\begin{frame}{Motivation}
-
-  
-\end{frame}
-
-\begin{frame}{monoidal category}
-  \begin{definition}
-    圏 $\VV$ とそのobject $I$, 関手 $\otimes : \VV \times \VV \to \VV$, 自然変換 $\alpha : \otimes \circ (\otimes \times id_{\VV} \Rightarrow \otimes \circ (id_{\VV} \times \otimes)), \lambda : I \otimes - \Rightarrow id_{\VV}, \rho : - \otimes I \Rightarrow id_{\VV}$ に対し, pair $(\VV, \otimes, I, \alpha, \lambda, \rho)$ が \textit{monoidal category} であるとは, 以下の性質を満たすものをいう:
-  \end{definition}
-\end{frame}
-
-\begin{frame}{Enriched Category}
-  \begin{definition}
-    $(\VV, I, \otimes, \alpha, \lambda, \rho)$ を monoidal categoryとする. 圏 $\calA$, a collection of morphisms $m, j$ に対し, pair $(\calA, m, j)$ が \textit{$\VV$-enriched category} であるとは, 以下の性質を満たすものをいう:
-  \end{definition}
-\end{frame}
-
-\begin{frame}{Enriched Category の例}
-
-\end{frame}
-
-\begin{frame}{Enriched category の magnitude}
-  $(\VV, \otimes, I, \alpha, \lambda, \rho, |\cdot|)$ をモノイダル圏, $(\calA, m, j)$ を 有限のオブジェクトを持つ $\VV$-enriched category とする.
-
-  \begin{definition}{magnitude}
-
-    
-  \end{definition}
-\end{frame}
-
-
-\begin{frame}{Enriched category から見た グラフ の magnitude}
-  \begin{theorem}
-    $G$ をグラフとするとき, $G$ には一般化距離空間の構造が入る. その上で $G$ を $[0, \infty]$-enriched category として考えると, その magnitude は, 先ほど定義したグラフの magnitude と一致する.
-  \end{theorem}
-
-  \begin{proof}
-    グラフの頂点集合 $V(G)$ に，最短経路が定める距離 $d$ を入れることで，$V(G)$ は一般化距離空間となる. これを $G$ の距離とする.
-
-    モノイダル圏 $([0, \infty], +, 0, \leq, id, |\cdot|)$ には, 部分的に定義されるモノイド準同型 $| \cdot | : Z \to \QQ(q)$ を $|x| = q^x$ が付加されており, $G$ の距離が $Z$ に値をとることから $G$ は $[0, \infty]$-enriched categoryの構造を持つ. (ただし, $Z = \ZZ_{\geq 0} \cup \{ \infty \}$). これにより \cref{magnitude} と一致させることができる.
-  \end{proof}
-  
 \end{frame}
 
 
@@ -693,13 +654,71 @@
 
 \end{frame}
 
-\begin{frame}{Magnitude では, connected components の個数 は特定できない}
-  Remark 2.2.12, 2.2.13 あたりをまとめましょう. 
-  簡単で非自明なグラフいくつかについて、3次くらいまでの一覧表を用意する.
+\begin{frame}{他の係数が持っている情報}
+  一般的に, $c_0 \geq 0, c_1 \leq 0, c_2 \geq 0$ は成り立つ. $c_2 \geq 0$ は
+  \[
+    c_2 = |\{ (x,y,z) \mid d(x,y) = d(y,z) = 1 \}| - |\{ (x,y) \mid d(x,y) = 2 \}|
+  \]
+  から成り立つ. しかし, $c_3 \leq 0$ は成り立たない. これは Petersen グラフ $G$ の例を見ればわかる. 他のグラフについても以下に併せて掲載.
+  \begin{center}
+    \includegraphics[width=\linewidth]{Tables/out/magnitude_coefficient.pdf}  
+  \end{center}
+\end{frame}
+
+\begin{frame}{サイクルグラフと完全2部グラフの Magnitude}
+  \begin{align*}
+    \# C_{2m} &= \frac{n(1-q)}{(1+q)(1-q^m)} \\
+    \# C_{2m-1} &= \frac{n(1-q)}{1+q-2q^m} \\
+    \# K_{m,n} &= \frac{(m+n) - (2mn - m - n)q}{(1+q)(1-(m-1)(n-1)q^2)}
+  \end{align*}
 \end{frame}
 
 \begin{frame}{条件なしでは, 主結果は得られない}
-  Lemma 2.3.3 や cartesian product 周りの話をまとめる.
+  \begin{lemma}
+    グラフ不変量 $\Phi$ が, cartesian product に関して積に分解する，かつ, 主定理を無条件に満たすとき, $\Phi (G) = |V(G)|$ となる.
+  \end{lemma}
+  Magnitude は cartesian product に関して積に分解するので, 主定理を満たすには条件が必要. 例えば, $C_3$ を下図のように分けた場合, 主定理は成り立たない.
+  \begin{center}
+    \begin{tikzpicture}[
+        dot/.style={circle, fill=black, inner sep=2pt, outer sep=0pt},
+        thick
+      ]
+      \begin{scope}[shift={(0, 0)}]
+        \node[dot] (a1) at (0, 0.866) {};
+        \node[dot] (a2) at (-0.5, 0) {};
+        \node[dot] (a3) at (0.5, 0) {};
+        \draw (a1) -- (a2);
+        \draw (a1) -- (a3);
+        \draw[red, very thick] (a2) -- (a3);
+      \end{scope}
+
+      \node at (1.25, 0.433) {\Large $\rightarrow$};
+
+      \begin{scope}[shift={(2.5, 0)}]
+        \node[dot] (b1) at (0, 0.866) {};
+        \node[dot] (b2) at (-0.5, 0) {};
+        \node[dot] (b3) at (0.5, 0) {};
+        \draw (b1) -- (b2);
+        \draw[red, very thick] (b2) -- (b3);
+      \end{scope}
+
+      \node at (3.75, 0.433) {\Large $\cup$};
+
+      \begin{scope}[shift={(5, 0)}]
+        \node[dot] (c1) at (0, 0.866) {};
+        \node[dot] (c2) at (-0.5, 0) {};
+        \node[dot] (c3) at (0.5, 0) {};
+        \draw (c1) -- (c3);
+        \draw[red, very thick] (c2) -- (c3);
+      \end{scope}
+    \end{tikzpicture}
+  \end{center}
+  
+  \begin{align*}
+    \# C_3 = \frac{3}{1 + 2q} \neq \frac{4 - 2q}{1 + q} = 2 \cdot \# T - \# C_2
+  \end{align*}
+  
+
 \end{frame}
 
 
@@ -711,17 +730,41 @@
   今回扱ったグラフの magnitude homology には, torsion は存在しない. 
 
   しかし, torsion を持つグラフも存在する.
-
-
+  \begin{center}
+    \includegraphics[width=\linewidth]{Img/torsion.png}
+    TORSION IN THE MAGNITUDE HOMOLOGY OF GRAPHS
+    
+    RADMILA SAZDANOVICAND VICTOR SUMMERS
+    
+    https://arxiv.org/pdf/1912.13483
+    
+    より (2019)
+  \end{center}
 \end{frame}
 
-\begin{frame}{4頂点以下のグラフについて}
+\begin{frame}{4頂点以下のグラフについて / Magnitude は connected components の個数 は特定できない}
   4頂点以下の全てのグラフについて調べた結果, Magnitudeが同じもののペアは以下の通りであった:
 \end{frame}
 
 \begin{frame}{categorificationについて}
   categorificationなので, 実際はfunctorの構造が入る.
+  グラフ写像 $f : V(G) \rightarrow V(H)$ があると, magnitude complex の間にも写像が誘導され，それが chain map なので, homology 間にも写像が誘導される. それを $f_{\#}$と書くと，$\#$ は\textrm{Graphs} から \textrm{BAB} への functor となる.
+\end{frame}
 
+\begin{frame}{実際に計算する}
+  \begin{lemma}[Leinster, 2014]\label{vertex_transitive_magnitude}
+    グラフ $G$ が vertex-transitive ならば, 任意の頂点 $x \in V(G)$ に対し,
+    \[
+    \# G(q) = \frac{|V(G)|}{\sum_{y \in V(G)} q^{d(x,y)}}.
+    \]
+  \end{lemma}
+  ※ \textbf{vertex-transitive}: 作用 $\aut (G) \curvearrowright V(G)$ の軌道が唯1つであるグラフ.
+  \begin{proof}
+    $S : V(G) \rightarrow \QQ(q) ; x \mapsto \sum_{y \in V(G)} q^{d(x,y)}$ とおくと, 仮定より, $S(x)$ の値は $x$ によらず, これを $S$ とすると, 定値関数 $\frac{1}{S}$ は weighting equation を満たす． よって, 
+    \[
+      \# G(q) = \sum_{x \in V(G)} \frac{1}{S} = \frac{|V(G)|}{S}.
+    \]
+  \end{proof}
 \end{frame}
 
 \end{document}

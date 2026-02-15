@@ -1,0 +1,25 @@
+\documentclass[dvipdfmx, border=5pt]{standalone}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{array}
+
+\begin{document}
+  \arrayrulecolor{black!20}
+  \setlength{\aboverulesep}{0pt}
+  \setlength{\belowrulesep}{0pt}
+  \setlength{\extrarowheight}{0.5ex}
+  \newcolumntype{I}{!{\color{black}\vrule width 1.2pt}}
+  
+  \begin{tabular}{|l I r|r|r|r|r|}
+    \arrayrulecolor{black}\specialrule{1.2pt}{0pt}{0pt}\arrayrulecolor{black!20}
+    & \multicolumn{5}{c|}{$c_k$} \\ \cline{2-6}
+    \multicolumn{1}{|c I}{\raisebox{1.5ex}[0pt]{Graph}} & 0 & 1 & 2 & 3 & 4 \\ 
+    \arrayrulecolor{black}\specialrule{1.2pt}{0pt}{0pt}\arrayrulecolor{black!20}
+    $G$       & 10&-30& 30& 90&-450 \\ \hline
+    $C_2$     & 2 &-2 & 2 & -2& 2   \\ \hline
+    $C_5$     & 5 &-10& 10&  0&-20  \\ \hline
+    $K_n$     &$n$&$-n(n-1)$&$n(n-1)^2$&$-n(n-1)^3$&$n(n-1)^4$\\ \hline
+    $K_{2,3}$ & 5 & -12& 22&-36&56  \\ \hline
+    \arrayrulecolor{black}\specialrule{1.2pt}{0pt}{0pt}\arrayrulecolor{black!20}    
+  \end{tabular}
+\end{document}

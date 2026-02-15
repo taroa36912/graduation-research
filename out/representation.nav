@@ -89,16 +89,10 @@
 \headcommand {\beamer@framepages {34}{34}}
 \headcommand {\slideentry {5}{0}{13}{35/35}{}{1}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\slideentry {5}{0}{14}{36/36}{}{1}}
-\headcommand {\beamer@framepages {36}{36}}
-\headcommand {\slideentry {5}{0}{15}{37/37}{}{1}}
-\headcommand {\beamer@framepages {37}{37}}
-\headcommand {\slideentry {5}{0}{16}{38/38}{}{1}}
-\headcommand {\beamer@framepages {38}{38}}
-\headcommand {\beamer@partpages {25}{38}}
-\headcommand {\beamer@subsectionpages {25}{38}}
-\headcommand {\beamer@sectionpages {25}{38}}
-\headcommand {\beamer@documentpages {38}}
-\headcommand {\gdef \inserttotalframenumber {14}}
+\headcommand {\beamer@partpages {25}{35}}
+\headcommand {\beamer@subsectionpages {25}{35}}
+\headcommand {\beamer@sectionpages {25}{35}}
+\headcommand {\beamer@documentpages {35}}
+\headcommand {\gdef \inserttotalframenumber {11}}
 \headcommand {\gdef \inserttotalframenumber {24}}
-\headcommand {\gdef \appendixtotalframenumber {14}}
+\headcommand {\gdef \appendixtotalframenumber {11}}
