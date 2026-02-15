@@ -192,30 +192,23 @@
   これを, \textbf{weighting equation} と呼ぶ. $Z_G(q)$ の可逆性より, weighting equation を満たす関数 $V(G) \to \QQ(q)$ は一意的である.
 \end{frame}
 
-\begin{frame}{実際に計算する}
-  \begin{lemma}[Leinster, 2014]\label{vertex_transitive_magnitude}
-    グラフ $G$ が vertex-transitive ならば, 任意の頂点 $x \in V(G)$ に対し,
-    \[
-    \# G(q) = \frac{|V(G)|}{\sum_{y \in V(G)} q^{d(x,y)}}.
-    \]
-  \end{lemma}
-  ※ \textbf{vertex-transitive}: 作用 $\aut (G) \curvearrowright V(G)$ の軌道が唯1つであるグラフ.
-\end{frame}
 
 \begin{frame}{実際の計算例: 完全グラフ $K_n$}
-  \begin{block}{Lemma 1 (再掲)}
+  \begin{lemma}[Leinster, 2014]\label{vertex_transitive_magnitude}
     グラフ $G$ が vertex-transitive ならば, 任意の頂点 $x \in V(G)$ に対し,
     \[
     \# G(q) = \frac{|V(G)|}{S}.
     \]
     ただし, $S = \sum_{y \in V(G)} q^{d(x,y)}$.
-  \end{block}
+
+    ※ \textbf{vertex-transitive}: 作用 $\aut (G) \curvearrowright V(G)$ の軌道が唯1つであるグラフ.
+  \end{lemma}
   $n$頂点完全グラフ $K_n$ は vertex-transitive である.
   Lemma 1 において, $S = 1 + (n-1)q$ であるから,
   \begin{align*}
-    \# K_n(q) &= \frac{n}{1 + (n-1)q} \\
-    &= n \sum_{k=0}^{\infty} - \{(n-1)q \}^k \\
+    \# K_n(q) &= \frac{n}{1 + (n-1)q} = n \sum_{k=0}^{\infty} - \{(n-1)q \}^k
   \end{align*}
+  \vspace{-1.0em}
   $k$ 次の係数は $c_k = \{ -(n-1)q \}^k n$ である. 特に, $c_0 = n, c_1 = -(n-1)n$.
 \end{frame}
 
@@ -297,23 +290,28 @@
   \end{definition}
 \end{frame}
 
-\begin{frame}{projectの例}
+\begin{frame}{projectである例 / でない例}
   (赤に接続された)すべての頂点に対し，赤の中から1点選んでfactor throughすることで, 赤の全ての点との距離が最短になるようにできる．
   
   上記の $u'$ は一意に定まる.
-  \begin{center}
-    \graphimg[height=4cm, keepaspectratio]{K_mn_2.pdf}
-    \hspace{1cm}
-    \graphimg[height=4cm, keepaspectratio]{Grid_Graph_Red_U.pdf}
-  \end{center}
-\end{frame}
 
-\begin{frame}{projectでない例}
-  \begin{center}
-    \graphimg[width=0.5\linewidth]{C_3_red.pdf}
-  \end{center}
+  \begin{columns}
+    \begin{column}{0.4\textwidth}
+      \graphimg[height=3cm, keepaspectratio]{K_mn_2.pdf}
+      projecting
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      \graphimg[height=4cm, keepaspectratio]{Grid_Graph_Red_U.pdf}
+      projecting
+    \end{column}
+    \vrule \hfill
+    \begin{column}{0.3\textwidth}
+      \graphimg[height=3cm, keepaspectratio]{C_3_red.pdf}
+      not projecting
+    \end{column}
+  \end{columns}
+  
 \end{frame}
-
 
 \section{主結果 1}
 \begin{frame}{主結果}
@@ -674,7 +672,7 @@
 \end{frame}
 
 \begin{frame}{条件なしでは, 主結果は得られない}
-  \begin{lemma}
+  \begin{lemma}[Leinster, 2014]
     グラフ不変量 $\Phi$ が, cartesian product に関して積に分解する，かつ, 主定理を無条件に満たすとき, $\Phi (G) = |V(G)|$ となる.
   \end{lemma}
   Magnitude は cartesian product に関して積に分解するので, 主定理を満たすには条件が必要. 例えば, $C_3$ を下図のように分けた場合, 主定理は成り立たない.

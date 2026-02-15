@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  15 FEB 2026 21:47
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2025.10.9)  15 FEB 2026 22:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -809,7 +809,10 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 [8
 
 ]
-Overfull \vbox (0.28775pt too high) detected at line 220
+File: Tikz/Graphs/out/petersen.pdf Graphic file (type pdf)
+<Tikz/Graphs/out/petersen.pdf>
+
+Overfull \vbox (3.4929pt too high) detected at line 237
  []
 
 
@@ -817,58 +820,54 @@ Overfull \vbox (0.28775pt too high) detected at line 220
 [9
 
 ]
-File: Tikz/Graphs/out/petersen.pdf Graphic file (type pdf)
-<Tikz/Graphs/out/petersen.pdf>
-
-Overfull \vbox (3.4929pt too high) detected at line 244
- []
-
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 256.
 
 
 [10
 
 ]
 LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 263.
+(Font)              No change on input line 273.
 
 
 [11
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 280.
-
 
 [12
-
-]
-
-[13
 
 ]
 File: Tikz/Graphs/out/K_mn_2.pdf Graphic file (type pdf)
 <Tikz/Graphs/out/K_mn_2.pdf>
 File: Tikz/Graphs/out/Grid_Graph_Red_U.pdf Graphic file (type pdf)
 <Tikz/Graphs/out/Grid_Graph_Red_U.pdf>
+File: Tikz/Graphs/out/C_3_red.pdf Graphic file (type pdf)
+<Tikz/Graphs/out/C_3_red.pdf>
+
+
+[13
+
+]
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 332.
 
 
 [14
 
 ]
-File: Tikz/Graphs/out/C_3_red.pdf Graphic file (type pdf)
-<Tikz/Graphs/out/C_3_red.pdf>
-
 
 [15
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 334.
-
 
 [16
 
 ]
+Overfull \vbox (3.25397pt too high) detected at line 471
+ []
+
+
 
 [17
 
@@ -877,24 +876,12 @@ LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
 [18
 
 ]
-Overfull \vbox (3.25397pt too high) detected at line 473
+Overfull \vbox (0.13919pt too high) detected at line 511
  []
 
 
 
 [19
-
-]
-
-[20
-
-]
-Overfull \vbox (0.13919pt too high) detected at line 513
- []
-
-
-
-[21
 
 ]
 File: Tikz/Graphs/out/C_5.pdf Graphic file (type pdf)
@@ -903,58 +890,66 @@ File: Tables/out/mag_hom_C_5_v2.pdf Graphic file (type pdf)
 <Tables/out/mag_hom_C_5_v2.pdf>
 
 
+[20
+
+]
+
+[21
+
+]
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 614.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 614.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 614.
+LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
+(Font)              No change on input line 614.
+
+
 [22
 
 ]
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\translate ' on input line 616.
+
+
+
 [23
 
 ]
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 616.
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 616.
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 616.
-LaTeX Font Info:    Kanji font shape `JY2/mc/m/it' undefined
-(Font)              No change on input line 616.
-
 
 [24
 
 ]
+File: Referrence/Petersen_proof.pdf Graphic file (type pdf)
+<Referrence/Petersen_proof.pdf>
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 618.
+Overfull \hbox (2.30707pt too wide) in paragraph at lines 653--653
+[][]  
+ []
+
+
+Overfull \vbox (24.46654pt too high) detected at line 653
+ []
 
 
 
 [25
 
 ]
+File: Tables/out/magnitude_coefficient.pdf Graphic file (type pdf)
+<Tables/out/magnitude_coefficient.pdf>
+
 
 [26
 
 ]
-File: Referrence/Petersen_proof.pdf Graphic file (type pdf)
-<Referrence/Petersen_proof.pdf>
-
-Overfull \hbox (2.30707pt too wide) in paragraph at lines 655--655
-[][]  
- []
-
-
-Overfull \vbox (24.46654pt too high) detected at line 655
- []
-
-
 
 [27
 
 ]
-File: Tables/out/magnitude_coefficient.pdf Graphic file (type pdf)
-<Tables/out/magnitude_coefficient.pdf>
-
 
 [28
 
@@ -963,6 +958,9 @@ File: Tables/out/magnitude_coefficient.pdf Graphic file (type pdf)
 [29
 
 ]
+File: Img/torsion.png Graphic file (type bmp)
+<Img/torsion.png>
+
 
 [30
 
@@ -971,23 +969,12 @@ File: Tables/out/magnitude_coefficient.pdf Graphic file (type pdf)
 [31
 
 ]
-File: Img/torsion.png Graphic file (type bmp)
-<Img/torsion.png>
-
 
 [32
 
 ]
 
 [33
-
-]
-
-[34
-
-]
-
-[35
 
 ]
 \tf@nav=\write6
@@ -1012,12 +999,12 @@ Package rerunfilecheck Info: File `representation.out' has not changed.
 (rerunfilecheck)             Checksum: C7DC3DC3FE5687F7243CC317485F85A5;554.
  ) 
 Here is how much of TeX's memory you used:
- 27900 strings out of 468392
- 563951 string characters out of 5442311
+ 27896 strings out of 468392
+ 563925 string characters out of 5442311
  945422 words of memory out of 5000000
- 56023 multiletter control sequences out of 15000+600000
+ 56019 multiletter control sequences out of 15000+600000
  715288 words of font info for 155 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  128i,28n,123p,447b,1122s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on out/representation.dvi (35 pages, 335344 bytes).
+Output written on out/representation.dvi (33 pages, 326540 bytes).
